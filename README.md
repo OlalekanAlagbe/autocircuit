@@ -1,5 +1,7 @@
 # AutoCircuit: Automated Discovery of Interpretable Reasoning Patterns in Large Language Models
 
+Project no.24 in [AI Safety Camp 2025](https://www.aisafety.camp/)
+
 ## Summary
 
 This project aims to systematically discover interpretable reasoning circuits in large language models, by data mining attribution graphs from Neuronpedia's circuit tracer which is based on [Anthropic's circuit tracing publication](https://transformer-circuits.pub/2025/attribution-graphs/methods.html). While the transformer circuits work demonstrates how to generate attribution graphs for individual prompts, manually analyzing thousands of graphs to identify common computational patterns is impractical.
