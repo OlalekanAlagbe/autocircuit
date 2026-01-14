@@ -1,94 +1,221 @@
-# Neuronpedia Attribution Graph Cleanup Automation Agent
+# Graph Analysis Tools
 
-An automated tool for cleaning and organizing attribution graphs generated from prompts in Neuronpedia's Circuit Tracer.
+This directory contains tools for analyzing neural network circuits from Neuronpedia graph data.
 
 ## Overview
 
-This agent automates the manual process of:
-- Pinning important nodes from attribution graphs
-- Grouping nodes into interpretable supernodes
-- Generating human-readable labels for functional modules
-- Computing quality metrics (replacement and completeness scores)
+These scripts help analyze computational circuits by:
+- Identifying information flow pathways
+- Grouping features into functional supernodes
+- Finding hub nodes and bottlenecks
+- Generating hypotheses about feature semantics
+- Preparing features for validation
 
-## Installation
+## Scripts
+
+### `circuit_analysis.py`
+
+Comprehensive circuit analysis script that:
+- Groups features into supernodes by (layer, context_position)
+- Analyzes layer-to-layer information flows
+- Identifies token-level flow patterns
+- Generates statistics about circuit structure
+
+**Usage:**
+```bash
+python circuit_analysis.py
+```
+
+**Requirements:**
+- Graph data saved as `/tmp/neuronpedia_graph_data.json`
+
+**Output:**
+- Supernode structure with feature counts and influence scores
+- Top 30 layer-to-layer flows by total edge weight
+- Token-to-token flow patterns with edge counts
+
+---
+
+### `analyze_hubs.py`
+
+Identifies hub nodes (high-degree nodes) in the circuit.
+
+**Usage:**
+```bash
+python analyze_hubs.py
+```
+
+**Requirements:**
+- Graph data saved as `/tmp/neuronpedia_graph_data.json`
+
+**Output:**
+- Top 20 nodes by total degree (in + out)
+- Top 20 nodes by weighted in-degree
+- Top 20 nodes by weighted out-degree
+- Layer and context position information
+
+---
+
+### `validate_hypotheses.py`
+
+Samples key features from different computational phases for hypothesis validation.
+
+**Usage:**
+```bash
+python validate_hypotheses.py <path_to_graph_data.json>
+```
+
+**Example:**
+```bash
+python validate_hypotheses.py example1/graph_data.json
+```
+
+**Output:**
+- Sampled features for each hypothesis category:
+  1. Domain/Topic features (early layers)
+  2. Syntactic/Structural features (definitional patterns)
+  3. Morphological/Prefix features (morpheme processing)
+  4. Integration Hub features (evidence combination)
+  5. Token-Specific features (output boosting)
+- Feature IDs ready for Neuronpedia lookup
+
+---
+
+## Example Analyses
+
+### Example 1: "DNA stands for deoxyribonucleic"
+
+**Location:** `example1/`
+
+**Task:** Predict completion of scientific definition
+
+**Key Findings:**
+- Hierarchical target-focused circuit with 6 phases
+- Strong skip connections from L0 to L22-L25
+- Dense decision module in layers 22-25
+- Progressive concentration toward target token
+
+**Files:**
+- `graph_info.txt` - Graph metadata and API information
+- `circuit_description.md` - Detailed flow analysis
+- `feature_hypotheses.md` - Predicted feature semantics
+- `hypothesis_features_summary.txt` - Key features to validate
+- `CIRCUIT_ANALYSIS_COMPLETE.md` - Executive summary
+
+---
+
+## Workflow
+
+### 1. Download Graph Data
 
 ```bash
-pip install -r requirements.txt
+# Get graph metadata
+curl -X GET "https://www.neuronpedia.org/api/graph/{MODEL}/{SLUG}" \
+  -H "x-api-key: YOUR_API_KEY"
+
+# Download full graph data
+curl -s -X GET "{GRAPH_DATA_URL}" -o graph_data.json
 ```
 
-## Quick Start
-
-### Analyze an existing graph
+### 2. Run Circuit Analysis
 
 ```bash
-python main.py analyze --graph-file my_graph.json
+# Analyze overall circuit structure
+python circuit_analysis.py
+
+# Identify hub nodes
+python analyze_hubs.py
+
+# Sample features for validation
+python validate_hypotheses.py graph_data.json
 ```
 
-### Cleanup an existing graph
+### 3. Validate Hypotheses
 
-```bash
-export ANTHROPIC_API_KEY=your_api_key
-python main.py cleanup-existing \
-    --graph-file my_graph.json \
-    --strategy pathway \
-    --grouping functional \
-    --output cleaned_graph.json
+For each sampled feature:
+1. Look up on Neuronpedia: `https://neuronpedia.org/{MODEL}/{FEATURE_ID}`
+2. Check if activation patterns match predictions
+3. Document semantic interpretation
+4. Calculate confirmation rate
+
+---
+
+## Analysis Methodology
+
+### Supernode Grouping
+
+Features are grouped by **(Layer, Context Position)** to create interpretable supernodes:
+
+```python
+supernode_id = (layer, context_position)
+# Example: (0, 1) = Layer 0, Token position 1
 ```
 
-## Project Structure
+**Why this works:**
+- Layer indicates computational depth
+- Context position shows which token is being processed
+- Creates natural functional groups
+
+### Information Flow Analysis
+
+Layer-to-layer transitions are analyzed by:
+1. Counting edges between layer pairs
+2. Summing absolute edge weights
+3. Identifying highest-flow pathways
+4. Tracking cross-token connections
+
+### Hub Node Identification
+
+Hub nodes are identified by:
+- **In-degree:** Number of incoming edges
+- **Out-degree:** Number of outgoing edges
+- **Weighted degree:** Sum of absolute edge weights
+- High-degree nodes often serve as integration points
+
+### Feature Hypothesis Generation
+
+Based on circuit structure and task, we predict:
+1. **Domain features** (early layers) - topic/context detection
+2. **Structural features** (early layers) - syntactic patterns
+3. **Morphological features** (middle layers) - prefix/suffix processing
+4. **Routing features** (middle layers) - cross-position information flow
+5. **Integration features** (late layers) - evidence combination
+6. **Token features** (final layers) - specific token boosting
+
+---
+
+## Citation
+
+If using these tools, please cite:
 
 ```
-graph-analysis/
-├── main.py                      # CLI entry point
-├── config.yaml                  # Configuration settings
-├── requirements.txt             # Python dependencies
-├── neuronpedia_agent/
-│   ├── analysis/
-│   │   ├── graph_analyzer.py       # Graph structure analysis
-│   │   ├── node_selector.py        # Node selection strategies
-│   │   └── grouping_engine.py      # Supernode creation
-│   ├── labeling/
-│   │   └── auto_labeler.py         # LLM-based label generation
-│   └── optimization/
-│       ├── path_tracer.py          # Computational pathway tracing
-│       └── metrics.py              # Quality metrics
+Circuit Analysis Tools for Neuronpedia Graphs
+Repository: https://github.com/KKrampis/autocircuit
 ```
 
-## Features
+---
 
-### Node Selection Strategies
-- **Pathway**: Follow strongest computational paths from input to output
-- **Importance**: Select globally most important nodes
-- **Balanced**: Distribute selection across layers
+## Dependencies
 
-### Grouping Strategies
-- **Functional**: Group by computational role (input detectors, processors, output promoters)
-- **Semantic**: Group by semantic similarity (requires embeddings)
-- **Layer**: Group by layer proximity
-- **Hybrid**: Combination of functional and semantic
+- Python 3.7+
+- Standard library only (json, collections, statistics)
 
-### Quality Metrics
-- **Replacement Score**: Fraction of end-to-end influence through pinned features (target: >0.5)
-- **Completeness Score**: Fraction of incoming edge influence explained (target: >0.7)
+---
 
-## Configuration
+## Contributing
 
-Edit `config.yaml` to customize:
-- Node selection thresholds
-- Grouping parameters
-- LLM settings for labeling
-- Quality metric thresholds
+To add new analysis scripts:
+1. Follow the existing script structure
+2. Document usage and output format
+3. Add example to this README
+4. Create new example directory if needed
 
-## Requirements
+---
 
-- Python 3.8+
-- Anthropic API key (for automated labeling)
-- See `requirements.txt` for full dependencies
+## Future Work
 
-## Examples
-
-See the specification document for detailed examples and usage patterns.
-
-## License
-
-[License information to be added]
+- Automated feature interpretation lookup
+- Visualization tools (circuit diagrams)
+- Comparative analysis across prompts
+- Batch processing for multiple graphs
+- Integration with existing circuit analysis tools
