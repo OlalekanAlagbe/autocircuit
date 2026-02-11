@@ -1,0 +1,95 @@
+Hypothesis Features Summary
+===========================
+Quick reference for top influential features in the circuit.
+
+Model: gemma-2-2b
+Prompt: "<bos>The state containing Seattle is"
+SAE: gemmascope-res-16k (transcoder)
+
+Top 10 Most Influential Features:
+---------------------------------
+
+1. ID: E_2329_2 | Layer: E (Embedding) | Context: 2 (state) | Influence: 1747.77
+   Type: Embedding feature (no Neuronpedia page)
+   Role: Initial "state" token representation
+
+2. ID: E_26996_4 | Layer: E (Embedding) | Context: 4 (Seattle) | Influence: 1382.07
+   Type: Embedding feature (no Neuronpedia page)
+   Role: Initial "Seattle" token representation
+
+3. ID: E_10751_3 | Layer: E (Embedding) | Context: 3 (containing) | Influence: 1127.69
+   Type: Embedding feature (no Neuronpedia page)
+   Role: Initial "containing" token representation
+
+4. ID: E_651_1 | Layer: E (Embedding) | Context: 1 (The) | Influence: 898.31
+   Type: Embedding feature (no Neuronpedia page)
+   Role: Initial "The" token representation
+
+5. ID: E_603_5 | Layer: E (Embedding) | Context: 5 (is) | Influence: 769.11
+   Type: Embedding feature (no Neuronpedia page)
+   Role: Initial "is" token representation (target position)
+
+6. ID: 19_467_5 | Layer: 19 | Context: 5 (is) | Influence: 343.29
+   URL: https://neuronpedia.org/gemma-2-2b/19-gemmascope-res-16k/467
+   Role: Late-stage router - key information aggregator at target position
+   Hypothesis: Information Routing Feature
+
+7. ID: 19_467_4 | Layer: 19 | Context: 4 (Seattle) | Influence: 335.67
+   URL: https://neuronpedia.org/gemma-2-2b/19-gemmascope-res-16k/467
+   Role: Seattle context processor feeding target position
+   Hypothesis: Information Routing Feature
+
+8. ID: 7_462_1 | Layer: 7 | Context: 1 (The) | Influence: 235.16
+   URL: https://neuronpedia.org/gemma-2-2b/7-gemmascope-res-16k/462
+   Role: Early-middle layer feature
+   Hypothesis: Domain/Topic Feature (Geography)
+
+9. ID: 10_14174_1 | Layer: 10 | Context: 1 (The) | Influence: 208.60
+   URL: https://neuronpedia.org/gemma-2-2b/10-gemmascope-res-16k/14174
+   Role: Middle layer feature
+   Hypothesis: Domain/Topic Feature (Geography)
+
+10. ID: 4_11742_4 | Layer: 4 | Context: 4 (Seattle) | Influence: 206.25
+    URL: https://neuronpedia.org/gemma-2-2b/4-gemmascope-res-16k/11742
+    Role: Early layer Seattle context processor
+    Hypothesis: Syntactic/Structural Feature
+
+
+Features by Hypothesis Category:
+--------------------------------
+
+DOMAIN/TOPIC FEATURES (Geography/US States):
+- 7_462_1: https://neuronpedia.org/gemma-2-2b/7-gemmascope-res-16k/462
+- 10_14174_1: https://neuronpedia.org/gemma-2-2b/10-gemmascope-res-16k/14174
+
+SYNTACTIC/STRUCTURAL FEATURES (Relation Detection):
+- 4_11742_4: https://neuronpedia.org/gemma-2-2b/4-gemmascope-res-16k/11742
+
+INFORMATION ROUTING FEATURES (Context Movers):
+- 19_467_5: https://neuronpedia.org/gemma-2-2b/19-gemmascope-res-16k/467
+- 19_467_4: https://neuronpedia.org/gemma-2-2b/19-gemmascope-res-16k/467
+
+LATE LAYER / DECISION FEATURES:
+- 27_7049_5: https://neuronpedia.org/gemma-2-2b/27-gemmascope-res-16k/7049
+- 25_553_5: https://neuronpedia.org/gemma-2-2b/25-gemmascope-res-16k/553
+- 24_14293_5: https://neuronpedia.org/gemma-2-2b/24-gemmascope-res-16k/14293
+- 23_6617_5: https://neuronpedia.org/gemma-2-2b/23-gemmascope-res-16k/6617
+
+
+Validation Status:
+------------------
+[ ] Feature 7_462_1 - Awaiting Neuronpedia verification
+[ ] Feature 10_14174_1 - Awaiting Neuronpedia verification
+[ ] Feature 4_11742_4 - Awaiting Neuronpedia verification
+[ ] Feature 19_467_5 - Awaiting Neuronpedia verification
+[ ] Feature 19_467_4 - Awaiting Neuronpedia verification
+[ ] Feature 27_7049_5 - Awaiting Neuronpedia verification
+
+
+Notes:
+------
+- Embedding (E) layer features don't have Neuronpedia pages
+- Feature IDs follow format: Layer_FeatureIndex_ContextPosition
+- Context positions: C0=<bos>, C1=The, C2=state, C3=containing, C4=Seattle, C5=is
+- High-influence embedding features suggest strong reliance on initial token representations
+- Layer 19 features appear critical for routing Seattle context to target position

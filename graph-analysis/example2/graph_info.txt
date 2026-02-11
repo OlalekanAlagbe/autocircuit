@@ -1,0 +1,13 @@
+Graph Metadata for thestatecontaini-1768998665701
+--------------------------------------------------
+Model: gemma-2-2b
+Prompt: <bos>The state containing Seattle is
+Tokens: ["<bos>", "The", " state", " containing", " Seattle", " is"]
+Created At: 2026-01-21T12:31:12.646Z
+Nodes: 1045
+Edges: 37978
+
+API Command:
+curl -X GET "https://neuronpedia-attrib.s3.us-east-1.amazonaws.com/user-graphs/cmknzdk5r0000x491tcid8y2s/thestatecontaini-1768998665701.json"
+
+Analysis Date: 2026-01-22 17:33:26
