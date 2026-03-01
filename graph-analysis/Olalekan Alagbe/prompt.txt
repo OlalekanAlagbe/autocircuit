@@ -1,0 +1,3 @@
+I have autocircuit_tools.py in this folder.
+First run it with: python autocircuit_tools.py to confirm Neuronpedia is connected.
+Then use the functions in that file to find the analogical circuit in Gemma-2-2B. Generate graphs for all 5 analogical prompts, compare them to find recurring features, label the top candidates, validate the most important ones with steer_feature(), save the circuit, and write me a full comprehensive research paper in an md file of what you found.
