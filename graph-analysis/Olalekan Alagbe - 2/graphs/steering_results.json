@@ -1,0 +1,101 @@
+[
+  {
+    "feature_layer": "0",
+    "feature_index": "11637899",
+    "feature_label": "the word \"part\" followed by prepositions or words related to sections or components",
+    "avg_influence": 0.7089,
+    "baseline": "[Inference API unavailable for transcoder-16k model]",
+    "steered": "[Inference API unavailable for transcoder-16k model]",
+    "changed": null,
+    "neighbour_count": 32,
+    "neighbour_labels": [
+      {
+        "node_id": "4_9555_1",
+        "explanation": " code comments and import statements"
+      },
+      {
+        "node_id": "5_3992_1",
+        "explanation": "the start of documentation blocks in code"
+      },
+      {
+        "node_id": "E_5342_4",
+        "explanation": "[E node \u2014 embedding or error term, no SAE feature]"
+      },
+      {
+        "node_id": "3_3205_4",
+        "explanation": " code snippets and documentation references, possibly related to web development"
+      },
+      {
+        "node_id": "1_12115_1",
+        "explanation": " code comments"
+      }
+    ],
+    "note": "Steering API returned 500 Unknown Error - gemmascope-transcoder-16k does not support live inference. Neighbourhood circuit analysis is valid."
+  },
+  {
+    "feature_layer": "0",
+    "feature_index": "18711902",
+    "feature_label": "words related to money or business transactions",
+    "avg_influence": 0.6891,
+    "baseline": "[Inference API unavailable for transcoder-16k model]",
+    "steered": "[Inference API unavailable for transcoder-16k model]",
+    "changed": null,
+    "neighbour_count": 16,
+    "neighbour_labels": [
+      {
+        "node_id": "1_12143_2",
+        "explanation": "the word \"artificial\""
+      },
+      {
+        "node_id": "E_5342_4",
+        "explanation": "[E node \u2014 embedding or error term, no SAE feature]"
+      },
+      {
+        "node_id": "4_15846_3",
+        "explanation": " words indicating disagreement or contradiction"
+      },
+      {
+        "node_id": "3_15843_4",
+        "explanation": "the word \"hot\" and words associated with heat"
+      },
+      {
+        "node_id": "3_3205_4",
+        "explanation": " code snippets and documentation references, possibly related to web development"
+      }
+    ],
+    "note": "Steering API returned 500 Unknown Error - gemmascope-transcoder-16k does not support live inference. Neighbourhood circuit analysis is valid."
+  },
+  {
+    "feature_layer": "0",
+    "feature_index": "74438300",
+    "feature_label": "a variety of specific nouns",
+    "avg_influence": 0.6834,
+    "baseline": "[Inference API unavailable for transcoder-16k model]",
+    "steered": "[Inference API unavailable for transcoder-16k model]",
+    "changed": null,
+    "neighbour_count": 57,
+    "neighbour_labels": [
+      {
+        "node_id": "4_9555_1",
+        "explanation": " code comments and import statements"
+      },
+      {
+        "node_id": "5_3992_1",
+        "explanation": "the start of documentation blocks in code"
+      },
+      {
+        "node_id": "6_4516_1",
+        "explanation": " the letter \"i.\""
+      },
+      {
+        "node_id": "E_5342_4",
+        "explanation": "[E node \u2014 embedding or error term, no SAE feature]"
+      },
+      {
+        "node_id": "2_15540_4",
+        "explanation": "words and phrases that are often found in scientific and technical documents, including descriptions of studies, circuits, applications, and conflicts."
+      }
+    ],
+    "note": "Steering API returned 500 Unknown Error - gemmascope-transcoder-16k does not support live inference. Neighbourhood circuit analysis is valid."
+  }
+]
