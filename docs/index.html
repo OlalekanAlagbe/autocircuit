@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,47 +14,226 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
+/* ── Theme variables ──────────────────────────────────────── */
+:root {
+  --bg:          #0d1117;
+  --bg2:         #161b22;
+  --bg3:         #21262d;
+  --border:      #30363d;
+  --text:        #c9d1d9;
+  --text-muted:  #8b949e;
+  --link:        #58a6ff;
+  --green:       #3fb950;
+  --orange:      #e67e22;
+  --purple:      #8854d0;
+  --red:         #f85149;
+  --hero-bg:     #0d1117;
+  --section-bg:  #0d1117;
+  --footer-bg:   #161b22;
+  --hr-color:    #30363d;
+  --code-bg:     #161b22;
+  --phase1-bg:   rgba(230,126,34,0.10);
+  --phase2-bg:   rgba(88,166,255,0.10);
+  --phase3-bg:   rgba(136,84,208,0.10);
+  --finding-bg:  rgba(63,185,80,0.10);
+  --finding-bdr: #3fb950;
+  --smoking-bg:  rgba(249,168,37,0.15);
+  --smoking-bdr: #d29922;
+  --table-head:  #161b22;
+  --table-even:  rgba(22,27,34,0.6);
+  /* SVG theme tokens */
+  --svg-box-blue-fill:   rgba(88,166,255,0.12);
+  --svg-box-blue-stroke: #58a6ff;
+  --svg-box-orange-fill: rgba(230,126,34,0.12);
+  --svg-box-orange-stroke: #e67e22;
+  --svg-text:            #c9d1d9;
+  --svg-text-muted:      #8b949e;
+  --svg-text-blue:       #58a6ff;
+  --svg-text-orange:     #e67e22;
+  --svg-divider:         #30363d;
+  --svg-bar-blue:        #3273dc;
+  --svg-bar-orange:      #e67e22;
+  --svg-bar-purple:      #8854d0;
+  --svg-bar-label:       #8b949e;
+}
+[data-theme="light"] {
+  --bg:          #ffffff;
+  --bg2:         #f6f8fa;
+  --bg3:         #eaeef2;
+  --border:      #d0d7de;
+  --text:        #1f2328;
+  --text-muted:  #57606a;
+  --link:        #0969da;
+  --green:       #1a7f37;
+  --orange:      #bc4c00;
+  --purple:      #6639ba;
+  --red:         #cf222e;
+  --hero-bg:     #ffffff;
+  --section-bg:  #ffffff;
+  --footer-bg:   #f6f8fa;
+  --hr-color:    #ededed;
+  --code-bg:     #eaeef2;
+  --phase1-bg:   #fff9f5;
+  --phase2-bg:   #f5f9ff;
+  --phase3-bg:   #f9f5ff;
+  --finding-bg:  #f6fff8;
+  --finding-bdr: #1a7f37;
+  --smoking-bg:  #fffde7;
+  --smoking-bdr: #f9a825;
+  --table-head:  #f6f8fa;
+  --table-even:  #f6f8fa;
+  --svg-box-blue-fill:   #f0f4ff;
+  --svg-box-blue-stroke: #3273dc;
+  --svg-box-orange-fill: #fff9e6;
+  --svg-box-orange-stroke: #e67e22;
+  --svg-text:            #1a1a1a;
+  --svg-text-muted:      #555555;
+  --svg-text-blue:       #3273dc;
+  --svg-text-orange:     #bc4c00;
+  --svg-divider:         #dddddd;
+  --svg-bar-blue:        #3273dc;
+  --svg-bar-orange:      #e67e22;
+  --svg-bar-purple:      #8854d0;
+  --svg-bar-label:       #555555;
+}
+
+/* ── Base ─────────────────────────────────────────────────── */
 html { font-size: 12pt; }
-body { font-family: 'DM Sans', sans-serif !important; color: #000; }
-code, pre { font-family: 'DM Mono', monospace !important; }
+body {
+  font-family: 'DM Sans', sans-serif !important;
+  color: var(--text);
+  background: var(--bg);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+code, pre { font-family: 'DM Mono', monospace !important; background: var(--code-bg) !important; color: var(--link) !important; }
+a { color: var(--link); }
+a:hover { color: var(--link); opacity: 0.8; }
+
+/* ── Bulma overrides ──────────────────────────────────────── */
+.hero { background: var(--hero-bg) !important; }
+.section { background: var(--section-bg) !important; }
+.footer { background: var(--footer-bg) !important; color: var(--text-muted); }
+.footer a { color: var(--link); }
+.title { color: var(--text) !important; }
+.content { color: var(--text); }
+.content h2, .content h3, .content h4, .content h5 { color: var(--text) !important; }
+.content p, .content li, .content ol, .content ul { color: var(--text); }
+.content strong { color: var(--text); }
+.content em { color: var(--text-muted); }
+.table { background: var(--bg2) !important; color: var(--text) !important; border-color: var(--border) !important; }
+.table thead th { background: var(--table-head) !important; color: var(--text-muted) !important; border-color: var(--border) !important; }
+.table td, .table th { border-color: var(--border) !important; color: var(--text) !important; }
+.table.is-hoverable tbody tr:hover { background: var(--bg3) !important; }
+.table tbody tr:nth-child(even) td { background: var(--table-even) !important; }
+.is-size-5 { color: var(--text-muted); }
+
+/* ── Layout helpers ───────────────────────────────────────── */
 .max-width-content { max-width: 70vw; margin: 0 auto; }
-hr.section-divider { background-color: #edededed; height: 1px; border: none; width: 90vw; margin: 0 auto; }
+hr.section-divider { background-color: var(--hr-color); height: 1px; border: none; width: 90vw; margin: 0 auto; }
 .publication-links .link-block { margin: 5px; display: inline-block; }
-.figure-caption { color: #555; font-size: 0.9em; margin-top: 10px; line-height: 1.5; }
-.figure-number { font-weight: 700; }
-/* Phase boxes for circuit diagram */
+.figure-caption { color: var(--text-muted); font-size: 0.9em; margin-top: 10px; line-height: 1.5; }
+.figure-number { font-weight: 700; color: var(--text); }
+
+/* ── Theme toggle button ──────────────────────────────────── */
+#theme-toggle {
+  position: fixed;
+  top: 14px;
+  right: 18px;
+  z-index: 9999;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-radius: 20px;
+  padding: 5px 14px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.78em;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: background 0.2s, border-color 0.2s;
+}
+#theme-toggle:hover { border-color: var(--link); color: var(--link); }
+
+/* ── Circuit phase boxes ──────────────────────────────────── */
 .phase-box { border-radius: 6px; padding: 14px 18px; margin: 8px 0; }
-.phase-input { background: #363636; color: #fff; border-radius: 6px; padding: 12px 18px; font-family: 'DM Mono', monospace; font-size: 0.9em; text-align: center; }
-.phase-output { background: #363636; color: #3fb950; border-radius: 6px; padding: 12px 18px; font-family: 'DM Mono', monospace; font-size: 0.9em; text-align: center; }
-.phase-1 { border-left: 4px solid #e67e22; background: #fff9f5; }
-.phase-2 { border-left: 4px solid #3273dc; background: #f5f9ff; }
-.phase-3 { border-left: 4px solid #8854d0; background: #f9f5ff; }
-.phase-label { font-size: 0.75em; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 6px; }
-.phase-label-1 { color: #e67e22; }
-.phase-label-2 { color: #3273dc; }
-.phase-label-3 { color: #8854d0; }
-.phase-feature { font-family: 'DM Mono', monospace; font-size: 0.8em; color: #333; margin: 2px 0; }
-.phase-feature strong { color: #1a1a1a; }
-.phase-arrow { text-align: center; font-size: 1.8em; color: #aaa; line-height: 1.2; margin: 2px 0; }
-.smoking-gun { background: #fffde7; border: 2px solid #f9a825; border-radius: 4px; padding: 2px 6px; font-weight: 700; }
-/* Venn diagram */
-.venn-container { display: flex; align-items: center; justify-content: center; gap: 0; margin: 16px auto; }
-.venn-circle { border-radius: 50%; width: 180px; height: 180px; display: flex; align-items: center; justify-content: center; font-size: 0.75em; text-align: center; padding: 20px; }
-.venn-left { background: rgba(50, 115, 220, 0.15); border: 2px solid #3273dc; margin-right: -40px; }
-.venn-right { background: rgba(136, 84, 208, 0.15); border: 2px solid #8854d0; margin-left: -40px; }
-.venn-overlap { background: rgba(63, 185, 80, 0.25); border: 2px solid #3fb950; width: 120px; height: 120px; z-index: 1; font-size: 0.7em; text-align: center; display: flex; align-items: center; justify-content: center; padding: 8px; border-radius: 50%; }
-/* Finding callout */
-.finding-box { border-left: 4px solid #3fb950; background: #f6fff8; padding: 12px 16px; border-radius: 0 6px 6px 0; margin: 12px 0; }
-.finding-box p { margin: 0; }
-/* Activation bar chart */
+.phase-input  { background: var(--bg3); color: var(--text); border: 1px solid var(--border); border-radius: 6px; padding: 12px 18px; font-family: 'DM Mono', monospace; font-size: 0.9em; text-align: center; }
+.phase-output { background: var(--bg3); color: var(--green); border: 1px solid var(--border); border-radius: 6px; padding: 12px 18px; font-family: 'DM Mono', monospace; font-size: 0.9em; text-align: center; }
+.phase-1 { border-left: 4px solid var(--orange); background: var(--phase1-bg); }
+.phase-2 { border-left: 4px solid var(--link);   background: var(--phase2-bg); }
+.phase-3 { border-left: 4px solid var(--purple);  background: var(--phase3-bg); }
+.phase-label   { font-size: 0.75em; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 6px; }
+.phase-label-1 { color: var(--orange); }
+.phase-label-2 { color: var(--link); }
+.phase-label-3 { color: var(--purple); }
+.phase-feature { font-family: 'DM Mono', monospace; font-size: 0.8em; color: var(--text); margin: 2px 0; }
+.phase-feature strong { color: var(--text); }
+.phase-arrow   { text-align: center; font-size: 1.8em; color: var(--text-muted); line-height: 1.2; margin: 2px 0; }
+.smoking-gun   { background: var(--smoking-bg); border: 2px solid var(--smoking-bdr); border-radius: 4px; padding: 2px 6px; font-weight: 700; color: var(--text); }
+.finding-box   { border-left: 4px solid var(--finding-bdr); background: var(--finding-bg); padding: 12px 16px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.finding-box p { margin: 0; color: var(--text); }
+
+/* ── SVG theming via CSS vars ─────────────────────────────── */
+.svg-box-blue   { fill: var(--svg-box-blue-fill);   stroke: var(--svg-box-blue-stroke);   stroke-width: 1.5; }
+.svg-box-orange { fill: var(--svg-box-orange-fill); stroke: var(--svg-box-orange-stroke); stroke-width: 1.5; }
+.svg-box-bg     { fill: var(--bg2); stroke: var(--border); stroke-width: 1; }
+.svg-text-main  { fill: var(--svg-text); }
+.svg-text-muted { fill: var(--svg-text-muted); }
+.svg-text-blue  { fill: var(--svg-text-blue);   font-weight: 600; }
+.svg-text-orange{ fill: var(--svg-text-orange); font-weight: 600; }
+.svg-text-green { fill: var(--green); font-weight: 700; }
+.svg-divider    { stroke: var(--svg-divider); }
+.svg-arrow      { fill: var(--text-muted); }
+.svg-bar-blue   { fill: var(--svg-bar-blue); }
+.svg-bar-orange { fill: var(--svg-bar-orange); }
+.svg-bar-purple { fill: var(--svg-bar-purple); }
+.svg-bar-label  { fill: var(--svg-bar-label); }
+.svg-circle-blue   { fill: rgba(88,166,255,0.12); stroke: #58a6ff; stroke-width: 2; }
+.svg-circle-purple { fill: rgba(136,84,208,0.12); stroke: #8854d0; stroke-width: 2; }
+[data-theme="light"] .svg-circle-blue   { fill: rgba(50,115,220,0.12); stroke: #3273dc; }
+[data-theme="light"] .svg-circle-purple { fill: rgba(136,84,208,0.12); stroke: #8854d0; }
+
+/* ── Bar chart ────────────────────────────────────────────── */
 .bar-chart { margin: 16px 0; }
 .bar-row { display: flex; align-items: center; margin: 6px 0; gap: 10px; }
-.bar-row-label { width: 80px; font-size: 0.8em; color: #555; font-family: 'DM Mono', monospace; text-align: right; }
+.bar-row-label { width: 80px; font-size: 0.8em; color: var(--text-muted); font-family: 'DM Mono', monospace; text-align: right; }
 .bar-fill { height: 24px; border-radius: 3px; display: flex; align-items: center; padding-left: 8px; color: white; font-size: 0.75em; font-weight: 600; }
-.bar-value { font-size: 0.75em; color: #555; margin-left: 6px; font-family: 'DM Mono', monospace; }
+.bar-value { font-size: 0.75em; color: var(--text-muted); margin-left: 6px; font-family: 'DM Mono', monospace; }
+
+/* ── Supplementary cards ──────────────────────────────────── */
+.supp-card { border: 1px solid var(--border); border-radius: 8px; padding: 20px; background: var(--bg2); }
+.supp-card p { color: var(--text-muted); }
+.supp-card a.button.is-dark { background: #363636; color: #fff; }
+[data-theme="light"] .supp-card { background: #f6f8fa; border-color: #d0d7de; }
 </style>
 </head>
 <body>
+
+<!-- THEME TOGGLE -->
+<button id="theme-toggle" onclick="toggleTheme()" title="Toggle light/dark mode">
+  <span id="theme-icon">☀️</span>
+  <span id="theme-label">Light mode</span>
+</button>
+<script>
+function toggleTheme() {
+  const html = document.documentElement;
+  const isDark = html.getAttribute('data-theme') === 'dark';
+  html.setAttribute('data-theme', isDark ? 'light' : 'dark');
+  document.getElementById('theme-icon').textContent  = isDark ? '🌙' : '☀️';
+  document.getElementById('theme-label').textContent = isDark ? 'Dark mode' : 'Light mode';
+  localStorage.setItem('theme', isDark ? 'light' : 'dark');
+}
+// Restore saved preference
+(function() {
+  const saved = localStorage.getItem('theme') || 'dark';
+  document.documentElement.setAttribute('data-theme', saved);
+  document.addEventListener('DOMContentLoaded', function() {
+    const isDark = saved === 'dark';
+    document.getElementById('theme-icon').textContent  = isDark ? '☀️' : '🌙';
+    document.getElementById('theme-label').textContent = isDark ? 'Light mode' : 'Dark mode';
+  });
+})();
+</script>
 
 <!-- HERO -->
 <section class="hero">
@@ -67,10 +246,16 @@ hr.section-divider { background-color: #edededed; height: 1px; border: none; wid
             in <span style="font-variant: small-caps;">Gemma-2-2B</span>
           </h1>
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><a href="#">Olalekan Alagbe</a></span>
+            <span class="author-block" style="margin: 0 8px;">
+              <a href="https://www.linkedin.com/in/olalekanjoshuaalagbe1000/" target="_blank" style="color:var(--link);">Olalekan Alagbe</a>
+            </span>
+            <span style="color:var(--text-muted);">·</span>
+            <span class="author-block" style="margin: 0 8px;">
+              <a href="https://www.linkedin.com/in/kkrampis/" target="_blank" style="color:var(--link);">Konstantinos Krampis</a>
+            </span>
           </div>
           <div class="is-size-5 publication-authors" style="margin-top:4px;">
-            <span style="color:#555;">Mechanistic Interpretability &nbsp;·&nbsp; March 2026</span>
+            <span style="color:var(--text-muted);">Mechanistic Interpretability &nbsp;·&nbsp; March 2026</span>
           </div>
           <div class="column has-text-centered" style="margin-top:16px;">
             <div class="publication-links">
@@ -81,15 +266,21 @@ hr.section-divider { background-color: #edededed; height: 1px; border: none; wid
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://github.com/kkrampis/autocircuit" class="external-link button is-normal is-rounded is-dark">
+                <a href="https://github.com/kkrampis/autocircuit" class="external-link button is-normal is-rounded is-dark" target="_blank">
                   <span class="icon"><i class="fab fa-github"></i></span>
                   <span>Code</span>
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://www.neuronpedia.org/gemma-2-2b" class="external-link button is-normal is-rounded is-dark">
+                <a href="presentation.html" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fa-solid fa-display"></i></span>
+                  <span>Presentation</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://www.neuronpedia.org/gemma-2-2b/graph?slug=analog_berlin" class="external-link button is-normal is-rounded is-dark" target="_blank">
                   <span class="icon"><i class="fa-solid fa-brain"></i></span>
-                  <span>Neuronpedia</span>
+                  <span>Attribution Graphs</span>
                 </a>
               </span>
             </div>
@@ -130,28 +321,28 @@ hr.section-divider { background-color: #edededed; height: 1px; border: none; wid
 
       <div class="max-width-content" style="margin: 24px auto;">
         <svg viewBox="0 0 680 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:680px;display:block;margin:0 auto;">
-          <rect x="10" y="60" width="100" height="40" rx="6" fill="#f0f4ff" stroke="#3273dc" stroke-width="1.5"/>
-          <text x="60" y="85" text-anchor="middle" font-family="DM Mono,monospace" font-size="13" fill="#1a1a1a">Paris</text>
-          <line x1="110" y1="80" x2="170" y2="80" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-          <rect x="170" y="60" width="110" height="40" rx="6" fill="#f0f4ff" stroke="#3273dc" stroke-width="1.5"/>
-          <text x="225" y="80" text-anchor="middle" font-family="DM Mono,monospace" font-size="13" fill="#1a1a1a">France</text>
-          <text x="140" y="72" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#888">capital-of</text>
-          <text x="160" y="140" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" fill="#555" font-style="italic">Known pair</text>
-          <line x1="340" y1="40" x2="340" y2="160" stroke="#ddd" stroke-width="1" stroke-dasharray="4,3"/>
-          <rect x="370" y="60" width="100" height="40" rx="6" fill="#f0f4ff" stroke="#3273dc" stroke-width="1.5"/>
-          <text x="420" y="85" text-anchor="middle" font-family="DM Mono,monospace" font-size="13" fill="#1a1a1a">Berlin</text>
-          <line x1="470" y1="80" x2="530" y2="80" stroke="#555" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arr)"/>
-          <rect x="530" y="60" width="120" height="40" rx="6" fill="#fff9e6" stroke="#e67e22" stroke-width="1.5"/>
-          <text x="590" y="85" text-anchor="middle" font-family="DM Mono,monospace" font-size="13" fill="#e67e22">Germany?</text>
-          <text x="500" y="72" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#888">capital-of?</text>
-          <text x="520" y="140" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" fill="#555" font-style="italic">To complete</text>
-          <text x="60" y="20" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" fill="#3273dc" font-weight="600">GIVEN</text>
-          <text x="520" y="20" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" fill="#e67e22" font-weight="600">QUERY</text>
           <defs>
             <marker id="arr" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
-              <path d="M0,0 L0,6 L6,3 z" fill="#555"/>
+              <path d="M0,0 L0,6 L6,3 z" class="svg-arrow"/>
             </marker>
           </defs>
+          <rect x="10" y="60" width="100" height="40" rx="6" class="svg-box-blue"/>
+          <text x="60" y="85" text-anchor="middle" font-family="DM Mono,monospace" font-size="13" class="svg-text-main">Paris</text>
+          <line x1="110" y1="80" x2="170" y2="80" stroke-width="1.5" class="svg-divider" marker-end="url(#arr)"/>
+          <rect x="170" y="60" width="110" height="40" rx="6" class="svg-box-blue"/>
+          <text x="225" y="80" text-anchor="middle" font-family="DM Mono,monospace" font-size="13" class="svg-text-main">France</text>
+          <text x="140" y="72" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" class="svg-text-muted">capital-of</text>
+          <text x="160" y="140" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" font-style="italic" class="svg-text-muted">Known pair</text>
+          <line x1="340" y1="40" x2="340" y2="160" stroke-width="1" stroke-dasharray="4,3" class="svg-divider"/>
+          <rect x="370" y="60" width="100" height="40" rx="6" class="svg-box-blue"/>
+          <text x="420" y="85" text-anchor="middle" font-family="DM Mono,monospace" font-size="13" class="svg-text-main">Berlin</text>
+          <line x1="470" y1="80" x2="530" y2="80" stroke-width="1.5" stroke-dasharray="5,3" class="svg-divider" marker-end="url(#arr)"/>
+          <rect x="530" y="60" width="120" height="40" rx="6" class="svg-box-orange"/>
+          <text x="590" y="85" text-anchor="middle" font-family="DM Mono,monospace" font-size="13" class="svg-text-orange">Germany?</text>
+          <text x="500" y="72" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" class="svg-text-muted">capital-of?</text>
+          <text x="520" y="140" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" font-style="italic" class="svg-text-muted">To complete</text>
+          <text x="60" y="20" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" class="svg-text-blue">GIVEN</text>
+          <text x="520" y="20" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" class="svg-text-orange">QUERY</text>
         </svg>
         <p class="figure-caption has-text-centered"><span class="figure-number">Figure 1.</span> The analogy task. Given the relationship between Paris and France, the model must recognize the <em>capital-of</em> relation and apply it to a new pair. This requires relational abstraction, not mere fact retrieval.</p>
       </div>
@@ -286,23 +477,19 @@ hr.section-divider { background-color: #edededed; height: 1px; border: none; wid
 
       <div class="max-width-content" style="margin:20px auto;">
         <svg viewBox="0 0 600 160" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:600px;display:block;margin:0 auto;">
-          <text x="10" y="20" font-family="DM Sans,sans-serif" font-size="12" fill="#555" font-weight="600">Core features by layer group (all 5/5 graphs)</text>
-          <!-- L0 -->
-          <text x="60" y="50" text-anchor="end" font-family="DM Mono,monospace" font-size="10" fill="#555">L0</text>
-          <rect x="65" y="38" width="192" height="18" rx="3" fill="#3273dc" opacity="0.7"/>
-          <text x="262" y="50" font-family="DM Mono,monospace" font-size="10" fill="#333">12</text>
-          <!-- L1-L4 -->
-          <text x="60" y="78" text-anchor="end" font-family="DM Mono,monospace" font-size="10" fill="#555">L1–L4</text>
-          <rect x="65" y="66" width="304" height="18" rx="3" fill="#3273dc" opacity="0.7"/>
-          <text x="374" y="78" font-family="DM Mono,monospace" font-size="10" fill="#333">19</text>
-          <!-- L5-L6 -->
-          <text x="60" y="106" text-anchor="end" font-family="DM Mono,monospace" font-size="10" fill="#555">L5–L6</text>
-          <rect x="65" y="94" width="192" height="18" rx="3" fill="#e67e22" opacity="0.8"/>
-          <text x="262" y="106" font-family="DM Mono,monospace" font-size="10" fill="#333">12</text>
-          <!-- L8-L9 -->
-          <text x="60" y="134" text-anchor="end" font-family="DM Mono,monospace" font-size="10" fill="#555">L8–L13</text>
-          <rect x="65" y="122" width="112" height="18" rx="3" fill="#8854d0" opacity="0.8"/>
-          <text x="182" y="134" font-family="DM Mono,monospace" font-size="10" fill="#333">7</text>
+          <text x="10" y="20" font-family="DM Sans,sans-serif" font-size="12" font-weight="600" class="svg-text-muted">Core features by layer group (all 5/5 graphs)</text>
+          <text x="60" y="50" text-anchor="end" font-family="DM Mono,monospace" font-size="10" class="svg-bar-label">L0</text>
+          <rect x="65" y="38" width="192" height="18" rx="3" class="svg-bar-blue" opacity="0.8"/>
+          <text x="262" y="50" font-family="DM Mono,monospace" font-size="10" class="svg-text-muted">12</text>
+          <text x="60" y="78" text-anchor="end" font-family="DM Mono,monospace" font-size="10" class="svg-bar-label">L1–L4</text>
+          <rect x="65" y="66" width="304" height="18" rx="3" class="svg-bar-blue" opacity="0.8"/>
+          <text x="374" y="78" font-family="DM Mono,monospace" font-size="10" class="svg-text-muted">19</text>
+          <text x="60" y="106" text-anchor="end" font-family="DM Mono,monospace" font-size="10" class="svg-bar-label">L5–L6</text>
+          <rect x="65" y="94" width="192" height="18" rx="3" class="svg-bar-orange" opacity="0.9"/>
+          <text x="262" y="106" font-family="DM Mono,monospace" font-size="10" class="svg-text-muted">12</text>
+          <text x="60" y="134" text-anchor="end" font-family="DM Mono,monospace" font-size="10" class="svg-bar-label">L8–L13</text>
+          <rect x="65" y="122" width="112" height="18" rx="3" class="svg-bar-purple" opacity="0.9"/>
+          <text x="182" y="134" font-family="DM Mono,monospace" font-size="10" class="svg-text-muted">7</text>
         </svg>
         <p class="figure-caption has-text-centered"><span class="figure-number">Figure 2.</span> Distribution of core circuit features (active in all 5 graphs) by layer group. Orange = analogy recognition hub (L5–L6); Purple = relational integration (L8–L13).</p>
       </div>
@@ -452,24 +639,20 @@ hr.section-divider { background-color: #edededed; height: 1px; border: none; wid
       <div class="max-width-content" style="margin:20px auto;">
         <!-- Venn diagram via SVG -->
         <svg viewBox="0 0 560 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:560px;display:block;margin:0 auto;">
-          <!-- Left circle: Capital analogies -->
-          <circle cx="185" cy="100" r="90" fill="rgba(50,115,220,0.12)" stroke="#3273dc" stroke-width="2"/>
-          <!-- Right circle: Semantic role analogies -->
-          <circle cx="375" cy="100" r="90" fill="rgba(136,84,208,0.12)" stroke="#8854d0" stroke-width="2"/>
-          <!-- Labels -->
-          <text x="120" y="75" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" fill="#3273dc" font-weight="700">Capital</text>
-          <text x="120" y="90" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" fill="#3273dc" font-weight="700">Analogies</text>
-          <text x="120" y="110" text-anchor="middle" font-family="DM Mono,monospace" font-size="9" fill="#555">Berlin, Rome,</text>
-          <text x="120" y="123" text-anchor="middle" font-family="DM Mono,monospace" font-size="9" fill="#555">Tokyo</text>
-          <text x="440" y="75" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" fill="#8854d0" font-weight="700">Semantic</text>
-          <text x="440" y="90" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" fill="#8854d0" font-weight="700">Role Analogies</text>
-          <text x="440" y="110" text-anchor="middle" font-family="DM Mono,monospace" font-size="9" fill="#555">Teacher, Bird</text>
-          <!-- Overlap label -->
-          <text x="280" y="88" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#2d6a2d" font-weight="700">180 shared</text>
-          <text x="280" y="102" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#2d6a2d" font-weight="700">features</text>
-          <text x="280" y="118" text-anchor="middle" font-family="DM Mono,monospace" font-size="8.5" fill="#555">L5 #5793 "analogies"</text>
-          <text x="280" y="131" text-anchor="middle" font-family="DM Mono,monospace" font-size="8.5" fill="#555">L8 #13766 "analogies or</text>
-          <text x="280" y="143" text-anchor="middle" font-family="DM Mono,monospace" font-size="8.5" fill="#555">comparisons"</text>
+          <circle cx="185" cy="100" r="90" class="svg-circle-blue"/>
+          <circle cx="375" cy="100" r="90" class="svg-circle-purple"/>
+          <text x="118" y="75"  text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" font-weight="700" class="svg-text-blue">Capital</text>
+          <text x="118" y="90"  text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" font-weight="700" class="svg-text-blue">Analogies</text>
+          <text x="118" y="110" text-anchor="middle" font-family="DM Mono,monospace" font-size="9" class="svg-text-muted">Berlin, Rome,</text>
+          <text x="118" y="123" text-anchor="middle" font-family="DM Mono,monospace" font-size="9" class="svg-text-muted">Tokyo</text>
+          <text x="442" y="75"  text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" font-weight="700" style="fill:var(--purple)">Semantic</text>
+          <text x="442" y="90"  text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" font-weight="700" style="fill:var(--purple)">Role Analogies</text>
+          <text x="442" y="110" text-anchor="middle" font-family="DM Mono,monospace" font-size="9" class="svg-text-muted">Teacher, Bird</text>
+          <text x="280" y="88"  text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" font-weight="700" class="svg-text-green">180 shared</text>
+          <text x="280" y="102" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" font-weight="700" class="svg-text-green">features</text>
+          <text x="280" y="118" text-anchor="middle" font-family="DM Mono,monospace" font-size="8.5" class="svg-text-muted">L5 #5793 "analogies"</text>
+          <text x="280" y="131" text-anchor="middle" font-family="DM Mono,monospace" font-size="8.5" class="svg-text-muted">L8 #13766 "analogies or</text>
+          <text x="280" y="143" text-anchor="middle" font-family="DM Mono,monospace" font-size="8.5" class="svg-text-muted">comparisons"</text>
         </svg>
         <p class="figure-caption has-text-centered"><span class="figure-number">Figure 4.</span> Cross-domain feature overlap. The 180 features active in all five graphs include the core analogy-concept features at L5 and L8, confirming a domain-agnostic mechanism for both geographic and semantic role analogies.</p>
       </div>
@@ -585,9 +768,9 @@ hr.section-divider { background-color: #edededed; height: 1px; border: none; wid
     <div class="content">
       <div class="columns">
         <div class="column">
-          <div style="border:1px solid #dbdbdb;border-radius:8px;padding:20px;">
-            <p style="font-size:1em;font-weight:700;margin-bottom:8px;"><i class="fa-solid fa-display" style="margin-right:8px;color:#363636;"></i>Interactive Presentation</p>
-            <p style="color:#555;font-size:0.9em;">20-slide reveal.js presentation with GitHub dark theme, circuit flow diagrams, feature tables, and layer-by-layer analysis.</p>
+          <div class="supp-card">
+            <p style="font-size:1em;font-weight:700;margin-bottom:8px;color:var(--text);"><i class="fa-solid fa-display" style="margin-right:8px;"></i>Interactive Presentation</p>
+            <p style="font-size:0.9em;">20-slide reveal.js presentation with GitHub dark theme, circuit flow diagrams, feature tables, and layer-by-layer analysis.</p>
             <a href="presentation.html" class="button is-normal is-rounded is-dark" style="margin-top:12px;">
               <span class="icon"><i class="fa-solid fa-display"></i></span>
               <span>View Presentation</span>
@@ -595,9 +778,9 @@ hr.section-divider { background-color: #edededed; height: 1px; border: none; wid
           </div>
         </div>
         <div class="column">
-          <div style="border:1px solid #dbdbdb;border-radius:8px;padding:20px;">
-            <p style="font-size:1em;font-weight:700;margin-bottom:8px;"><i class="fa-solid fa-brain" style="margin-right:8px;color:#363636;"></i>Live Attribution Graphs</p>
-            <p style="color:#555;font-size:0.9em;margin-bottom:10px;">Interactive Neuronpedia attribution graph viewer for all five prompts:</p>
+          <div class="supp-card">
+            <p style="font-size:1em;font-weight:700;margin-bottom:8px;color:var(--text);"><i class="fa-solid fa-brain" style="margin-right:8px;"></i>Live Attribution Graphs</p>
+            <p style="font-size:0.9em;margin-bottom:10px;">Interactive Neuronpedia attribution graph viewer for all five prompts:</p>
             <ul style="font-size:0.85em;list-style:none;padding:0;margin:0;">
               <li style="margin:4px 0;"><a href="https://www.neuronpedia.org/gemma-2-2b/graph?slug=analog_berlin" target="_blank"><code>analog_berlin</code></a> — Paris:France::Berlin:?</li>
               <li style="margin:4px 0;"><a href="https://www.neuronpedia.org/gemma-2-2b/graph?slug=analog_rome" target="_blank"><code>analog_rome</code></a> — Paris:France::Rome:?</li>
