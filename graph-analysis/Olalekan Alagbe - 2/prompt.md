@@ -1,16 +1,16 @@
 # Circuit Research Prompt
 
 ```
-I have autocircuit_tools_3.py in this folder.
+I have autocircuit_tools.py in this folder.
 
 # ── CONFIGURATION — change only this line to switch categories ───────────────
-CATEGORY = "factual_recall"   # options: "analogical" | "factual_recall" | "linguistic"
+CATEGORY = "linguistic"   # options: "analogical" | "factual_recall" | "linguistic"
 # ─────────────────────────────────────────────────────────────────────────────
 
-1. Run `python autocircuit_tools_3.py` to confirm Neuronpedia is connected. Stop and
+1. Run `python autocircuit_tools.py` to confirm Neuronpedia is connected. Stop and
    report if it fails.
 
-2. Import autocircuit_tools_3 and call build_prompt_dataset(). Extract the prompt list
+2. Import autocircuit_tools and call build_prompt_dataset(). Extract the prompt list
    for CATEGORY. Do NOT deduplicate — the list is already clean. Print the category
    name and the exact count of prompts before proceeding.
 
