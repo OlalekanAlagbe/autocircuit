@@ -20,13 +20,13 @@
   --gh-red: #f85149;
 }
 .reveal-viewport { background: var(--gh-bg) !important; }
-.reveal { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; color: var(--gh-text); }
+.reveal { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; color: var(--gh-text); font-size: 22px; }
 .reveal h1, .reveal h2, .reveal h3 { color: var(--gh-text); text-transform: none; letter-spacing: -0.5px; }
-.reveal h1 { color: var(--gh-blue); font-size: 1.8em; }
-.reveal h2 { color: var(--gh-blue); font-size: 1.4em; border-bottom: 1px solid var(--gh-border); padding-bottom: 0.3em; margin-bottom: 0.6em; }
-.reveal h3 { color: var(--gh-purple); font-size: 1.1em; }
+.reveal h1 { color: var(--gh-blue); font-size: 1.6em; }
+.reveal h2 { color: var(--gh-blue); font-size: 1.15em; border-bottom: 1px solid var(--gh-border); padding-bottom: 0.25em; margin-bottom: 0.5em; }
+.reveal h3 { color: var(--gh-purple); font-size: 0.95em; }
 .reveal section { background: var(--gh-bg); }
-.reveal .slides section { padding: 20px 40px; }
+.reveal .slides section { padding: 16px 36px; }
 .card { background: var(--gh-bg2); border: 1px solid var(--gh-border); border-radius: 6px; padding: 16px; margin: 8px 0; }
 .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.7em; font-weight: 600; font-family: monospace; margin: 2px; }
 .tag-blue { background: rgba(88,166,255,0.15); color: var(--gh-blue); border: 1px solid rgba(88,166,255,0.3); }
@@ -34,30 +34,33 @@
 .tag-orange { background: rgba(210,153,34,0.15); color: var(--gh-orange); border: 1px solid rgba(210,153,34,0.3); }
 .tag-purple { background: rgba(188,140,255,0.15); color: var(--gh-purple); border: 1px solid rgba(188,140,255,0.3); }
 .tag-red { background: rgba(248,81,73,0.15); color: var(--gh-red); border: 1px solid rgba(248,81,73,0.3); }
-table { width: 100%; border-collapse: collapse; font-size: 0.75em; }
-th { background: var(--gh-bg2); color: var(--gh-muted); padding: 6px 10px; border: 1px solid var(--gh-border); text-align: left; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
-td { padding: 6px 10px; border: 1px solid var(--gh-border); color: var(--gh-text); }
+table { width: 100%; border-collapse: collapse; font-size: 0.68em; }
+th { background: var(--gh-bg2); color: var(--gh-muted); padding: 5px 8px; border: 1px solid var(--gh-border); text-align: left; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+td { padding: 5px 8px; border: 1px solid var(--gh-border); color: var(--gh-text); }
 tr:nth-child(even) td { background: rgba(22,27,34,0.5); }
-code, .mono { font-family: 'SFMono-Regular', Consolas, monospace; font-size: 0.85em; background: var(--gh-bg2); padding: 1px 5px; border-radius: 3px; color: var(--gh-blue); }
-.flow-box { background: var(--gh-bg2); border: 1px solid var(--gh-border); border-radius: 6px; padding: 10px 16px; margin: 4px 0; text-align: center; }
+code, .mono { font-family: 'SFMono-Regular', Consolas, monospace; font-size: 0.82em; background: var(--gh-bg2); padding: 1px 4px; border-radius: 3px; color: var(--gh-blue); }
+.flow-box { background: var(--gh-bg2); border: 1px solid var(--gh-border); border-radius: 6px; padding: 8px 12px; margin: 3px 0; text-align: center; }
 .flow-box.key { border-color: var(--gh-blue); background: rgba(88,166,255,0.08); }
 .flow-box.phase1 { border-color: var(--gh-orange); background: rgba(210,153,34,0.06); }
 .flow-box.phase2 { border-color: var(--gh-blue); background: rgba(88,166,255,0.06); }
 .flow-box.phase3 { border-color: var(--gh-purple); background: rgba(188,140,255,0.06); }
-.flow-arrow { text-align: center; color: var(--gh-muted); font-size: 1.2em; margin: 2px 0; line-height: 1; }
+.flow-arrow { text-align: center; color: var(--gh-muted); font-size: 1.0em; margin: 1px 0; line-height: 1; }
 .highlight { color: var(--gh-blue); font-weight: 600; }
-.muted { color: var(--gh-muted); font-size: 0.85em; }
-.finding { border-left: 3px solid var(--gh-green); padding-left: 12px; margin: 8px 0; font-size: 0.85em; }
-.warning { border-left: 3px solid var(--gh-orange); padding-left: 12px; margin: 8px 0; font-size: 0.85em; }
-.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-.three-col { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
-.big-number { font-size: 2.5em; font-weight: 700; color: var(--gh-blue); display: block; }
-.big-label { font-size: 0.7em; color: var(--gh-muted); }
-ul { margin: 0; padding-left: 1.2em; }
-li { margin: 4px 0; font-size: 0.85em; }
+.muted { color: var(--gh-muted); font-size: 0.8em; }
+.finding { border-left: 3px solid var(--gh-green); padding-left: 10px; margin: 6px 0; font-size: 0.78em; }
+.warning { border-left: 3px solid var(--gh-orange); padding-left: 10px; margin: 6px 0; font-size: 0.78em; }
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.three-col { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; }
+.big-number { font-size: 2.0em; font-weight: 700; color: var(--gh-blue); display: block; }
+.big-label { font-size: 0.65em; color: var(--gh-muted); }
+ul { margin: 0; padding-left: 1.1em; }
+li { margin: 3px 0; font-size: 0.78em; }
 .reveal .progress { color: var(--gh-blue); }
-.reveal .slide-number { color: var(--gh-muted); font-size: 0.8em; }
-.phase-label { font-size: 0.65em; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; }
+.reveal .slide-number { color: var(--gh-muted); font-size: 0.75em; }
+.phase-label { font-size: 0.6em; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; }
+/* Figure SVGs in presentation */
+.pres-svg { width: 100%; max-height: 180px; display: block; margin: 6px auto; }
+.card { background: var(--gh-bg2); border: 1px solid var(--gh-border); border-radius: 6px; padding: 10px 14px; margin: 6px 0; }
 </style>
 </head>
 <body>
@@ -113,19 +116,36 @@ li { margin: 4px 0; font-size: 0.85em; }
 <!-- SLIDE 3: INTRODUCTION - WHAT IS ANALOGICAL REASONING -->
 <section data-background-color="#0d1117">
   <h2>Introduction: The Analogical Reasoning Challenge</h2>
-  <div class="two-col" style="margin-top:12px;">
+  <div class="two-col" style="margin-top:8px;">
     <div>
       <div class="card">
         <h3 style="margin-top:0;">The Task</h3>
-        <p style="font-size:0.85em;color:#c9d1d9;">Complete the analogy:</p>
-        <div style="background:#0d1117;border:1px solid #30363d;border-radius:4px;padding:10px;font-family:monospace;font-size:0.8em;color:#58a6ff;margin:8px 0;">
-          "Paris is to France as Berlin is to ____"
-        </div>
-        <p class="muted">Expected: <span style="color:#3fb950;font-weight:600;">"Germany"</span></p>
+        <!-- Figure 1: Analogy task diagram -->
+        <svg viewBox="0 0 560 140" xmlns="http://www.w3.org/2000/svg" class="pres-svg" style="max-height:130px;">
+          <defs><marker id="a2" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L0,6 L6,3 z" fill="#8b949e"/></marker></defs>
+          <rect x="8"   y="40" width="90"  height="36" rx="5" fill="rgba(88,166,255,0.15)" stroke="#58a6ff" stroke-width="1.5"/>
+          <text x="53"  y="63" text-anchor="middle" font-family="monospace" font-size="13" fill="#c9d1d9">Paris</text>
+          <line x1="98" y1="58" x2="148" y2="58" stroke="#8b949e" stroke-width="1.5" marker-end="url(#a2)"/>
+          <text x="123" y="50" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#8b949e">capital-of</text>
+          <rect x="148" y="40" width="100" height="36" rx="5" fill="rgba(88,166,255,0.15)" stroke="#58a6ff" stroke-width="1.5"/>
+          <text x="198" y="63" text-anchor="middle" font-family="monospace" font-size="13" fill="#c9d1d9">France</text>
+          <text x="130" y="120" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#8b949e" font-style="italic">Known pair</text>
+          <line x1="288" y1="20" x2="288" y2="120" stroke="#30363d" stroke-width="1" stroke-dasharray="4,3"/>
+          <rect x="298" y="40" width="90"  height="36" rx="5" fill="rgba(88,166,255,0.15)" stroke="#58a6ff" stroke-width="1.5"/>
+          <text x="343" y="63" text-anchor="middle" font-family="monospace" font-size="13" fill="#c9d1d9">Berlin</text>
+          <line x1="388" y1="58" x2="428" y2="58" stroke="#8b949e" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#a2)"/>
+          <text x="408" y="50" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#8b949e">capital-of?</text>
+          <rect x="428" y="40" width="110" height="36" rx="5" fill="rgba(210,153,34,0.15)" stroke="#d29922" stroke-width="1.5"/>
+          <text x="483" y="63" text-anchor="middle" font-family="monospace" font-size="13" fill="#d29922">Germany?</text>
+          <text x="420" y="120" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#d29922" font-style="italic">To complete</text>
+          <text x="130" y="22" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#58a6ff" font-weight="600">GIVEN</text>
+          <text x="420" y="22" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#d29922" font-weight="600">QUERY</text>
+        </svg>
+        <p class="muted" style="font-size:0.72em;">Expected: <span style="color:#3fb950;font-weight:600;">"Germany"</span></p>
       </div>
-      <div class="card" style="margin-top:8px;">
+      <div class="card" style="margin-top:6px;">
         <h3 style="margin-top:0;">The Core Question</h3>
-        <p style="font-size:0.8em;">Does the model perform genuine <span class="highlight">two-step relational reasoning</span> — identifying the capital-of relationship and applying it compositionally — or does it rely on a statistical shortcut?</p>
+        <p style="font-size:0.75em;">Does the model perform genuine <span class="highlight">two-step relational reasoning</span> or rely on a statistical shortcut?</p>
       </div>
     </div>
     <div>
@@ -138,9 +158,9 @@ li { margin: 4px 0; font-size: 0.85em; }
           <li>Must generalize across domains: geographic, professional, biological</li>
         </ul>
       </div>
-      <div class="card" style="margin-top:8px;">
+      <div class="card" style="margin-top:6px;">
         <h3 style="margin-top:0;">Prior Work Gap</h3>
-        <p style="font-size:0.8em;">Mechanistic interpretability has illuminated <em>factual recall</em> circuits (Meng et al. 2022) and <em>syntactic processing</em> (Conmy et al. 2023), but <strong>analogical reasoning</strong> — relational abstraction — remains unexplored at the circuit level.</p>
+        <p style="font-size:0.75em;">Mechanistic interpretability has illuminated <em>factual recall</em> circuits (Meng et al. 2022) and <em>syntactic processing</em> (Conmy et al. 2023), but <strong>analogical reasoning</strong> — relational abstraction — remains unexplored at the circuit level.</p>
       </div>
     </div>
   </div>
@@ -529,43 +549,64 @@ li { margin: 4px 0; font-size: 0.85em; }
 <!-- SLIDE 15: CROSS-DOMAIN GENERALIZATION -->
 <section data-background-color="#0d1117">
   <h2>Results: Cross-Domain Generalization</h2>
-  <p style="font-size:0.82em;color:#8b949e;margin:6px 0 12px;">The same core features activate for geographically-specific and semantically-open analogies — evidence of a domain-agnostic relational mechanism.</p>
-  <div class="two-col">
-    <div class="card" style="border-color:#d29922;">
-      <h3 style="margin-top:0;color:#d29922;">Capital-City Analogies</h3>
-      <ul>
-        <li>Berlin, Rome, Tokyo prompts</li>
-        <li>Nodes: 905–963 (smaller graphs)</li>
-        <li>Well-defined factual output domain</li>
-        <li>L5 "analogies" feature active ✓</li>
-        <li>L8 "analogies or comparisons" active ✓</li>
-        <li>Some L6–L7 geographic features unique to this type</li>
-      </ul>
+  <p style="font-size:0.78em;color:#8b949e;margin:4px 0 8px;">The same core features activate for both analogy types — evidence of a domain-agnostic relational mechanism.</p>
+  <div class="two-col" style="align-items:start;">
+    <div>
+      <!-- Venn diagram SVG -->
+      <svg viewBox="0 0 460 175" xmlns="http://www.w3.org/2000/svg" class="pres-svg" style="max-height:155px;">
+        <circle cx="155" cy="90" r="78" fill="rgba(88,166,255,0.12)" stroke="#58a6ff" stroke-width="1.8"/>
+        <circle cx="305" cy="90" r="78" fill="rgba(188,140,255,0.12)" stroke="#bc8cff" stroke-width="1.8"/>
+        <text x="95"  y="68"  text-anchor="middle" font-family="sans-serif" font-size="10" fill="#58a6ff" font-weight="700">Capital</text>
+        <text x="95"  y="82"  text-anchor="middle" font-family="sans-serif" font-size="10" fill="#58a6ff" font-weight="700">Analogies</text>
+        <text x="95"  y="100" text-anchor="middle" font-family="monospace"   font-size="8"  fill="#8b949e">Berlin, Rome,</text>
+        <text x="95"  y="113" text-anchor="middle" font-family="monospace"   font-size="8"  fill="#8b949e">Tokyo</text>
+        <text x="365" y="68"  text-anchor="middle" font-family="sans-serif" font-size="10" fill="#bc8cff" font-weight="700">Semantic</text>
+        <text x="365" y="82"  text-anchor="middle" font-family="sans-serif" font-size="10" fill="#bc8cff" font-weight="700">Role</text>
+        <text x="365" y="100" text-anchor="middle" font-family="monospace"   font-size="8"  fill="#8b949e">Teacher,</text>
+        <text x="365" y="113" text-anchor="middle" font-family="monospace"   font-size="8"  fill="#8b949e">Bird</text>
+        <text x="230" y="76"  text-anchor="middle" font-family="sans-serif" font-size="10" fill="#3fb950" font-weight="700">180 shared</text>
+        <text x="230" y="90"  text-anchor="middle" font-family="sans-serif" font-size="10" fill="#3fb950" font-weight="700">features</text>
+        <text x="230" y="108" text-anchor="middle" font-family="monospace"   font-size="7.5" fill="#c9d1d9">L5#5793 "analogies"</text>
+        <text x="230" y="120" text-anchor="middle" font-family="monospace"   font-size="7.5" fill="#c9d1d9">L8#13766 "comparisons"</text>
+      </svg>
     </div>
-    <div class="card" style="border-color:#58a6ff;">
-      <h3 style="margin-top:0;color:#58a6ff;">Semantic Role Analogies</h3>
-      <ul>
-        <li>Teacher, Bird prompts</li>
-        <li>Nodes: 1,040–1,071 (larger graphs)</li>
-        <li>Ambiguous output domain (school? sky?)</li>
-        <li>L5 "analogies" feature active ✓</li>
-        <li>L8 "analogies or comparisons" active ✓</li>
-        <li>Broader world-knowledge access required</li>
-      </ul>
+    <div>
+      <div class="card" style="border-color:#3fb950;margin-bottom:6px;">
+        <h3 style="margin-top:0;color:#3fb950;font-size:0.88em;">Shared Core (all 5 prompts)</h3>
+        <p style="font-size:0.72em;"><code>L5#5793 "analogies"</code> and <code>L8#13766 "analogies or comparisons"</code> appear in the shared core — strong evidence of a <strong>domain-agnostic circuit</strong>.</p>
+      </div>
+      <div class="card" style="border-color:#d29922;">
+        <h3 style="margin-top:0;color:#d29922;font-size:0.88em;">Graph Size Difference</h3>
+        <ul style="font-size:0.72em;">
+          <li>Capital graphs: 905–963 nodes (smaller)</li>
+          <li>Semantic role graphs: 1,040–1,071 nodes</li>
+          <li>Larger = broader world-knowledge access, not a different relational mechanism</li>
+        </ul>
+      </div>
     </div>
-  </div>
-  <div class="card" style="margin-top:10px;border-color:#3fb950;">
-    <h3 style="margin-top:0;color:#3fb950;">The Shared Core (180 features, all 5 prompts)</h3>
-    <p style="font-size:0.84em;">The explicitly analogical features — <code>L5#5793 "analogies"</code> and <code>L8#13766 "analogies or comparisons"</code> — appear in this shared core. This provides strong evidence that Gemma-2-2B uses a <strong>domain-agnostic analogical reasoning circuit</strong> rather than separate mechanisms for geographic vs. semantic analogies.</p>
-    <p class="muted">The larger graphs for semantic role analogies likely reflect greater world-knowledge retrieval breadth, not a fundamentally different relational mechanism.</p>
   </div>
 </section>
 
 <!-- SLIDE 16: ACTIVATION MAGNITUDE -->
 <section data-background-color="#0d1117">
   <h2>Results: Activation Signal Builds Through the Circuit</h2>
-  <p style="font-size:0.82em;color:#8b949e;margin:6px 0 12px;">Activation magnitudes increase substantially with layer depth for core circuit features — the analogy signal strengthens as it propagates.</p>
-  <div class="card" style="margin-bottom:12px;">
+  <p style="font-size:0.78em;color:#8b949e;margin:4px 0 8px;">Activation magnitudes increase with depth — the analogy signal strengthens as it propagates.</p>
+  <!-- Horizontal bar chart SVG (from paper Figure 5) -->
+  <svg viewBox="0 0 580 110" xmlns="http://www.w3.org/2000/svg" class="pres-svg" style="max-height:105px;margin-bottom:6px;">
+    <text x="5"   y="22"  font-family="monospace" font-size="9" fill="#8b949e" text-anchor="start">L0 structural</text>
+    <rect x="115" y="10"  width="130" height="15" rx="3" fill="#d29922" opacity="0.8"/>
+    <text x="250" y="22"  font-family="monospace" font-size="9" fill="#d29922">1.5–6.4</text>
+    <text x="5"   y="48"  font-family="monospace" font-size="9" fill="#8b949e" text-anchor="start">L5 analogy hub</text>
+    <rect x="115" y="36"  width="230" height="15" rx="3" fill="#58a6ff" opacity="0.85"/>
+    <text x="350" y="48"  font-family="monospace" font-size="9" fill="#58a6ff">7.4–11.1</text>
+    <text x="5"   y="74"  font-family="monospace" font-size="9" fill="#8b949e" text-anchor="start">L8–L9 detectors</text>
+    <rect x="115" y="62"  width="275" height="15" rx="3" fill="#3fb950" opacity="0.85"/>
+    <text x="395" y="74"  font-family="monospace" font-size="9" fill="#3fb950">~13.4</text>
+    <text x="5"   y="100" font-family="monospace" font-size="9" fill="#8b949e" text-anchor="start">L10–L13 integr.</text>
+    <rect x="115" y="88"  width="340" height="15" rx="3" fill="#bc8cff" opacity="0.85"/>
+    <text x="460" y="100" font-family="monospace" font-size="9" fill="#bc8cff">9.1–16.3</text>
+  </svg>
+  <div class="card" style="margin-bottom:8px;">
     <table>
       <tr><th>Phase</th><th>Layer Range</th><th>Role</th><th>Typical Avg Activation</th></tr>
       <tr>
