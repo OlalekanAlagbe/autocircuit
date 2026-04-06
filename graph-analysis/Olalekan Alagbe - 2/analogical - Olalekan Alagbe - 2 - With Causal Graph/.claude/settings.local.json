@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pip list:*)",
+      "Bash(python autocircuit_tools.py)",
+      "Bash(python -c ':*)",
+      "Read(//c/Users/USER/Desktop/autocircuit-claude-neuronpedia-graph-agent-01HFiC1iuN7NgrBABfkH7NzC/graph-analysis/**)",
+      "Bash(python)",
+      "Bash(PYTHONIOENCODING=utf-8 python write_narratives.py)",
+      "Bash(PYTHONIOENCODING=utf-8 python append_discussion.py)"
+    ]
+  }
+}
