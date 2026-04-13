@@ -1,0 +1,152 @@
+{
+  "analog_berlin": {
+    "suppress_all_phase2": {
+      "first_token": "France",
+      "disrupted": true,
+      "steered_text": "<bos>Paris is to France as Berlin is to France as ",
+      "default_text": "<bos>Paris is to France as Berlin is to Germany. I",
+      "n_features": 4
+    },
+    "suppress_all_phase1": {
+      "first_token": "",
+      "disrupted": true,
+      "steered_text": "<bos>Paris is to France as Berlin is to\n\n<h3>B) I",
+      "default_text": "<bos>Paris is to France as Berlin is to Germany. I",
+      "n_features": 5
+    },
+    "suppress_all_phase1_and_phase2": {
+      "first_token": ":",
+      "disrupted": true,
+      "steered_text": "<bos>Paris is to France as Berlin is to:::::",
+      "default_text": "<bos>Paris is to France as Berlin is to Germany. I",
+      "n_features": 9
+    },
+    "suppress_all_phase1_phase2_phase3": {
+      "first_token": ":",
+      "disrupted": true,
+      "steered_text": "<bos>Paris is to France as Berlin is to:::::",
+      "default_text": "<bos>Paris is to France as Berlin is to Germany. I",
+      "n_features": 10
+    }
+  },
+  "analog_rome": {
+    "suppress_all_phase2": {
+      "first_token": "France",
+      "disrupted": true,
+      "steered_text": "<bos>Paris is to France as Rome is to France as Ro",
+      "default_text": "<bos>Paris is to France as Rome is to Italy. It is",
+      "n_features": 4
+    },
+    "suppress_all_phase1": {
+      "first_token": "",
+      "disrupted": true,
+      "steered_text": "<bos>Paris is to France as Rome is to\n\n<h3>F's",
+      "default_text": "<bos>Paris is to France as Rome is to Italy. It is",
+      "n_features": 5
+    },
+    "suppress_all_phase1_and_phase2": {
+      "first_token": ":",
+      "disrupted": true,
+      "steered_text": "<bos>Paris is to France as Rome is to:::::",
+      "default_text": "<bos>Paris is to France as Rome is to Italy. It is",
+      "n_features": 9
+    },
+    "suppress_all_phase1_phase2_phase3": {
+      "first_token": ":",
+      "disrupted": true,
+      "steered_text": "<bos>Paris is to France as Rome is to:::::",
+      "default_text": "<bos>Paris is to France as Rome is to Italy. It is",
+      "n_features": 10
+    }
+  },
+  "analog_tokyo": {
+    "suppress_all_phase2": {
+      "first_token": "France",
+      "disrupted": true,
+      "steered_text": "<bos>Paris is to France as Tokyo is to France as w",
+      "default_text": "<bos>Paris is to France as Tokyo is to Japan. It i",
+      "n_features": 4
+    },
+    "suppress_all_phase1": {
+      "first_token": "",
+      "disrupted": true,
+      "steered_text": "<bos>Paris is to France as Tokyo is to\n\n<h3>\nThe ",
+      "default_text": "<bos>Paris is to France as Tokyo is to Japan. It i",
+      "n_features": 5
+    },
+    "suppress_all_phase1_and_phase2": {
+      "first_token": ":",
+      "disrupted": true,
+      "steered_text": "<bos>Paris is to France as Tokyo is to:::::",
+      "default_text": "<bos>Paris is to France as Tokyo is to Japan. It i",
+      "n_features": 9
+    },
+    "suppress_all_phase1_phase2_phase3": {
+      "first_token": ":",
+      "disrupted": true,
+      "steered_text": "<bos>Paris is to France as Tokyo is to:::::",
+      "default_text": "<bos>Paris is to France as Tokyo is to Japan. It i",
+      "n_features": 10
+    }
+  },
+  "analog_teacher": {
+    "suppress_all_phase2": {
+      "first_token": "be",
+      "disrupted": true,
+      "steered_text": "<bos>Doctor is to hospital as teacher is to be a n",
+      "default_text": "<bos>Doctor is to hospital as teacher is to school",
+      "n_features": 4
+    },
+    "suppress_all_phase1": {
+      "first_token": "to",
+      "disrupted": true,
+      "steered_text": "<bos>Doctor is to hospital as teacher is to to to ",
+      "default_text": "<bos>Doctor is to hospital as teacher is to school",
+      "n_features": 5
+    },
+    "suppress_all_phase1_and_phase2": {
+      "first_token": ":",
+      "disrupted": true,
+      "steered_text": "<bos>Doctor is to hospital as teacher is to:::::",
+      "default_text": "<bos>Doctor is to hospital as teacher is to school",
+      "n_features": 9
+    },
+    "suppress_all_phase1_phase2_phase3": {
+      "first_token": "be",
+      "disrupted": true,
+      "steered_text": "<bos>Doctor is to hospital as teacher is to be had",
+      "default_text": "<bos>Doctor is to hospital as teacher is to school",
+      "n_features": 10
+    }
+  },
+  "analog_bird": {
+    "suppress_all_phase2": {
+      "first_token": "fish",
+      "disrupted": true,
+      "steered_text": "<bos>Fish is to water as bird is to fish\n\nThe wate",
+      "default_text": "<bos>Fish is to water as bird is to air.\n\nThe fish",
+      "n_features": 4
+    },
+    "suppress_all_phase1": {
+      "first_token": "to",
+      "disrupted": true,
+      "steered_text": "<bos>Fish is to water as bird is to to to to to to",
+      "default_text": "<bos>Fish is to water as bird is to air.\n\nThe fish",
+      "n_features": 5
+    },
+    "suppress_all_phase1_and_phase2": {
+      "first_token": ":",
+      "disrupted": true,
+      "steered_text": "<bos>Fish is to water as bird is to:::::",
+      "default_text": "<bos>Fish is to water as bird is to air.\n\nThe fish",
+      "n_features": 9
+    },
+    "suppress_all_phase1_phase2_phase3": {
+      "first_token": ":",
+      "disrupted": true,
+      "steered_text": "<bos>Fish is to water as bird is to:::::",
+      "default_text": "<bos>Fish is to water as bird is to air.\n\nThe fish",
+      "n_features": 10
+    }
+  }
+}
