@@ -1,0 +1,43 @@
+# Neuronpedia API Configuration
+model:
+  name: "gemma-2-2b"
+  layers: 26  # Adjust based on actual model architecture
+  features_per_layer: null  # Will be fetched from API
+
+api:
+  base_url: "https://neuronpedia.org/api"
+  api_key: "YOUR_API_KEY_HERE"  # Get from https://neuronpedia.org
+  rate_limit_delay: 0.5  # seconds between requests
+
+# Feature selection
+feature_selection:
+  min_activation_threshold: 0.1
+  max_features_per_layer: 1000
+  focus_layers: null  # null = all layers, or specify list like [10, 15, 20]
+
+# Circuit detection parameters
+circuit_detection:
+  max_circuit_depth: 5
+  min_circuit_strength: 0.3
+  connection_threshold: 0.2
+
+# Supernode clustering
+supernode_clustering:
+  algorithm: "louvain"  # louvain, leiden, or hierarchical
+  min_cluster_size: 3
+  max_cluster_size: 50
+  similarity_threshold: 0.4
+
+# Safety analysis focus areas
+safety_focus:
+  - "deception"
+  - "power_seeking"
+  - "sycophancy"
+  - "backdoors"
+  - "jailbreaks"
+
+# Output settings
+output:
+  save_intermediate: true
+  visualization_format: "png"  # png, svg, or both
+  report_format: "markdown"
