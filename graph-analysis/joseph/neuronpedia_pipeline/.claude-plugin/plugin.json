@@ -1,0 +1,10 @@
+{
+  "name": "neuronpedia-pipeline",
+  "description": "Skills for LLM circuit analysis using Neuronpedia attribution graphs. Includes graph generation, conversion, analysis, visualization, comparison, validation, circuit reports, and steering validation.",
+  "version": "1.0.0",
+  "author": {
+    "name": "jbl10"
+  },
+  "license": "MIT",
+  "keywords": ["neuronpedia", "circuit-analysis", "sae", "mechanistic-interpretability", "steering"]
+}
