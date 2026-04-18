@@ -1,0 +1,1923 @@
+{
+  "analog_rome": {
+    "prompt": "Paris is to France as Rome is to",
+    "expected_token": "Italy",
+    "category": "analogical",
+    "confidence": 0.9738622903823853,
+    "graph_url": "https://www.neuronpedia.org/gemma-2-2b/graph?slug=analog_rome",
+    "graph_stats": {
+      "total_nodes": 963,
+      "total_edges": 27608,
+      "embedding_nodes": 9,
+      "transcoder_nodes": 825,
+      "error_nodes": 128
+    },
+    "backbone": {
+      "L0_F1053": {
+        "layer": 0,
+        "index": 1053,
+        "role": "Early feature detector",
+        "activation": 28.15,
+        "influence": 0.3273,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          3
+        ]
+      },
+      "L0_F8444": {
+        "layer": 0,
+        "index": 8444,
+        "role": "Early feature detector",
+        "activation": 38.72,
+        "influence": 0.338,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          2
+        ]
+      },
+      "L0_F11375": {
+        "layer": 0,
+        "index": 11375,
+        "role": "Early feature detector",
+        "activation": 31.78,
+        "influence": 0.3121,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          4
+        ]
+      },
+      "L1_F1321": {
+        "layer": 1,
+        "index": 1321,
+        "role": "Early feature detector",
+        "activation": 10.51,
+        "influence": 0.7964,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          1
+        ]
+      },
+      "L2_F3732": {
+        "layer": 2,
+        "index": 3732,
+        "role": "Early feature detector",
+        "activation": 8.2,
+        "influence": 0.5238,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          3
+        ]
+      },
+      "L2_F15420": {
+        "layer": 2,
+        "index": 15420,
+        "role": "Early feature detector",
+        "activation": 7.43,
+        "influence": 0.6319,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          4
+        ]
+      },
+      "L3_F10018": {
+        "layer": 3,
+        "index": 10018,
+        "role": "Early feature detector",
+        "activation": 19.84,
+        "influence": 0.4151,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          2
+        ]
+      },
+      "L4_F1802": {
+        "layer": 4,
+        "index": 1802,
+        "role": "Early feature detector",
+        "activation": 9.51,
+        "influence": 0.7641,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          1
+        ]
+      },
+      "L4_F10752": {
+        "layer": 4,
+        "index": 10752,
+        "role": "Early feature detector",
+        "activation": 14.01,
+        "influence": 0.5899,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          5
+        ]
+      },
+      "L4_F14496": {
+        "layer": 4,
+        "index": 14496,
+        "role": "Early feature detector",
+        "activation": 3.29,
+        "influence": 0.7799,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          3
+        ]
+      },
+      "L4_F14857": {
+        "layer": 4,
+        "index": 14857,
+        "role": "Early feature detector",
+        "activation": 11.09,
+        "influence": 0.792,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          4
+        ]
+      },
+      "L5_F2334": {
+        "layer": 5,
+        "index": 2334,
+        "role": "Early-mid feature",
+        "activation": 5.85,
+        "influence": 0.6646,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          3
+        ]
+      },
+      "L5_F5793": {
+        "layer": 5,
+        "index": 5793,
+        "role": "Early-mid feature",
+        "activation": 14.35,
+        "influence": 0.7879,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          1
+        ]
+      },
+      "L5_F7191": {
+        "layer": 5,
+        "index": 7191,
+        "role": "Early-mid feature",
+        "activation": 14.28,
+        "influence": 0.6438,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          5
+        ]
+      },
+      "L6_F2267": {
+        "layer": 6,
+        "index": 2267,
+        "role": "Early-mid feature",
+        "activation": 13.7,
+        "influence": 0.7159,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          3
+        ]
+      },
+      "L6_F4662": {
+        "layer": 6,
+        "index": 4662,
+        "role": "Early-mid feature",
+        "activation": 17.16,
+        "influence": 0.5685,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          4
+        ]
+      },
+      "L7_F7929": {
+        "layer": 7,
+        "index": 7929,
+        "role": "Early-mid feature",
+        "activation": 11.13,
+        "influence": 0.7536,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          4
+        ]
+      },
+      "L8_F13766": {
+        "layer": 8,
+        "index": 13766,
+        "role": "Early-mid feature",
+        "activation": 19.22,
+        "influence": 0.6857,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          5
+        ]
+      },
+      "L9_F13344": {
+        "layer": 9,
+        "index": 13344,
+        "role": "Early-mid feature",
+        "activation": 15.95,
+        "influence": 0.7527,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          1
+        ]
+      },
+      "L10_F14542": {
+        "layer": 10,
+        "index": 14542,
+        "role": "Mid-layer relay",
+        "activation": 7.28,
+        "influence": 0.7928,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          3
+        ]
+      },
+      "L13_F10969": {
+        "layer": 13,
+        "index": 10969,
+        "role": "Mid-layer relay",
+        "activation": 12.5,
+        "influence": 0.5854,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          1
+        ]
+      },
+      "L14_F11455": {
+        "layer": 14,
+        "index": 11455,
+        "role": "Mid-layer relay",
+        "activation": 32.5,
+        "influence": 0.7025,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          3
+        ]
+      },
+      "L15_F11238": {
+        "layer": 15,
+        "index": 11238,
+        "role": "Mid-layer relay",
+        "activation": 41.53,
+        "influence": 0.6462,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          5
+        ]
+      },
+      "L17_F8341": {
+        "layer": 17,
+        "index": 8341,
+        "role": "Mid-layer relay",
+        "activation": 21.41,
+        "influence": 0.3088,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          4
+        ]
+      },
+      "L17_F14546": {
+        "layer": 17,
+        "index": 14546,
+        "role": "Mid-layer relay",
+        "activation": 15.75,
+        "influence": 0.4511,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          5
+        ]
+      },
+      "L19_F5699": {
+        "layer": 19,
+        "index": 5699,
+        "role": "Mid-late relay/integration hub",
+        "activation": 13.01,
+        "influence": 0.5442,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          5
+        ]
+      },
+      "L20_F411": {
+        "layer": 20,
+        "index": 411,
+        "role": "Mid-late relay/integration hub",
+        "activation": 10.98,
+        "influence": 0.5866,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          5
+        ]
+      },
+      "L20_F6648": {
+        "layer": 20,
+        "index": 6648,
+        "role": "Mid-late relay/integration hub",
+        "activation": 38.17,
+        "influence": 0.7606,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          3
+        ]
+      },
+      "L20_F7666": {
+        "layer": 20,
+        "index": 7666,
+        "role": "Mid-late relay/integration hub",
+        "activation": 52.32,
+        "influence": 0.3011,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          1
+        ]
+      },
+      "L20_F15360": {
+        "layer": 20,
+        "index": 15360,
+        "role": "Mid-late relay/integration hub",
+        "activation": 23.27,
+        "influence": 0.2513,
+        "clerp": "",
+        "on_backward_paths": [
+          5
+        ],
+        "on_forward_paths": []
+      },
+      "L21_F11272": {
+        "layer": 21,
+        "index": 11272,
+        "role": "Mid-late relay/integration hub",
+        "activation": 16.43,
+        "influence": 0.4499,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          3
+        ]
+      },
+      "L21_F12427": {
+        "layer": 21,
+        "index": 12427,
+        "role": "Mid-late relay/integration hub",
+        "activation": 37.6,
+        "influence": 0.6221,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          1
+        ]
+      },
+      "L22_F12202": {
+        "layer": 22,
+        "index": 12202,
+        "role": "Mid-late relay/integration hub",
+        "activation": 17.85,
+        "influence": 0.6454,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          1
+        ]
+      },
+      "L22_F14727": {
+        "layer": 22,
+        "index": 14727,
+        "role": "Mid-late relay/integration hub",
+        "activation": 11.06,
+        "influence": 0.6643,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          5
+        ]
+      },
+      "L23_F5917": {
+        "layer": 23,
+        "index": 5917,
+        "role": "Late-layer amplifier/output driver",
+        "activation": 11.0,
+        "influence": 0.6266,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          2
+        ]
+      },
+      "L24_F13277": {
+        "layer": 24,
+        "index": 13277,
+        "role": "Late-layer amplifier/output driver",
+        "activation": 135.78,
+        "influence": 0.2972,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          1
+        ]
+      },
+      "L24_F16122": {
+        "layer": 24,
+        "index": 16122,
+        "role": "Convergence hub (3 paths) - Late-layer amplifier/output driver",
+        "activation": 25.42,
+        "influence": 0.2315,
+        "clerp": "",
+        "on_backward_paths": [
+          3
+        ],
+        "on_forward_paths": [
+          3,
+          4
+        ]
+      },
+      "L25_F286": {
+        "layer": 25,
+        "index": 286,
+        "role": "Late-layer amplifier/output driver",
+        "activation": 27.69,
+        "influence": 0.2391,
+        "clerp": "",
+        "on_backward_paths": [
+          2
+        ],
+        "on_forward_paths": []
+      },
+      "L25_F4717": {
+        "layer": 25,
+        "index": 4717,
+        "role": "Late-layer amplifier/output driver",
+        "activation": 265.2,
+        "influence": 0.2931,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          2
+        ]
+      },
+      "L25_F10521": {
+        "layer": 25,
+        "index": 10521,
+        "role": "Late-layer amplifier/output driver",
+        "activation": 20.52,
+        "influence": 0.2738,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          4
+        ]
+      }
+    },
+    "sufficiency_prompts": [
+      [
+        "Paris is to France as Tokyo is to",
+        "different analogy same structure"
+      ],
+      [
+        "Madrid is to Spain as Rome is to",
+        "different source pair"
+      ],
+      [
+        "The weather today is really",
+        "irrelevant context"
+      ]
+    ],
+    "non_backbone": [
+      {
+        "layer": 22,
+        "index": 14727,
+        "desc": "L22 non-backbone (act=150.8)",
+        "activation": 150.7597198486328
+      },
+      {
+        "layer": 24,
+        "index": 13541,
+        "desc": "L24 non-backbone (act=98.2)",
+        "activation": 98.1690673828125
+      }
+    ]
+  },
+  "analog_tokyo": {
+    "prompt": "Paris is to France as Tokyo is to",
+    "expected_token": "Japan",
+    "category": "analogical",
+    "confidence": 0.990234375,
+    "graph_url": "https://www.neuronpedia.org/gemma-2-2b/graph?slug=analog_tokyo",
+    "graph_stats": {
+      "total_nodes": 905,
+      "total_edges": 22414,
+      "embedding_nodes": 9,
+      "transcoder_nodes": 768,
+      "error_nodes": 127
+    },
+    "backbone": {
+      "L0_F1053": {
+        "layer": 0,
+        "index": 1053,
+        "role": "Early feature detector",
+        "activation": 28.15,
+        "influence": 0.3432,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          3
+        ]
+      },
+      "L0_F8444": {
+        "layer": 0,
+        "index": 8444,
+        "role": "Early feature detector",
+        "activation": 38.69,
+        "influence": 0.3776,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          2
+        ]
+      },
+      "L0_F11375": {
+        "layer": 0,
+        "index": 11375,
+        "role": "Early feature detector",
+        "activation": 31.78,
+        "influence": 0.3199,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          4
+        ]
+      },
+      "L1_F10469": {
+        "layer": 1,
+        "index": 10469,
+        "role": "Early feature detector",
+        "activation": 11.08,
+        "influence": 0.5146,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          3
+        ]
+      },
+      "L2_F15420": {
+        "layer": 2,
+        "index": 15420,
+        "role": "Early feature detector",
+        "activation": 7.43,
+        "influence": 0.66,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          4
+        ]
+      },
+      "L3_F3205": {
+        "layer": 3,
+        "index": 3205,
+        "role": "Early feature detector",
+        "activation": 6.29,
+        "influence": 0.7659,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          3
+        ]
+      },
+      "L3_F10018": {
+        "layer": 3,
+        "index": 10018,
+        "role": "Early feature detector",
+        "activation": 19.79,
+        "influence": 0.4897,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          2
+        ]
+      },
+      "L3_F15381": {
+        "layer": 3,
+        "index": 15381,
+        "role": "Early feature detector",
+        "activation": 5.01,
+        "influence": 0.7862,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          4
+        ]
+      },
+      "L4_F128": {
+        "layer": 4,
+        "index": 128,
+        "role": "Early feature detector",
+        "activation": 10.75,
+        "influence": 0.5901,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          4
+        ]
+      },
+      "L4_F10752": {
+        "layer": 4,
+        "index": 10752,
+        "role": "Early feature detector",
+        "activation": 14.01,
+        "influence": 0.5346,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          5
+        ]
+      },
+      "L5_F7191": {
+        "layer": 5,
+        "index": 7191,
+        "role": "Early-mid feature",
+        "activation": 8.82,
+        "influence": 0.7297,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          2
+        ]
+      },
+      "L5_F9672": {
+        "layer": 5,
+        "index": 9672,
+        "role": "Early-mid feature",
+        "activation": 19.23,
+        "influence": 0.7083,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          1
+        ]
+      },
+      "L6_F2267": {
+        "layer": 6,
+        "index": 2267,
+        "role": "Early-mid feature",
+        "activation": 13.7,
+        "influence": 0.6777,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          3
+        ]
+      },
+      "L6_F4662": {
+        "layer": 6,
+        "index": 4662,
+        "role": "Early-mid feature",
+        "activation": 17.16,
+        "influence": 0.5969,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          4
+        ]
+      },
+      "L8_F2742": {
+        "layer": 8,
+        "index": 2742,
+        "role": "Early-mid feature",
+        "activation": 12.44,
+        "influence": 0.7945,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          5
+        ]
+      },
+      "L8_F6462": {
+        "layer": 8,
+        "index": 6462,
+        "role": "Early-mid feature",
+        "activation": 10.82,
+        "influence": 0.6327,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          4
+        ]
+      },
+      "L8_F13766": {
+        "layer": 8,
+        "index": 13766,
+        "role": "Early-mid feature",
+        "activation": 29.31,
+        "influence": 0.6984,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          1
+        ]
+      },
+      "L9_F1195": {
+        "layer": 9,
+        "index": 1195,
+        "role": "Early-mid feature",
+        "activation": 5.03,
+        "influence": 0.7436,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          3
+        ]
+      },
+      "L9_F13344": {
+        "layer": 9,
+        "index": 13344,
+        "role": "Early-mid feature",
+        "activation": 15.57,
+        "influence": 0.7236,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          1
+        ]
+      },
+      "L10_F6033": {
+        "layer": 10,
+        "index": 6033,
+        "role": "Mid-layer relay",
+        "activation": 21.98,
+        "influence": 0.669,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          3
+        ]
+      },
+      "L13_F14536": {
+        "layer": 13,
+        "index": 14536,
+        "role": "Mid-layer relay",
+        "activation": 32.1,
+        "influence": 0.7638,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          3
+        ]
+      },
+      "L14_F11455": {
+        "layer": 14,
+        "index": 11455,
+        "role": "Mid-layer relay",
+        "activation": 32.5,
+        "influence": 0.5941,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          3
+        ]
+      },
+      "L15_F10550": {
+        "layer": 15,
+        "index": 10550,
+        "role": "Mid-layer relay",
+        "activation": 31.69,
+        "influence": 0.3935,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          5
+        ]
+      },
+      "L16_F12678": {
+        "layer": 16,
+        "index": 12678,
+        "role": "Mid-layer relay",
+        "activation": 32.85,
+        "influence": 0.7364,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          4
+        ]
+      },
+      "L17_F14546": {
+        "layer": 17,
+        "index": 14546,
+        "role": "Mid-layer relay",
+        "activation": 14.44,
+        "influence": 0.5393,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          5
+        ]
+      },
+      "L18_F5424": {
+        "layer": 18,
+        "index": 5424,
+        "role": "Mid-late relay/integration hub",
+        "activation": 35.88,
+        "influence": 0.6633,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          4
+        ]
+      },
+      "L19_F5699": {
+        "layer": 19,
+        "index": 5699,
+        "role": "Mid-late relay/integration hub",
+        "activation": 11.49,
+        "influence": 0.6439,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          5
+        ]
+      },
+      "L20_F411": {
+        "layer": 20,
+        "index": 411,
+        "role": "Mid-late relay/integration hub",
+        "activation": 10.8,
+        "influence": 0.6346,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          5
+        ]
+      },
+      "L20_F1194": {
+        "layer": 20,
+        "index": 1194,
+        "role": "Mid-late relay/integration hub",
+        "activation": 61.4,
+        "influence": 0.3066,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          4
+        ]
+      },
+      "L20_F6648": {
+        "layer": 20,
+        "index": 6648,
+        "role": "Mid-late relay/integration hub",
+        "activation": 35.69,
+        "influence": 0.7716,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          3
+        ]
+      },
+      "L20_F11695": {
+        "layer": 20,
+        "index": 11695,
+        "role": "Mid-late relay/integration hub",
+        "activation": 24.32,
+        "influence": 0.3017,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          1
+        ]
+      },
+      "L20_F15360": {
+        "layer": 20,
+        "index": 15360,
+        "role": "Mid-late relay/integration hub",
+        "activation": 28.84,
+        "influence": 0.2964,
+        "clerp": "",
+        "on_backward_paths": [
+          5
+        ],
+        "on_forward_paths": []
+      },
+      "L21_F7764": {
+        "layer": 21,
+        "index": 7764,
+        "role": "Mid-late relay/integration hub",
+        "activation": 11.08,
+        "influence": 0.4111,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          5
+        ]
+      },
+      "L21_F12003": {
+        "layer": 21,
+        "index": 12003,
+        "role": "Mid-late relay/integration hub",
+        "activation": 25.02,
+        "influence": 0.6575,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          3
+        ]
+      },
+      "L23_F850": {
+        "layer": 23,
+        "index": 850,
+        "role": "Late-layer amplifier/output driver",
+        "activation": 41.59,
+        "influence": 0.7739,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          4
+        ]
+      },
+      "L23_F13914": {
+        "layer": 23,
+        "index": 13914,
+        "role": "Late-layer amplifier/output driver",
+        "activation": 38.08,
+        "influence": 0.6199,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          5
+        ]
+      },
+      "L24_F13277": {
+        "layer": 24,
+        "index": 13277,
+        "role": "Late-layer amplifier/output driver",
+        "activation": 129.23,
+        "influence": 0.3711,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          2
+        ]
+      },
+      "L25_F286": {
+        "layer": 25,
+        "index": 286,
+        "role": "Late-layer amplifier/output driver",
+        "activation": 34.03,
+        "influence": 0.2908,
+        "clerp": "",
+        "on_backward_paths": [
+          5
+        ],
+        "on_forward_paths": []
+      },
+      "L25_F10152": {
+        "layer": 25,
+        "index": 10152,
+        "role": "Late-layer amplifier/output driver",
+        "activation": 15.1,
+        "influence": 0.7057,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          2
+        ]
+      },
+      "L25_F12223": {
+        "layer": 25,
+        "index": 12223,
+        "role": "Late-layer amplifier/output driver",
+        "activation": 30.77,
+        "influence": 0.2846,
+        "clerp": "",
+        "on_backward_paths": [
+          4
+        ],
+        "on_forward_paths": [
+          1
+        ]
+      }
+    },
+    "sufficiency_prompts": [
+      [
+        "Paris is to France as Rome is to",
+        "different analogy same structure"
+      ],
+      [
+        "Beijing is to China as Tokyo is to",
+        "different source pair"
+      ],
+      [
+        "The temperature outside was around",
+        "irrelevant context"
+      ]
+    ],
+    "non_backbone": [
+      {
+        "layer": 25,
+        "index": 4717,
+        "desc": "L25 non-backbone (act=275.3)",
+        "activation": 275.2569885253906
+      },
+      {
+        "layer": 24,
+        "index": 13541,
+        "desc": "L24 non-backbone (act=81.7)",
+        "activation": 81.71829223632812
+      }
+    ]
+  },
+  "analog_teacher": {
+    "prompt": "Doctor is to hospital as teacher is to",
+    "expected_token": "school",
+    "category": "analogical",
+    "confidence": 0.48596903681755066,
+    "graph_url": "https://www.neuronpedia.org/gemma-2-2b/graph?slug=analog_teacher",
+    "graph_stats": {
+      "total_nodes": 1040,
+      "total_edges": 35481,
+      "embedding_nodes": 9,
+      "transcoder_nodes": 873,
+      "error_nodes": 148
+    },
+    "backbone": {
+      "L0_F17": {
+        "layer": 0,
+        "index": 17,
+        "role": "Early feature detector",
+        "activation": null,
+        "influence": 0.2586,
+        "clerp": "",
+        "on_backward_paths": [
+          4
+        ],
+        "on_forward_paths": []
+      },
+      "L0_F1053": {
+        "layer": 0,
+        "index": 1053,
+        "role": "Early feature detector",
+        "activation": 28.23,
+        "influence": 0.2889,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          3
+        ]
+      },
+      "L0_F8444": {
+        "layer": 0,
+        "index": 8444,
+        "role": "Early feature detector",
+        "activation": 38.76,
+        "influence": 0.3116,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          2
+        ]
+      },
+      "L0_F13004": {
+        "layer": 0,
+        "index": 13004,
+        "role": "Early feature detector",
+        "activation": 6.6,
+        "influence": 0.6115,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          4
+        ]
+      },
+      "L1_F961": {
+        "layer": 1,
+        "index": 961,
+        "role": "Early feature detector",
+        "activation": 5.65,
+        "influence": 0.6501,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          4
+        ]
+      },
+      "L2_F3732": {
+        "layer": 2,
+        "index": 3732,
+        "role": "Early feature detector",
+        "activation": 9.11,
+        "influence": 0.494,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          3
+        ]
+      },
+      "L3_F10018": {
+        "layer": 3,
+        "index": 10018,
+        "role": "Early feature detector",
+        "activation": 16.58,
+        "influence": 0.501,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          2
+        ]
+      },
+      "L3_F12009": {
+        "layer": 3,
+        "index": 12009,
+        "role": "Early feature detector",
+        "activation": 4.6,
+        "influence": 0.6722,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          3
+        ]
+      },
+      "L4_F10752": {
+        "layer": 4,
+        "index": 10752,
+        "role": "Early feature detector",
+        "activation": 9.75,
+        "influence": 0.6794,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          2
+        ]
+      },
+      "L4_F14857": {
+        "layer": 4,
+        "index": 14857,
+        "role": "Early feature detector",
+        "activation": 17.83,
+        "influence": 0.6753,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          4
+        ]
+      },
+      "L5_F2267": {
+        "layer": 5,
+        "index": 2267,
+        "role": "Early-mid feature",
+        "activation": 8.76,
+        "influence": 0.7305,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          3
+        ]
+      },
+      "L5_F7191": {
+        "layer": 5,
+        "index": 7191,
+        "role": "Early-mid feature",
+        "activation": 8.46,
+        "influence": 0.7561,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          2
+        ]
+      },
+      "L5_F8174": {
+        "layer": 5,
+        "index": 8174,
+        "role": "Early-mid feature",
+        "activation": 11.57,
+        "influence": 0.5971,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          4
+        ]
+      },
+      "L7_F749": {
+        "layer": 7,
+        "index": 749,
+        "role": "Early-mid feature",
+        "activation": 10.16,
+        "influence": 0.7352,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          2
+        ]
+      },
+      "L7_F3099": {
+        "layer": 7,
+        "index": 3099,
+        "role": "Early-mid feature",
+        "activation": 17.27,
+        "influence": 0.6923,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          3
+        ]
+      },
+      "L7_F15132": {
+        "layer": 7,
+        "index": 15132,
+        "role": "Early-mid feature",
+        "activation": 18.14,
+        "influence": 0.7136,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          4
+        ]
+      },
+      "L9_F65": {
+        "layer": 9,
+        "index": 65,
+        "role": "Early-mid feature",
+        "activation": 22.41,
+        "influence": 0.7514,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          5
+        ]
+      },
+      "L9_F6399": {
+        "layer": 9,
+        "index": 6399,
+        "role": "Early-mid feature",
+        "activation": 12.68,
+        "influence": 0.7747,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          4
+        ]
+      },
+      "L10_F5559": {
+        "layer": 10,
+        "index": 5559,
+        "role": "Mid-layer relay",
+        "activation": 27.1,
+        "influence": 0.6686,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          2
+        ]
+      },
+      "L11_F2279": {
+        "layer": 11,
+        "index": 2279,
+        "role": "Mid-layer relay",
+        "activation": 15.18,
+        "influence": 0.6581,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          3
+        ]
+      },
+      "L11_F16076": {
+        "layer": 11,
+        "index": 16076,
+        "role": "Mid-layer relay",
+        "activation": 14.63,
+        "influence": 0.7652,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          2,
+          5
+        ]
+      },
+      "L14_F11455": {
+        "layer": 14,
+        "index": 11455,
+        "role": "Mid-layer relay",
+        "activation": 32.23,
+        "influence": 0.669,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          3
+        ]
+      },
+      "L15_F3343": {
+        "layer": 15,
+        "index": 3343,
+        "role": "Mid-layer relay",
+        "activation": 26.49,
+        "influence": 0.7056,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          2,
+          5
+        ]
+      },
+      "L15_F13801": {
+        "layer": 15,
+        "index": 13801,
+        "role": "Mid-layer relay",
+        "activation": 12.97,
+        "influence": 0.3335,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          4
+        ]
+      },
+      "L15_F13802": {
+        "layer": 15,
+        "index": 13802,
+        "role": "Mid-layer relay",
+        "activation": 23.71,
+        "influence": 0.7699,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          3
+        ]
+      },
+      "L18_F6532": {
+        "layer": 18,
+        "index": 6532,
+        "role": "Mid-late relay/integration hub",
+        "activation": 41.13,
+        "influence": 0.2632,
+        "clerp": "",
+        "on_backward_paths": [
+          3
+        ],
+        "on_forward_paths": [
+          4
+        ]
+      },
+      "L18_F11952": {
+        "layer": 18,
+        "index": 11952,
+        "role": "Mid-late relay/integration hub",
+        "activation": 46.31,
+        "influence": 0.7234,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          3
+        ]
+      },
+      "L18_F13586": {
+        "layer": 18,
+        "index": 13586,
+        "role": "Mid-late relay/integration hub",
+        "activation": 18.65,
+        "influence": 0.7621,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          2,
+          5
+        ]
+      },
+      "L20_F6179": {
+        "layer": 20,
+        "index": 6179,
+        "role": "Mid-late relay/integration hub",
+        "activation": 27.67,
+        "influence": 0.2857,
+        "clerp": "",
+        "on_backward_paths": [
+          5
+        ],
+        "on_forward_paths": []
+      },
+      "L21_F2655": {
+        "layer": 21,
+        "index": 2655,
+        "role": "Mid-late relay/integration hub",
+        "activation": 38.54,
+        "influence": 0.6639,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          2,
+          5
+        ]
+      },
+      "L22_F4751": {
+        "layer": 22,
+        "index": 4751,
+        "role": "Mid-late relay/integration hub",
+        "activation": 26.12,
+        "influence": 0.7853,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          5
+        ]
+      },
+      "L22_F15670": {
+        "layer": 22,
+        "index": 15670,
+        "role": "Mid-late relay/integration hub",
+        "activation": 87.44,
+        "influence": 0.7908,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          1
+        ]
+      },
+      "L23_F10032": {
+        "layer": 23,
+        "index": 10032,
+        "role": "Late-layer amplifier/output driver",
+        "activation": 14.0,
+        "influence": 0.5966,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          5
+        ]
+      },
+      "L24_F15259": {
+        "layer": 24,
+        "index": 15259,
+        "role": "Late-layer amplifier/output driver",
+        "activation": 12.67,
+        "influence": 0.4533,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          4
+        ]
+      },
+      "L25_F4717": {
+        "layer": 25,
+        "index": 4717,
+        "role": "Convergence hub (4 paths) - Late-layer amplifier/output driver",
+        "activation": 135.64,
+        "influence": 0.3722,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          1,
+          3,
+          4,
+          5
+        ]
+      },
+      "L25_F4975": {
+        "layer": 25,
+        "index": 4975,
+        "role": "Late-layer amplifier/output driver",
+        "activation": 28.02,
+        "influence": 0.2472,
+        "clerp": "",
+        "on_backward_paths": [
+          2
+        ],
+        "on_forward_paths": []
+      }
+    },
+    "sufficiency_prompts": [
+      [
+        "Nurse is to hospital as teacher is to",
+        "different source pair"
+      ],
+      [
+        "Doctor is to hospital as student is to",
+        "different target"
+      ],
+      [
+        "The weather today is quite",
+        "irrelevant context"
+      ]
+    ],
+    "non_backbone": [
+      {
+        "layer": 15,
+        "index": 851,
+        "desc": "L15 non-backbone (act=154.1)",
+        "activation": 154.05360412597656
+      },
+      {
+        "layer": 22,
+        "index": 14727,
+        "desc": "L22 non-backbone (act=144.9)",
+        "activation": 144.8735809326172
+      }
+    ]
+  },
+  "analog_bird": {
+    "prompt": "Fish is to water as bird is to",
+    "expected_token": "air",
+    "category": "analogical",
+    "confidence": 0.11670991033315659,
+    "graph_url": "https://www.neuronpedia.org/gemma-2-2b/graph?slug=analog_bird",
+    "graph_stats": {
+      "total_nodes": 1071,
+      "total_edges": 38741,
+      "embedding_nodes": 9,
+      "transcoder_nodes": 896,
+      "error_nodes": 156
+    },
+    "backbone": {
+      "L0_F1053": {
+        "layer": 0,
+        "index": 1053,
+        "role": "Early feature detector",
+        "activation": 28.62,
+        "influence": 0.2924,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          2
+        ]
+      },
+      "L0_F8444": {
+        "layer": 0,
+        "index": 8444,
+        "role": "Early feature detector",
+        "activation": 39.14,
+        "influence": 0.2649,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          4
+        ]
+      },
+      "L0_F13004": {
+        "layer": 0,
+        "index": 13004,
+        "role": "Early feature detector",
+        "activation": 6.79,
+        "influence": 0.6118,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          5
+        ]
+      },
+      "L1_F961": {
+        "layer": 1,
+        "index": 961,
+        "role": "Early feature detector",
+        "activation": 6.06,
+        "influence": 0.6546,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          5
+        ]
+      },
+      "L2_F3732": {
+        "layer": 2,
+        "index": 3732,
+        "role": "Early feature detector",
+        "activation": 8.63,
+        "influence": 0.5007,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          2
+        ]
+      },
+      "L3_F10018": {
+        "layer": 3,
+        "index": 10018,
+        "role": "Early feature detector",
+        "activation": 19.62,
+        "influence": 0.4146,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          4
+        ]
+      },
+      "L4_F10752": {
+        "layer": 4,
+        "index": 10752,
+        "role": "Early feature detector",
+        "activation": 9.73,
+        "influence": 0.681,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          4
+        ]
+      },
+      "L4_F14857": {
+        "layer": 4,
+        "index": 14857,
+        "role": "Early feature detector",
+        "activation": 8.42,
+        "influence": 0.6565,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          2
+        ]
+      },
+      "L5_F7191": {
+        "layer": 5,
+        "index": 7191,
+        "role": "Early-mid feature",
+        "activation": 5.75,
+        "influence": 0.7957,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          4
+        ]
+      },
+      "L6_F2267": {
+        "layer": 6,
+        "index": 2267,
+        "role": "Early-mid feature",
+        "activation": 12.67,
+        "influence": 0.7562,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          2
+        ]
+      },
+      "L8_F4440": {
+        "layer": 8,
+        "index": 4440,
+        "role": "Early-mid feature",
+        "activation": 12.7,
+        "influence": 0.7991,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          5
+        ]
+      },
+      "L11_F2279": {
+        "layer": 11,
+        "index": 2279,
+        "role": "Mid-layer relay",
+        "activation": 14.68,
+        "influence": 0.7876,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          2
+        ]
+      },
+      "L14_F11455": {
+        "layer": 14,
+        "index": 11455,
+        "role": "Mid-layer relay",
+        "activation": 30.15,
+        "influence": 0.6991,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          2
+        ]
+      },
+      "L18_F14713": {
+        "layer": 18,
+        "index": 14713,
+        "role": "Mid-late relay/integration hub",
+        "activation": 35.1,
+        "influence": 0.769,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          2
+        ]
+      },
+      "L19_F1254": {
+        "layer": 19,
+        "index": 1254,
+        "role": "Mid-late relay/integration hub",
+        "activation": 27.58,
+        "influence": 0.3101,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          4
+        ]
+      },
+      "L19_F10328": {
+        "layer": 19,
+        "index": 10328,
+        "role": "Mid-late relay/integration hub",
+        "activation": 35.46,
+        "influence": 0.7692,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          2
+        ]
+      },
+      "L20_F3094": {
+        "layer": 20,
+        "index": 3094,
+        "role": "Mid-late relay/integration hub",
+        "activation": 23.61,
+        "influence": 0.5202,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          5
+        ]
+      },
+      "L20_F3824": {
+        "layer": 20,
+        "index": 3824,
+        "role": "Mid-late relay/integration hub",
+        "activation": 33.47,
+        "influence": 0.5073,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          3
+        ]
+      },
+      "L22_F4252": {
+        "layer": 22,
+        "index": 4252,
+        "role": "Mid-late relay/integration hub",
+        "activation": 29.42,
+        "influence": 0.2694,
+        "clerp": "",
+        "on_backward_paths": [
+          1,
+          2
+        ],
+        "on_forward_paths": []
+      },
+      "L22_F13619": {
+        "layer": 22,
+        "index": 13619,
+        "role": "Mid-late relay/integration hub",
+        "activation": 19.62,
+        "influence": 0.5379,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          5
+        ]
+      },
+      "L22_F14727": {
+        "layer": 22,
+        "index": 14727,
+        "role": "Mid-late relay/integration hub",
+        "activation": 161.79,
+        "influence": 0.6424,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          2
+        ]
+      },
+      "L22_F15670": {
+        "layer": 22,
+        "index": 15670,
+        "role": "Mid-late relay/integration hub",
+        "activation": 117.12,
+        "influence": 0.7038,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          1
+        ]
+      },
+      "L23_F16077": {
+        "layer": 23,
+        "index": 16077,
+        "role": "Late-layer amplifier/output driver",
+        "activation": 32.75,
+        "influence": 0.3238,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          4
+        ]
+      },
+      "L24_F4383": {
+        "layer": 24,
+        "index": 4383,
+        "role": "Late-layer amplifier/output driver",
+        "activation": 16.4,
+        "influence": 0.3382,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          5
+        ]
+      },
+      "L24_F8106": {
+        "layer": 24,
+        "index": 8106,
+        "role": "Late-layer amplifier/output driver",
+        "activation": 28.59,
+        "influence": 0.3021,
+        "clerp": "",
+        "on_backward_paths": [
+          2
+        ],
+        "on_forward_paths": []
+      },
+      "L24_F12559": {
+        "layer": 24,
+        "index": 12559,
+        "role": "Late-layer amplifier/output driver",
+        "activation": 11.41,
+        "influence": 0.5175,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          4
+        ]
+      },
+      "L25_F4717": {
+        "layer": 25,
+        "index": 4717,
+        "role": "Convergence hub (3 paths) - Late-layer amplifier/output driver",
+        "activation": 122.35,
+        "influence": 0.3303,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          1,
+          2,
+          4
+        ]
+      },
+      "L25_F11801": {
+        "layer": 25,
+        "index": 11801,
+        "role": "Late-layer amplifier/output driver",
+        "activation": 22.34,
+        "influence": 0.6639,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          3
+        ]
+      }
+    },
+    "sufficiency_prompts": [
+      [
+        "Dog is to land as fish is to",
+        "different analogy same structure"
+      ],
+      [
+        "Fish is to water as bird is to",
+        "same prompt"
+      ],
+      [
+        "The chemical formula for salt is",
+        "irrelevant context"
+      ]
+    ],
+    "non_backbone": [
+      {
+        "layer": 22,
+        "index": 8560,
+        "desc": "L22 non-backbone (act=96.4)",
+        "activation": 96.44159698486328
+      },
+      {
+        "layer": 24,
+        "index": 13277,
+        "desc": "L24 non-backbone (act=94.2)",
+        "activation": 94.16827392578125
+      }
+    ]
+  }
+}
