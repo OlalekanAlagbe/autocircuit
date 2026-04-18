@@ -1,0 +1,5978 @@
+{
+  "analogical_paris_germany": [
+    {
+      "default_text": "<bos>Paris is to France as Berlin is to Germany. It is the",
+      "steered_text": "<bos>Paris is to France as Berlin is to Germany. It is the",
+      "first_steered_token": " Germany",
+      "first_steered_logprob": -0.18359375,
+      "first_steered_top5": [
+        {
+          "token": " Germany",
+          "logprob": -0.18359375
+        },
+        {
+          "token": " the",
+          "logprob": -3.15625
+        },
+        {
+          "token": "...",
+          "logprob": -3.84375
+        },
+        {
+          "token": "\u2026",
+          "logprob": -4.0625
+        },
+        {
+          "token": " ",
+          "logprob": -4.75
+        }
+      ],
+      "first_default_token": " Germany",
+      "first_default_logprob": -0.04248046875,
+      "first_default_top5": [
+        {
+          "token": " Germany",
+          "logprob": -0.04248046875
+        },
+        {
+          "token": " the",
+          "logprob": -4.40625
+        },
+        {
+          "token": " Berlin",
+          "logprob": -5.53125
+        },
+        {
+          "token": " German",
+          "logprob": -6.09375
+        },
+        {
+          "token": " Europe",
+          "logprob": -6.09375
+        }
+      ],
+      "experiment": "suppress_L21_science_hub",
+      "circuit": "analogical_paris_germany",
+      "category": "analogical",
+      "description": "Suppress L21_science_hub (Strongest path entry \u2014 scientific/medical research feature (act=45.0, edge +198.0))"
+    },
+    {
+      "default_text": "<bos>Paris is to France as Berlin is to Germany. It is the",
+      "steered_text": "<bos>Paris is to France as Berlin is to Germany. It is the",
+      "first_steered_token": " Germany",
+      "first_steered_logprob": -0.038818359375,
+      "first_steered_top5": [
+        {
+          "token": " Germany",
+          "logprob": -0.038818359375
+        },
+        {
+          "token": " the",
+          "logprob": -4.15625
+        },
+        {
+          "token": " Europe",
+          "logprob": -4.65625
+        },
+        {
+          "token": " Berlin",
+          "logprob": -5.65625
+        },
+        {
+          "token": " ",
+          "logprob": -6.28125
+        }
+      ],
+      "first_default_token": " Germany",
+      "first_default_logprob": -0.04248046875,
+      "first_default_top5": [
+        {
+          "token": " Germany",
+          "logprob": -0.04248046875
+        },
+        {
+          "token": " the",
+          "logprob": -4.40625
+        },
+        {
+          "token": " Berlin",
+          "logprob": -5.53125
+        },
+        {
+          "token": " German",
+          "logprob": -6.09375
+        },
+        {
+          "token": " Europe",
+          "logprob": -6.09375
+        }
+      ],
+      "experiment": "suppress_L22_relay",
+      "circuit": "analogical_paris_germany",
+      "category": "analogical",
+      "description": "Suppress L22_relay (Path 1 relay (edge -1.36 to L25))"
+    },
+    {
+      "default_text": "<bos>Paris is to France as Berlin is to Germany. It is the",
+      "steered_text": "<bos>Paris is to France as Berlin is to Germany.\n\nIt is",
+      "first_steered_token": " Germany",
+      "first_steered_logprob": -0.578125,
+      "first_steered_top5": [
+        {
+          "token": " Germany",
+          "logprob": -0.578125
+        },
+        {
+          "token": " the",
+          "logprob": -2.078125
+        },
+        {
+          "token": " all",
+          "logprob": -3.203125
+        },
+        {
+          "token": " its",
+          "logprob": -3.578125
+        },
+        {
+          "token": " West",
+          "logprob": -3.828125
+        }
+      ],
+      "first_default_token": " Germany",
+      "first_default_logprob": -0.04248046875,
+      "first_default_top5": [
+        {
+          "token": " Germany",
+          "logprob": -0.04248046875
+        },
+        {
+          "token": " the",
+          "logprob": -4.40625
+        },
+        {
+          "token": " Berlin",
+          "logprob": -5.53125
+        },
+        {
+          "token": " German",
+          "logprob": -6.09375
+        },
+        {
+          "token": " Europe",
+          "logprob": -6.09375
+        }
+      ],
+      "experiment": "suppress_L25_output_driver_a",
+      "circuit": "analogical_paris_germany",
+      "category": "analogical",
+      "description": "Suppress L25_output_driver_a (Final amplifier to logit (edge +1.14))"
+    },
+    {
+      "default_text": "<bos>Paris is to France as Berlin is to Germany. It is the",
+      "steered_text": "<bos>Paris is to France as Berlin is to Germany. It is the",
+      "first_steered_token": " Germany",
+      "first_steered_logprob": -0.08544921875,
+      "first_steered_top5": [
+        {
+          "token": " Germany",
+          "logprob": -0.08544921875
+        },
+        {
+          "token": " Berlin",
+          "logprob": -2.953125
+        },
+        {
+          "token": " the",
+          "logprob": -4.84375
+        },
+        {
+          "token": " Brandenburg",
+          "logprob": -5.46875
+        },
+        {
+          "token": " West",
+          "logprob": -6.28125
+        }
+      ],
+      "first_default_token": " Germany",
+      "first_default_logprob": -0.04248046875,
+      "first_default_top5": [
+        {
+          "token": " Germany",
+          "logprob": -0.04248046875
+        },
+        {
+          "token": " the",
+          "logprob": -4.40625
+        },
+        {
+          "token": " Berlin",
+          "logprob": -5.53125
+        },
+        {
+          "token": " German",
+          "logprob": -6.09375
+        },
+        {
+          "token": " Europe",
+          "logprob": -6.09375
+        }
+      ],
+      "experiment": "suppress_L16_location_encoder",
+      "circuit": "analogical_paris_germany",
+      "category": "analogical",
+      "description": "Suppress L16_location_encoder (Location/direction feature, path 2 entry (edge -0.74))"
+    },
+    {
+      "default_text": "<bos>Paris is to France as Berlin is to Germany. It is the",
+      "steered_text": "<bos>Paris is to France as Berlin is to Germany. It is the",
+      "first_steered_token": " Germany",
+      "first_steered_logprob": -0.06396484375,
+      "first_steered_top5": [
+        {
+          "token": " Germany",
+          "logprob": -0.06396484375
+        },
+        {
+          "token": " the",
+          "logprob": -3.9375
+        },
+        {
+          "token": " Europe",
+          "logprob": -4.5625
+        },
+        {
+          "token": " German",
+          "logprob": -5.3125
+        },
+        {
+          "token": " Deutschland",
+          "logprob": -5.8125
+        }
+      ],
+      "first_default_token": " Germany",
+      "first_default_logprob": -0.04248046875,
+      "first_default_top5": [
+        {
+          "token": " Germany",
+          "logprob": -0.04248046875
+        },
+        {
+          "token": " the",
+          "logprob": -4.40625
+        },
+        {
+          "token": " Berlin",
+          "logprob": -5.53125
+        },
+        {
+          "token": " German",
+          "logprob": -6.09375
+        },
+        {
+          "token": " Europe",
+          "logprob": -6.09375
+        }
+      ],
+      "experiment": "suppress_L17_relay",
+      "circuit": "analogical_paris_germany",
+      "category": "analogical",
+      "description": "Suppress L17_relay (Mid-cascade relay (edge +4.55))"
+    },
+    {
+      "default_text": "<bos>Paris is to France as Berlin is to Germany. It is the",
+      "steered_text": "<bos>Paris is to France as Berlin is to Germany. The city is",
+      "first_steered_token": " Germany",
+      "first_steered_logprob": -0.0830078125,
+      "first_steered_top5": [
+        {
+          "token": " Germany",
+          "logprob": -0.0830078125
+        },
+        {
+          "token": " Europe",
+          "logprob": -4.09375
+        },
+        {
+          "token": " the",
+          "logprob": -4.46875
+        },
+        {
+          "token": " Berlin",
+          "logprob": -4.96875
+        },
+        {
+          "token": " German",
+          "logprob": -4.96875
+        }
+      ],
+      "first_default_token": " Germany",
+      "first_default_logprob": -0.04248046875,
+      "first_default_top5": [
+        {
+          "token": " Germany",
+          "logprob": -0.04248046875
+        },
+        {
+          "token": " the",
+          "logprob": -4.40625
+        },
+        {
+          "token": " Berlin",
+          "logprob": -5.53125
+        },
+        {
+          "token": " German",
+          "logprob": -6.09375
+        },
+        {
+          "token": " Europe",
+          "logprob": -6.09375
+        }
+      ],
+      "experiment": "suppress_L19_relay",
+      "circuit": "analogical_paris_germany",
+      "category": "analogical",
+      "description": "Suppress L19_relay (Late relay (edge +2.97))"
+    },
+    {
+      "default_text": "<bos>Paris is to France as Berlin is to Germany. It is the",
+      "steered_text": "<bos>Paris is to France as Berlin is to Germany.  It is",
+      "first_steered_token": " Germany",
+      "first_steered_logprob": -0.12890625,
+      "first_steered_top5": [
+        {
+          "token": " Germany",
+          "logprob": -0.12890625
+        },
+        {
+          "token": " Berlin",
+          "logprob": -3.125
+        },
+        {
+          "token": " the",
+          "logprob": -4.375
+        },
+        {
+          "token": " German",
+          "logprob": -5.25
+        },
+        {
+          "token": " for",
+          "logprob": -5.4375
+        }
+      ],
+      "first_default_token": " Germany",
+      "first_default_logprob": -0.04248046875,
+      "first_default_top5": [
+        {
+          "token": " Germany",
+          "logprob": -0.04248046875
+        },
+        {
+          "token": " the",
+          "logprob": -4.40625
+        },
+        {
+          "token": " Berlin",
+          "logprob": -5.53125
+        },
+        {
+          "token": " German",
+          "logprob": -6.09375
+        },
+        {
+          "token": " Europe",
+          "logprob": -6.09375
+        }
+      ],
+      "experiment": "suppress_L21_integrator",
+      "circuit": "analogical_paris_germany",
+      "category": "analogical",
+      "description": "Suppress L21_integrator (Integration hub on paths 2-4 (edge +8.49 to L25))"
+    },
+    {
+      "default_text": "<bos>Paris is to France as Berlin is to Germany. It is the",
+      "steered_text": "<bos>Paris is to France as Berlin is to the rest of the world",
+      "first_steered_token": " the",
+      "first_steered_logprob": -0.2138671875,
+      "first_steered_top5": [
+        {
+          "token": " the",
+          "logprob": -0.2138671875
+        },
+        {
+          "token": " ",
+          "logprob": -3.59375
+        },
+        {
+          "token": "\u2026",
+          "logprob": -3.71875
+        },
+        {
+          "token": " \u2026",
+          "logprob": -3.71875
+        },
+        {
+          "token": " all",
+          "logprob": -4.34375
+        }
+      ],
+      "first_default_token": " Germany",
+      "first_default_logprob": -0.04248046875,
+      "first_default_top5": [
+        {
+          "token": " Germany",
+          "logprob": -0.04248046875
+        },
+        {
+          "token": " the",
+          "logprob": -4.40625
+        },
+        {
+          "token": " Berlin",
+          "logprob": -5.53125
+        },
+        {
+          "token": " German",
+          "logprob": -6.09375
+        },
+        {
+          "token": " Europe",
+          "logprob": -6.09375
+        }
+      ],
+      "experiment": "suppress_L25_output_driver_b",
+      "circuit": "analogical_paris_germany",
+      "category": "analogical",
+      "description": "Suppress L25_output_driver_b (Secondary output driver (edge -2.09 to logit))"
+    },
+    {
+      "default_text": "<bos>Paris is to France as Berlin is to Germany. It is the",
+      "steered_text": "<bos>Paris is to France as Berlin is to Germany. The city is",
+      "first_steered_token": " Germany",
+      "first_steered_logprob": -0.484375,
+      "first_steered_top5": [
+        {
+          "token": " Germany",
+          "logprob": -0.484375
+        },
+        {
+          "token": " the",
+          "logprob": -2.671875
+        },
+        {
+          "token": "\u2026",
+          "logprob": -3.109375
+        },
+        {
+          "token": " \u2026",
+          "logprob": -3.671875
+        },
+        {
+          "token": " Europe",
+          "logprob": -3.796875
+        }
+      ],
+      "first_default_token": " Germany",
+      "first_default_logprob": -0.04248046875,
+      "first_default_top5": [
+        {
+          "token": " Germany",
+          "logprob": -0.04248046875
+        },
+        {
+          "token": " the",
+          "logprob": -4.40625
+        },
+        {
+          "token": " Berlin",
+          "logprob": -5.53125
+        },
+        {
+          "token": " German",
+          "logprob": -6.09375
+        },
+        {
+          "token": " Europe",
+          "logprob": -6.09375
+        }
+      ],
+      "experiment": "suppress_L19_relation_applier",
+      "circuit": "analogical_paris_germany",
+      "category": "analogical",
+      "description": "Suppress L19_relation_applier (Relation application node (edge +13.50))"
+    },
+    {
+      "default_text": "<bos>Paris is to France as Berlin is to Germany. It is the",
+      "steered_text": "<bos>Paris is to France as Berlin is to of of of of of",
+      "first_steered_token": " of",
+      "first_steered_logprob": -1.1953125,
+      "first_steered_top5": [
+        {
+          "token": " of",
+          "logprob": -1.1953125
+        },
+        {
+          "token": " the",
+          "logprob": -1.3203125
+        },
+        {
+          "token": " (",
+          "logprob": -2.375
+        },
+        {
+          "token": " at",
+          "logprob": -2.375
+        },
+        {
+          "token": "\n",
+          "logprob": -3.25
+        }
+      ],
+      "first_default_token": " Germany",
+      "first_default_logprob": -0.04248046875,
+      "first_default_top5": [
+        {
+          "token": " Germany",
+          "logprob": -0.04248046875
+        },
+        {
+          "token": " the",
+          "logprob": -4.40625
+        },
+        {
+          "token": " Berlin",
+          "logprob": -5.53125
+        },
+        {
+          "token": " German",
+          "logprob": -6.09375
+        },
+        {
+          "token": " Europe",
+          "logprob": -6.09375
+        }
+      ],
+      "experiment": "suppress_all_backbone",
+      "circuit": "analogical_paris_germany",
+      "category": "analogical",
+      "description": "Suppress all 9 backbone features"
+    },
+    {
+      "default_text": "<bos>Cairo is to Egypt as Nairobi is to Kenya. It is the",
+      "steered_text": "<bos>Cairo is to Egypt as Nairobi is to Kenya. It is the",
+      "first_steered_token": " Kenya",
+      "first_steered_logprob": -0.0498046875,
+      "first_steered_top5": [
+        {
+          "token": " Kenya",
+          "logprob": -0.0498046875
+        },
+        {
+          "token": " ken",
+          "logprob": -4.75
+        },
+        {
+          "token": " Ken",
+          "logprob": -4.75
+        },
+        {
+          "token": " East",
+          "logprob": -4.8125
+        },
+        {
+          "token": " Africa",
+          "logprob": -5.5
+        }
+      ],
+      "first_default_token": " Kenya",
+      "first_default_logprob": -0.05517578125,
+      "first_default_top5": [
+        {
+          "token": " Kenya",
+          "logprob": -0.05517578125
+        },
+        {
+          "token": " Africa",
+          "logprob": -3.9375
+        },
+        {
+          "token": " East",
+          "logprob": -4.9375
+        },
+        {
+          "token": " the",
+          "logprob": -5.0625
+        },
+        {
+          "token": "\u2026",
+          "logprob": -6.4375
+        }
+      ],
+      "experiment": "boost_hub_Cairo_is_to_Egypt_as_Nair",
+      "circuit": "analogical_paris_germany",
+      "category": "analogical",
+      "description": "Boost L21_science_hub on: different analogy same structure",
+      "baseline_text": "?"
+    },
+    {
+      "default_text": "<bos>Madrid is to Spain as Berlin is to Germany. It is the",
+      "steered_text": "<bos>Madrid is to Spain as Berlin is to Germany. It is the",
+      "first_steered_token": " Germany",
+      "first_steered_logprob": -0.025146484375,
+      "first_steered_top5": [
+        {
+          "token": " Germany",
+          "logprob": -0.025146484375
+        },
+        {
+          "token": " the",
+          "logprob": -4.90625
+        },
+        {
+          "token": " Berlin",
+          "logprob": -5.03125
+        },
+        {
+          "token": " Europe",
+          "logprob": -6.09375
+        },
+        {
+          "token": " German",
+          "logprob": -6.90625
+        }
+      ],
+      "first_default_token": " Germany",
+      "first_default_logprob": -0.0693359375,
+      "first_default_top5": [
+        {
+          "token": " Germany",
+          "logprob": -0.0693359375
+        },
+        {
+          "token": " the",
+          "logprob": -3.9375
+        },
+        {
+          "token": " Europe",
+          "logprob": -4.1875
+        },
+        {
+          "token": " Berlin",
+          "logprob": -5.0625
+        },
+        {
+          "token": " German",
+          "logprob": -5.6875
+        }
+      ],
+      "experiment": "boost_hub_Madrid_is_to_Spain_as_Ber",
+      "circuit": "analogical_paris_germany",
+      "category": "analogical",
+      "description": "Boost L21_science_hub on: different source pair",
+      "baseline_text": "?"
+    },
+    {
+      "default_text": "<bos>The weather today is really nice. It\u2019s",
+      "steered_text": "<bos>The weather today is really nice, so I decided",
+      "first_steered_token": " nice",
+      "first_steered_logprob": -1.5390625,
+      "first_steered_top5": [
+        {
+          "token": " nice",
+          "logprob": -1.5390625
+        },
+        {
+          "token": " hot",
+          "logprob": -2.15625
+        },
+        {
+          "token": " cold",
+          "logprob": -2.53125
+        },
+        {
+          "token": " great",
+          "logprob": -2.90625
+        },
+        {
+          "token": " good",
+          "logprob": -2.90625
+        }
+      ],
+      "first_default_token": " nice",
+      "first_default_logprob": -1.625,
+      "first_default_top5": [
+        {
+          "token": " nice",
+          "logprob": -1.625
+        },
+        {
+          "token": " hot",
+          "logprob": -2.625
+        },
+        {
+          "token": " good",
+          "logprob": -2.625
+        },
+        {
+          "token": " beautiful",
+          "logprob": -2.875
+        },
+        {
+          "token": " bad",
+          "logprob": -2.875
+        }
+      ],
+      "experiment": "boost_hub_The_weather_today_is_real",
+      "circuit": "analogical_paris_germany",
+      "category": "analogical",
+      "description": "Boost L21_science_hub on: irrelevant context",
+      "baseline_text": "?"
+    },
+    {
+      "default_text": "<bos>Paris is to France as Berlin is to Germany. It is the",
+      "steered_text": "<bos>Paris is to France as Berlin is to Germany. Paris is the",
+      "first_steered_token": " Germany",
+      "first_steered_logprob": -0.030029296875,
+      "first_steered_top5": [
+        {
+          "token": " Germany",
+          "logprob": -0.030029296875
+        },
+        {
+          "token": " the",
+          "logprob": -5.03125
+        },
+        {
+          "token": " Berlin",
+          "logprob": -5.59375
+        },
+        {
+          "token": " Deutschland",
+          "logprob": -5.59375
+        },
+        {
+          "token": " German",
+          "logprob": -6.59375
+        }
+      ],
+      "first_default_token": " Germany",
+      "first_default_logprob": -0.04248046875,
+      "first_default_top5": [
+        {
+          "token": " Germany",
+          "logprob": -0.04248046875
+        },
+        {
+          "token": " the",
+          "logprob": -4.40625
+        },
+        {
+          "token": " Berlin",
+          "logprob": -5.53125
+        },
+        {
+          "token": " German",
+          "logprob": -6.09375
+        },
+        {
+          "token": " Europe",
+          "logprob": -6.09375
+        }
+      ],
+      "experiment": "suppress_nonbackbone_L6_3335",
+      "circuit": "analogical_paris_germany",
+      "category": "analogical",
+      "description": "Suppress non-backbone: L6 'difficulty/challenges' (path 5 entry, low weight)"
+    },
+    {
+      "default_text": "<bos>Paris is to France as Berlin is to Germany. It is the",
+      "steered_text": "<bos>Paris is to France as Berlin is to Germany.\n\nThe city",
+      "first_steered_token": " Germany",
+      "first_steered_logprob": -0.05029296875,
+      "first_steered_top5": [
+        {
+          "token": " Germany",
+          "logprob": -0.05029296875
+        },
+        {
+          "token": " the",
+          "logprob": -4.4375
+        },
+        {
+          "token": " Berlin",
+          "logprob": -4.9375
+        },
+        {
+          "token": " Deutschland",
+          "logprob": -5.9375
+        },
+        {
+          "token": " Europe",
+          "logprob": -6.0625
+        }
+      ],
+      "first_default_token": " Germany",
+      "first_default_logprob": -0.04248046875,
+      "first_default_top5": [
+        {
+          "token": " Germany",
+          "logprob": -0.04248046875
+        },
+        {
+          "token": " the",
+          "logprob": -4.40625
+        },
+        {
+          "token": " Berlin",
+          "logprob": -5.53125
+        },
+        {
+          "token": " German",
+          "logprob": -6.09375
+        },
+        {
+          "token": " Europe",
+          "logprob": -6.09375
+        }
+      ],
+      "experiment": "suppress_nonbackbone_L13_4435",
+      "circuit": "analogical_paris_germany",
+      "category": "analogical",
+      "description": "Suppress non-backbone: L13 'opera-related terms' (not on Paris paths)"
+    }
+  ],
+  "analogical_cairo_kenya": [
+    {
+      "default_text": "<bos>Cairo is to Egypt as Nairobi is to Kenya. It is the",
+      "steered_text": "<bos>Cairo is to Egypt as Nairobi is to Kenya. It is the",
+      "first_steered_token": " Kenya",
+      "first_steered_logprob": -0.10693359375,
+      "first_steered_top5": [
+        {
+          "token": " Kenya",
+          "logprob": -0.10693359375
+        },
+        {
+          "token": " the",
+          "logprob": -3.984375
+        },
+        {
+          "token": " Africa",
+          "logprob": -4.09375
+        },
+        {
+          "token": " East",
+          "logprob": -4.59375
+        },
+        {
+          "token": " Uganda",
+          "logprob": -5.34375
+        }
+      ],
+      "first_default_token": " Kenya",
+      "first_default_logprob": -0.05517578125,
+      "first_default_top5": [
+        {
+          "token": " Kenya",
+          "logprob": -0.05517578125
+        },
+        {
+          "token": " Africa",
+          "logprob": -3.9375
+        },
+        {
+          "token": " East",
+          "logprob": -4.9375
+        },
+        {
+          "token": " the",
+          "logprob": -5.0625
+        },
+        {
+          "token": "\u2026",
+          "logprob": -6.4375
+        }
+      ],
+      "experiment": "suppress_L15_relay",
+      "circuit": "analogical_cairo_kenya",
+      "category": "analogical",
+      "description": "Suppress L15_relay (Path 1 mid relay (edge +6.74))"
+    },
+    {
+      "default_text": "<bos>Cairo is to Egypt as Nairobi is to Kenya. It is the",
+      "steered_text": "<bos>Cairo is to Egypt as Nairobi is to Kenya. It is the",
+      "first_steered_token": " Kenya",
+      "first_steered_logprob": -0.10107421875,
+      "first_steered_top5": [
+        {
+          "token": " Kenya",
+          "logprob": -0.10107421875
+        },
+        {
+          "token": " Africa",
+          "logprob": -3.34375
+        },
+        {
+          "token": " the",
+          "logprob": -4.34375
+        },
+        {
+          "token": " East",
+          "logprob": -4.59375
+        },
+        {
+          "token": " Nairobi",
+          "logprob": -5.09375
+        }
+      ],
+      "first_default_token": " Kenya",
+      "first_default_logprob": -0.05517578125,
+      "first_default_top5": [
+        {
+          "token": " Kenya",
+          "logprob": -0.05517578125
+        },
+        {
+          "token": " Africa",
+          "logprob": -3.9375
+        },
+        {
+          "token": " East",
+          "logprob": -4.9375
+        },
+        {
+          "token": " the",
+          "logprob": -5.0625
+        },
+        {
+          "token": "\u2026",
+          "logprob": -6.4375
+        }
+      ],
+      "experiment": "suppress_L18_legal_docs",
+      "circuit": "analogical_cairo_kenya",
+      "category": "analogical",
+      "description": "Suppress L18_legal_docs (Legal docs feature on path 1 (edge +1.53))"
+    },
+    {
+      "default_text": "<bos>Cairo is to Egypt as Nairobi is to Kenya. It is the",
+      "steered_text": "<bos>Cairo is to Egypt as Nairobi is to Kenya. It is the",
+      "first_steered_token": " Kenya",
+      "first_steered_logprob": -0.03076171875,
+      "first_steered_top5": [
+        {
+          "token": " Kenya",
+          "logprob": -0.03076171875
+        },
+        {
+          "token": " Africa",
+          "logprob": -3.78125
+        },
+        {
+          "token": "Kenya",
+          "logprob": -6.78125
+        },
+        {
+          "token": " the",
+          "logprob": -7.46875
+        },
+        {
+          "token": " East",
+          "logprob": -7.71875
+        }
+      ],
+      "first_default_token": " Kenya",
+      "first_default_logprob": -0.05517578125,
+      "first_default_top5": [
+        {
+          "token": " Kenya",
+          "logprob": -0.05517578125
+        },
+        {
+          "token": " Africa",
+          "logprob": -3.9375
+        },
+        {
+          "token": " East",
+          "logprob": -4.9375
+        },
+        {
+          "token": " the",
+          "logprob": -5.0625
+        },
+        {
+          "token": "\u2026",
+          "logprob": -6.4375
+        }
+      ],
+      "experiment": "suppress_L24_suppressor",
+      "circuit": "analogical_cairo_kenya",
+      "category": "analogical",
+      "description": "Suppress L24_suppressor (Competitor suppression (edge -8.50))"
+    },
+    {
+      "default_text": "<bos>Cairo is to Egypt as Nairobi is to Kenya. It is the",
+      "steered_text": "<bos>Cairo is to Egypt as Nairobi is to Kenya. It is the",
+      "first_steered_token": " Kenya",
+      "first_steered_logprob": -0.025634765625,
+      "first_steered_top5": [
+        {
+          "token": " Kenya",
+          "logprob": -0.025634765625
+        },
+        {
+          "token": " Africa",
+          "logprob": -4.59375
+        },
+        {
+          "token": "\u2026",
+          "logprob": -5.78125
+        },
+        {
+          "token": " East",
+          "logprob": -6.59375
+        },
+        {
+          "token": " the",
+          "logprob": -6.78125
+        }
+      ],
+      "first_default_token": " Kenya",
+      "first_default_logprob": -0.05517578125,
+      "first_default_top5": [
+        {
+          "token": " Kenya",
+          "logprob": -0.05517578125
+        },
+        {
+          "token": " Africa",
+          "logprob": -3.9375
+        },
+        {
+          "token": " East",
+          "logprob": -4.9375
+        },
+        {
+          "token": " the",
+          "logprob": -5.0625
+        },
+        {
+          "token": "\u2026",
+          "logprob": -6.4375
+        }
+      ],
+      "experiment": "suppress_L25_output_a",
+      "circuit": "analogical_cairo_kenya",
+      "category": "analogical",
+      "description": "Suppress L25_output_a (Output driver path 1 (edge -0.44 to logit))"
+    },
+    {
+      "default_text": "<bos>Cairo is to Egypt as Nairobi is to Kenya. It is the",
+      "steered_text": "<bos>Cairo is to Egypt as Nairobi is to Kenya. It is the",
+      "first_steered_token": " Kenya",
+      "first_steered_logprob": -0.15234375,
+      "first_steered_top5": [
+        {
+          "token": " Kenya",
+          "logprob": -0.15234375
+        },
+        {
+          "token": " the",
+          "logprob": -2.9375
+        },
+        {
+          "token": " Africa",
+          "logprob": -3.703125
+        },
+        {
+          "token": " ",
+          "logprob": -4.96875
+        },
+        {
+          "token": " East",
+          "logprob": -5.1875
+        }
+      ],
+      "first_default_token": " Kenya",
+      "first_default_logprob": -0.05517578125,
+      "first_default_top5": [
+        {
+          "token": " Kenya",
+          "logprob": -0.05517578125
+        },
+        {
+          "token": " Africa",
+          "logprob": -3.9375
+        },
+        {
+          "token": " East",
+          "logprob": -4.9375
+        },
+        {
+          "token": " the",
+          "logprob": -5.0625
+        },
+        {
+          "token": "\u2026",
+          "logprob": -6.4375
+        }
+      ],
+      "experiment": "suppress_L20_relay",
+      "circuit": "analogical_cairo_kenya",
+      "category": "analogical",
+      "description": "Suppress L20_relay (Path 2 relay (edge +7.79))"
+    },
+    {
+      "default_text": "<bos>Cairo is to Egypt as Nairobi is to Kenya. It is the",
+      "steered_text": "<bos>Cairo is to Egypt as Nairobi is to the world. It is",
+      "first_steered_token": " the",
+      "first_steered_logprob": -0.470703125,
+      "first_steered_top5": [
+        {
+          "token": " the",
+          "logprob": -0.470703125
+        },
+        {
+          "token": " Kenya",
+          "logprob": -2.59375
+        },
+        {
+          "token": " East",
+          "logprob": -3.40625
+        },
+        {
+          "token": " ",
+          "logprob": -3.78125
+        },
+        {
+          "token": "\u2026",
+          "logprob": -4.09375
+        }
+      ],
+      "first_default_token": " Kenya",
+      "first_default_logprob": -0.05517578125,
+      "first_default_top5": [
+        {
+          "token": " Kenya",
+          "logprob": -0.05517578125
+        },
+        {
+          "token": " Africa",
+          "logprob": -3.9375
+        },
+        {
+          "token": " East",
+          "logprob": -4.9375
+        },
+        {
+          "token": " the",
+          "logprob": -5.0625
+        },
+        {
+          "token": "\u2026",
+          "logprob": -6.4375
+        }
+      ],
+      "experiment": "suppress_L23_relay",
+      "circuit": "analogical_cairo_kenya",
+      "category": "analogical",
+      "description": "Suppress L23_relay (Late relay (edge +10.65))"
+    },
+    {
+      "default_text": "<bos>Cairo is to Egypt as Nairobi is to Kenya. It is the",
+      "steered_text": "<bos>Cairo is to Egypt as Nairobi is to the rest of the world",
+      "first_steered_token": " the",
+      "first_steered_logprob": -0.171875,
+      "first_steered_top5": [
+        {
+          "token": " the",
+          "logprob": -0.171875
+        },
+        {
+          "token": " East",
+          "logprob": -3.546875
+        },
+        {
+          "token": " ",
+          "logprob": -3.921875
+        },
+        {
+          "token": "\u2026",
+          "logprob": -4.09375
+        },
+        {
+          "token": " ken",
+          "logprob": -4.53125
+        }
+      ],
+      "first_default_token": " Kenya",
+      "first_default_logprob": -0.05517578125,
+      "first_default_top5": [
+        {
+          "token": " Kenya",
+          "logprob": -0.05517578125
+        },
+        {
+          "token": " Africa",
+          "logprob": -3.9375
+        },
+        {
+          "token": " East",
+          "logprob": -4.9375
+        },
+        {
+          "token": " the",
+          "logprob": -5.0625
+        },
+        {
+          "token": "\u2026",
+          "logprob": -6.4375
+        }
+      ],
+      "experiment": "suppress_L25_output_b",
+      "circuit": "analogical_cairo_kenya",
+      "category": "analogical",
+      "description": "Suppress L25_output_b (Secondary output driver (edge -1.07 to logit))"
+    },
+    {
+      "default_text": "<bos>Cairo is to Egypt as Nairobi is to Kenya. It is the",
+      "steered_text": "<bos>Cairo is to Egypt as Nairobi is to Kenya. It is the",
+      "first_steered_token": " Kenya",
+      "first_steered_logprob": -0.08203125,
+      "first_steered_top5": [
+        {
+          "token": " Kenya",
+          "logprob": -0.08203125
+        },
+        {
+          "token": " Africa",
+          "logprob": -4.46875
+        },
+        {
+          "token": " me",
+          "logprob": -4.96875
+        },
+        {
+          "token": " Nairobi",
+          "logprob": -5.34375
+        },
+        {
+          "token": " South",
+          "logprob": -5.34375
+        }
+      ],
+      "first_default_token": " Kenya",
+      "first_default_logprob": -0.05517578125,
+      "first_default_top5": [
+        {
+          "token": " Kenya",
+          "logprob": -0.05517578125
+        },
+        {
+          "token": " Africa",
+          "logprob": -3.9375
+        },
+        {
+          "token": " East",
+          "logprob": -4.9375
+        },
+        {
+          "token": " the",
+          "logprob": -5.0625
+        },
+        {
+          "token": "\u2026",
+          "logprob": -6.4375
+        }
+      ],
+      "experiment": "suppress_L15_geography",
+      "circuit": "analogical_cairo_kenya",
+      "category": "analogical",
+      "description": "Suppress L15_geography (Geographical locations feature (edge +0.72))"
+    },
+    {
+      "default_text": "<bos>Cairo is to Egypt as Nairobi is to Kenya. It is the",
+      "steered_text": "<bos>Cairo is to Egypt as Nairobi is to Kenya. It is the",
+      "first_steered_token": " Kenya",
+      "first_steered_logprob": -0.98046875,
+      "first_steered_top5": [
+        {
+          "token": " Kenya",
+          "logprob": -0.98046875
+        },
+        {
+          "token": " East",
+          "logprob": -1.1015625
+        },
+        {
+          "token": " Africa",
+          "logprob": -2.109375
+        },
+        {
+          "token": " Sub",
+          "logprob": -3.109375
+        },
+        {
+          "token": " ken",
+          "logprob": -3.984375
+        }
+      ],
+      "first_default_token": " Kenya",
+      "first_default_logprob": -0.05517578125,
+      "first_default_top5": [
+        {
+          "token": " Kenya",
+          "logprob": -0.05517578125
+        },
+        {
+          "token": " Africa",
+          "logprob": -3.9375
+        },
+        {
+          "token": " East",
+          "logprob": -4.9375
+        },
+        {
+          "token": " the",
+          "logprob": -5.0625
+        },
+        {
+          "token": "\u2026",
+          "logprob": -6.4375
+        }
+      ],
+      "experiment": "suppress_L21_convergence",
+      "circuit": "analogical_cairo_kenya",
+      "category": "analogical",
+      "description": "Suppress L21_convergence (Convergence hub (edge +9.67))"
+    },
+    {
+      "default_text": "<bos>Cairo is to Egypt as Nairobi is to Kenya. It is the",
+      "steered_text": "<bos>Cairo is to Egypt as Nairobi is to     ",
+      "first_steered_token": " ",
+      "first_steered_logprob": -1.5,
+      "first_steered_top5": [
+        {
+          "token": " ",
+          "logprob": -1.5
+        },
+        {
+          "token": " the",
+          "logprob": -1.625
+        },
+        {
+          "token": " Tur",
+          "logprob": -2.375
+        },
+        {
+          "token": " Capital",
+          "logprob": -2.5
+        },
+        {
+          "token": " Te",
+          "logprob": -2.75
+        }
+      ],
+      "first_default_token": " Kenya",
+      "first_default_logprob": -0.05517578125,
+      "first_default_top5": [
+        {
+          "token": " Kenya",
+          "logprob": -0.05517578125
+        },
+        {
+          "token": " Africa",
+          "logprob": -3.9375
+        },
+        {
+          "token": " East",
+          "logprob": -4.9375
+        },
+        {
+          "token": " the",
+          "logprob": -5.0625
+        },
+        {
+          "token": "\u2026",
+          "logprob": -6.4375
+        }
+      ],
+      "experiment": "suppress_all_backbone",
+      "circuit": "analogical_cairo_kenya",
+      "category": "analogical",
+      "description": "Suppress all 9 backbone features"
+    },
+    {
+      "default_text": "<bos>Paris is to France as Berlin is to Germany. It is the",
+      "steered_text": "<bos>Paris is to France as Berlin is to Germany. It is the",
+      "first_steered_token": " Germany",
+      "first_steered_logprob": -0.09716796875,
+      "first_steered_top5": [
+        {
+          "token": " Germany",
+          "logprob": -0.09716796875
+        },
+        {
+          "token": " the",
+          "logprob": -3.96875
+        },
+        {
+          "token": " Europe",
+          "logprob": -4.46875
+        },
+        {
+          "token": " East",
+          "logprob": -4.84375
+        },
+        {
+          "token": " Berlin",
+          "logprob": -5.46875
+        }
+      ],
+      "first_default_token": " Germany",
+      "first_default_logprob": -0.04248046875,
+      "first_default_top5": [
+        {
+          "token": " Germany",
+          "logprob": -0.04248046875
+        },
+        {
+          "token": " the",
+          "logprob": -4.40625
+        },
+        {
+          "token": " Berlin",
+          "logprob": -5.53125
+        },
+        {
+          "token": " German",
+          "logprob": -6.09375
+        },
+        {
+          "token": " Europe",
+          "logprob": -6.09375
+        }
+      ],
+      "experiment": "boost_hub_Paris_is_to_France_as_Ber",
+      "circuit": "analogical_cairo_kenya",
+      "category": "analogical",
+      "description": "Boost L15_relay on: different analogy same task",
+      "baseline_text": "?"
+    },
+    {
+      "default_text": "<bos>Lagos is to Nigeria as Nairobi is to Kenya. It is the",
+      "steered_text": "<bos>Lagos is to Nigeria as Nairobi is to Kenya. It is the",
+      "first_steered_token": " Kenya",
+      "first_steered_logprob": -0.0458984375,
+      "first_steered_top5": [
+        {
+          "token": " Kenya",
+          "logprob": -0.0458984375
+        },
+        {
+          "token": " the",
+          "logprob": -4.78125
+        },
+        {
+          "token": " Africa",
+          "logprob": -4.90625
+        },
+        {
+          "token": " East",
+          "logprob": -5.15625
+        },
+        {
+          "token": " its",
+          "logprob": -6.03125
+        }
+      ],
+      "first_default_token": " Kenya",
+      "first_default_logprob": -0.0439453125,
+      "first_default_top5": [
+        {
+          "token": " Kenya",
+          "logprob": -0.0439453125
+        },
+        {
+          "token": " Africa",
+          "logprob": -4.53125
+        },
+        {
+          "token": " East",
+          "logprob": -4.53125
+        },
+        {
+          "token": " the",
+          "logprob": -4.90625
+        },
+        {
+          "token": " Uganda",
+          "logprob": -6.53125
+        }
+      ],
+      "experiment": "boost_hub_Lagos_is_to_Nigeria_as_Na",
+      "circuit": "analogical_cairo_kenya",
+      "category": "analogical",
+      "description": "Boost L15_relay on: different source pair",
+      "baseline_text": "?"
+    },
+    {
+      "default_text": "<bos>The temperature outside was around 100 degrees",
+      "steered_text": "<bos>The temperature outside was around 10 degrees below",
+      "first_steered_token": " ",
+      "first_steered_logprob": -0.53515625,
+      "first_steered_top5": [
+        {
+          "token": " ",
+          "logprob": -0.53515625
+        },
+        {
+          "token": " -",
+          "logprob": -1.90625
+        },
+        {
+          "token": " minus",
+          "logprob": -2.90625
+        },
+        {
+          "token": " freezing",
+          "logprob": -3.15625
+        },
+        {
+          "token": " zero",
+          "logprob": -3.15625
+        }
+      ],
+      "first_default_token": " ",
+      "first_default_logprob": -0.2294921875,
+      "first_default_top5": [
+        {
+          "token": " ",
+          "logprob": -0.2294921875
+        },
+        {
+          "token": " -",
+          "logprob": -2.734375
+        },
+        {
+          "token": " freezing",
+          "logprob": -3.734375
+        },
+        {
+          "token": " zero",
+          "logprob": -3.859375
+        },
+        {
+          "token": " the",
+          "logprob": -3.859375
+        }
+      ],
+      "experiment": "boost_hub_The_temperature_outside_w",
+      "circuit": "analogical_cairo_kenya",
+      "category": "analogical",
+      "description": "Boost L15_relay on: irrelevant context",
+      "baseline_text": "?"
+    },
+    {
+      "default_text": "<bos>Cairo is to Egypt as Nairobi is to Kenya. It is the",
+      "steered_text": "<bos>Cairo is to Egypt as Nairobi is to Kenya.\n\nThe two",
+      "first_steered_token": " Kenya",
+      "first_steered_logprob": -0.06884765625,
+      "first_steered_top5": [
+        {
+          "token": " Kenya",
+          "logprob": -0.06884765625
+        },
+        {
+          "token": " Africa",
+          "logprob": -3.8125
+        },
+        {
+          "token": " East",
+          "logprob": -4.6875
+        },
+        {
+          "token": " the",
+          "logprob": -4.8125
+        },
+        {
+          "token": " Nairobi",
+          "logprob": -6.3125
+        }
+      ],
+      "first_default_token": " Kenya",
+      "first_default_logprob": -0.05517578125,
+      "first_default_top5": [
+        {
+          "token": " Kenya",
+          "logprob": -0.05517578125
+        },
+        {
+          "token": " Africa",
+          "logprob": -3.9375
+        },
+        {
+          "token": " East",
+          "logprob": -4.9375
+        },
+        {
+          "token": " the",
+          "logprob": -5.0625
+        },
+        {
+          "token": "\u2026",
+          "logprob": -6.4375
+        }
+      ],
+      "experiment": "suppress_nonbackbone_L5_5500",
+      "circuit": "analogical_cairo_kenya",
+      "category": "analogical",
+      "description": "Suppress non-backbone: L5 'profanity and comparisons' (weak path 4 entry)"
+    },
+    {
+      "default_text": "<bos>Cairo is to Egypt as Nairobi is to Kenya. It is the",
+      "steered_text": "<bos>Cairo is to Egypt as Nairobi is to the capital of Kenya.",
+      "first_steered_token": " the",
+      "first_steered_logprob": -2.28125,
+      "first_steered_top5": [
+        {
+          "token": " the",
+          "logprob": -2.28125
+        },
+        {
+          "token": " Kenya",
+          "logprob": -2.40625
+        },
+        {
+          "token": " Nairobi",
+          "logprob": -2.53125
+        },
+        {
+          "token": " London",
+          "logprob": -2.90625
+        },
+        {
+          "token": " New",
+          "logprob": -3.03125
+        }
+      ],
+      "first_default_token": " Kenya",
+      "first_default_logprob": -0.05517578125,
+      "first_default_top5": [
+        {
+          "token": " Kenya",
+          "logprob": -0.05517578125
+        },
+        {
+          "token": " Africa",
+          "logprob": -3.9375
+        },
+        {
+          "token": " East",
+          "logprob": -4.9375
+        },
+        {
+          "token": " the",
+          "logprob": -5.0625
+        },
+        {
+          "token": "\u2026",
+          "logprob": -6.4375
+        }
+      ],
+      "experiment": "suppress_nonbackbone_L0_8",
+      "circuit": "analogical_cairo_kenya",
+      "category": "analogical",
+      "description": "Suppress non-backbone: L0 general 'are/research' feature"
+    }
+  ],
+  "analogical_puppy_cat": [
+    {
+      "default_text": "<bos>Puppy is to dog as kitten is to cat.\n\nI'",
+      "steered_text": "<bos>Puppy is to dog as kitten is to cat.\n\nThe first",
+      "first_steered_token": " cat",
+      "first_steered_logprob": -1.171875,
+      "first_steered_top5": [
+        {
+          "token": " cat",
+          "logprob": -1.171875
+        },
+        {
+          "token": " adult",
+          "logprob": -1.421875
+        },
+        {
+          "token": " dog",
+          "logprob": -2.421875
+        },
+        {
+          "token": " kitten",
+          "logprob": -3.296875
+        },
+        {
+          "token": " puppy",
+          "logprob": -3.671875
+        }
+      ],
+      "first_default_token": " cat",
+      "first_default_logprob": -0.349609375,
+      "first_default_top5": [
+        {
+          "token": " cat",
+          "logprob": -0.349609375
+        },
+        {
+          "token": " what",
+          "logprob": -3.84375
+        },
+        {
+          "token": "...",
+          "logprob": -3.96875
+        },
+        {
+          "token": " ____",
+          "logprob": -4.09375
+        },
+        {
+          "token": " .",
+          "logprob": -4.21875
+        }
+      ],
+      "experiment": "suppress_L14_relay",
+      "circuit": "analogical_puppy_cat",
+      "category": "analogical",
+      "description": "Suppress L14_relay (Path 1 relay (edge +11.89))"
+    },
+    {
+      "default_text": "<bos>Puppy is to dog as kitten is to cat.\n\nI'",
+      "steered_text": "<bos>Puppy is to dog as kitten is to cat.\n\nI'",
+      "first_steered_token": " cat",
+      "first_steered_logprob": -0.58203125,
+      "first_steered_top5": [
+        {
+          "token": " cat",
+          "logprob": -0.58203125
+        },
+        {
+          "token": " what",
+          "logprob": -2.578125
+        },
+        {
+          "token": " -",
+          "logprob": -3.453125
+        },
+        {
+          "token": " a",
+          "logprob": -3.828125
+        },
+        {
+          "token": "?",
+          "logprob": -3.953125
+        }
+      ],
+      "first_default_token": " cat",
+      "first_default_logprob": -0.349609375,
+      "first_default_top5": [
+        {
+          "token": " cat",
+          "logprob": -0.349609375
+        },
+        {
+          "token": " what",
+          "logprob": -3.84375
+        },
+        {
+          "token": "...",
+          "logprob": -3.96875
+        },
+        {
+          "token": " ____",
+          "logprob": -4.09375
+        },
+        {
+          "token": " .",
+          "logprob": -4.21875
+        }
+      ],
+      "experiment": "suppress_L20_integration",
+      "circuit": "analogical_puppy_cat",
+      "category": "analogical",
+      "description": "Suppress L20_integration (Integration hub (edge -12.76))"
+    },
+    {
+      "default_text": "<bos>Puppy is to dog as kitten is to cat.\n\nI'",
+      "steered_text": "<bos>Puppy is to dog as kitten is to cat.\n\nI'",
+      "first_steered_token": " cat",
+      "first_steered_logprob": -0.384765625,
+      "first_steered_top5": [
+        {
+          "token": " cat",
+          "logprob": -0.384765625
+        },
+        {
+          "token": " ________",
+          "logprob": -3.140625
+        },
+        {
+          "token": " ",
+          "logprob": -3.515625
+        },
+        {
+          "token": " what",
+          "logprob": -3.515625
+        },
+        {
+          "token": " dog",
+          "logprob": -3.890625
+        }
+      ],
+      "first_default_token": " cat",
+      "first_default_logprob": -0.349609375,
+      "first_default_top5": [
+        {
+          "token": " cat",
+          "logprob": -0.349609375
+        },
+        {
+          "token": " what",
+          "logprob": -3.84375
+        },
+        {
+          "token": "...",
+          "logprob": -3.96875
+        },
+        {
+          "token": " ____",
+          "logprob": -4.09375
+        },
+        {
+          "token": " .",
+          "logprob": -4.21875
+        }
+      ],
+      "experiment": "suppress_L22_relay",
+      "circuit": "analogical_puppy_cat",
+      "category": "analogical",
+      "description": "Suppress L22_relay (Late relay shared with Paris circuit (edge -2.45))"
+    },
+    {
+      "default_text": "<bos>Puppy is to dog as kitten is to cat.\n\nI'",
+      "steered_text": "<bos>Puppy is to dog as kitten is to cat.\n\nI have",
+      "first_steered_token": " cat",
+      "first_steered_logprob": -0.34765625,
+      "first_steered_top5": [
+        {
+          "token": " cat",
+          "logprob": -0.34765625
+        },
+        {
+          "token": " what",
+          "logprob": -2.46875
+        },
+        {
+          "token": "...",
+          "logprob": -3.71875
+        },
+        {
+          "token": " a",
+          "logprob": -3.84375
+        },
+        {
+          "token": " which",
+          "logprob": -3.96875
+        }
+      ],
+      "first_default_token": " cat",
+      "first_default_logprob": -0.349609375,
+      "first_default_top5": [
+        {
+          "token": " cat",
+          "logprob": -0.349609375
+        },
+        {
+          "token": " what",
+          "logprob": -3.84375
+        },
+        {
+          "token": "...",
+          "logprob": -3.96875
+        },
+        {
+          "token": " ____",
+          "logprob": -4.09375
+        },
+        {
+          "token": " .",
+          "logprob": -4.21875
+        }
+      ],
+      "experiment": "suppress_L25_amplifier",
+      "circuit": "analogical_puppy_cat",
+      "category": "analogical",
+      "description": "Suppress L25_amplifier (Final amplifier to logit (shared with Paris circuit))"
+    },
+    {
+      "default_text": "<bos>Puppy is to dog as kitten is to cat.\n\nI'",
+      "steered_text": "<bos>Puppy is to dog as kitten is to cat.\n\nI think",
+      "first_steered_token": " cat",
+      "first_steered_logprob": -1.546875,
+      "first_steered_top5": [
+        {
+          "token": " cat",
+          "logprob": -1.546875
+        },
+        {
+          "token": " dog",
+          "logprob": -2.046875
+        },
+        {
+          "token": " ",
+          "logprob": -2.171875
+        },
+        {
+          "token": " adult",
+          "logprob": -2.421875
+        },
+        {
+          "token": " -",
+          "logprob": -2.671875
+        }
+      ],
+      "first_default_token": " cat",
+      "first_default_logprob": -0.349609375,
+      "first_default_top5": [
+        {
+          "token": " cat",
+          "logprob": -0.349609375
+        },
+        {
+          "token": " what",
+          "logprob": -3.84375
+        },
+        {
+          "token": "...",
+          "logprob": -3.96875
+        },
+        {
+          "token": " ____",
+          "logprob": -4.09375
+        },
+        {
+          "token": " .",
+          "logprob": -4.21875
+        }
+      ],
+      "experiment": "suppress_all_backbone",
+      "circuit": "analogical_puppy_cat",
+      "category": "analogical",
+      "description": "Suppress all 4 backbone features"
+    },
+    {
+      "default_text": "<bos>Fish is to water as bird is to air.\n\nThe fish",
+      "steered_text": "<bos>Fish is to water as bird is to what?\n\nA.",
+      "first_steered_token": " what",
+      "first_steered_logprob": -2.390625,
+      "first_steered_top5": [
+        {
+          "token": " what",
+          "logprob": -2.390625
+        },
+        {
+          "token": " ____",
+          "logprob": -2.640625
+        },
+        {
+          "token": "\n\n",
+          "logprob": -2.640625
+        },
+        {
+          "token": " ________",
+          "logprob": -2.640625
+        },
+        {
+          "token": " ",
+          "logprob": -3.265625
+        }
+      ],
+      "first_default_token": " air",
+      "first_default_logprob": -2.578125,
+      "first_default_top5": [
+        {
+          "token": " air",
+          "logprob": -2.578125
+        },
+        {
+          "token": " ____",
+          "logprob": -2.578125
+        },
+        {
+          "token": " ________",
+          "logprob": -2.953125
+        },
+        {
+          "token": " ",
+          "logprob": -3.078125
+        },
+        {
+          "token": " the",
+          "logprob": -3.078125
+        }
+      ],
+      "experiment": "boost_hub_Fish_is_to_water_as_bird_",
+      "circuit": "analogical_puppy_cat",
+      "category": "analogical",
+      "description": "Boost L14_relay on: different analogy same structure",
+      "baseline_text": "?"
+    },
+    {
+      "default_text": "<bos>Lamb is to sheep as kitten is to cat.\n\nI'",
+      "steered_text": "<bos>Lamb is to sheep as kitten is to what?\n\nWhat is",
+      "first_steered_token": " what",
+      "first_steered_logprob": -2.375,
+      "first_steered_top5": [
+        {
+          "token": " what",
+          "logprob": -2.375
+        },
+        {
+          "token": " ________",
+          "logprob": -2.875
+        },
+        {
+          "token": " cat",
+          "logprob": -2.875
+        },
+        {
+          "token": " ____",
+          "logprob": -3
+        },
+        {
+          "token": " .",
+          "logprob": -3.125
+        }
+      ],
+      "first_default_token": " cat",
+      "first_default_logprob": -1.4921875,
+      "first_default_top5": [
+        {
+          "token": " cat",
+          "logprob": -1.4921875
+        },
+        {
+          "token": " what",
+          "logprob": -2.75
+        },
+        {
+          "token": " ____",
+          "logprob": -3.25
+        },
+        {
+          "token": " kitten",
+          "logprob": -3.25
+        },
+        {
+          "token": " .",
+          "logprob": -3.25
+        }
+      ],
+      "experiment": "boost_hub_Lamb_is_to_sheep_as_kitte",
+      "circuit": "analogical_puppy_cat",
+      "category": "analogical",
+      "description": "Boost L14_relay on: different source pair",
+      "baseline_text": "?"
+    },
+    {
+      "default_text": "<bos>The weather today is really nice. It\u2019s",
+      "steered_text": "<bos>The weather today is really nice. It's",
+      "first_steered_token": " nice",
+      "first_steered_logprob": -2.140625,
+      "first_steered_top5": [
+        {
+          "token": " hot",
+          "logprob": -2.140625
+        },
+        {
+          "token": " nice",
+          "logprob": -2.140625
+        },
+        {
+          "token": " cold",
+          "logprob": -2.640625
+        },
+        {
+          "token": " warm",
+          "logprob": -3.140625
+        },
+        {
+          "token": " beautiful",
+          "logprob": -3.265625
+        }
+      ],
+      "first_default_token": " nice",
+      "first_default_logprob": -1.625,
+      "first_default_top5": [
+        {
+          "token": " nice",
+          "logprob": -1.625
+        },
+        {
+          "token": " hot",
+          "logprob": -2.625
+        },
+        {
+          "token": " good",
+          "logprob": -2.625
+        },
+        {
+          "token": " beautiful",
+          "logprob": -2.875
+        },
+        {
+          "token": " bad",
+          "logprob": -2.875
+        }
+      ],
+      "experiment": "boost_hub_The_weather_today_is_real",
+      "circuit": "analogical_puppy_cat",
+      "category": "analogical",
+      "description": "Boost L14_relay on: irrelevant context",
+      "baseline_text": "?"
+    },
+    {
+      "default_text": "<bos>Puppy is to dog as kitten is to cat.\n\nI'",
+      "steered_text": "<bos>Puppy is to dog as kitten is to cat\n\n[User ",
+      "first_steered_token": " cat",
+      "first_steered_logprob": -0.1416015625,
+      "first_steered_top5": [
+        {
+          "token": " cat",
+          "logprob": -0.1416015625
+        },
+        {
+          "token": " cats",
+          "logprob": -3.265625
+        },
+        {
+          "token": " a",
+          "logprob": -3.515625
+        },
+        {
+          "token": " dog",
+          "logprob": -3.765625
+        },
+        {
+          "token": " kitten",
+          "logprob": -5.15625
+        }
+      ],
+      "first_default_token": " cat",
+      "first_default_logprob": -0.349609375,
+      "first_default_top5": [
+        {
+          "token": " cat",
+          "logprob": -0.349609375
+        },
+        {
+          "token": " what",
+          "logprob": -3.84375
+        },
+        {
+          "token": "...",
+          "logprob": -3.96875
+        },
+        {
+          "token": " ____",
+          "logprob": -4.09375
+        },
+        {
+          "token": " .",
+          "logprob": -4.21875
+        }
+      ],
+      "experiment": "suppress_nonbackbone_L9_2909",
+      "circuit": "analogical_puppy_cat",
+      "category": "analogical",
+      "description": "Suppress non-backbone: L9 'formulas/ratios' (path 1 entry but general feature)"
+    }
+  ],
+  "factual_water_oxygen": [
+    {
+      "default_text": "<bos>Water is composed of hydrogen and oxygen. The ratio of",
+      "steered_text": "<bos>Water is composed of hydrogen and oxygen.\n\nThe water",
+      "first_steered_token": " oxygen",
+      "first_steered_logprob": -1.90625,
+      "first_steered_top5": [
+        {
+          "token": " oxygen",
+          "logprob": -1.90625
+        },
+        {
+          "token": " the",
+          "logprob": -2.65625
+        },
+        {
+          "token": " a",
+          "logprob": -2.65625
+        },
+        {
+          "token": " carbon",
+          "logprob": -3.03125
+        },
+        {
+          "token": " chlorine",
+          "logprob": -3.15625
+        }
+      ],
+      "first_default_token": " oxygen",
+      "first_default_logprob": -0.031494140625,
+      "first_default_top5": [
+        {
+          "token": " oxygen",
+          "logprob": -0.031494140625
+        },
+        {
+          "token": " ",
+          "logprob": -5.90625
+        },
+        {
+          "token": " the",
+          "logprob": -6.65625
+        },
+        {
+          "token": " O",
+          "logprob": -6.78125
+        },
+        {
+          "token": "\n",
+          "logprob": -6.78125
+        }
+      ],
+      "experiment": "suppress_L19_hub",
+      "circuit": "factual_water_oxygen",
+      "category": "factual_recall",
+      "description": "Suppress L19_hub (Primary hub \u2014 feeds the dominant cascade (edge +5.81))"
+    },
+    {
+      "default_text": "<bos>Water is composed of hydrogen and oxygen. The ratio of",
+      "steered_text": "<bos>Water is composed of hydrogen and oxygen, which are both",
+      "first_steered_token": " oxygen",
+      "first_steered_logprob": -0.2001953125,
+      "first_steered_top5": [
+        {
+          "token": " oxygen",
+          "logprob": -0.2001953125
+        },
+        {
+          "token": " ",
+          "logprob": -3.984375
+        },
+        {
+          "token": " the",
+          "logprob": -4.03125
+        },
+        {
+          "token": " carbon",
+          "logprob": -4.15625
+        },
+        {
+          "token": " a",
+          "logprob": -4.90625
+        }
+      ],
+      "first_default_token": " oxygen",
+      "first_default_logprob": -0.031494140625,
+      "first_default_top5": [
+        {
+          "token": " oxygen",
+          "logprob": -0.031494140625
+        },
+        {
+          "token": " ",
+          "logprob": -5.90625
+        },
+        {
+          "token": " the",
+          "logprob": -6.65625
+        },
+        {
+          "token": " O",
+          "logprob": -6.78125
+        },
+        {
+          "token": "\n",
+          "logprob": -6.78125
+        }
+      ],
+      "experiment": "suppress_L22_bottleneck",
+      "circuit": "factual_water_oxygen",
+      "category": "factual_recall",
+      "description": "Suppress L22_bottleneck (Circuit bottleneck (edge +43.25 \u2014 massive weight))"
+    },
+    {
+      "default_text": "<bos>Water is composed of hydrogen and oxygen. The ratio of",
+      "steered_text": "<bos>Water is composed of hydrogen and <strong><em><u><strong>",
+      "first_steered_token": " ",
+      "first_steered_logprob": -1.8515625,
+      "first_steered_top5": [
+        {
+          "token": " ",
+          "logprob": -1.8515625
+        },
+        {
+          "token": " oxygen",
+          "logprob": -2.171875
+        },
+        {
+          "token": " of",
+          "logprob": -2.359375
+        },
+        {
+          "token": "\n\n",
+          "logprob": -2.796875
+        },
+        {
+          "token": "\n",
+          "logprob": -2.921875
+        }
+      ],
+      "first_default_token": " oxygen",
+      "first_default_logprob": -0.031494140625,
+      "first_default_top5": [
+        {
+          "token": " oxygen",
+          "logprob": -0.031494140625
+        },
+        {
+          "token": " ",
+          "logprob": -5.90625
+        },
+        {
+          "token": " the",
+          "logprob": -6.65625
+        },
+        {
+          "token": " O",
+          "logprob": -6.78125
+        },
+        {
+          "token": "\n",
+          "logprob": -6.78125
+        }
+      ],
+      "experiment": "suppress_L24_suppressor",
+      "circuit": "factual_water_oxygen",
+      "category": "factual_recall",
+      "description": "Suppress L24_suppressor (Inhibitory suppressor (edge -13.13))"
+    },
+    {
+      "default_text": "<bos>Water is composed of hydrogen and oxygen. The ratio of",
+      "steered_text": "<bos>Water is composed of hydrogen and 16.0",
+      "first_steered_token": " ",
+      "first_steered_logprob": -1.125,
+      "first_steered_top5": [
+        {
+          "token": " ",
+          "logprob": -1.125
+        },
+        {
+          "token": " the",
+          "logprob": -1.875
+        },
+        {
+          "token": "\n",
+          "logprob": -2.5625
+        },
+        {
+          "token": " what",
+          "logprob": -2.6875
+        },
+        {
+          "token": "\n\n",
+          "logprob": -2.6875
+        }
+      ],
+      "first_default_token": " oxygen",
+      "first_default_logprob": -0.031494140625,
+      "first_default_top5": [
+        {
+          "token": " oxygen",
+          "logprob": -0.031494140625
+        },
+        {
+          "token": " ",
+          "logprob": -5.90625
+        },
+        {
+          "token": " the",
+          "logprob": -6.65625
+        },
+        {
+          "token": " O",
+          "logprob": -6.78125
+        },
+        {
+          "token": "\n",
+          "logprob": -6.78125
+        }
+      ],
+      "experiment": "suppress_L25_gate",
+      "circuit": "factual_water_oxygen",
+      "category": "factual_recall",
+      "description": "Suppress L25_gate (Final gate to logit (edge -0.55))"
+    },
+    {
+      "default_text": "<bos>Water is composed of hydrogen and oxygen. The ratio of",
+      "steered_text": "<bos>Water is composed of hydrogen and water molecules. The water",
+      "first_steered_token": " water",
+      "first_steered_logprob": -2.0625,
+      "first_steered_top5": [
+        {
+          "token": " water",
+          "logprob": -2.0625
+        },
+        {
+          "token": " oxygen",
+          "logprob": -2.1875
+        },
+        {
+          "token": " a",
+          "logprob": -2.5625
+        },
+        {
+          "token": " the",
+          "logprob": -2.6875
+        },
+        {
+          "token": " gas",
+          "logprob": -3.0625
+        }
+      ],
+      "first_default_token": " oxygen",
+      "first_default_logprob": -0.031494140625,
+      "first_default_top5": [
+        {
+          "token": " oxygen",
+          "logprob": -0.031494140625
+        },
+        {
+          "token": " ",
+          "logprob": -5.90625
+        },
+        {
+          "token": " the",
+          "logprob": -6.65625
+        },
+        {
+          "token": " O",
+          "logprob": -6.78125
+        },
+        {
+          "token": "\n",
+          "logprob": -6.78125
+        }
+      ],
+      "experiment": "suppress_L18_relay",
+      "circuit": "factual_water_oxygen",
+      "category": "factual_recall",
+      "description": "Suppress L18_relay (Excitatory relay (edge +17.50))"
+    },
+    {
+      "default_text": "<bos>Water is composed of hydrogen and oxygen. The ratio of",
+      "steered_text": "<bos>Water is composed of hydrogen and oxygen, which are both",
+      "first_steered_token": " oxygen",
+      "first_steered_logprob": -1.640625,
+      "first_steered_top5": [
+        {
+          "token": " oxygen",
+          "logprob": -1.640625
+        },
+        {
+          "token": " hydroxide",
+          "logprob": -1.765625
+        },
+        {
+          "token": " hydroxyl",
+          "logprob": -2.265625
+        },
+        {
+          "token": " water",
+          "logprob": -3.015625
+        },
+        {
+          "token": " what",
+          "logprob": -3.015625
+        }
+      ],
+      "first_default_token": " oxygen",
+      "first_default_logprob": -0.031494140625,
+      "first_default_top5": [
+        {
+          "token": " oxygen",
+          "logprob": -0.031494140625
+        },
+        {
+          "token": " ",
+          "logprob": -5.90625
+        },
+        {
+          "token": " the",
+          "logprob": -6.65625
+        },
+        {
+          "token": " O",
+          "logprob": -6.78125
+        },
+        {
+          "token": "\n",
+          "logprob": -6.78125
+        }
+      ],
+      "experiment": "suppress_L19_secondary",
+      "circuit": "factual_water_oxygen",
+      "category": "factual_recall",
+      "description": "Suppress L19_secondary (Secondary L19 output (edge +1.27 to logit))"
+    },
+    {
+      "default_text": "<bos>Water is composed of hydrogen and oxygen. The ratio of",
+      "steered_text": "<bos>Water is composed of hydrogen and oxygen.\n\n$\\mathrm",
+      "first_steered_token": " oxygen",
+      "first_steered_logprob": -0.15234375,
+      "first_steered_top5": [
+        {
+          "token": " oxygen",
+          "logprob": -0.15234375
+        },
+        {
+          "token": " chlorine",
+          "logprob": -3.15625
+        },
+        {
+          "token": " hydroxide",
+          "logprob": -3.78125
+        },
+        {
+          "token": " hydroxyl",
+          "logprob": -5.15625
+        },
+        {
+          "token": " fluorine",
+          "logprob": -5.78125
+        }
+      ],
+      "first_default_token": " oxygen",
+      "first_default_logprob": -0.031494140625,
+      "first_default_top5": [
+        {
+          "token": " oxygen",
+          "logprob": -0.031494140625
+        },
+        {
+          "token": " ",
+          "logprob": -5.90625
+        },
+        {
+          "token": " the",
+          "logprob": -6.65625
+        },
+        {
+          "token": " O",
+          "logprob": -6.78125
+        },
+        {
+          "token": "\n",
+          "logprob": -6.78125
+        }
+      ],
+      "experiment": "suppress_L9_chemistry",
+      "circuit": "factual_water_oxygen",
+      "category": "factual_recall",
+      "description": "Suppress L9_chemistry (Chemistry/chemical elements feature (edge +0.67))"
+    },
+    {
+      "default_text": "<bos>Water is composed of hydrogen and oxygen. The ratio of",
+      "steered_text": "<bos>Water is composed of hydrogen and oxygen atoms. By using",
+      "first_steered_token": " oxygen",
+      "first_steered_logprob": -0.25390625,
+      "first_steered_top5": [
+        {
+          "token": " oxygen",
+          "logprob": -0.25390625
+        },
+        {
+          "token": " ",
+          "logprob": -3.75
+        },
+        {
+          "token": " ________",
+          "logprob": -4.5625
+        },
+        {
+          "token": " about",
+          "logprob": -4.75
+        },
+        {
+          "token": " of",
+          "logprob": -4.75
+        }
+      ],
+      "first_default_token": " oxygen",
+      "first_default_logprob": -0.031494140625,
+      "first_default_top5": [
+        {
+          "token": " oxygen",
+          "logprob": -0.031494140625
+        },
+        {
+          "token": " ",
+          "logprob": -5.90625
+        },
+        {
+          "token": " the",
+          "logprob": -6.65625
+        },
+        {
+          "token": " O",
+          "logprob": -6.78125
+        },
+        {
+          "token": "\n",
+          "logprob": -6.78125
+        }
+      ],
+      "experiment": "suppress_L22_secondary",
+      "circuit": "factual_water_oxygen",
+      "category": "factual_recall",
+      "description": "Suppress L22_secondary (Secondary L22 node (edge +5.11))"
+    },
+    {
+      "default_text": "<bos>Water is composed of hydrogen and oxygen. The ratio of",
+      "steered_text": "<bos>Water is composed of hydrogen and oxygen in the following\n\n",
+      "first_steered_token": " oxygen",
+      "first_steered_logprob": -0.80078125,
+      "first_steered_top5": [
+        {
+          "token": " oxygen",
+          "logprob": -0.80078125
+        },
+        {
+          "token": " ",
+          "logprob": -1.9296875
+        },
+        {
+          "token": " the",
+          "logprob": -2.421875
+        },
+        {
+          "token": " what",
+          "logprob": -3.296875
+        },
+        {
+          "token": " a",
+          "logprob": -3.421875
+        }
+      ],
+      "first_default_token": " oxygen",
+      "first_default_logprob": -0.031494140625,
+      "first_default_top5": [
+        {
+          "token": " oxygen",
+          "logprob": -0.031494140625
+        },
+        {
+          "token": " ",
+          "logprob": -5.90625
+        },
+        {
+          "token": " the",
+          "logprob": -6.65625
+        },
+        {
+          "token": " O",
+          "logprob": -6.78125
+        },
+        {
+          "token": "\n",
+          "logprob": -6.78125
+        }
+      ],
+      "experiment": "suppress_L25_amplifier",
+      "circuit": "factual_water_oxygen",
+      "category": "factual_recall",
+      "description": "Suppress L25_amplifier (Final amplifier shared across circuits)"
+    },
+    {
+      "default_text": "<bos>Water is composed of hydrogen and oxygen. The ratio of",
+      "steered_text": "<bos>Water is composed of hydrogen and \n\n \n\n ",
+      "first_steered_token": " ",
+      "first_steered_logprob": -0.7109375,
+      "first_steered_top5": [
+        {
+          "token": " ",
+          "logprob": -0.7109375
+        },
+        {
+          "token": ",",
+          "logprob": -1.7109375
+        },
+        {
+          "token": ".",
+          "logprob": -2.828125
+        },
+        {
+          "token": "\n\n",
+          "logprob": -2.953125
+        },
+        {
+          "token": " and",
+          "logprob": -3.078125
+        }
+      ],
+      "first_default_token": " oxygen",
+      "first_default_logprob": -0.031494140625,
+      "first_default_top5": [
+        {
+          "token": " oxygen",
+          "logprob": -0.031494140625
+        },
+        {
+          "token": " ",
+          "logprob": -5.90625
+        },
+        {
+          "token": " the",
+          "logprob": -6.65625
+        },
+        {
+          "token": " O",
+          "logprob": -6.78125
+        },
+        {
+          "token": "\n",
+          "logprob": -6.78125
+        }
+      ],
+      "experiment": "suppress_all_backbone",
+      "circuit": "factual_water_oxygen",
+      "category": "factual_recall",
+      "description": "Suppress all 9 backbone features"
+    },
+    {
+      "default_text": "<bos>The chemical formula for methane is CH4. The chemical formula",
+      "steered_text": "<bos>The chemical formula for methane is CH$_4$. This means",
+      "first_steered_token": "$_",
+      "first_steered_logprob": -1.1640625,
+      "first_steered_top5": [
+        {
+          "token": "$_",
+          "logprob": -1.1640625
+        },
+        {
+          "token": "4",
+          "logprob": -1.1640625
+        },
+        {
+          "token": "<sub>",
+          "logprob": -1.5390625
+        },
+        {
+          "token": "_",
+          "logprob": -3.046875
+        },
+        {
+          "token": " ",
+          "logprob": -4.15625
+        }
+      ],
+      "first_default_token": "4",
+      "first_default_logprob": -0.7890625,
+      "first_default_top5": [
+        {
+          "token": "4",
+          "logprob": -0.7890625
+        },
+        {
+          "token": "$_",
+          "logprob": -1.4140625
+        },
+        {
+          "token": "<sub>",
+          "logprob": -1.9140625
+        },
+        {
+          "token": "_",
+          "logprob": -3.53125
+        },
+        {
+          "token": " ",
+          "logprob": -3.78125
+        }
+      ],
+      "experiment": "boost_hub_The_chemical_formula_for_",
+      "circuit": "factual_water_oxygen",
+      "category": "factual_recall",
+      "description": "Boost L19_hub on: different molecule same task",
+      "baseline_text": "?"
+    },
+    {
+      "default_text": "<bos>Water boils at a temperature of 100 degrees",
+      "steered_text": "<bos>Water boils at a temperature of 100.",
+      "first_steered_token": " ",
+      "first_steered_logprob": -0.625,
+      "first_steered_top5": [
+        {
+          "token": " ",
+          "logprob": -0.625
+        },
+        {
+          "token": " $",
+          "logprob": -1.25
+        },
+        {
+          "token": "\n\n",
+          "logprob": -4.125
+        },
+        {
+          "token": " zero",
+          "logprob": -4.25
+        },
+        {
+          "token": ":",
+          "logprob": -4.375
+        }
+      ],
+      "first_default_token": " ",
+      "first_default_logprob": -0.62890625,
+      "first_default_top5": [
+        {
+          "token": " ",
+          "logprob": -0.62890625
+        },
+        {
+          "token": " $",
+          "logprob": -1.2578125
+        },
+        {
+          "token": "\n\n",
+          "logprob": -3
+        },
+        {
+          "token": ":",
+          "logprob": -3.75
+        },
+        {
+          "token": "\n",
+          "logprob": -4.25
+        }
+      ],
+      "experiment": "boost_hub_Water_boils_at_a_temperat",
+      "circuit": "factual_water_oxygen",
+      "category": "factual_recall",
+      "description": "Boost L19_hub on: same entity different relation",
+      "baseline_text": "?"
+    },
+    {
+      "default_text": "<bos>The weather today is quite nice. The sun is",
+      "steered_text": "<bos>The weather today is quite nice, with a temperature",
+      "first_steered_token": " nice",
+      "first_steered_logprob": -2.03125,
+      "first_steered_top5": [
+        {
+          "token": " nice",
+          "logprob": -2.03125
+        },
+        {
+          "token": " different",
+          "logprob": -2.15625
+        },
+        {
+          "token": " good",
+          "logprob": -2.28125
+        },
+        {
+          "token": " a",
+          "logprob": -2.28125
+        },
+        {
+          "token": " similar",
+          "logprob": -3.15625
+        }
+      ],
+      "first_default_token": " nice",
+      "first_default_logprob": -2.09375,
+      "first_default_top5": [
+        {
+          "token": " nice",
+          "logprob": -2.09375
+        },
+        {
+          "token": " pleasant",
+          "logprob": -2.59375
+        },
+        {
+          "token": " warm",
+          "logprob": -2.71875
+        },
+        {
+          "token": " cold",
+          "logprob": -2.84375
+        },
+        {
+          "token": " different",
+          "logprob": -2.96875
+        }
+      ],
+      "experiment": "boost_hub_The_weather_today_is_quit",
+      "circuit": "factual_water_oxygen",
+      "category": "factual_recall",
+      "description": "Boost L19_hub on: irrelevant context",
+      "baseline_text": "?"
+    },
+    {
+      "default_text": "<bos>Water is composed of hydrogen and oxygen. The ratio of",
+      "steered_text": "<bos>Water is composed of hydrogen and oxygen.\n\nWater is",
+      "first_steered_token": " oxygen",
+      "first_steered_logprob": -0.035400390625,
+      "first_steered_top5": [
+        {
+          "token": " oxygen",
+          "logprob": -0.035400390625
+        },
+        {
+          "token": " Oxygen",
+          "logprob": -5.34375
+        },
+        {
+          "token": " hydroxyl",
+          "logprob": -6.34375
+        },
+        {
+          "token": " O",
+          "logprob": -6.34375
+        },
+        {
+          "token": "\n\n",
+          "logprob": -6.65625
+        }
+      ],
+      "first_default_token": " oxygen",
+      "first_default_logprob": -0.031494140625,
+      "first_default_top5": [
+        {
+          "token": " oxygen",
+          "logprob": -0.031494140625
+        },
+        {
+          "token": " ",
+          "logprob": -5.90625
+        },
+        {
+          "token": " the",
+          "logprob": -6.65625
+        },
+        {
+          "token": " O",
+          "logprob": -6.78125
+        },
+        {
+          "token": "\n",
+          "logprob": -6.78125
+        }
+      ],
+      "experiment": "suppress_nonbackbone_L6_2238",
+      "circuit": "factual_water_oxygen",
+      "category": "factual_recall",
+      "description": "Suppress non-backbone: L6 'passive voice/designed systems' (path 1 entry but general)"
+    },
+    {
+      "default_text": "<bos>Water is composed of hydrogen and oxygen. The ratio of",
+      "steered_text": "<bos>Water is composed of hydrogen and oxygen. The hydrogen is",
+      "first_steered_token": " oxygen",
+      "first_steered_logprob": -0.11376953125,
+      "first_steered_top5": [
+        {
+          "token": " oxygen",
+          "logprob": -0.11376953125
+        },
+        {
+          "token": " hydroxyl",
+          "logprob": -3.734375
+        },
+        {
+          "token": " hydroxide",
+          "logprob": -4.25
+        },
+        {
+          "token": " Oxygen",
+          "logprob": -5.25
+        },
+        {
+          "token": " hydrogen",
+          "logprob": -5.25
+        }
+      ],
+      "first_default_token": " oxygen",
+      "first_default_logprob": -0.031494140625,
+      "first_default_top5": [
+        {
+          "token": " oxygen",
+          "logprob": -0.031494140625
+        },
+        {
+          "token": " ",
+          "logprob": -5.90625
+        },
+        {
+          "token": " the",
+          "logprob": -6.65625
+        },
+        {
+          "token": " O",
+          "logprob": -6.78125
+        },
+        {
+          "token": "\n",
+          "logprob": -6.78125
+        }
+      ],
+      "experiment": "suppress_nonbackbone_L7_4310",
+      "circuit": "factual_water_oxygen",
+      "category": "factual_recall",
+      "description": "Suppress non-backbone: L7 'food/math' feature (path 5, low weight)"
+    }
+  ],
+  "factual_napoleon_elba": [
+    {
+      "default_text": "<bos>Napoleon was exiled to the island of Elba in 18",
+      "steered_text": "<bos>Napoleon was exiled to the island of Elba in 18",
+      "first_steered_token": " Elba",
+      "first_steered_logprob": -0.80859375,
+      "first_steered_top5": [
+        {
+          "token": " Elba",
+          "logprob": -0.80859375
+        },
+        {
+          "token": " St",
+          "logprob": -1.4296875
+        },
+        {
+          "token": " Saint",
+          "logprob": -1.5546875
+        },
+        {
+          "token": " Sint",
+          "logprob": -4.3125
+        },
+        {
+          "token": " El",
+          "logprob": -4.9375
+        }
+      ],
+      "first_default_token": " Elba",
+      "first_default_logprob": -0.421875,
+      "first_default_top5": [
+        {
+          "token": " Elba",
+          "logprob": -0.421875
+        },
+        {
+          "token": " St",
+          "logprob": -1.609375
+        },
+        {
+          "token": " Saint",
+          "logprob": -2.234375
+        },
+        {
+          "token": " El",
+          "logprob": -4.5625
+        },
+        {
+          "token": " Sant",
+          "logprob": -5.6875
+        }
+      ],
+      "experiment": "suppress_L5_relay",
+      "circuit": "factual_napoleon_elba",
+      "category": "factual_recall",
+      "description": "Suppress L5_relay (Early-mid relay (edge +0.86))"
+    },
+    {
+      "default_text": "<bos>Napoleon was exiled to the island of Elba in 18",
+      "steered_text": "<bos>Napoleon was exiled to the island of Elba in 18",
+      "first_steered_token": " Elba",
+      "first_steered_logprob": -0.16015625,
+      "first_steered_top5": [
+        {
+          "token": " Elba",
+          "logprob": -0.16015625
+        },
+        {
+          "token": " St",
+          "logprob": -2.90625
+        },
+        {
+          "token": " Saint",
+          "logprob": -3.3125
+        },
+        {
+          "token": " Malta",
+          "logprob": -5.03125
+        },
+        {
+          "token": " El",
+          "logprob": -5.28125
+        }
+      ],
+      "first_default_token": " Elba",
+      "first_default_logprob": -0.421875,
+      "first_default_top5": [
+        {
+          "token": " Elba",
+          "logprob": -0.421875
+        },
+        {
+          "token": " St",
+          "logprob": -1.609375
+        },
+        {
+          "token": " Saint",
+          "logprob": -2.234375
+        },
+        {
+          "token": " El",
+          "logprob": -4.5625
+        },
+        {
+          "token": " Sant",
+          "logprob": -5.6875
+        }
+      ],
+      "experiment": "suppress_L21_convergence",
+      "circuit": "factual_napoleon_elba",
+      "category": "factual_recall",
+      "description": "Suppress L21_convergence (Late convergence hub (edge +2.17))"
+    },
+    {
+      "default_text": "<bos>Napoleon was exiled to the island of Elba in 18",
+      "steered_text": "<bos>Napoleon was exiled to the island of Elba in 18",
+      "first_steered_token": " Elba",
+      "first_steered_logprob": -0.86328125,
+      "first_steered_top5": [
+        {
+          "token": " Elba",
+          "logprob": -0.86328125
+        },
+        {
+          "token": " St",
+          "logprob": -1.359375
+        },
+        {
+          "token": " Saint",
+          "logprob": -1.609375
+        },
+        {
+          "token": " El",
+          "logprob": -3.796875
+        },
+        {
+          "token": " Santa",
+          "logprob": -4.03125
+        }
+      ],
+      "first_default_token": " Elba",
+      "first_default_logprob": -0.421875,
+      "first_default_top5": [
+        {
+          "token": " Elba",
+          "logprob": -0.421875
+        },
+        {
+          "token": " St",
+          "logprob": -1.609375
+        },
+        {
+          "token": " Saint",
+          "logprob": -2.234375
+        },
+        {
+          "token": " El",
+          "logprob": -4.5625
+        },
+        {
+          "token": " Sant",
+          "logprob": -5.6875
+        }
+      ],
+      "experiment": "suppress_L25_output",
+      "circuit": "factual_napoleon_elba",
+      "category": "factual_recall",
+      "description": "Suppress L25_output (Output driver (edge -0.52 to logit))"
+    },
+    {
+      "default_text": "<bos>Napoleon was exiled to the island of Elba in 18",
+      "steered_text": "<bos>Napoleon was exiled to the island of Pond Pond in 1",
+      "first_steered_token": " Pond",
+      "first_steered_logprob": -1.6875,
+      "first_steered_top5": [
+        {
+          "token": " Pond",
+          "logprob": -1.6875
+        },
+        {
+          "token": " Elba",
+          "logprob": -1.6875
+        },
+        {
+          "token": " St",
+          "logprob": -2.0625
+        },
+        {
+          "token": " Saint",
+          "logprob": -2.1875
+        },
+        {
+          "token": " the",
+          "logprob": -3.5625
+        }
+      ],
+      "first_default_token": " Elba",
+      "first_default_logprob": -0.421875,
+      "first_default_top5": [
+        {
+          "token": " Elba",
+          "logprob": -0.421875
+        },
+        {
+          "token": " St",
+          "logprob": -1.609375
+        },
+        {
+          "token": " Saint",
+          "logprob": -2.234375
+        },
+        {
+          "token": " El",
+          "logprob": -4.5625
+        },
+        {
+          "token": " Sant",
+          "logprob": -5.6875
+        }
+      ],
+      "experiment": "suppress_L18_island_encoder",
+      "circuit": "factual_napoleon_elba",
+      "category": "factual_recall",
+      "description": "Suppress L18_island_encoder (Island/park names encoder (act=51.48 \u2014 highest late-layer activation))"
+    },
+    {
+      "default_text": "<bos>Napoleon was exiled to the island of Elba in 18",
+      "steered_text": "<bos>Napoleon was exiled to the island of Elba in 18",
+      "first_steered_token": " Elba",
+      "first_steered_logprob": -0.1923828125,
+      "first_steered_top5": [
+        {
+          "token": " Elba",
+          "logprob": -0.1923828125
+        },
+        {
+          "token": " Saint",
+          "logprob": -2.8125
+        },
+        {
+          "token": " St",
+          "logprob": -2.9375
+        },
+        {
+          "token": " El",
+          "logprob": -5.0625
+        },
+        {
+          "token": " ",
+          "logprob": -5.125
+        }
+      ],
+      "first_default_token": " Elba",
+      "first_default_logprob": -0.421875,
+      "first_default_top5": [
+        {
+          "token": " Elba",
+          "logprob": -0.421875
+        },
+        {
+          "token": " St",
+          "logprob": -1.609375
+        },
+        {
+          "token": " Saint",
+          "logprob": -2.234375
+        },
+        {
+          "token": " El",
+          "logprob": -4.5625
+        },
+        {
+          "token": " Sant",
+          "logprob": -5.6875
+        }
+      ],
+      "experiment": "suppress_L17_empire",
+      "circuit": "factual_napoleon_elba",
+      "category": "factual_recall",
+      "description": "Suppress L17_empire (Empires/global power (act=19.18))"
+    },
+    {
+      "default_text": "<bos>Napoleon was exiled to the island of Elba in 18",
+      "steered_text": "<bos>Napoleon was exiled to the island of 15, ",
+      "first_steered_token": " ",
+      "first_steered_logprob": -0.65234375,
+      "first_steered_top5": [
+        {
+          "token": " ",
+          "logprob": -0.65234375
+        },
+        {
+          "token": " of",
+          "logprob": -1.1484375
+        },
+        {
+          "token": " the",
+          "logprob": -3.03125
+        },
+        {
+          "token": " K",
+          "logprob": -4.28125
+        },
+        {
+          "token": ",",
+          "logprob": -4.78125
+        }
+      ],
+      "first_default_token": " Elba",
+      "first_default_logprob": -0.421875,
+      "first_default_top5": [
+        {
+          "token": " Elba",
+          "logprob": -0.421875
+        },
+        {
+          "token": " St",
+          "logprob": -1.609375
+        },
+        {
+          "token": " Saint",
+          "logprob": -2.234375
+        },
+        {
+          "token": " El",
+          "logprob": -4.5625
+        },
+        {
+          "token": " Sant",
+          "logprob": -5.6875
+        }
+      ],
+      "experiment": "suppress_all_backbone",
+      "circuit": "factual_napoleon_elba",
+      "category": "factual_recall",
+      "description": "Suppress all 5 backbone features"
+    },
+    {
+      "default_text": "<bos>After his defeat, the emperor was sent to the island of the dead, where he",
+      "steered_text": "<bos>After his defeat, the emperor was sent to the island of Crete, where he was",
+      "first_steered_token": " Crete",
+      "first_steered_logprob": -2.875,
+      "first_steered_top5": [
+        {
+          "token": " Crete",
+          "logprob": -2.875
+        },
+        {
+          "token": " Pat",
+          "logprob": -3.25
+        },
+        {
+          "token": " the",
+          "logprob": -3.25
+        },
+        {
+          "token": " Cor",
+          "logprob": -3.5
+        },
+        {
+          "token": " R",
+          "logprob": -3.5
+        }
+      ],
+      "first_default_token": " the",
+      "first_default_logprob": -3,
+      "first_default_top5": [
+        {
+          "token": " exile",
+          "logprob": -3
+        },
+        {
+          "token": " the",
+          "logprob": -3
+        },
+        {
+          "token": " Elba",
+          "logprob": -3.125
+        },
+        {
+          "token": " Crete",
+          "logprob": -3.25
+        },
+        {
+          "token": " Cor",
+          "logprob": -3.625
+        }
+      ],
+      "experiment": "boost_hub_After_his_defeat,_the_emp",
+      "circuit": "factual_napoleon_elba",
+      "category": "factual_recall",
+      "description": "Boost L5_relay on: rephrased same fact",
+      "baseline_text": "?"
+    },
+    {
+      "default_text": "<bos>The French general was exiled to the island of Elba in",
+      "steered_text": "<bos>The French general was exiled to the United States in ",
+      "first_steered_token": " the",
+      "first_steered_logprob": -1.8125,
+      "first_steered_top5": [
+        {
+          "token": " the",
+          "logprob": -1.8125
+        },
+        {
+          "token": " England",
+          "logprob": -2.0625
+        },
+        {
+          "token": " Britain",
+          "logprob": -3.0625
+        },
+        {
+          "token": " India",
+          "logprob": -3.3125
+        },
+        {
+          "token": " London",
+          "logprob": -3.3125
+        }
+      ],
+      "first_default_token": " the",
+      "first_default_logprob": -1.6328125,
+      "first_default_top5": [
+        {
+          "token": " the",
+          "logprob": -1.6328125
+        },
+        {
+          "token": " Algeria",
+          "logprob": -2.640625
+        },
+        {
+          "token": " a",
+          "logprob": -3.015625
+        },
+        {
+          "token": " India",
+          "logprob": -3.140625
+        },
+        {
+          "token": " New",
+          "logprob": -3.890625
+        }
+      ],
+      "experiment": "boost_hub_The_French_general_was_ex",
+      "circuit": "factual_napoleon_elba",
+      "category": "factual_recall",
+      "description": "Boost L5_relay on: paraphrased",
+      "baseline_text": "?"
+    },
+    {
+      "default_text": "<bos>The weather in the morning was perfect for a walk.",
+      "steered_text": "<bos>The weather in the morning was very nice. The sun",
+      "first_steered_token": " very",
+      "first_steered_logprob": -2.71875,
+      "first_steered_top5": [
+        {
+          "token": " very",
+          "logprob": -2.71875
+        },
+        {
+          "token": " a",
+          "logprob": -2.84375
+        },
+        {
+          "token": " not",
+          "logprob": -3.09375
+        },
+        {
+          "token": " perfect",
+          "logprob": -3.21875
+        },
+        {
+          "token": " clear",
+          "logprob": -3.34375
+        }
+      ],
+      "first_default_token": " perfect",
+      "first_default_logprob": -2.515625,
+      "first_default_top5": [
+        {
+          "token": " perfect",
+          "logprob": -2.515625
+        },
+        {
+          "token": " a",
+          "logprob": -2.765625
+        },
+        {
+          "token": " very",
+          "logprob": -3.015625
+        },
+        {
+          "token": " not",
+          "logprob": -3.015625
+        },
+        {
+          "token": " beautiful",
+          "logprob": -3.140625
+        }
+      ],
+      "experiment": "boost_hub_The_weather_in_the_mornin",
+      "circuit": "factual_napoleon_elba",
+      "category": "factual_recall",
+      "description": "Boost L5_relay on: irrelevant context",
+      "baseline_text": "?"
+    },
+    {
+      "default_text": "<bos>Napoleon was exiled to the island of Elba in 18",
+      "steered_text": "<bos>Napoleon was exiled to the island of Elba in 18",
+      "first_steered_token": " Elba",
+      "first_steered_logprob": -1.171875,
+      "first_steered_top5": [
+        {
+          "token": " Elba",
+          "logprob": -1.171875
+        },
+        {
+          "token": " St",
+          "logprob": -2.046875
+        },
+        {
+          "token": " Saint",
+          "logprob": -2.171875
+        },
+        {
+          "token": " the",
+          "logprob": -3.171875
+        },
+        {
+          "token": " Malta",
+          "logprob": -3.296875
+        }
+      ],
+      "first_default_token": " Elba",
+      "first_default_logprob": -0.421875,
+      "first_default_top5": [
+        {
+          "token": " Elba",
+          "logprob": -0.421875
+        },
+        {
+          "token": " St",
+          "logprob": -1.609375
+        },
+        {
+          "token": " Saint",
+          "logprob": -2.234375
+        },
+        {
+          "token": " El",
+          "logprob": -4.5625
+        },
+        {
+          "token": " Sant",
+          "logprob": -5.6875
+        }
+      ],
+      "experiment": "suppress_nonbackbone_L6_526",
+      "circuit": "factual_napoleon_elba",
+      "category": "factual_recall",
+      "description": "Suppress non-backbone: L6 abbreviations/acronyms (inhibitory path 3)"
+    },
+    {
+      "default_text": "<bos>Napoleon was exiled to the island of Elba in 18",
+      "steered_text": "<bos>Napoleon was exiled to the island of Elba, and he was",
+      "first_steered_token": " Elba",
+      "first_steered_logprob": -0.640625,
+      "first_steered_top5": [
+        {
+          "token": " Elba",
+          "logprob": -0.640625
+        },
+        {
+          "token": " St",
+          "logprob": -1.640625
+        },
+        {
+          "token": " Saint",
+          "logprob": -1.765625
+        },
+        {
+          "token": " El",
+          "logprob": -4
+        },
+        {
+          "token": " ",
+          "logprob": -4.3125
+        }
+      ],
+      "first_default_token": " Elba",
+      "first_default_logprob": -0.421875,
+      "first_default_top5": [
+        {
+          "token": " Elba",
+          "logprob": -0.421875
+        },
+        {
+          "token": " St",
+          "logprob": -1.609375
+        },
+        {
+          "token": " Saint",
+          "logprob": -2.234375
+        },
+        {
+          "token": " El",
+          "logprob": -4.5625
+        },
+        {
+          "token": " Sant",
+          "logprob": -5.6875
+        }
+      ],
+      "experiment": "suppress_nonbackbone_L4_6280",
+      "circuit": "factual_napoleon_elba",
+      "category": "factual_recall",
+      "description": "Suppress non-backbone: L4 legal text/processes (path 2 entry)"
+    }
+  ],
+  "linguistic_hot_cold": [
+    {
+      "default_text": "<bos>The opposite of hot is cold.\n\nThe opposite",
+      "steered_text": "<bos>The opposite of hot is cold.\n\nThe opposite",
+      "first_steered_token": " cold",
+      "first_steered_logprob": -0.67578125,
+      "first_steered_top5": [
+        {
+          "token": " cold",
+          "logprob": -0.67578125
+        },
+        {
+          "token": " not",
+          "logprob": -1.796875
+        },
+        {
+          "token": " the",
+          "logprob": -3.296875
+        },
+        {
+          "token": " actually",
+          "logprob": -3.671875
+        },
+        {
+          "token": " a",
+          "logprob": -3.671875
+        }
+      ],
+      "first_default_token": " cold",
+      "first_default_logprob": -0.73046875,
+      "first_default_top5": [
+        {
+          "token": " cold",
+          "logprob": -0.73046875
+        },
+        {
+          "token": " not",
+          "logprob": -2.859375
+        },
+        {
+          "token": " cool",
+          "logprob": -3.234375
+        },
+        {
+          "token": " ",
+          "logprob": -3.484375
+        },
+        {
+          "token": " what",
+          "logprob": -3.609375
+        }
+      ],
+      "experiment": "suppress_L11_systems",
+      "circuit": "linguistic_hot_cold",
+      "category": "linguistic",
+      "description": "Suppress L11_systems (Path 1 entry \u2014 systems description (edge -0.86))"
+    },
+    {
+      "default_text": "<bos>The opposite of hot is cold.\n\nThe opposite",
+      "steered_text": "<bos>The opposite of hot is cold.\n\nThe opposite",
+      "first_steered_token": " cold",
+      "first_steered_logprob": -1.9921875,
+      "first_steered_top5": [
+        {
+          "token": " cold",
+          "logprob": -1.9921875
+        },
+        {
+          "token": " the",
+          "logprob": -2.25
+        },
+        {
+          "token": " cool",
+          "logprob": -2.625
+        },
+        {
+          "token": " ",
+          "logprob": -2.75
+        },
+        {
+          "token": " a",
+          "logprob": -3
+        }
+      ],
+      "first_default_token": " cold",
+      "first_default_logprob": -0.73046875,
+      "first_default_top5": [
+        {
+          "token": " cold",
+          "logprob": -0.73046875
+        },
+        {
+          "token": " not",
+          "logprob": -2.859375
+        },
+        {
+          "token": " cool",
+          "logprob": -3.234375
+        },
+        {
+          "token": " ",
+          "logprob": -3.484375
+        },
+        {
+          "token": " what",
+          "logprob": -3.609375
+        }
+      ],
+      "experiment": "suppress_L18_relay",
+      "circuit": "linguistic_hot_cold",
+      "category": "linguistic",
+      "description": "Suppress L18_relay (Mid-late relay (edge +11.56))"
+    },
+    {
+      "default_text": "<bos>The opposite of hot is cold.\n\nThe opposite",
+      "steered_text": "<bos>The opposite of hot is cold.\n\nThe opposite",
+      "first_steered_token": " cold",
+      "first_steered_logprob": -1.3828125,
+      "first_steered_top5": [
+        {
+          "token": " cold",
+          "logprob": -1.3828125
+        },
+        {
+          "token": " ",
+          "logprob": -2.75
+        },
+        {
+          "token": " not",
+          "logprob": -3.125
+        },
+        {
+          "token": " a",
+          "logprob": -3.125
+        },
+        {
+          "token": " the",
+          "logprob": -3.25
+        }
+      ],
+      "first_default_token": " cold",
+      "first_default_logprob": -0.73046875,
+      "first_default_top5": [
+        {
+          "token": " cold",
+          "logprob": -0.73046875
+        },
+        {
+          "token": " not",
+          "logprob": -2.859375
+        },
+        {
+          "token": " cool",
+          "logprob": -3.234375
+        },
+        {
+          "token": " ",
+          "logprob": -3.484375
+        },
+        {
+          "token": " what",
+          "logprob": -3.609375
+        }
+      ],
+      "experiment": "suppress_L20_hub",
+      "circuit": "linguistic_hot_cold",
+      "category": "linguistic",
+      "description": "Suppress L20_hub (Central convergence hub \u2014 on paths 1,2,3,5 (edge +5.31))"
+    },
+    {
+      "default_text": "<bos>The opposite of hot is cold.\n\nThe opposite",
+      "steered_text": "<bos>The opposite of hot is not always the same as",
+      "first_steered_token": " not",
+      "first_steered_logprob": -1.6875,
+      "first_steered_top5": [
+        {
+          "token": " not",
+          "logprob": -1.6875
+        },
+        {
+          "token": " ",
+          "logprob": -2.1875
+        },
+        {
+          "token": " the",
+          "logprob": -2.5625
+        },
+        {
+          "token": " what",
+          "logprob": -2.6875
+        },
+        {
+          "token": "...",
+          "logprob": -2.9375
+        }
+      ],
+      "first_default_token": " cold",
+      "first_default_logprob": -0.73046875,
+      "first_default_top5": [
+        {
+          "token": " cold",
+          "logprob": -0.73046875
+        },
+        {
+          "token": " not",
+          "logprob": -2.859375
+        },
+        {
+          "token": " cool",
+          "logprob": -3.234375
+        },
+        {
+          "token": " ",
+          "logprob": -3.484375
+        },
+        {
+          "token": " what",
+          "logprob": -3.609375
+        }
+      ],
+      "experiment": "suppress_L25_output",
+      "circuit": "linguistic_hot_cold",
+      "category": "linguistic",
+      "description": "Suppress L25_output (Output driver \u2014 on all multi-hop paths (edge -5.95))"
+    },
+    {
+      "default_text": "<bos>The opposite of hot is cold.\n\nThe opposite",
+      "steered_text": "<bos>The opposite of hot is cold.\n\nThe opposite",
+      "first_steered_token": " cold",
+      "first_steered_logprob": -0.9609375,
+      "first_steered_top5": [
+        {
+          "token": " cold",
+          "logprob": -0.9609375
+        },
+        {
+          "token": " cool",
+          "logprob": -2.828125
+        },
+        {
+          "token": " ",
+          "logprob": -3.078125
+        },
+        {
+          "token": ":",
+          "logprob": -3.453125
+        },
+        {
+          "token": "...",
+          "logprob": -3.453125
+        }
+      ],
+      "first_default_token": " cold",
+      "first_default_logprob": -0.73046875,
+      "first_default_top5": [
+        {
+          "token": " cold",
+          "logprob": -0.73046875
+        },
+        {
+          "token": " not",
+          "logprob": -2.859375
+        },
+        {
+          "token": " cool",
+          "logprob": -3.234375
+        },
+        {
+          "token": " ",
+          "logprob": -3.484375
+        },
+        {
+          "token": " what",
+          "logprob": -3.609375
+        }
+      ],
+      "experiment": "suppress_L7_comparison",
+      "circuit": "linguistic_hot_cold",
+      "category": "linguistic",
+      "description": "Suppress L7_comparison (Comparisons/symmetry/reversals feature (edge -1.90))"
+    },
+    {
+      "default_text": "<bos>The opposite of hot is cold.\n\nThe opposite",
+      "steered_text": "<bos>The opposite of hot is cold.\n\nThe opposite",
+      "first_steered_token": " cold",
+      "first_steered_logprob": -0.7421875,
+      "first_steered_top5": [
+        {
+          "token": " cold",
+          "logprob": -0.7421875
+        },
+        {
+          "token": " not",
+          "logprob": -2.375
+        },
+        {
+          "token": " cool",
+          "logprob": -3
+        },
+        {
+          "token": " the",
+          "logprob": -3
+        },
+        {
+          "token": " a",
+          "logprob": -3.125
+        }
+      ],
+      "first_default_token": " cold",
+      "first_default_logprob": -0.73046875,
+      "first_default_top5": [
+        {
+          "token": " cold",
+          "logprob": -0.73046875
+        },
+        {
+          "token": " not",
+          "logprob": -2.859375
+        },
+        {
+          "token": " cool",
+          "logprob": -3.234375
+        },
+        {
+          "token": " ",
+          "logprob": -3.484375
+        },
+        {
+          "token": " what",
+          "logprob": -3.609375
+        }
+      ],
+      "experiment": "suppress_L12_relay",
+      "circuit": "linguistic_hot_cold",
+      "category": "linguistic",
+      "description": "Suppress L12_relay (Mid relay (edge +1.17))"
+    },
+    {
+      "default_text": "<bos>The opposite of hot is cold.\n\nThe opposite",
+      "steered_text": "<bos>The opposite of hot is cold. The opposite of",
+      "first_steered_token": " cold",
+      "first_steered_logprob": -0.578125,
+      "first_steered_top5": [
+        {
+          "token": " cold",
+          "logprob": -0.578125
+        },
+        {
+          "token": " the",
+          "logprob": -2.703125
+        },
+        {
+          "token": " not",
+          "logprob": -3.078125
+        },
+        {
+          "token": " cool",
+          "logprob": -3.328125
+        },
+        {
+          "token": " a",
+          "logprob": -3.703125
+        }
+      ],
+      "first_default_token": " cold",
+      "first_default_logprob": -0.73046875,
+      "first_default_top5": [
+        {
+          "token": " cold",
+          "logprob": -0.73046875
+        },
+        {
+          "token": " not",
+          "logprob": -2.859375
+        },
+        {
+          "token": " cool",
+          "logprob": -3.234375
+        },
+        {
+          "token": " ",
+          "logprob": -3.484375
+        },
+        {
+          "token": " what",
+          "logprob": -3.609375
+        }
+      ],
+      "experiment": "suppress_L14_relay",
+      "circuit": "linguistic_hot_cold",
+      "category": "linguistic",
+      "description": "Suppress L14_relay (Late-mid relay (edge +0.78))"
+    },
+    {
+      "default_text": "<bos>The opposite of hot is cold.\n\nThe opposite",
+      "steered_text": "<bos>The opposite of hot is not no matter no matter",
+      "first_steered_token": " not",
+      "first_steered_logprob": -0.99609375,
+      "first_steered_top5": [
+        {
+          "token": " not",
+          "logprob": -0.99609375
+        },
+        {
+          "token": " the",
+          "logprob": -1.875
+        },
+        {
+          "token": " one",
+          "logprob": -2.5
+        },
+        {
+          "token": " no",
+          "logprob": -2.625
+        },
+        {
+          "token": " intended",
+          "logprob": -2.875
+        }
+      ],
+      "first_default_token": " cold",
+      "first_default_logprob": -0.73046875,
+      "first_default_top5": [
+        {
+          "token": " cold",
+          "logprob": -0.73046875
+        },
+        {
+          "token": " not",
+          "logprob": -2.859375
+        },
+        {
+          "token": " cool",
+          "logprob": -3.234375
+        },
+        {
+          "token": " ",
+          "logprob": -3.484375
+        },
+        {
+          "token": " what",
+          "logprob": -3.609375
+        }
+      ],
+      "experiment": "suppress_all_backbone",
+      "circuit": "linguistic_hot_cold",
+      "category": "linguistic",
+      "description": "Suppress all 7 backbone features"
+    },
+    {
+      "default_text": "<bos>The opposite of fast is slow.\n\nThe opposite",
+      "steered_text": "<bos>The opposite of fast is slow. The opposite of",
+      "first_steered_token": " slow",
+      "first_steered_logprob": -0.5,
+      "first_steered_top5": [
+        {
+          "token": " slow",
+          "logprob": -0.5
+        },
+        {
+          "token": " not",
+          "logprob": -3.25
+        },
+        {
+          "token": "\u2026",
+          "logprob": -3.625
+        },
+        {
+          "token": " the",
+          "logprob": -3.75
+        },
+        {
+          "token": " a",
+          "logprob": -4
+        }
+      ],
+      "first_default_token": " slow",
+      "first_default_logprob": -0.765625,
+      "first_default_top5": [
+        {
+          "token": " slow",
+          "logprob": -0.765625
+        },
+        {
+          "token": " not",
+          "logprob": -2.390625
+        },
+        {
+          "token": " the",
+          "logprob": -2.640625
+        },
+        {
+          "token": " a",
+          "logprob": -3.140625
+        },
+        {
+          "token": " ",
+          "logprob": -3.765625
+        }
+      ],
+      "experiment": "boost_hub_The_opposite_of_fast_is",
+      "circuit": "linguistic_hot_cold",
+      "category": "linguistic",
+      "description": "Boost L11_systems on: different adjective",
+      "baseline_text": "?"
+    },
+    {
+      "default_text": "<bos>The meaning of hot is a little different in the",
+      "steered_text": "<bos>The meaning of hot is that it is warm.",
+      "first_steered_token": " that",
+      "first_steered_logprob": -2.3125,
+      "first_steered_top5": [
+        {
+          "token": " that",
+          "logprob": -2.3125
+        },
+        {
+          "token": " to",
+          "logprob": -2.4375
+        },
+        {
+          "token": " a",
+          "logprob": -2.4375
+        },
+        {
+          "token": " the",
+          "logprob": -2.6875
+        },
+        {
+          "token": " not",
+          "logprob": -3.1875
+        }
+      ],
+      "first_default_token": " a",
+      "first_default_logprob": -2.390625,
+      "first_default_top5": [
+        {
+          "token": " a",
+          "logprob": -2.390625
+        },
+        {
+          "token": " that",
+          "logprob": -2.640625
+        },
+        {
+          "token": " the",
+          "logprob": -2.640625
+        },
+        {
+          "token": " not",
+          "logprob": -2.890625
+        },
+        {
+          "token": " to",
+          "logprob": -2.890625
+        }
+      ],
+      "experiment": "boost_hub_The_meaning_of_hot_is",
+      "circuit": "linguistic_hot_cold",
+      "category": "linguistic",
+      "description": "Boost L11_systems on: different relation",
+      "baseline_text": "?"
+    },
+    {
+      "default_text": "<bos>The weather today is a bit of a mixed",
+      "steered_text": "<bos>The weather today is a little bit of a",
+      "first_steered_token": " a",
+      "first_steered_logprob": -2.546875,
+      "first_steered_top5": [
+        {
+          "token": " a",
+          "logprob": -2.546875
+        },
+        {
+          "token": " going",
+          "logprob": -2.921875
+        },
+        {
+          "token": " ",
+          "logprob": -3.046875
+        },
+        {
+          "token": " very",
+          "logprob": -3.171875
+        },
+        {
+          "token": " not",
+          "logprob": -3.296875
+        }
+      ],
+      "first_default_token": " a",
+      "first_default_logprob": -2.359375,
+      "first_default_top5": [
+        {
+          "token": " a",
+          "logprob": -2.359375
+        },
+        {
+          "token": " very",
+          "logprob": -2.984375
+        },
+        {
+          "token": " perfect",
+          "logprob": -3.109375
+        },
+        {
+          "token": " going",
+          "logprob": -3.109375
+        },
+        {
+          "token": " not",
+          "logprob": -3.109375
+        }
+      ],
+      "experiment": "boost_hub_The_weather_today_is",
+      "circuit": "linguistic_hot_cold",
+      "category": "linguistic",
+      "description": "Boost L11_systems on: irrelevant context",
+      "baseline_text": "?"
+    },
+    {
+      "default_text": "<bos>The opposite of hot is cold.\n\nThe opposite",
+      "steered_text": "<bos>The opposite of hot is cold.\n\nThe opposite",
+      "first_steered_token": " cold",
+      "first_steered_logprob": -0.8125,
+      "first_steered_top5": [
+        {
+          "token": " cold",
+          "logprob": -0.8125
+        },
+        {
+          "token": " ",
+          "logprob": -2.6875
+        },
+        {
+          "token": " called",
+          "logprob": -3.0625
+        },
+        {
+          "token": " the",
+          "logprob": -3.3125
+        },
+        {
+          "token": " a",
+          "logprob": -3.8125
+        }
+      ],
+      "first_default_token": " cold",
+      "first_default_logprob": -0.73046875,
+      "first_default_top5": [
+        {
+          "token": " cold",
+          "logprob": -0.73046875
+        },
+        {
+          "token": " not",
+          "logprob": -2.859375
+        },
+        {
+          "token": " cool",
+          "logprob": -3.234375
+        },
+        {
+          "token": " ",
+          "logprob": -3.484375
+        },
+        {
+          "token": " what",
+          "logprob": -3.609375
+        }
+      ],
+      "experiment": "suppress_nonbackbone_L2_8212",
+      "circuit": "linguistic_hot_cold",
+      "category": "linguistic",
+      "description": "Suppress non-backbone: L2 'compare/contrast' (path 3 entry, low weight)"
+    },
+    {
+      "default_text": "<bos>The opposite of hot is cold.\n\nThe opposite",
+      "steered_text": "<bos>The opposite of hot is cold.\n\nThe opposite",
+      "first_steered_token": " cold",
+      "first_steered_logprob": -0.51953125,
+      "first_steered_top5": [
+        {
+          "token": " cold",
+          "logprob": -0.51953125
+        },
+        {
+          "token": " the",
+          "logprob": -2.890625
+        },
+        {
+          "token": " cool",
+          "logprob": -3.265625
+        },
+        {
+          "token": " a",
+          "logprob": -3.390625
+        },
+        {
+          "token": " not",
+          "logprob": -3.640625
+        }
+      ],
+      "first_default_token": " cold",
+      "first_default_logprob": -0.73046875,
+      "first_default_top5": [
+        {
+          "token": " cold",
+          "logprob": -0.73046875
+        },
+        {
+          "token": " not",
+          "logprob": -2.859375
+        },
+        {
+          "token": " cool",
+          "logprob": -3.234375
+        },
+        {
+          "token": " ",
+          "logprob": -3.484375
+        },
+        {
+          "token": " what",
+          "logprob": -3.609375
+        }
+      ],
+      "experiment": "suppress_nonbackbone_L0_902",
+      "circuit": "linguistic_hot_cold",
+      "category": "linguistic",
+      "description": "Suppress non-backbone: L0 'the word is' (path 5, very low weight)"
+    }
+  ],
+  "linguistic_maps_atlas": [
+    {
+      "default_text": "<bos>A book of maps is called an atlas.\n\nA book",
+      "steered_text": "<bos>A book of maps is called an atlas.\n\nA book",
+      "first_steered_token": " atlas",
+      "first_steered_logprob": -0.79296875,
+      "first_steered_top5": [
+        {
+          "token": " atlas",
+          "logprob": -0.79296875
+        },
+        {
+          "token": " album",
+          "logprob": -2.671875
+        },
+        {
+          "token": " ",
+          "logprob": -2.796875
+        },
+        {
+          "token": " Atlas",
+          "logprob": -3.546875
+        },
+        {
+          "token": " \"",
+          "logprob": -3.546875
+        }
+      ],
+      "first_default_token": " atlas",
+      "first_default_logprob": -0.26953125,
+      "first_default_top5": [
+        {
+          "token": " atlas",
+          "logprob": -0.26953125
+        },
+        {
+          "token": " Atlas",
+          "logprob": -2.015625
+        },
+        {
+          "token": " ",
+          "logprob": -3.890625
+        },
+        {
+          "token": " \"",
+          "logprob": -4.53125
+        },
+        {
+          "token": " index",
+          "logprob": -4.65625
+        }
+      ],
+      "experiment": "suppress_L18_gateway",
+      "circuit": "linguistic_maps_atlas",
+      "category": "linguistic",
+      "description": "Suppress L18_gateway (Central gateway \u2014 on paths 1,2,4,5 (edge +22.62))"
+    },
+    {
+      "default_text": "<bos>A book of maps is called an atlas.\n\nA book",
+      "steered_text": "<bos>A book of maps is called an atlas.\n\nThe word",
+      "first_steered_token": " atlas",
+      "first_steered_logprob": -0.8359375,
+      "first_steered_top5": [
+        {
+          "token": " atlas",
+          "logprob": -0.8359375
+        },
+        {
+          "token": " ",
+          "logprob": -2.328125
+        },
+        {
+          "token": " \"",
+          "logprob": -2.703125
+        },
+        {
+          "token": " \u201c",
+          "logprob": -2.828125
+        },
+        {
+          "token": " Atlas",
+          "logprob": -3.953125
+        }
+      ],
+      "first_default_token": " atlas",
+      "first_default_logprob": -0.26953125,
+      "first_default_top5": [
+        {
+          "token": " atlas",
+          "logprob": -0.26953125
+        },
+        {
+          "token": " Atlas",
+          "logprob": -2.015625
+        },
+        {
+          "token": " ",
+          "logprob": -3.890625
+        },
+        {
+          "token": " \"",
+          "logprob": -4.53125
+        },
+        {
+          "token": " index",
+          "logprob": -4.65625
+        }
+      ],
+      "experiment": "suppress_L19_relay",
+      "circuit": "linguistic_maps_atlas",
+      "category": "linguistic",
+      "description": "Suppress L19_relay (Post-gateway relay (edge +2.21))"
+    },
+    {
+      "default_text": "<bos>A book of maps is called an atlas.\n\nA book",
+      "steered_text": "<bos>A book of maps is called an \"<b><i><b><i>",
+      "first_steered_token": " \"",
+      "first_steered_logprob": -1.8671875,
+      "first_steered_top5": [
+        {
+          "token": " \"",
+          "logprob": -1.8671875
+        },
+        {
+          "token": " ",
+          "logprob": -1.9921875
+        },
+        {
+          "token": " \u201c",
+          "logprob": -2.109375
+        },
+        {
+          "token": " '",
+          "logprob": -2.609375
+        },
+        {
+          "token": " \u2018",
+          "logprob": -2.984375
+        }
+      ],
+      "first_default_token": " atlas",
+      "first_default_logprob": -0.26953125,
+      "first_default_top5": [
+        {
+          "token": " atlas",
+          "logprob": -0.26953125
+        },
+        {
+          "token": " Atlas",
+          "logprob": -2.015625
+        },
+        {
+          "token": " ",
+          "logprob": -3.890625
+        },
+        {
+          "token": " \"",
+          "logprob": -4.53125
+        },
+        {
+          "token": " index",
+          "logprob": -4.65625
+        }
+      ],
+      "experiment": "suppress_L24_suppressor",
+      "circuit": "linguistic_maps_atlas",
+      "category": "linguistic",
+      "description": "Suppress L24_suppressor (Competitor suppression bottleneck (edge -6.89))"
+    },
+    {
+      "default_text": "<bos>A book of maps is called an atlas.\n\nA book",
+      "steered_text": "<bos>A book of maps is called an <strong><em>atlas</em>",
+      "first_steered_token": " ",
+      "first_steered_logprob": -0.68359375,
+      "first_steered_top5": [
+        {
+          "token": " ",
+          "logprob": -0.68359375
+        },
+        {
+          "token": " \"",
+          "logprob": -2.0625
+        },
+        {
+          "token": " atlas",
+          "logprob": -2.1875
+        },
+        {
+          "token": " \u201c",
+          "logprob": -3.0625
+        },
+        {
+          "token": " index",
+          "logprob": -3.3125
+        }
+      ],
+      "first_default_token": " atlas",
+      "first_default_logprob": -0.26953125,
+      "first_default_top5": [
+        {
+          "token": " atlas",
+          "logprob": -0.26953125
+        },
+        {
+          "token": " Atlas",
+          "logprob": -2.015625
+        },
+        {
+          "token": " ",
+          "logprob": -3.890625
+        },
+        {
+          "token": " \"",
+          "logprob": -4.53125
+        },
+        {
+          "token": " index",
+          "logprob": -4.65625
+        }
+      ],
+      "experiment": "suppress_L25_gate",
+      "circuit": "linguistic_maps_atlas",
+      "category": "linguistic",
+      "description": "Suppress L25_gate (Final gate to logit (edge -0.27))"
+    },
+    {
+      "default_text": "<bos>A book of maps is called an atlas.\n\nA book",
+      "steered_text": "<bos>A book of maps is called an atlas. It is a",
+      "first_steered_token": " atlas",
+      "first_steered_logprob": -0.443359375,
+      "first_steered_top5": [
+        {
+          "token": " atlas",
+          "logprob": -0.443359375
+        },
+        {
+          "token": " Atlas",
+          "logprob": -2.6875
+        },
+        {
+          "token": " ",
+          "logprob": -3.5625
+        },
+        {
+          "token": " \"",
+          "logprob": -3.8125
+        },
+        {
+          "token": " index",
+          "logprob": -3.9375
+        }
+      ],
+      "first_default_token": " atlas",
+      "first_default_logprob": -0.26953125,
+      "first_default_top5": [
+        {
+          "token": " atlas",
+          "logprob": -0.26953125
+        },
+        {
+          "token": " Atlas",
+          "logprob": -2.015625
+        },
+        {
+          "token": " ",
+          "logprob": -3.890625
+        },
+        {
+          "token": " \"",
+          "logprob": -4.53125
+        },
+        {
+          "token": " index",
+          "logprob": -4.65625
+        }
+      ],
+      "experiment": "suppress_L10_references",
+      "circuit": "linguistic_maps_atlas",
+      "category": "linguistic",
+      "description": "Suppress L10_references (References feature (act=38.22, edge +3.31))"
+    },
+    {
+      "default_text": "<bos>A book of maps is called an atlas.\n\nA book",
+      "steered_text": "<bos>A book of maps is called an atlas.\n\nA book",
+      "first_steered_token": " atlas",
+      "first_steered_logprob": -0.435546875,
+      "first_steered_top5": [
+        {
+          "token": " atlas",
+          "logprob": -0.435546875
+        },
+        {
+          "token": " ",
+          "logprob": -2.5625
+        },
+        {
+          "token": " Atlas",
+          "logprob": -2.6875
+        },
+        {
+          "token": " alman",
+          "logprob": -4.0625
+        },
+        {
+          "token": " \"",
+          "logprob": -4.3125
+        }
+      ],
+      "first_default_token": " atlas",
+      "first_default_logprob": -0.26953125,
+      "first_default_top5": [
+        {
+          "token": " atlas",
+          "logprob": -0.26953125
+        },
+        {
+          "token": " Atlas",
+          "logprob": -2.015625
+        },
+        {
+          "token": " ",
+          "logprob": -3.890625
+        },
+        {
+          "token": " \"",
+          "logprob": -4.53125
+        },
+        {
+          "token": " index",
+          "logprob": -4.65625
+        }
+      ],
+      "experiment": "suppress_L21_visual_info",
+      "circuit": "linguistic_maps_atlas",
+      "category": "linguistic",
+      "description": "Suppress L21_visual_info (Visual representations feature (act=17.10))"
+    },
+    {
+      "default_text": "<bos>A book of maps is called an atlas.\n\nA book",
+      "steered_text": "<bos>A book of maps is called an atlas.\n\nA book",
+      "first_steered_token": " atlas",
+      "first_steered_logprob": -0.51953125,
+      "first_steered_top5": [
+        {
+          "token": " atlas",
+          "logprob": -0.51953125
+        },
+        {
+          "token": " Atlas",
+          "logprob": -2.640625
+        },
+        {
+          "token": " ",
+          "logprob": -3.140625
+        },
+        {
+          "token": " index",
+          "logprob": -3.515625
+        },
+        {
+          "token": " \"",
+          "logprob": -3.515625
+        }
+      ],
+      "first_default_token": " atlas",
+      "first_default_logprob": -0.26953125,
+      "first_default_top5": [
+        {
+          "token": " atlas",
+          "logprob": -0.26953125
+        },
+        {
+          "token": " Atlas",
+          "logprob": -2.015625
+        },
+        {
+          "token": " ",
+          "logprob": -3.890625
+        },
+        {
+          "token": " \"",
+          "logprob": -4.53125
+        },
+        {
+          "token": " index",
+          "logprob": -4.65625
+        }
+      ],
+      "experiment": "suppress_L16_word_origins",
+      "circuit": "linguistic_maps_atlas",
+      "category": "linguistic",
+      "description": "Suppress L16_word_origins (Word origins / etymology feature (act=7.30))"
+    },
+    {
+      "default_text": "<bos>A book of maps is called an atlas.\n\nA book",
+      "steered_text": "<bos>A book of maps is called an a a   ",
+      "first_steered_token": " a",
+      "first_steered_logprob": -0.84375,
+      "first_steered_top5": [
+        {
+          "token": " a",
+          "logprob": -0.84375
+        },
+        {
+          "token": " ",
+          "logprob": -1.21875
+        },
+        {
+          "token": " no",
+          "logprob": -2.96875
+        },
+        {
+          "token": ",",
+          "logprob": -3.09375
+        },
+        {
+          "token": " for",
+          "logprob": -3.21875
+        }
+      ],
+      "first_default_token": " atlas",
+      "first_default_logprob": -0.26953125,
+      "first_default_top5": [
+        {
+          "token": " atlas",
+          "logprob": -0.26953125
+        },
+        {
+          "token": " Atlas",
+          "logprob": -2.015625
+        },
+        {
+          "token": " ",
+          "logprob": -3.890625
+        },
+        {
+          "token": " \"",
+          "logprob": -4.53125
+        },
+        {
+          "token": " index",
+          "logprob": -4.65625
+        }
+      ],
+      "experiment": "suppress_all_backbone",
+      "circuit": "linguistic_maps_atlas",
+      "category": "linguistic",
+      "description": "Suppress all 7 backbone features"
+    },
+    {
+      "default_text": "<bos>A collection of maps is called an atlas.\n\nA map",
+      "steered_text": "<bos>A collection of maps is called an atlas.\n\nA map",
+      "first_steered_token": " atlas",
+      "first_steered_logprob": -0.47265625,
+      "first_steered_top5": [
+        {
+          "token": " atlas",
+          "logprob": -0.47265625
+        },
+        {
+          "token": " ",
+          "logprob": -1.59375
+        },
+        {
+          "token": " Atlas",
+          "logprob": -3.34375
+        },
+        {
+          "token": " \"",
+          "logprob": -3.71875
+        },
+        {
+          "token": " \u201c",
+          "logprob": -4.59375
+        }
+      ],
+      "first_default_token": " atlas",
+      "first_default_logprob": -0.322265625,
+      "first_default_top5": [
+        {
+          "token": " atlas",
+          "logprob": -0.322265625
+        },
+        {
+          "token": " ",
+          "logprob": -2.578125
+        },
+        {
+          "token": " Atlas",
+          "logprob": -2.703125
+        },
+        {
+          "token": " index",
+          "logprob": -4.3125
+        },
+        {
+          "token": " \"",
+          "logprob": -4.3125
+        }
+      ],
+      "experiment": "boost_hub_A_collection_of_maps_is_c",
+      "circuit": "linguistic_maps_atlas",
+      "category": "linguistic",
+      "description": "Boost L18_gateway on: rephrased same fact",
+      "baseline_text": "?"
+    },
+    {
+      "default_text": "<bos>A book of recipes is called a cookbook.\n\nA book",
+      "steered_text": "<bos>A book of recipes is called a map of the world.",
+      "first_steered_token": " map",
+      "first_steered_logprob": -0.98046875,
+      "first_steered_top5": [
+        {
+          "token": " map",
+          "logprob": -0.98046875
+        },
+        {
+          "token": " ",
+          "logprob": -1.8515625
+        },
+        {
+          "token": " \"",
+          "logprob": -2.609375
+        },
+        {
+          "token": " '",
+          "logprob": -2.984375
+        },
+        {
+          "token": " \u201c",
+          "logprob": -3.234375
+        }
+      ],
+      "first_default_token": " cookbook",
+      "first_default_logprob": -0.76171875,
+      "first_default_top5": [
+        {
+          "token": " cookbook",
+          "logprob": -0.76171875
+        },
+        {
+          "token": " cook",
+          "logprob": -2.015625
+        },
+        {
+          "token": " recipe",
+          "logprob": -2.390625
+        },
+        {
+          "token": " ",
+          "logprob": -2.765625
+        },
+        {
+          "token": " \"",
+          "logprob": -3.140625
+        }
+      ],
+      "experiment": "boost_hub_A_book_of_recipes_is_call",
+      "circuit": "linguistic_maps_atlas",
+      "category": "linguistic",
+      "description": "Boost L18_gateway on: different content same structure",
+      "baseline_text": "?"
+    },
+    {
+      "default_text": "<bos>The temperature outside was around 100 degrees",
+      "steered_text": "<bos>The temperature outside was around 100 degrees",
+      "first_steered_token": " ",
+      "first_steered_logprob": -0.140625,
+      "first_steered_top5": [
+        {
+          "token": " ",
+          "logprob": -0.140625
+        },
+        {
+          "token": " the",
+          "logprob": -2.890625
+        },
+        {
+          "token": " a",
+          "logprob": -4.03125
+        },
+        {
+          "token": " -",
+          "logprob": -4.28125
+        },
+        {
+          "token": " +",
+          "logprob": -4.53125
+        }
+      ],
+      "first_default_token": " ",
+      "first_default_logprob": -0.2294921875,
+      "first_default_top5": [
+        {
+          "token": " ",
+          "logprob": -0.2294921875
+        },
+        {
+          "token": " -",
+          "logprob": -2.734375
+        },
+        {
+          "token": " freezing",
+          "logprob": -3.734375
+        },
+        {
+          "token": " zero",
+          "logprob": -3.859375
+        },
+        {
+          "token": " the",
+          "logprob": -3.859375
+        }
+      ],
+      "experiment": "boost_hub_The_temperature_outside_w",
+      "circuit": "linguistic_maps_atlas",
+      "category": "linguistic",
+      "description": "Boost L18_gateway on: irrelevant context",
+      "baseline_text": "?"
+    },
+    {
+      "default_text": "<bos>A book of maps is called an atlas.\n\nA book",
+      "steered_text": "<bos>A book of maps is called an atlas. A map of",
+      "first_steered_token": " atlas",
+      "first_steered_logprob": -1.0390625,
+      "first_steered_top5": [
+        {
+          "token": " atlas",
+          "logprob": -1.0390625
+        },
+        {
+          "token": " ",
+          "logprob": -1.7890625
+        },
+        {
+          "token": " Atlas",
+          "logprob": -2.78125
+        },
+        {
+          "token": " index",
+          "logprob": -3.40625
+        },
+        {
+          "token": " \u201c",
+          "logprob": -3.53125
+        }
+      ],
+      "first_default_token": " atlas",
+      "first_default_logprob": -0.26953125,
+      "first_default_top5": [
+        {
+          "token": " atlas",
+          "logprob": -0.26953125
+        },
+        {
+          "token": " Atlas",
+          "logprob": -2.015625
+        },
+        {
+          "token": " ",
+          "logprob": -3.890625
+        },
+        {
+          "token": " \"",
+          "logprob": -4.53125
+        },
+        {
+          "token": " index",
+          "logprob": -4.65625
+        }
+      ],
+      "experiment": "suppress_nonbackbone_L8_1494",
+      "circuit": "linguistic_maps_atlas",
+      "category": "linguistic",
+      "description": "Suppress non-backbone: L8 coding/GUI (path 1 entry but general feature)"
+    },
+    {
+      "default_text": "<bos>A book of maps is called an atlas.\n\nA book",
+      "steered_text": "<bos>A book of maps is called an <strong>atlas</strong>.",
+      "first_steered_token": " ",
+      "first_steered_logprob": -1.6328125,
+      "first_steered_top5": [
+        {
+          "token": " ",
+          "logprob": -1.6328125
+        },
+        {
+          "token": " \"",
+          "logprob": -3.015625
+        },
+        {
+          "token": " \u201c",
+          "logprob": -3.140625
+        },
+        {
+          "token": " essential",
+          "logprob": -3.515625
+        },
+        {
+          "token": " important",
+          "logprob": -3.515625
+        }
+      ],
+      "first_default_token": " atlas",
+      "first_default_logprob": -0.26953125,
+      "first_default_top5": [
+        {
+          "token": " atlas",
+          "logprob": -0.26953125
+        },
+        {
+          "token": " Atlas",
+          "logprob": -2.015625
+        },
+        {
+          "token": " ",
+          "logprob": -3.890625
+        },
+        {
+          "token": " \"",
+          "logprob": -4.53125
+        },
+        {
+          "token": " index",
+          "logprob": -4.65625
+        }
+      ],
+      "experiment": "suppress_nonbackbone_L8_13791",
+      "circuit": "linguistic_maps_atlas",
+      "category": "linguistic",
+      "description": "Suppress non-backbone: L8 web dev/URLs (path 2 entry but general feature)"
+    }
+  ],
+  "linguistic_author": [
+    {
+      "default_text": "<bos>A person who writes books is called an author.\n\nA person",
+      "steered_text": "<bos>A person who writes books is called an author.\n\nA person",
+      "first_steered_token": " author",
+      "first_steered_logprob": -1.4453125,
+      "first_steered_top5": [
+        {
+          "token": " author",
+          "logprob": -1.4453125
+        },
+        {
+          "token": " ",
+          "logprob": -1.8203125
+        },
+        {
+          "token": " \u201c",
+          "logprob": -2.4375
+        },
+        {
+          "token": " \"",
+          "logprob": -2.9375
+        },
+        {
+          "token": " ________",
+          "logprob": -3.4375
+        }
+      ],
+      "first_default_token": " author",
+      "first_default_logprob": -0.1494140625,
+      "first_default_top5": [
+        {
+          "token": " author",
+          "logprob": -0.1494140625
+        },
+        {
+          "token": " Author",
+          "logprob": -3.28125
+        },
+        {
+          "token": " ",
+          "logprob": -3.40625
+        },
+        {
+          "token": " \u201c",
+          "logprob": -4.53125
+        },
+        {
+          "token": " \"",
+          "logprob": -4.90625
+        }
+      ],
+      "experiment": "suppress_L24_bottleneck",
+      "circuit": "linguistic_author",
+      "category": "linguistic",
+      "description": "Suppress L24_bottleneck (Inhibitory bottleneck (edge -2.56))"
+    },
+    {
+      "default_text": "<bos>A person who writes books is called an author.\n\nA person",
+      "steered_text": "<bos>A person who writes books is called an <strong><em><strong><em>",
+      "first_steered_token": " ",
+      "first_steered_logprob": -0.515625,
+      "first_steered_top5": [
+        {
+          "token": " ",
+          "logprob": -0.515625
+        },
+        {
+          "token": " \u201c",
+          "logprob": -2.390625
+        },
+        {
+          "token": " \"",
+          "logprob": -2.390625
+        },
+        {
+          "token": " an",
+          "logprob": -3.890625
+        },
+        {
+          "token": "\n\n",
+          "logprob": -3.890625
+        }
+      ],
+      "first_default_token": " author",
+      "first_default_logprob": -0.1494140625,
+      "first_default_top5": [
+        {
+          "token": " author",
+          "logprob": -0.1494140625
+        },
+        {
+          "token": " Author",
+          "logprob": -3.28125
+        },
+        {
+          "token": " ",
+          "logprob": -3.40625
+        },
+        {
+          "token": " \u201c",
+          "logprob": -4.53125
+        },
+        {
+          "token": " \"",
+          "logprob": -4.90625
+        }
+      ],
+      "experiment": "suppress_L25_output",
+      "circuit": "linguistic_author",
+      "category": "linguistic",
+      "description": "Suppress L25_output (Output driver (edge -2.76 to logit))"
+    },
+    {
+      "default_text": "<bos>A person who writes books is called an author.\n\nA person",
+      "steered_text": "<bos>A person who writes books is called an author.\n\nA person",
+      "first_steered_token": " author",
+      "first_steered_logprob": -0.71484375,
+      "first_steered_top5": [
+        {
+          "token": " author",
+          "logprob": -0.71484375
+        },
+        {
+          "token": " ",
+          "logprob": -2.34375
+        },
+        {
+          "token": " \u201c",
+          "logprob": -2.84375
+        },
+        {
+          "token": " \"",
+          "logprob": -2.96875
+        },
+        {
+          "token": " Author",
+          "logprob": -3.71875
+        }
+      ],
+      "first_default_token": " author",
+      "first_default_logprob": -0.1494140625,
+      "first_default_top5": [
+        {
+          "token": " author",
+          "logprob": -0.1494140625
+        },
+        {
+          "token": " Author",
+          "logprob": -3.28125
+        },
+        {
+          "token": " ",
+          "logprob": -3.40625
+        },
+        {
+          "token": " \u201c",
+          "logprob": -4.53125
+        },
+        {
+          "token": " \"",
+          "logprob": -4.90625
+        }
+      ],
+      "experiment": "suppress_L22_gateway",
+      "circuit": "linguistic_author",
+      "category": "linguistic",
+      "description": "Suppress L22_gateway (Direct excitatory gateway (edge +3.79 to logit))"
+    },
+    {
+      "default_text": "<bos>A person who writes books is called an author.\n\nA person",
+      "steered_text": "<bos>A person who writes books is called an author.\n\nA person",
+      "first_steered_token": " author",
+      "first_steered_logprob": -0.51953125,
+      "first_steered_top5": [
+        {
+          "token": " author",
+          "logprob": -0.51953125
+        },
+        {
+          "token": " ",
+          "logprob": -2.140625
+        },
+        {
+          "token": " \u201c",
+          "logprob": -2.765625
+        },
+        {
+          "token": " \"",
+          "logprob": -2.890625
+        },
+        {
+          "token": " Author",
+          "logprob": -3.640625
+        }
+      ],
+      "first_default_token": " author",
+      "first_default_logprob": -0.1494140625,
+      "first_default_top5": [
+        {
+          "token": " author",
+          "logprob": -0.1494140625
+        },
+        {
+          "token": " Author",
+          "logprob": -3.28125
+        },
+        {
+          "token": " ",
+          "logprob": -3.40625
+        },
+        {
+          "token": " \u201c",
+          "logprob": -4.53125
+        },
+        {
+          "token": " \"",
+          "logprob": -4.90625
+        }
+      ],
+      "experiment": "suppress_L18_writing_projects",
+      "circuit": "linguistic_author",
+      "category": "linguistic",
+      "description": "Suppress L18_writing_projects (Writing projects feature \u2014 most semantically precise (edge -1.38))"
+    },
+    {
+      "default_text": "<bos>A person who writes books is called an author.\n\nA person",
+      "steered_text": "<bos>A person who writes books is called an author.\n\nA person",
+      "first_steered_token": " author",
+      "first_steered_logprob": -0.294921875,
+      "first_steered_top5": [
+        {
+          "token": " author",
+          "logprob": -0.294921875
+        },
+        {
+          "token": " ",
+          "logprob": -3.046875
+        },
+        {
+          "token": " \"",
+          "logprob": -3.046875
+        },
+        {
+          "token": " \u201c",
+          "logprob": -3.546875
+        },
+        {
+          "token": " editor",
+          "logprob": -4.03125
+        }
+      ],
+      "first_default_token": " author",
+      "first_default_logprob": -0.1494140625,
+      "first_default_top5": [
+        {
+          "token": " author",
+          "logprob": -0.1494140625
+        },
+        {
+          "token": " Author",
+          "logprob": -3.28125
+        },
+        {
+          "token": " ",
+          "logprob": -3.40625
+        },
+        {
+          "token": " \u201c",
+          "logprob": -4.53125
+        },
+        {
+          "token": " \"",
+          "logprob": -4.90625
+        }
+      ],
+      "experiment": "suppress_L19_relay",
+      "circuit": "linguistic_author",
+      "category": "linguistic",
+      "description": "Suppress L19_relay (Relay (edge +7.15))"
+    },
+    {
+      "default_text": "<bos>A person who writes books is called an author.\n\nA person",
+      "steered_text": "<bos>A person who writes books is called an <strong><em>author</em>",
+      "first_steered_token": " ",
+      "first_steered_logprob": -1.1171875,
+      "first_steered_top5": [
+        {
+          "token": " ",
+          "logprob": -1.1171875
+        },
+        {
+          "token": " author",
+          "logprob": -2.046875
+        },
+        {
+          "token": " \u201c",
+          "logprob": -2.734375
+        },
+        {
+          "token": " \"",
+          "logprob": -3.296875
+        },
+        {
+          "token": "\n\n",
+          "logprob": -3.296875
+        }
+      ],
+      "first_default_token": " author",
+      "first_default_logprob": -0.1494140625,
+      "first_default_top5": [
+        {
+          "token": " author",
+          "logprob": -0.1494140625
+        },
+        {
+          "token": " Author",
+          "logprob": -3.28125
+        },
+        {
+          "token": " ",
+          "logprob": -3.40625
+        },
+        {
+          "token": " \u201c",
+          "logprob": -4.53125
+        },
+        {
+          "token": " \"",
+          "logprob": -4.90625
+        }
+      ],
+      "experiment": "suppress_L21_relay",
+      "circuit": "linguistic_author",
+      "category": "linguistic",
+      "description": "Suppress L21_relay (Late relay (edge +4.38))"
+    },
+    {
+      "default_text": "<bos>A person who writes books is called an author.\n\nA person",
+      "steered_text": "<bos>A person who writes books is called an author.\n\nA person",
+      "first_steered_token": " author",
+      "first_steered_logprob": -0.44921875,
+      "first_steered_top5": [
+        {
+          "token": " author",
+          "logprob": -0.44921875
+        },
+        {
+          "token": " \"",
+          "logprob": -2.453125
+        },
+        {
+          "token": " \u201c",
+          "logprob": -2.703125
+        },
+        {
+          "token": " '",
+          "logprob": -3.328125
+        },
+        {
+          "token": " \u2018",
+          "logprob": -3.578125
+        }
+      ],
+      "first_default_token": " author",
+      "first_default_logprob": -0.1494140625,
+      "first_default_top5": [
+        {
+          "token": " author",
+          "logprob": -0.1494140625
+        },
+        {
+          "token": " Author",
+          "logprob": -3.28125
+        },
+        {
+          "token": " ",
+          "logprob": -3.40625
+        },
+        {
+          "token": " \u201c",
+          "logprob": -4.53125
+        },
+        {
+          "token": " \"",
+          "logprob": -4.90625
+        }
+      ],
+      "experiment": "suppress_L25_amplifier",
+      "circuit": "linguistic_author",
+      "category": "linguistic",
+      "description": "Suppress L25_amplifier (Shared amplifier (edge +0.75))"
+    },
+    {
+      "default_text": "<bos>A person who writes books is called an author.\n\nA person",
+      "steered_text": "<bos>A person who writes books is called an author.\n\nA person",
+      "first_steered_token": " author",
+      "first_steered_logprob": -0.27734375,
+      "first_steered_top5": [
+        {
+          "token": " author",
+          "logprob": -0.27734375
+        },
+        {
+          "token": " Author",
+          "logprob": -2.65625
+        },
+        {
+          "token": " ",
+          "logprob": -3.03125
+        },
+        {
+          "token": " \u201c",
+          "logprob": -3.40625
+        },
+        {
+          "token": " \"",
+          "logprob": -3.90625
+        }
+      ],
+      "first_default_token": " author",
+      "first_default_logprob": -0.1494140625,
+      "first_default_top5": [
+        {
+          "token": " author",
+          "logprob": -0.1494140625
+        },
+        {
+          "token": " Author",
+          "logprob": -3.28125
+        },
+        {
+          "token": " ",
+          "logprob": -3.40625
+        },
+        {
+          "token": " \u201c",
+          "logprob": -4.53125
+        },
+        {
+          "token": " \"",
+          "logprob": -4.90625
+        }
+      ],
+      "experiment": "suppress_L22_literature",
+      "circuit": "linguistic_author",
+      "category": "linguistic",
+      "description": "Suppress L22_literature (Literature/writing feature (act=8.55))"
+    },
+    {
+      "default_text": "<bos>A person who writes books is called an author.\n\nA person",
+      "steered_text": "<bos>A person who writes books is called an author.\n\nA person",
+      "first_steered_token": " author",
+      "first_steered_logprob": -0.55859375,
+      "first_steered_top5": [
+        {
+          "token": " author",
+          "logprob": -0.55859375
+        },
+        {
+          "token": " ",
+          "logprob": -1.9375
+        },
+        {
+          "token": " Author",
+          "logprob": -3.4375
+        },
+        {
+          "token": " \u201c",
+          "logprob": -3.5625
+        },
+        {
+          "token": " writer",
+          "logprob": -3.6875
+        }
+      ],
+      "first_default_token": " author",
+      "first_default_logprob": -0.1494140625,
+      "first_default_top5": [
+        {
+          "token": " author",
+          "logprob": -0.1494140625
+        },
+        {
+          "token": " Author",
+          "logprob": -3.28125
+        },
+        {
+          "token": " ",
+          "logprob": -3.40625
+        },
+        {
+          "token": " \u201c",
+          "logprob": -4.53125
+        },
+        {
+          "token": " \"",
+          "logprob": -4.90625
+        }
+      ],
+      "experiment": "suppress_L24_creative_works",
+      "circuit": "linguistic_author",
+      "category": "linguistic",
+      "description": "Suppress L24_creative_works (Creative endeavors/authors)"
+    },
+    {
+      "default_text": "<bos>A person who writes books is called an author.\n\nA person",
+      "steered_text": "<bos>A person who writes books is called an <strong><strong><strong><strong>",
+      "first_steered_token": " ",
+      "first_steered_logprob": -1.2578125,
+      "first_steered_top5": [
+        {
+          "token": " ",
+          "logprob": -1.2578125
+        },
+        {
+          "token": " \u201c",
+          "logprob": -2.265625
+        },
+        {
+          "token": "<strong>",
+          "logprob": -2.265625
+        },
+        {
+          "token": " ____",
+          "logprob": -2.640625
+        },
+        {
+          "token": "  ",
+          "logprob": -2.953125
+        }
+      ],
+      "first_default_token": " author",
+      "first_default_logprob": -0.1494140625,
+      "first_default_top5": [
+        {
+          "token": " author",
+          "logprob": -0.1494140625
+        },
+        {
+          "token": " Author",
+          "logprob": -3.28125
+        },
+        {
+          "token": " ",
+          "logprob": -3.40625
+        },
+        {
+          "token": " \u201c",
+          "logprob": -4.53125
+        },
+        {
+          "token": " \"",
+          "logprob": -4.90625
+        }
+      ],
+      "experiment": "suppress_all_backbone",
+      "circuit": "linguistic_author",
+      "category": "linguistic",
+      "description": "Suppress all 9 backbone features"
+    },
+    {
+      "default_text": "<bos>Someone who writes novels is called an author.\n\nSomeone who",
+      "steered_text": "<bos>Someone who writes novels is called an author. Someone who writes",
+      "first_steered_token": " author",
+      "first_steered_logprob": -0.12890625,
+      "first_steered_top5": [
+        {
+          "token": " author",
+          "logprob": -0.12890625
+        },
+        {
+          "token": " ",
+          "logprob": -3.875
+        },
+        {
+          "token": " Author",
+          "logprob": -4
+        },
+        {
+          "token": " novelist",
+          "logprob": -4.75
+        },
+        {
+          "token": " \u201c",
+          "logprob": -4.75
+        }
+      ],
+      "first_default_token": " author",
+      "first_default_logprob": -0.2119140625,
+      "first_default_top5": [
+        {
+          "token": " author",
+          "logprob": -0.2119140625
+        },
+        {
+          "token": " ",
+          "logprob": -3.21875
+        },
+        {
+          "token": " Author",
+          "logprob": -3.71875
+        },
+        {
+          "token": " \u201c",
+          "logprob": -3.96875
+        },
+        {
+          "token": " \"",
+          "logprob": -4.46875
+        }
+      ],
+      "experiment": "boost_hub_Someone_who_writes_novels",
+      "circuit": "linguistic_author",
+      "category": "linguistic",
+      "description": "Boost L24_bottleneck on: rephrased same fact",
+      "baseline_text": "?"
+    },
+    {
+      "default_text": "<bos>A person who paints pictures is called an artist.\n\nA person",
+      "steered_text": "<bos>A person who paints pictures is called an artist. A person who",
+      "first_steered_token": " artist",
+      "first_steered_logprob": -0.33203125,
+      "first_steered_top5": [
+        {
+          "token": " artist",
+          "logprob": -0.33203125
+        },
+        {
+          "token": " ",
+          "logprob": -2.453125
+        },
+        {
+          "token": " Artist",
+          "logprob": -4.21875
+        },
+        {
+          "token": " art",
+          "logprob": -4.21875
+        },
+        {
+          "token": " \u201c",
+          "logprob": -4.34375
+        }
+      ],
+      "first_default_token": " artist",
+      "first_default_logprob": -0.1435546875,
+      "first_default_top5": [
+        {
+          "token": " artist",
+          "logprob": -0.1435546875
+        },
+        {
+          "token": " ",
+          "logprob": -3.390625
+        },
+        {
+          "token": " Artist",
+          "logprob": -3.390625
+        },
+        {
+          "token": " illustrator",
+          "logprob": -4.90625
+        },
+        {
+          "token": " \u201c",
+          "logprob": -4.90625
+        }
+      ],
+      "experiment": "boost_hub_A_person_who_paints_pictu",
+      "circuit": "linguistic_author",
+      "category": "linguistic",
+      "description": "Boost L24_bottleneck on: different domain same structure",
+      "baseline_text": "?"
+    },
+    {
+      "default_text": "<bos>The weather in the morning was perfect for a walk.",
+      "steered_text": "<bos>The weather in the morning was perfect for a walk.",
+      "first_steered_token": " perfect",
+      "first_steered_logprob": -2.078125,
+      "first_steered_top5": [
+        {
+          "token": " perfect",
+          "logprob": -2.078125
+        },
+        {
+          "token": " a",
+          "logprob": -2.703125
+        },
+        {
+          "token": " very",
+          "logprob": -2.828125
+        },
+        {
+          "token": " beautiful",
+          "logprob": -2.953125
+        },
+        {
+          "token": " not",
+          "logprob": -3.203125
+        }
+      ],
+      "first_default_token": " perfect",
+      "first_default_logprob": -2.515625,
+      "first_default_top5": [
+        {
+          "token": " perfect",
+          "logprob": -2.515625
+        },
+        {
+          "token": " a",
+          "logprob": -2.765625
+        },
+        {
+          "token": " very",
+          "logprob": -3.015625
+        },
+        {
+          "token": " not",
+          "logprob": -3.015625
+        },
+        {
+          "token": " beautiful",
+          "logprob": -3.140625
+        }
+      ],
+      "experiment": "boost_hub_The_weather_in_the_mornin",
+      "circuit": "linguistic_author",
+      "category": "linguistic",
+      "description": "Boost L24_bottleneck on: irrelevant context",
+      "baseline_text": "?"
+    },
+    {
+      "default_text": "<bos>A person who writes books is called an author.\n\nA person",
+      "steered_text": "<bos>A person who writes books is called an artist, but this one",
+      "first_steered_token": " artist",
+      "first_steered_logprob": -0.5,
+      "first_steered_top5": [
+        {
+          "token": " artist",
+          "logprob": -0.5
+        },
+        {
+          "token": " artisan",
+          "logprob": -2.25
+        },
+        {
+          "token": " author",
+          "logprob": -2.4375
+        },
+        {
+          "token": " auto",
+          "logprob": -3.125
+        },
+        {
+          "token": " intellectual",
+          "logprob": -3.6875
+        }
+      ],
+      "first_default_token": " author",
+      "first_default_logprob": -0.1494140625,
+      "first_default_top5": [
+        {
+          "token": " author",
+          "logprob": -0.1494140625
+        },
+        {
+          "token": " Author",
+          "logprob": -3.28125
+        },
+        {
+          "token": " ",
+          "logprob": -3.40625
+        },
+        {
+          "token": " \u201c",
+          "logprob": -4.53125
+        },
+        {
+          "token": " \"",
+          "logprob": -4.90625
+        }
+      ],
+      "experiment": "suppress_nonbackbone_L10_1037",
+      "circuit": "linguistic_author",
+      "category": "linguistic",
+      "description": "Suppress non-backbone: L10 capitalized words"
+    },
+    {
+      "default_text": "<bos>A person who writes books is called an author.\n\nA person",
+      "steered_text": "<bos>A person who writes books is called an author.\n\nA person",
+      "first_steered_token": " author",
+      "first_steered_logprob": -0.6953125,
+      "first_steered_top5": [
+        {
+          "token": " author",
+          "logprob": -0.6953125
+        },
+        {
+          "token": " ",
+          "logprob": -2.703125
+        },
+        {
+          "token": "\n\n",
+          "logprob": -3.453125
+        },
+        {
+          "token": " Author",
+          "logprob": -3.578125
+        },
+        {
+          "token": "\n",
+          "logprob": -3.828125
+        }
+      ],
+      "first_default_token": " author",
+      "first_default_logprob": -0.1494140625,
+      "first_default_top5": [
+        {
+          "token": " author",
+          "logprob": -0.1494140625
+        },
+        {
+          "token": " Author",
+          "logprob": -3.28125
+        },
+        {
+          "token": " ",
+          "logprob": -3.40625
+        },
+        {
+          "token": " \u201c",
+          "logprob": -4.53125
+        },
+        {
+          "token": " \"",
+          "logprob": -4.90625
+        }
+      ],
+      "experiment": "suppress_nonbackbone_L9_10769",
+      "circuit": "linguistic_author",
+      "category": "linguistic",
+      "description": "Suppress non-backbone: L9 people/categories"
+    }
+  ]
+}
