@@ -211,9 +211,3 @@ PRE_COMMIT_REVIEW.md
 READY_TO_COMMIT.md
 CLEANUP_COMPLETE.md
 CLEANUP_PLAN.md
-
-# ============================================================
-# Generated site files (built by docs/build.py in CI)
-# ============================================================
-docs/index.html
-docs/presentation.html

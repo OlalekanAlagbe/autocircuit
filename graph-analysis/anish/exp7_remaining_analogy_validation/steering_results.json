@@ -1,0 +1,3286 @@
+{
+  "analog_rome": [
+    {
+      "default_text": "<bos>Paris is to France as Rome is to Italy. It is the",
+      "steered_text": "<bos>Paris is to France as Rome is to Italy. It is the",
+      "first_steered_token": " Italy",
+      "first_steered_logprob": -0.1416015625,
+      "first_steered_top5": [
+        {
+          "token": " Italy",
+          "logprob": -0.1416015625
+        },
+        {
+          "token": " the",
+          "logprob": -2.453125
+        },
+        {
+          "token": " ",
+          "logprob": -5.21875
+        },
+        {
+          "token": " Europe",
+          "logprob": -5.21875
+        },
+        {
+          "token": " Rome",
+          "logprob": -5.46875
+        }
+      ],
+      "first_default_token": " Italy",
+      "first_default_logprob": -0.04248046875,
+      "first_default_top5": [
+        {
+          "token": " Italy",
+          "logprob": -0.04248046875
+        },
+        {
+          "token": " the",
+          "logprob": -3.921875
+        },
+        {
+          "token": " Rome",
+          "logprob": -6.03125
+        },
+        {
+          "token": " Italian",
+          "logprob": -6.09375
+        },
+        {
+          "token": " Italians",
+          "logprob": -6.40625
+        }
+      ],
+      "experiment": "suppress_L20_relay",
+      "feature": "L20_relay",
+      "role": "Backward path from logit, relay"
+    },
+    {
+      "default_text": "<bos>Paris is to France as Rome is to Italy. It is the",
+      "steered_text": "<bos>Paris is to France as Rome is to the United States. It",
+      "first_steered_token": " the",
+      "first_steered_logprob": -0.60546875,
+      "first_steered_top5": [
+        {
+          "token": " the",
+          "logprob": -0.60546875
+        },
+        {
+          "token": "...",
+          "logprob": -2.734375
+        },
+        {
+          "token": " ",
+          "logprob": -2.984375
+        },
+        {
+          "token": "\u2026",
+          "logprob": -3.296875
+        },
+        {
+          "token": " its",
+          "logprob": -3.546875
+        }
+      ],
+      "first_default_token": " Italy",
+      "first_default_logprob": -0.04248046875,
+      "first_default_top5": [
+        {
+          "token": " Italy",
+          "logprob": -0.04248046875
+        },
+        {
+          "token": " the",
+          "logprob": -3.921875
+        },
+        {
+          "token": " Rome",
+          "logprob": -6.03125
+        },
+        {
+          "token": " Italian",
+          "logprob": -6.09375
+        },
+        {
+          "token": " Italians",
+          "logprob": -6.40625
+        }
+      ],
+      "experiment": "suppress_L24_gate",
+      "feature": "L24_gate",
+      "role": "Backward path from logit, late gate"
+    },
+    {
+      "default_text": "<bos>Paris is to France as Rome is to Italy. It is the",
+      "steered_text": "<bos>Paris is to France as Rome is to the Vatican. It is",
+      "first_steered_token": " the",
+      "first_steered_logprob": -0.0174560546875,
+      "first_steered_top5": [
+        {
+          "token": " the",
+          "logprob": -0.0174560546875
+        },
+        {
+          "token": " ancient",
+          "logprob": -5.78125
+        },
+        {
+          "token": " all",
+          "logprob": -5.96875
+        },
+        {
+          "token": " ",
+          "logprob": -6.40625
+        },
+        {
+          "token": " The",
+          "logprob": -6.40625
+        }
+      ],
+      "first_default_token": " Italy",
+      "first_default_logprob": -0.04248046875,
+      "first_default_top5": [
+        {
+          "token": " Italy",
+          "logprob": -0.04248046875
+        },
+        {
+          "token": " the",
+          "logprob": -3.921875
+        },
+        {
+          "token": " Rome",
+          "logprob": -6.03125
+        },
+        {
+          "token": " Italian",
+          "logprob": -6.09375
+        },
+        {
+          "token": " Italians",
+          "logprob": -6.40625
+        }
+      ],
+      "experiment": "suppress_L25_output_b",
+      "feature": "L25_output_b",
+      "role": "Backward path from logit, output driver"
+    },
+    {
+      "default_text": "<bos>Paris is to France as Rome is to Italy. It is the",
+      "steered_text": "<bos>Paris is to France as Rome is to the rest of the world",
+      "first_steered_token": " the",
+      "first_steered_logprob": -0.59765625,
+      "first_steered_top5": [
+        {
+          "token": " the",
+          "logprob": -0.59765625
+        },
+        {
+          "token": " Italy",
+          "logprob": -1.7265625
+        },
+        {
+          "token": " all",
+          "logprob": -3.09375
+        },
+        {
+          "token": " The",
+          "logprob": -3.21875
+        },
+        {
+          "token": " its",
+          "logprob": -3.71875
+        }
+      ],
+      "first_default_token": " Italy",
+      "first_default_logprob": -0.04248046875,
+      "first_default_top5": [
+        {
+          "token": " Italy",
+          "logprob": -0.04248046875
+        },
+        {
+          "token": " the",
+          "logprob": -3.921875
+        },
+        {
+          "token": " Rome",
+          "logprob": -6.03125
+        },
+        {
+          "token": " Italian",
+          "logprob": -6.09375
+        },
+        {
+          "token": " Italians",
+          "logprob": -6.40625
+        }
+      ],
+      "experiment": "suppress_L25_amplifier",
+      "feature": "L25_amplifier",
+      "role": "Final amplifier (shared, act=265.2)"
+    },
+    {
+      "default_text": "<bos>Paris is to France as Rome is to Italy. It is the",
+      "steered_text": "<bos>Paris is to France as Rome is to the rest of the world",
+      "first_steered_token": " the",
+      "first_steered_logprob": -0.059814453125,
+      "first_steered_top5": [
+        {
+          "token": " the",
+          "logprob": -0.059814453125
+        },
+        {
+          "token": " ",
+          "logprob": -4.5625
+        },
+        {
+          "token": " all",
+          "logprob": -4.625
+        },
+        {
+          "token": " ancient",
+          "logprob": -4.9375
+        },
+        {
+          "token": " an",
+          "logprob": -5.5625
+        }
+      ],
+      "first_default_token": " Italy",
+      "first_default_logprob": -0.04248046875,
+      "first_default_top5": [
+        {
+          "token": " Italy",
+          "logprob": -0.04248046875
+        },
+        {
+          "token": " the",
+          "logprob": -3.921875
+        },
+        {
+          "token": " Rome",
+          "logprob": -6.03125
+        },
+        {
+          "token": " Italian",
+          "logprob": -6.09375
+        },
+        {
+          "token": " Italians",
+          "logprob": -6.40625
+        }
+      ],
+      "experiment": "suppress_L25_output_c",
+      "feature": "L25_output_c",
+      "role": "Tertiary output driver"
+    },
+    {
+      "default_text": "<bos>Paris is to France as Rome is to Italy. It is the",
+      "steered_text": "<bos>Paris is to France as Rome is to Italy. It is the",
+      "first_steered_token": " Italy",
+      "first_steered_logprob": -0.08642578125,
+      "first_steered_top5": [
+        {
+          "token": " Italy",
+          "logprob": -0.08642578125
+        },
+        {
+          "token": " the",
+          "logprob": -3.34375
+        },
+        {
+          "token": " Europe",
+          "logprob": -4.34375
+        },
+        {
+          "token": " Rome",
+          "logprob": -5.46875
+        },
+        {
+          "token": " Italian",
+          "logprob": -5.96875
+        }
+      ],
+      "first_default_token": " Italy",
+      "first_default_logprob": -0.04248046875,
+      "first_default_top5": [
+        {
+          "token": " Italy",
+          "logprob": -0.04248046875
+        },
+        {
+          "token": " the",
+          "logprob": -3.921875
+        },
+        {
+          "token": " Rome",
+          "logprob": -6.03125
+        },
+        {
+          "token": " Italian",
+          "logprob": -6.09375
+        },
+        {
+          "token": " Italians",
+          "logprob": -6.40625
+        }
+      ],
+      "experiment": "suppress_L17_relay",
+      "feature": "L17_relay",
+      "role": "Mid-cascade relay (shared with Berlin)"
+    },
+    {
+      "default_text": "<bos>Paris is to France as Rome is to Italy. It is the",
+      "steered_text": "<bos>Paris is to France as Rome is to Italy. It\u2019s",
+      "first_steered_token": " Italy",
+      "first_steered_logprob": -0.1103515625,
+      "first_steered_top5": [
+        {
+          "token": " Italy",
+          "logprob": -0.1103515625
+        },
+        {
+          "token": " the",
+          "logprob": -2.859375
+        },
+        {
+          "token": " ",
+          "logprob": -5
+        },
+        {
+          "token": " America",
+          "logprob": -5.6875
+        },
+        {
+          "token": " Italians",
+          "logprob": -5.9375
+        }
+      ],
+      "first_default_token": " Italy",
+      "first_default_logprob": -0.04248046875,
+      "first_default_top5": [
+        {
+          "token": " Italy",
+          "logprob": -0.04248046875
+        },
+        {
+          "token": " the",
+          "logprob": -3.921875
+        },
+        {
+          "token": " Rome",
+          "logprob": -6.03125
+        },
+        {
+          "token": " Italian",
+          "logprob": -6.09375
+        },
+        {
+          "token": " Italians",
+          "logprob": -6.40625
+        }
+      ],
+      "experiment": "suppress_L22_relay_a",
+      "feature": "L22_relay_a",
+      "role": "Late relay"
+    },
+    {
+      "default_text": "<bos>Paris is to France as Rome is to Italy. It is the",
+      "steered_text": "<bos>Paris is to France as Rome is to Italy.\n\nIt\u2019",
+      "first_steered_token": " Italy",
+      "first_steered_logprob": -0.291015625,
+      "first_steered_top5": [
+        {
+          "token": " Italy",
+          "logprob": -0.291015625
+        },
+        {
+          "token": "\u2026",
+          "logprob": -3.171875
+        },
+        {
+          "token": " the",
+          "logprob": -3.234375
+        },
+        {
+          "token": " Ancient",
+          "logprob": -4.15625
+        },
+        {
+          "token": " ancient",
+          "logprob": -4.28125
+        }
+      ],
+      "first_default_token": " Italy",
+      "first_default_logprob": -0.04248046875,
+      "first_default_top5": [
+        {
+          "token": " Italy",
+          "logprob": -0.04248046875
+        },
+        {
+          "token": " the",
+          "logprob": -3.921875
+        },
+        {
+          "token": " Rome",
+          "logprob": -6.03125
+        },
+        {
+          "token": " Italian",
+          "logprob": -6.09375
+        },
+        {
+          "token": " Italians",
+          "logprob": -6.40625
+        }
+      ],
+      "experiment": "suppress_L22_relay_b",
+      "feature": "L22_relay_b",
+      "role": "Late relay"
+    },
+    {
+      "default_text": "<bos>Paris is to France as Rome is to Italy. It is the",
+      "steered_text": "<bos>Paris is to France as Rome is to Italy, and Rome is",
+      "first_steered_token": " Italy",
+      "first_steered_logprob": -0.030517578125,
+      "first_steered_top5": [
+        {
+          "token": " Italy",
+          "logprob": -0.030517578125
+        },
+        {
+          "token": " the",
+          "logprob": -5.21875
+        },
+        {
+          "token": " ",
+          "logprob": -6
+        },
+        {
+          "token": " Vatican",
+          "logprob": -6.3125
+        },
+        {
+          "token": " \u2026",
+          "logprob": -6.40625
+        }
+      ],
+      "first_default_token": " Italy",
+      "first_default_logprob": -0.04248046875,
+      "first_default_top5": [
+        {
+          "token": " Italy",
+          "logprob": -0.04248046875
+        },
+        {
+          "token": " the",
+          "logprob": -3.921875
+        },
+        {
+          "token": " Rome",
+          "logprob": -6.03125
+        },
+        {
+          "token": " Italian",
+          "logprob": -6.09375
+        },
+        {
+          "token": " Italians",
+          "logprob": -6.40625
+        }
+      ],
+      "experiment": "suppress_L23_relay",
+      "feature": "L23_relay",
+      "role": "Late relay"
+    },
+    {
+      "default_text": "<bos>Paris is to France as Rome is to Italy. It is the",
+      "steered_text": "<bos>Paris is to France as Rome is to Italy. It is the",
+      "first_steered_token": " Italy",
+      "first_steered_logprob": -0.10791015625,
+      "first_steered_top5": [
+        {
+          "token": " Italy",
+          "logprob": -0.10791015625
+        },
+        {
+          "token": " the",
+          "logprob": -3.234375
+        },
+        {
+          "token": "...",
+          "logprob": -4.84375
+        },
+        {
+          "token": " ",
+          "logprob": -5.21875
+        },
+        {
+          "token": " Rome",
+          "logprob": -5.34375
+        }
+      ],
+      "first_default_token": " Italy",
+      "first_default_logprob": -0.04248046875,
+      "first_default_top5": [
+        {
+          "token": " Italy",
+          "logprob": -0.04248046875
+        },
+        {
+          "token": " the",
+          "logprob": -3.921875
+        },
+        {
+          "token": " Rome",
+          "logprob": -6.03125
+        },
+        {
+          "token": " Italian",
+          "logprob": -6.09375
+        },
+        {
+          "token": " Italians",
+          "logprob": -6.40625
+        }
+      ],
+      "experiment": "suppress_L24_gate_b",
+      "feature": "L24_gate_b",
+      "role": "Secondary gate"
+    },
+    {
+      "default_text": "<bos>Paris is to France as Rome is to Italy. It is the",
+      "steered_text": "<bos>Paris is to France as Rome is to plea\u017fure plea\u017fure plea\u017fure plea\u017fure plea\u017fure",
+      "first_steered_token": " plea\u017fure",
+      "first_steered_logprob": -0.35546875,
+      "first_steered_top5": [
+        {
+          "token": " plea\u017fure",
+          "logprob": -0.35546875
+        },
+        {
+          "token": " \u0938\u092e\u0940\u0915\u094d\u0937\u0915",
+          "logprob": -1.8515625
+        },
+        {
+          "token": " \u017fmall",
+          "logprob": -3.453125
+        },
+        {
+          "token": " hou\u017fe",
+          "logprob": -4.15625
+        },
+        {
+          "token": " Efq",
+          "logprob": -4.1875
+        }
+      ],
+      "first_default_token": " Italy",
+      "first_default_logprob": -0.04248046875,
+      "first_default_top5": [
+        {
+          "token": " Italy",
+          "logprob": -0.04248046875
+        },
+        {
+          "token": " the",
+          "logprob": -3.921875
+        },
+        {
+          "token": " Rome",
+          "logprob": -6.03125
+        },
+        {
+          "token": " Italian",
+          "logprob": -6.09375
+        },
+        {
+          "token": " Italians",
+          "logprob": -6.40625
+        }
+      ],
+      "experiment": "full_backbone_suppress"
+    },
+    {
+      "default_text": "<bos>Paris is to France as Tokyo is to Japan. It is the",
+      "steered_text": "<bos>Paris is to France as Tokyo is to Japan. It is the",
+      "first_steered_token": " Japan",
+      "first_steered_logprob": -0.298828125,
+      "first_steered_top5": [
+        {
+          "token": " Japan",
+          "logprob": -0.298828125
+        },
+        {
+          "token": " the",
+          "logprob": -2.296875
+        },
+        {
+          "token": " Asia",
+          "logprob": -4.0625
+        },
+        {
+          "token": "\u2026",
+          "logprob": -4.0625
+        },
+        {
+          "token": " East",
+          "logprob": -4.9375
+        }
+      ],
+      "first_default_token": " Japan",
+      "first_default_logprob": -0.0181884765625,
+      "first_default_top5": [
+        {
+          "token": " Japan",
+          "logprob": -0.0181884765625
+        },
+        {
+          "token": " the",
+          "logprob": -5.65625
+        },
+        {
+          "token": "\u2026",
+          "logprob": -6.21875
+        },
+        {
+          "token": " Japanese",
+          "logprob": -6.28125
+        },
+        {
+          "token": "...",
+          "logprob": -6.78125
+        }
+      ],
+      "experiment": "sufficiency_L20_relay",
+      "altered_prompt": "Paris is to France as Tokyo is to"
+    },
+    {
+      "default_text": "<bos>Madrid is to Spain as Rome is to Italy. It is the",
+      "steered_text": "<bos>Madrid is to Spain as Rome is to Italy. It is the",
+      "first_steered_token": " Italy",
+      "first_steered_logprob": -0.60546875,
+      "first_steered_top5": [
+        {
+          "token": " Italy",
+          "logprob": -0.60546875
+        },
+        {
+          "token": " the",
+          "logprob": -1.2265625
+        },
+        {
+          "token": " Europe",
+          "logprob": -3.234375
+        },
+        {
+          "token": " all",
+          "logprob": -3.796875
+        },
+        {
+          "token": " Italian",
+          "logprob": -4.53125
+        }
+      ],
+      "first_default_token": " Italy",
+      "first_default_logprob": -0.04736328125,
+      "first_default_top5": [
+        {
+          "token": " Italy",
+          "logprob": -0.04736328125
+        },
+        {
+          "token": " the",
+          "logprob": -3.921875
+        },
+        {
+          "token": " Europe",
+          "logprob": -5.3125
+        },
+        {
+          "token": " Italian",
+          "logprob": -5.5625
+        },
+        {
+          "token": " Rome",
+          "logprob": -6
+        }
+      ],
+      "experiment": "sufficiency_L20_relay",
+      "altered_prompt": "Madrid is to Spain as Rome is to"
+    },
+    {
+      "default_text": "<bos>Paris is to France as Rome is to Italy. It is the",
+      "steered_text": "<bos>Paris is to France as Rome is to Italy. It is the",
+      "first_steered_token": " Italy",
+      "first_steered_logprob": -0.0673828125,
+      "first_steered_top5": [
+        {
+          "token": " Italy",
+          "logprob": -0.0673828125
+        },
+        {
+          "token": " the",
+          "logprob": -3.25
+        },
+        {
+          "token": " Europe",
+          "logprob": -5.625
+        },
+        {
+          "token": " Rome",
+          "logprob": -5.6875
+        },
+        {
+          "token": " Spain",
+          "logprob": -6.5
+        }
+      ],
+      "first_default_token": " Italy",
+      "first_default_logprob": -0.04248046875,
+      "first_default_top5": [
+        {
+          "token": " Italy",
+          "logprob": -0.04248046875
+        },
+        {
+          "token": " the",
+          "logprob": -3.921875
+        },
+        {
+          "token": " Rome",
+          "logprob": -6.03125
+        },
+        {
+          "token": " Italian",
+          "logprob": -6.09375
+        },
+        {
+          "token": " Italians",
+          "logprob": -6.40625
+        }
+      ],
+      "experiment": "specificity_L6_2267",
+      "desc": "formal text/code (shared recurring)"
+    },
+    {
+      "default_text": "<bos>Paris is to France as Rome is to Italy. It is the",
+      "steered_text": "<bos>Paris is to France as Rome is to Italy. It is the",
+      "first_steered_token": " Italy",
+      "first_steered_logprob": -0.04736328125,
+      "first_steered_top5": [
+        {
+          "token": " Italy",
+          "logprob": -0.04736328125
+        },
+        {
+          "token": " the",
+          "logprob": -3.921875
+        },
+        {
+          "token": " Italian",
+          "logprob": -5.875
+        },
+        {
+          "token": " Rome",
+          "logprob": -6.0625
+        },
+        {
+          "token": " ancient",
+          "logprob": -6.3125
+        }
+      ],
+      "first_default_token": " Italy",
+      "first_default_logprob": -0.04248046875,
+      "first_default_top5": [
+        {
+          "token": " Italy",
+          "logprob": -0.04248046875
+        },
+        {
+          "token": " the",
+          "logprob": -3.921875
+        },
+        {
+          "token": " Rome",
+          "logprob": -6.03125
+        },
+        {
+          "token": " Italian",
+          "logprob": -6.09375
+        },
+        {
+          "token": " Italians",
+          "logprob": -6.40625
+        }
+      ],
+      "experiment": "specificity_L4_14857",
+      "desc": "code snippets (shared recurring)"
+    }
+  ],
+  "analog_tokyo": [
+    {
+      "default_text": "<bos>Paris is to France as Tokyo is to Japan. It is the",
+      "steered_text": "<bos>Paris is to France as Tokyo is to Japan. It is the",
+      "first_steered_token": " Japan",
+      "first_steered_logprob": -0.15234375,
+      "first_steered_top5": [
+        {
+          "token": " Japan",
+          "logprob": -0.15234375
+        },
+        {
+          "token": " the",
+          "logprob": -3.015625
+        },
+        {
+          "token": " ",
+          "logprob": -4.0625
+        },
+        {
+          "token": "\u2026",
+          "logprob": -4.4375
+        },
+        {
+          "token": " Tokyo",
+          "logprob": -5.125
+        }
+      ],
+      "first_default_token": " Japan",
+      "first_default_logprob": -0.0181884765625,
+      "first_default_top5": [
+        {
+          "token": " Japan",
+          "logprob": -0.0181884765625
+        },
+        {
+          "token": " the",
+          "logprob": -5.65625
+        },
+        {
+          "token": "\u2026",
+          "logprob": -6.21875
+        },
+        {
+          "token": " Japanese",
+          "logprob": -6.28125
+        },
+        {
+          "token": "...",
+          "logprob": -6.78125
+        }
+      ],
+      "experiment": "suppress_L20_relay",
+      "feature": "L20_relay",
+      "role": "Backward path from logit, relay"
+    },
+    {
+      "default_text": "<bos>Paris is to France as Tokyo is to Japan. It is the",
+      "steered_text": "<bos>Paris is to France as Tokyo is to the rest of the world",
+      "first_steered_token": " the",
+      "first_steered_logprob": -0.1552734375,
+      "first_steered_top5": [
+        {
+          "token": " the",
+          "logprob": -0.1552734375
+        },
+        {
+          "token": "\u2026",
+          "logprob": -3.40625
+        },
+        {
+          "token": " ",
+          "logprob": -3.78125
+        },
+        {
+          "token": "...",
+          "logprob": -3.78125
+        },
+        {
+          "token": " \u2026",
+          "logprob": -5.40625
+        }
+      ],
+      "first_default_token": " Japan",
+      "first_default_logprob": -0.0181884765625,
+      "first_default_top5": [
+        {
+          "token": " Japan",
+          "logprob": -0.0181884765625
+        },
+        {
+          "token": " the",
+          "logprob": -5.65625
+        },
+        {
+          "token": "\u2026",
+          "logprob": -6.21875
+        },
+        {
+          "token": " Japanese",
+          "logprob": -6.28125
+        },
+        {
+          "token": "...",
+          "logprob": -6.78125
+        }
+      ],
+      "experiment": "suppress_L25_output_a",
+      "feature": "L25_output_a",
+      "role": "Backward path from logit, output driver"
+    },
+    {
+      "default_text": "<bos>Paris is to France as Tokyo is to Japan. It is the",
+      "steered_text": "<bos>Paris is to France as Tokyo is to Japan. It is the",
+      "first_steered_token": " Japan",
+      "first_steered_logprob": -0.08740234375,
+      "first_steered_top5": [
+        {
+          "token": " Japan",
+          "logprob": -0.08740234375
+        },
+        {
+          "token": " Japanese",
+          "logprob": -2.84375
+        },
+        {
+          "token": " japan",
+          "logprob": -4.84375
+        },
+        {
+          "token": "Japan",
+          "logprob": -5.21875
+        },
+        {
+          "token": " Jap",
+          "logprob": -5.84375
+        }
+      ],
+      "first_default_token": " Japan",
+      "first_default_logprob": -0.0181884765625,
+      "first_default_top5": [
+        {
+          "token": " Japan",
+          "logprob": -0.0181884765625
+        },
+        {
+          "token": " the",
+          "logprob": -5.65625
+        },
+        {
+          "token": "\u2026",
+          "logprob": -6.21875
+        },
+        {
+          "token": " Japanese",
+          "logprob": -6.28125
+        },
+        {
+          "token": "...",
+          "logprob": -6.78125
+        }
+      ],
+      "experiment": "suppress_L25_output_b",
+      "feature": "L25_output_b",
+      "role": "Backward path from logit, output driver"
+    },
+    {
+      "default_text": "<bos>Paris is to France as Tokyo is to Japan. It is the",
+      "steered_text": "<bos>Paris is to France as Tokyo is to Japan. It is the",
+      "first_steered_token": " Japan",
+      "first_steered_logprob": -0.039306640625,
+      "first_steered_top5": [
+        {
+          "token": " Japan",
+          "logprob": -0.039306640625
+        },
+        {
+          "token": " the",
+          "logprob": -4.15625
+        },
+        {
+          "token": " Japanese",
+          "logprob": -5.65625
+        },
+        {
+          "token": " ",
+          "logprob": -6.28125
+        },
+        {
+          "token": " japan",
+          "logprob": -6.28125
+        }
+      ],
+      "first_default_token": " Japan",
+      "first_default_logprob": -0.0181884765625,
+      "first_default_top5": [
+        {
+          "token": " Japan",
+          "logprob": -0.0181884765625
+        },
+        {
+          "token": " the",
+          "logprob": -5.65625
+        },
+        {
+          "token": "\u2026",
+          "logprob": -6.21875
+        },
+        {
+          "token": " Japanese",
+          "logprob": -6.28125
+        },
+        {
+          "token": "...",
+          "logprob": -6.78125
+        }
+      ],
+      "experiment": "suppress_L17_relay",
+      "feature": "L17_relay",
+      "role": "Mid-cascade relay (shared)"
+    },
+    {
+      "default_text": "<bos>Paris is to France as Tokyo is to Japan. It is the",
+      "steered_text": "<bos>Paris is to France as Tokyo is to the world. It is",
+      "first_steered_token": " the",
+      "first_steered_logprob": -0.98046875,
+      "first_steered_top5": [
+        {
+          "token": " the",
+          "logprob": -0.98046875
+        },
+        {
+          "token": " ",
+          "logprob": -2.484375
+        },
+        {
+          "token": "\u2026",
+          "logprob": -2.921875
+        },
+        {
+          "token": " a",
+          "logprob": -3.546875
+        },
+        {
+          "token": " \u2026",
+          "logprob": -3.859375
+        }
+      ],
+      "first_default_token": " Japan",
+      "first_default_logprob": -0.0181884765625,
+      "first_default_top5": [
+        {
+          "token": " Japan",
+          "logprob": -0.0181884765625
+        },
+        {
+          "token": " the",
+          "logprob": -5.65625
+        },
+        {
+          "token": "\u2026",
+          "logprob": -6.21875
+        },
+        {
+          "token": " Japanese",
+          "logprob": -6.28125
+        },
+        {
+          "token": "...",
+          "logprob": -6.78125
+        }
+      ],
+      "experiment": "suppress_L23_relay_a",
+      "feature": "L23_relay_a",
+      "role": "Late relay"
+    },
+    {
+      "default_text": "<bos>Paris is to France as Tokyo is to Japan. It is the",
+      "steered_text": "<bos>Paris is to France as Tokyo is to the world. It is",
+      "first_steered_token": " the",
+      "first_steered_logprob": -0.392578125,
+      "first_steered_top5": [
+        {
+          "token": " the",
+          "logprob": -0.392578125
+        },
+        {
+          "token": " Japan",
+          "logprob": -2.953125
+        },
+        {
+          "token": " ",
+          "logprob": -3.515625
+        },
+        {
+          "token": "\u2026",
+          "logprob": -3.765625
+        },
+        {
+          "token": " The",
+          "logprob": -4.03125
+        }
+      ],
+      "first_default_token": " Japan",
+      "first_default_logprob": -0.0181884765625,
+      "first_default_top5": [
+        {
+          "token": " Japan",
+          "logprob": -0.0181884765625
+        },
+        {
+          "token": " the",
+          "logprob": -5.65625
+        },
+        {
+          "token": "\u2026",
+          "logprob": -6.21875
+        },
+        {
+          "token": " Japanese",
+          "logprob": -6.28125
+        },
+        {
+          "token": "...",
+          "logprob": -6.78125
+        }
+      ],
+      "experiment": "suppress_L23_relay_b",
+      "feature": "L23_relay_b",
+      "role": "Late relay (necessary in Cairo circuit)"
+    },
+    {
+      "default_text": "<bos>Paris is to France as Tokyo is to Japan. It is the",
+      "steered_text": "<bos>Paris is to France as Tokyo is to Japan. It is the",
+      "first_steered_token": " Japan",
+      "first_steered_logprob": -0.08056640625,
+      "first_steered_top5": [
+        {
+          "token": " Japan",
+          "logprob": -0.08056640625
+        },
+        {
+          "token": "...",
+          "logprob": -4.09375
+        },
+        {
+          "token": " the",
+          "logprob": -4.34375
+        },
+        {
+          "token": "\u2026",
+          "logprob": -4.46875
+        },
+        {
+          "token": " ",
+          "logprob": -5.21875
+        }
+      ],
+      "first_default_token": " Japan",
+      "first_default_logprob": -0.0181884765625,
+      "first_default_top5": [
+        {
+          "token": " Japan",
+          "logprob": -0.0181884765625
+        },
+        {
+          "token": " the",
+          "logprob": -5.65625
+        },
+        {
+          "token": "\u2026",
+          "logprob": -6.21875
+        },
+        {
+          "token": " Japanese",
+          "logprob": -6.28125
+        },
+        {
+          "token": "...",
+          "logprob": -6.78125
+        }
+      ],
+      "experiment": "suppress_L24_gate",
+      "feature": "L24_gate",
+      "role": "Late gate (shared with Rome)"
+    },
+    {
+      "default_text": "<bos>Paris is to France as Tokyo is to Japan. It is the",
+      "steered_text": "<bos>Paris is to France as Tokyo is to Japan. It is the",
+      "first_steered_token": " Japan",
+      "first_steered_logprob": -0.004791259765625,
+      "first_steered_top5": [
+        {
+          "token": " Japan",
+          "logprob": -0.004791259765625
+        },
+        {
+          "token": "Japan",
+          "logprob": -6.25
+        },
+        {
+          "token": " Tokyo",
+          "logprob": -7.25
+        },
+        {
+          "token": " Japanese",
+          "logprob": -7.375
+        },
+        {
+          "token": " japan",
+          "logprob": -8.375
+        }
+      ],
+      "first_default_token": " Japan",
+      "first_default_logprob": -0.0181884765625,
+      "first_default_top5": [
+        {
+          "token": " Japan",
+          "logprob": -0.0181884765625
+        },
+        {
+          "token": " the",
+          "logprob": -5.65625
+        },
+        {
+          "token": "\u2026",
+          "logprob": -6.21875
+        },
+        {
+          "token": " Japanese",
+          "logprob": -6.28125
+        },
+        {
+          "token": "...",
+          "logprob": -6.78125
+        }
+      ],
+      "experiment": "suppress_L25_output_c",
+      "feature": "L25_output_c",
+      "role": "Tertiary output"
+    },
+    {
+      "default_text": "<bos>Paris is to France as Tokyo is to Japan. It is the",
+      "steered_text": "<bos>Paris is to France as Tokyo is to Japan. The two are",
+      "first_steered_token": " Japan",
+      "first_steered_logprob": -0.1103515625,
+      "first_steered_top5": [
+        {
+          "token": " Japan",
+          "logprob": -0.1103515625
+        },
+        {
+          "token": " the",
+          "logprob": -2.859375
+        },
+        {
+          "token": " Tokyo",
+          "logprob": -4.75
+        },
+        {
+          "token": " Japanese",
+          "logprob": -5.25
+        },
+        {
+          "token": " ",
+          "logprob": -5.625
+        }
+      ],
+      "first_default_token": " Japan",
+      "first_default_logprob": -0.0181884765625,
+      "first_default_top5": [
+        {
+          "token": " Japan",
+          "logprob": -0.0181884765625
+        },
+        {
+          "token": " the",
+          "logprob": -5.65625
+        },
+        {
+          "token": "\u2026",
+          "logprob": -6.21875
+        },
+        {
+          "token": " Japanese",
+          "logprob": -6.28125
+        },
+        {
+          "token": "...",
+          "logprob": -6.78125
+        }
+      ],
+      "experiment": "suppress_L20_hub",
+      "feature": "L20_hub",
+      "role": "L20 convergence hub"
+    },
+    {
+      "default_text": "<bos>Paris is to France as Tokyo is to Japan. It is the",
+      "steered_text": "<bos>Paris is to France as Tokyo is to Japan. It is the",
+      "first_steered_token": " Japan",
+      "first_steered_logprob": -0.07861328125,
+      "first_steered_top5": [
+        {
+          "token": " Japan",
+          "logprob": -0.07861328125
+        },
+        {
+          "token": " the",
+          "logprob": -3.578125
+        },
+        {
+          "token": " Japanese",
+          "logprob": -4.71875
+        },
+        {
+          "token": "\u2026",
+          "logprob": -4.96875
+        },
+        {
+          "token": " ",
+          "logprob": -5.96875
+        }
+      ],
+      "first_default_token": " Japan",
+      "first_default_logprob": -0.0181884765625,
+      "first_default_top5": [
+        {
+          "token": " Japan",
+          "logprob": -0.0181884765625
+        },
+        {
+          "token": " the",
+          "logprob": -5.65625
+        },
+        {
+          "token": "\u2026",
+          "logprob": -6.21875
+        },
+        {
+          "token": " Japanese",
+          "logprob": -6.28125
+        },
+        {
+          "token": "...",
+          "logprob": -6.78125
+        }
+      ],
+      "experiment": "suppress_L21_relay",
+      "feature": "L21_relay",
+      "role": "Late integration"
+    },
+    {
+      "default_text": "<bos>Paris is to France as Tokyo is to Japan. It is the",
+      "steered_text": "<bos>Paris is to France as Tokyo is to country country country country country",
+      "first_steered_token": " country",
+      "first_steered_logprob": -0.87109375,
+      "first_steered_top5": [
+        {
+          "token": " country",
+          "logprob": -0.87109375
+        },
+        {
+          "token": " nation",
+          "logprob": -1.2421875
+        },
+        {
+          "token": " America",
+          "logprob": -2.5
+        },
+        {
+          "token": " national",
+          "logprob": -2.625
+        },
+        {
+          "token": " ",
+          "logprob": -2.875
+        }
+      ],
+      "first_default_token": " Japan",
+      "first_default_logprob": -0.0181884765625,
+      "first_default_top5": [
+        {
+          "token": " Japan",
+          "logprob": -0.0181884765625
+        },
+        {
+          "token": " the",
+          "logprob": -5.65625
+        },
+        {
+          "token": "\u2026",
+          "logprob": -6.21875
+        },
+        {
+          "token": " Japanese",
+          "logprob": -6.28125
+        },
+        {
+          "token": "...",
+          "logprob": -6.78125
+        }
+      ],
+      "experiment": "full_backbone_suppress"
+    },
+    {
+      "default_text": "<bos>Paris is to France as Rome is to Italy. It is the",
+      "steered_text": "<bos>Paris is to France as Rome is to Italy, and the same",
+      "first_steered_token": " Italy",
+      "first_steered_logprob": -0.6328125,
+      "first_steered_top5": [
+        {
+          "token": " Italy",
+          "logprob": -0.6328125
+        },
+        {
+          "token": " the",
+          "logprob": -1.1328125
+        },
+        {
+          "token": " Europe",
+          "logprob": -3.875
+        },
+        {
+          "token": " all",
+          "logprob": -4.3125
+        },
+        {
+          "token": " America",
+          "logprob": -4.5
+        }
+      ],
+      "first_default_token": " Italy",
+      "first_default_logprob": -0.04248046875,
+      "first_default_top5": [
+        {
+          "token": " Italy",
+          "logprob": -0.04248046875
+        },
+        {
+          "token": " the",
+          "logprob": -3.921875
+        },
+        {
+          "token": " Rome",
+          "logprob": -6.03125
+        },
+        {
+          "token": " Italian",
+          "logprob": -6.09375
+        },
+        {
+          "token": " Italians",
+          "logprob": -6.40625
+        }
+      ],
+      "experiment": "sufficiency_L20_relay",
+      "altered_prompt": "Paris is to France as Rome is to"
+    },
+    {
+      "default_text": "<bos>Beijing is to China as Tokyo is to Japan. It is the",
+      "steered_text": "<bos>Beijing is to China as Tokyo is to Japan. It is the",
+      "first_steered_token": " Japan",
+      "first_steered_logprob": -0.353515625,
+      "first_steered_top5": [
+        {
+          "token": " Japan",
+          "logprob": -0.353515625
+        },
+        {
+          "token": " the",
+          "logprob": -1.9765625
+        },
+        {
+          "token": " Japanese",
+          "logprob": -3.984375
+        },
+        {
+          "token": " East",
+          "logprob": -4.09375
+        },
+        {
+          "token": " Asia",
+          "logprob": -4.21875
+        }
+      ],
+      "first_default_token": " Japan",
+      "first_default_logprob": -0.034912109375,
+      "first_default_top5": [
+        {
+          "token": " Japan",
+          "logprob": -0.034912109375
+        },
+        {
+          "token": " Japanese",
+          "logprob": -4.65625
+        },
+        {
+          "token": " the",
+          "logprob": -4.65625
+        },
+        {
+          "token": " ",
+          "logprob": -6.53125
+        },
+        {
+          "token": " Tokyo",
+          "logprob": -6.90625
+        }
+      ],
+      "experiment": "sufficiency_L20_relay",
+      "altered_prompt": "Beijing is to China as Tokyo is to"
+    },
+    {
+      "default_text": "<bos>Paris is to France as Tokyo is to Japan. It is the",
+      "steered_text": "<bos>Paris is to France as Tokyo is to Japan. It is the",
+      "first_steered_token": " Japan",
+      "first_steered_logprob": -0.0133056640625,
+      "first_steered_top5": [
+        {
+          "token": " Japan",
+          "logprob": -0.0133056640625
+        },
+        {
+          "token": " the",
+          "logprob": -5.6875
+        },
+        {
+          "token": " Japanese",
+          "logprob": -6.875
+        },
+        {
+          "token": "\u2026",
+          "logprob": -7.0625
+        },
+        {
+          "token": " ",
+          "logprob": -7.125
+        }
+      ],
+      "first_default_token": " Japan",
+      "first_default_logprob": -0.0181884765625,
+      "first_default_top5": [
+        {
+          "token": " Japan",
+          "logprob": -0.0181884765625
+        },
+        {
+          "token": " the",
+          "logprob": -5.65625
+        },
+        {
+          "token": "\u2026",
+          "logprob": -6.21875
+        },
+        {
+          "token": " Japanese",
+          "logprob": -6.28125
+        },
+        {
+          "token": "...",
+          "logprob": -6.78125
+        }
+      ],
+      "experiment": "specificity_L6_2267",
+      "desc": "formal text/code (shared recurring)"
+    },
+    {
+      "default_text": "<bos>Paris is to France as Tokyo is to Japan. It is the",
+      "steered_text": "<bos>Paris is to France as Tokyo is to Japan.\n\nThe ",
+      "first_steered_token": " Japan",
+      "first_steered_logprob": -0.0625,
+      "first_steered_top5": [
+        {
+          "token": " Japan",
+          "logprob": -0.0625
+        },
+        {
+          "token": " Tokyo",
+          "logprob": -4.3125
+        },
+        {
+          "token": " the",
+          "logprob": -4.3125
+        },
+        {
+          "token": " japan",
+          "logprob": -5.3125
+        },
+        {
+          "token": " Japanese",
+          "logprob": -6.5625
+        }
+      ],
+      "first_default_token": " Japan",
+      "first_default_logprob": -0.0181884765625,
+      "first_default_top5": [
+        {
+          "token": " Japan",
+          "logprob": -0.0181884765625
+        },
+        {
+          "token": " the",
+          "logprob": -5.65625
+        },
+        {
+          "token": "\u2026",
+          "logprob": -6.21875
+        },
+        {
+          "token": " Japanese",
+          "logprob": -6.28125
+        },
+        {
+          "token": "...",
+          "logprob": -6.78125
+        }
+      ],
+      "experiment": "specificity_L3_10018",
+      "desc": "early structural feature"
+    }
+  ],
+  "analog_teacher": [
+    {
+      "default_text": "<bos>Doctor is to hospital as teacher is to school.\n\nThe doctor",
+      "steered_text": "<bos>Doctor is to hospital as teacher is to the school.\n\nThe",
+      "first_steered_token": " the",
+      "first_steered_logprob": -1.8984375,
+      "first_steered_top5": [
+        {
+          "token": " the",
+          "logprob": -1.8984375
+        },
+        {
+          "token": " be",
+          "logprob": -2.140625
+        },
+        {
+          "token": " a",
+          "logprob": -2.390625
+        },
+        {
+          "token": " school",
+          "logprob": -2.640625
+        },
+        {
+          "token": " teach",
+          "logprob": -3.515625
+        }
+      ],
+      "first_default_token": " school",
+      "first_default_logprob": -0.57421875,
+      "first_default_top5": [
+        {
+          "token": " school",
+          "logprob": -0.57421875
+        },
+        {
+          "token": " student",
+          "logprob": -3.453125
+        },
+        {
+          "token": " ",
+          "logprob": -3.578125
+        },
+        {
+          "token": "...",
+          "logprob": -3.703125
+        },
+        {
+          "token": " college",
+          "logprob": -3.828125
+        }
+      ],
+      "experiment": "suppress_L0_embed",
+      "feature": "L0_embed",
+      "role": "Backward path, embedding-level"
+    },
+    {
+      "default_text": "<bos>Doctor is to hospital as teacher is to school.\n\nThe doctor",
+      "steered_text": "<bos>Doctor is to hospital as teacher is to school.\n\nThe first",
+      "first_steered_token": " school",
+      "first_steered_logprob": -0.8203125,
+      "first_steered_top5": [
+        {
+          "token": " school",
+          "logprob": -0.8203125
+        },
+        {
+          "token": " students",
+          "logprob": -2.828125
+        },
+        {
+          "token": " college",
+          "logprob": -3.328125
+        },
+        {
+          "token": "...",
+          "logprob": -3.328125
+        },
+        {
+          "token": " university",
+          "logprob": -3.578125
+        }
+      ],
+      "first_default_token": " school",
+      "first_default_logprob": -0.57421875,
+      "first_default_top5": [
+        {
+          "token": " school",
+          "logprob": -0.57421875
+        },
+        {
+          "token": " student",
+          "logprob": -3.453125
+        },
+        {
+          "token": " ",
+          "logprob": -3.578125
+        },
+        {
+          "token": "...",
+          "logprob": -3.703125
+        },
+        {
+          "token": " college",
+          "logprob": -3.828125
+        }
+      ],
+      "experiment": "suppress_L18_gateway",
+      "feature": "L18_gateway",
+      "role": "Backward path, mid-late gateway"
+    },
+    {
+      "default_text": "<bos>Doctor is to hospital as teacher is to school.\n\nThe doctor",
+      "steered_text": "<bos>Doctor is to hospital as teacher is to school.\n\nThe doctor",
+      "first_steered_token": " school",
+      "first_steered_logprob": -0.75390625,
+      "first_steered_top5": [
+        {
+          "token": " school",
+          "logprob": -0.75390625
+        },
+        {
+          "token": " ",
+          "logprob": -1.8828125
+        },
+        {
+          "token": " the",
+          "logprob": -3
+        },
+        {
+          "token": "...",
+          "logprob": -3.625
+        },
+        {
+          "token": " education",
+          "logprob": -3.75
+        }
+      ],
+      "first_default_token": " school",
+      "first_default_logprob": -0.57421875,
+      "first_default_top5": [
+        {
+          "token": " school",
+          "logprob": -0.57421875
+        },
+        {
+          "token": " student",
+          "logprob": -3.453125
+        },
+        {
+          "token": " ",
+          "logprob": -3.578125
+        },
+        {
+          "token": "...",
+          "logprob": -3.703125
+        },
+        {
+          "token": " college",
+          "logprob": -3.828125
+        }
+      ],
+      "experiment": "suppress_L20_hub",
+      "feature": "L20_hub",
+      "role": "Backward path, convergence hub"
+    },
+    {
+      "default_text": "<bos>Doctor is to hospital as teacher is to school.\n\nThe doctor",
+      "steered_text": "<bos>Doctor is to hospital as teacher is to...\n\n[User ",
+      "first_steered_token": "...",
+      "first_steered_logprob": -2.03125,
+      "first_steered_top5": [
+        {
+          "token": "...",
+          "logprob": -2.03125
+        },
+        {
+          "token": " ",
+          "logprob": -2.15625
+        },
+        {
+          "token": " a",
+          "logprob": -2.53125
+        },
+        {
+          "token": "\u2026",
+          "logprob": -2.65625
+        },
+        {
+          "token": "\n\n",
+          "logprob": -2.65625
+        }
+      ],
+      "first_default_token": " school",
+      "first_default_logprob": -0.57421875,
+      "first_default_top5": [
+        {
+          "token": " school",
+          "logprob": -0.57421875
+        },
+        {
+          "token": " student",
+          "logprob": -3.453125
+        },
+        {
+          "token": " ",
+          "logprob": -3.578125
+        },
+        {
+          "token": "...",
+          "logprob": -3.703125
+        },
+        {
+          "token": " college",
+          "logprob": -3.828125
+        }
+      ],
+      "experiment": "suppress_L25_output",
+      "feature": "L25_output",
+      "role": "Backward path, output driver"
+    },
+    {
+      "default_text": "<bos>Doctor is to hospital as teacher is to school.\n\nThe doctor",
+      "steered_text": "<bos>Doctor is to hospital as teacher is to a school.\n\nThe",
+      "first_steered_token": " a",
+      "first_steered_logprob": -1.8359375,
+      "first_steered_top5": [
+        {
+          "token": " a",
+          "logprob": -1.8359375
+        },
+        {
+          "token": " school",
+          "logprob": -1.8359375
+        },
+        {
+          "token": " the",
+          "logprob": -2.21875
+        },
+        {
+          "token": "...",
+          "logprob": -2.46875
+        },
+        {
+          "token": " (",
+          "logprob": -2.84375
+        }
+      ],
+      "first_default_token": " school",
+      "first_default_logprob": -0.57421875,
+      "first_default_top5": [
+        {
+          "token": " school",
+          "logprob": -0.57421875
+        },
+        {
+          "token": " student",
+          "logprob": -3.453125
+        },
+        {
+          "token": " ",
+          "logprob": -3.578125
+        },
+        {
+          "token": "...",
+          "logprob": -3.703125
+        },
+        {
+          "token": " college",
+          "logprob": -3.828125
+        }
+      ],
+      "experiment": "suppress_L25_amplifier",
+      "feature": "L25_amplifier",
+      "role": "Final amplifier (shared, act=135.6)"
+    },
+    {
+      "default_text": "<bos>Doctor is to hospital as teacher is to school.\n\nThe doctor",
+      "steered_text": "<bos>Doctor is to hospital as teacher is to school.\n\nDoctor is",
+      "first_steered_token": " school",
+      "first_steered_logprob": -0.546875,
+      "first_steered_top5": [
+        {
+          "token": " school",
+          "logprob": -0.546875
+        },
+        {
+          "token": " ",
+          "logprob": -2.421875
+        },
+        {
+          "token": " ________",
+          "logprob": -3.546875
+        },
+        {
+          "token": " college",
+          "logprob": -3.671875
+        },
+        {
+          "token": " student",
+          "logprob": -3.671875
+        }
+      ],
+      "first_default_token": " school",
+      "first_default_logprob": -0.57421875,
+      "first_default_top5": [
+        {
+          "token": " school",
+          "logprob": -0.57421875
+        },
+        {
+          "token": " student",
+          "logprob": -3.453125
+        },
+        {
+          "token": " ",
+          "logprob": -3.578125
+        },
+        {
+          "token": "...",
+          "logprob": -3.703125
+        },
+        {
+          "token": " college",
+          "logprob": -3.828125
+        }
+      ],
+      "experiment": "suppress_L22_relay",
+      "feature": "L22_relay",
+      "role": "Late relay (shared)"
+    },
+    {
+      "default_text": "<bos>Doctor is to hospital as teacher is to school.\n\nThe doctor",
+      "steered_text": "<bos>Doctor is to hospital as teacher is to school.\n\nThe doctor",
+      "first_steered_token": " school",
+      "first_steered_logprob": -0.44140625,
+      "first_steered_top5": [
+        {
+          "token": " school",
+          "logprob": -0.44140625
+        },
+        {
+          "token": " ",
+          "logprob": -3.1875
+        },
+        {
+          "token": " classroom",
+          "logprob": -3.6875
+        },
+        {
+          "token": " student",
+          "logprob": -4.1875
+        },
+        {
+          "token": " a",
+          "logprob": -4.1875
+        }
+      ],
+      "first_default_token": " school",
+      "first_default_logprob": -0.57421875,
+      "first_default_top5": [
+        {
+          "token": " school",
+          "logprob": -0.57421875
+        },
+        {
+          "token": " student",
+          "logprob": -3.453125
+        },
+        {
+          "token": " ",
+          "logprob": -3.578125
+        },
+        {
+          "token": "...",
+          "logprob": -3.703125
+        },
+        {
+          "token": " college",
+          "logprob": -3.828125
+        }
+      ],
+      "experiment": "suppress_L18_relay_b",
+      "feature": "L18_relay_b",
+      "role": "Mid-late relay"
+    },
+    {
+      "default_text": "<bos>Doctor is to hospital as teacher is to school.\n\nThe doctor",
+      "steered_text": "<bos>Doctor is to hospital as teacher is to school.\n\nThe doctor",
+      "first_steered_token": " school",
+      "first_steered_logprob": -0.70703125,
+      "first_steered_top5": [
+        {
+          "token": " school",
+          "logprob": -0.70703125
+        },
+        {
+          "token": " ",
+          "logprob": -2.953125
+        },
+        {
+          "token": " a",
+          "logprob": -3.328125
+        },
+        {
+          "token": " student",
+          "logprob": -3.453125
+        },
+        {
+          "token": " the",
+          "logprob": -3.703125
+        }
+      ],
+      "first_default_token": " school",
+      "first_default_logprob": -0.57421875,
+      "first_default_top5": [
+        {
+          "token": " school",
+          "logprob": -0.57421875
+        },
+        {
+          "token": " student",
+          "logprob": -3.453125
+        },
+        {
+          "token": " ",
+          "logprob": -3.578125
+        },
+        {
+          "token": "...",
+          "logprob": -3.703125
+        },
+        {
+          "token": " college",
+          "logprob": -3.828125
+        }
+      ],
+      "experiment": "suppress_L18_relay_c",
+      "feature": "L18_relay_c",
+      "role": "Legal docs feature"
+    },
+    {
+      "default_text": "<bos>Doctor is to hospital as teacher is to school.\n\nThe doctor",
+      "steered_text": "<bos>Doctor is to hospital as teacher is to school.\n\nDoctor is",
+      "first_steered_token": " school",
+      "first_steered_logprob": -0.7421875,
+      "first_steered_top5": [
+        {
+          "token": " school",
+          "logprob": -0.7421875
+        },
+        {
+          "token": "...",
+          "logprob": -3
+        },
+        {
+          "token": " ",
+          "logprob": -3.5
+        },
+        {
+          "token": "\u2026",
+          "logprob": -3.625
+        },
+        {
+          "token": " ________",
+          "logprob": -3.875
+        }
+      ],
+      "first_default_token": " school",
+      "first_default_logprob": -0.57421875,
+      "first_default_top5": [
+        {
+          "token": " school",
+          "logprob": -0.57421875
+        },
+        {
+          "token": " student",
+          "logprob": -3.453125
+        },
+        {
+          "token": " ",
+          "logprob": -3.578125
+        },
+        {
+          "token": "...",
+          "logprob": -3.703125
+        },
+        {
+          "token": " college",
+          "logprob": -3.828125
+        }
+      ],
+      "experiment": "suppress_L21_convergence",
+      "feature": "L21_convergence",
+      "role": "Late convergence hub"
+    },
+    {
+      "default_text": "<bos>Doctor is to hospital as teacher is to school.\n\nThe doctor",
+      "steered_text": "<bos>Doctor is to hospital as teacher is to school.\n\nThe doctor",
+      "first_steered_token": " school",
+      "first_steered_logprob": -1.828125,
+      "first_steered_top5": [
+        {
+          "token": " school",
+          "logprob": -1.828125
+        },
+        {
+          "token": "...",
+          "logprob": -2.328125
+        },
+        {
+          "token": " student",
+          "logprob": -2.828125
+        },
+        {
+          "token": " students",
+          "logprob": -2.953125
+        },
+        {
+          "token": "\u2026",
+          "logprob": -3.078125
+        }
+      ],
+      "first_default_token": " school",
+      "first_default_logprob": -0.57421875,
+      "first_default_top5": [
+        {
+          "token": " school",
+          "logprob": -0.57421875
+        },
+        {
+          "token": " student",
+          "logprob": -3.453125
+        },
+        {
+          "token": " ",
+          "logprob": -3.578125
+        },
+        {
+          "token": "...",
+          "logprob": -3.703125
+        },
+        {
+          "token": " college",
+          "logprob": -3.828125
+        }
+      ],
+      "experiment": "suppress_L24_gate",
+      "feature": "L24_gate",
+      "role": "Late suppression gate"
+    },
+    {
+      "default_text": "<bos>Doctor is to hospital as teacher is to school.\n\nThe doctor",
+      "steered_text": "<bos>Doctor is to hospital as teacher is to 1111",
+      "first_steered_token": " ",
+      "first_steered_logprob": -1.484375,
+      "first_steered_top5": [
+        {
+          "token": " ",
+          "logprob": -1.484375
+        },
+        {
+          "token": " (",
+          "logprob": -2.609375
+        },
+        {
+          "token": ",",
+          "logprob": -2.734375
+        },
+        {
+          "token": ".",
+          "logprob": -2.859375
+        },
+        {
+          "token": "  ",
+          "logprob": -3.234375
+        }
+      ],
+      "first_default_token": " school",
+      "first_default_logprob": -0.57421875,
+      "first_default_top5": [
+        {
+          "token": " school",
+          "logprob": -0.57421875
+        },
+        {
+          "token": " student",
+          "logprob": -3.453125
+        },
+        {
+          "token": " ",
+          "logprob": -3.578125
+        },
+        {
+          "token": "...",
+          "logprob": -3.703125
+        },
+        {
+          "token": " college",
+          "logprob": -3.828125
+        }
+      ],
+      "experiment": "full_backbone_suppress"
+    },
+    {
+      "default_text": "<bos>Nurse is to hospital as teacher is to school.\n\nNurse is",
+      "steered_text": "<bos>Nurse is to hospital as teacher is to be a nurse.\n\n",
+      "first_steered_token": " be",
+      "first_steered_logprob": -2.34375,
+      "first_steered_top5": [
+        {
+          "token": " be",
+          "logprob": -2.34375
+        },
+        {
+          "token": " the",
+          "logprob": -2.84375
+        },
+        {
+          "token": " nurse",
+          "logprob": -2.96875
+        },
+        {
+          "token": " a",
+          "logprob": -3.21875
+        },
+        {
+          "token": " teach",
+          "logprob": -3.34375
+        }
+      ],
+      "first_default_token": " school",
+      "first_default_logprob": -0.64453125,
+      "first_default_top5": [
+        {
+          "token": " school",
+          "logprob": -0.64453125
+        },
+        {
+          "token": " ",
+          "logprob": -3.390625
+        },
+        {
+          "token": " classroom",
+          "logprob": -3.640625
+        },
+        {
+          "token": "...",
+          "logprob": -3.640625
+        },
+        {
+          "token": " ________",
+          "logprob": -3.765625
+        }
+      ],
+      "experiment": "sufficiency_L0_embed",
+      "altered_prompt": "Nurse is to hospital as teacher is to"
+    },
+    {
+      "default_text": "<bos>Doctor is to hospital as chef is to restaurant.\n\nThe doctor",
+      "steered_text": "<bos>Doctor is to hospital as chef is to hospital.\n\n[User",
+      "first_steered_token": " hospital",
+      "first_steered_logprob": -2.234375,
+      "first_steered_top5": [
+        {
+          "token": " hospital",
+          "logprob": -2.234375
+        },
+        {
+          "token": " the",
+          "logprob": -2.484375
+        },
+        {
+          "token": "hospital",
+          "logprob": -2.609375
+        },
+        {
+          "token": " be",
+          "logprob": -2.609375
+        },
+        {
+          "token": " a",
+          "logprob": -2.859375
+        }
+      ],
+      "first_default_token": " restaurant",
+      "first_default_logprob": -0.9296875,
+      "first_default_top5": [
+        {
+          "token": " restaurant",
+          "logprob": -0.9296875
+        },
+        {
+          "token": " kitchen",
+          "logprob": -2.4375
+        },
+        {
+          "token": " a",
+          "logprob": -2.8125
+        },
+        {
+          "token": " hotel",
+          "logprob": -3.1875
+        },
+        {
+          "token": "...",
+          "logprob": -3.5625
+        }
+      ],
+      "experiment": "sufficiency_L0_embed",
+      "altered_prompt": "Doctor is to hospital as chef is to"
+    },
+    {
+      "default_text": "<bos>Doctor is to hospital as teacher is to school.\n\nThe doctor",
+      "steered_text": "<bos>Doctor is to hospital as teacher is to school.\n\nThe doctor",
+      "first_steered_token": " school",
+      "first_steered_logprob": -0.259765625,
+      "first_steered_top5": [
+        {
+          "token": " school",
+          "logprob": -0.259765625
+        },
+        {
+          "token": " the",
+          "logprob": -3.140625
+        },
+        {
+          "token": " classroom",
+          "logprob": -3.265625
+        },
+        {
+          "token": " a",
+          "logprob": -3.390625
+        },
+        {
+          "token": " student",
+          "logprob": -4
+        }
+      ],
+      "first_default_token": " school",
+      "first_default_logprob": -0.57421875,
+      "first_default_top5": [
+        {
+          "token": " school",
+          "logprob": -0.57421875
+        },
+        {
+          "token": " student",
+          "logprob": -3.453125
+        },
+        {
+          "token": " ",
+          "logprob": -3.578125
+        },
+        {
+          "token": "...",
+          "logprob": -3.703125
+        },
+        {
+          "token": " college",
+          "logprob": -3.828125
+        }
+      ],
+      "experiment": "specificity_L4_14857",
+      "desc": "code snippets (shared recurring)"
+    },
+    {
+      "default_text": "<bos>Doctor is to hospital as teacher is to school.\n\nThe doctor",
+      "steered_text": "<bos>Doctor is to hospital as teacher is to school.\n\nThe doctor",
+      "first_steered_token": " school",
+      "first_steered_logprob": -1.765625,
+      "first_steered_top5": [
+        {
+          "token": " school",
+          "logprob": -1.765625
+        },
+        {
+          "token": " student",
+          "logprob": -2.640625
+        },
+        {
+          "token": " hospital",
+          "logprob": -2.765625
+        },
+        {
+          "token": " classroom",
+          "logprob": -2.765625
+        },
+        {
+          "token": " patient",
+          "logprob": -3.140625
+        }
+      ],
+      "first_default_token": " school",
+      "first_default_logprob": -0.57421875,
+      "first_default_top5": [
+        {
+          "token": " school",
+          "logprob": -0.57421875
+        },
+        {
+          "token": " student",
+          "logprob": -3.453125
+        },
+        {
+          "token": " ",
+          "logprob": -3.578125
+        },
+        {
+          "token": "...",
+          "logprob": -3.703125
+        },
+        {
+          "token": " college",
+          "logprob": -3.828125
+        }
+      ],
+      "experiment": "specificity_L8_13766",
+      "desc": "analogies or comparisons"
+    }
+  ],
+  "analog_bird": [
+    {
+      "default_text": "<bos>Fish is to water as bird is to air.\n\nThe fish",
+      "steered_text": "<bos>Fish is to water as bird is to _________________.\n\nIn",
+      "first_steered_token": " ",
+      "first_steered_logprob": -2.265625,
+      "first_steered_top5": [
+        {
+          "token": " ",
+          "logprob": -2.265625
+        },
+        {
+          "token": " ____",
+          "logprob": -2.640625
+        },
+        {
+          "token": " ________",
+          "logprob": -2.890625
+        },
+        {
+          "token": ":",
+          "logprob": -3.015625
+        },
+        {
+          "token": "\n\n",
+          "logprob": -3.015625
+        }
+      ],
+      "first_default_token": " air",
+      "first_default_logprob": -2.578125,
+      "first_default_top5": [
+        {
+          "token": " air",
+          "logprob": -2.578125
+        },
+        {
+          "token": " ____",
+          "logprob": -2.578125
+        },
+        {
+          "token": " ________",
+          "logprob": -2.953125
+        },
+        {
+          "token": " ",
+          "logprob": -3.078125
+        },
+        {
+          "token": " the",
+          "logprob": -3.078125
+        }
+      ],
+      "experiment": "suppress_L22_backward",
+      "feature": "L22_backward",
+      "role": "Backward path from logit"
+    },
+    {
+      "default_text": "<bos>Fish is to water as bird is to air.\n\nThe fish",
+      "steered_text": "<bos>Fish is to water as bird is to _____.\n\nA $",
+      "first_steered_token": " ____",
+      "first_steered_logprob": -2.34375,
+      "first_steered_top5": [
+        {
+          "token": " ____",
+          "logprob": -2.34375
+        },
+        {
+          "token": " ________",
+          "logprob": -2.59375
+        },
+        {
+          "token": " ______",
+          "logprob": -2.84375
+        },
+        {
+          "token": "...",
+          "logprob": -2.84375
+        },
+        {
+          "token": " _______",
+          "logprob": -3.21875
+        }
+      ],
+      "first_default_token": " air",
+      "first_default_logprob": -2.578125,
+      "first_default_top5": [
+        {
+          "token": " air",
+          "logprob": -2.578125
+        },
+        {
+          "token": " ____",
+          "logprob": -2.578125
+        },
+        {
+          "token": " ________",
+          "logprob": -2.953125
+        },
+        {
+          "token": " ",
+          "logprob": -3.078125
+        },
+        {
+          "token": " the",
+          "logprob": -3.078125
+        }
+      ],
+      "experiment": "suppress_L24_backward",
+      "feature": "L24_backward",
+      "role": "Backward path from logit, late gate"
+    },
+    {
+      "default_text": "<bos>Fish is to water as bird is to air.\n\nThe fish",
+      "steered_text": "<bos>Fish is to water as bird is to the sky.\n\nThe",
+      "first_steered_token": " the",
+      "first_steered_logprob": -0.91796875,
+      "first_steered_top5": [
+        {
+          "token": " the",
+          "logprob": -0.91796875
+        },
+        {
+          "token": " which",
+          "logprob": -1.796875
+        },
+        {
+          "token": " air",
+          "logprob": -2.546875
+        },
+        {
+          "token": " what",
+          "logprob": -2.671875
+        },
+        {
+          "token": " (",
+          "logprob": -3.296875
+        }
+      ],
+      "first_default_token": " air",
+      "first_default_logprob": -2.578125,
+      "first_default_top5": [
+        {
+          "token": " air",
+          "logprob": -2.578125
+        },
+        {
+          "token": " ____",
+          "logprob": -2.578125
+        },
+        {
+          "token": " ________",
+          "logprob": -2.953125
+        },
+        {
+          "token": " ",
+          "logprob": -3.078125
+        },
+        {
+          "token": " the",
+          "logprob": -3.078125
+        }
+      ],
+      "experiment": "suppress_L25_amplifier",
+      "feature": "L25_amplifier",
+      "role": "Final amplifier (shared, act=122.3)"
+    },
+    {
+      "default_text": "<bos>Fish is to water as bird is to air.\n\nThe fish",
+      "steered_text": "<bos>Fish is to water as bird is to?\n\nA. water",
+      "first_steered_token": "?",
+      "first_steered_logprob": -2.46875,
+      "first_steered_top5": [
+        {
+          "token": "?",
+          "logprob": -2.46875
+        },
+        {
+          "token": " ____",
+          "logprob": -2.71875
+        },
+        {
+          "token": "\n\n",
+          "logprob": -2.71875
+        },
+        {
+          "token": " ",
+          "logprob": -2.84375
+        },
+        {
+          "token": "\u2026",
+          "logprob": -2.96875
+        }
+      ],
+      "first_default_token": " air",
+      "first_default_logprob": -2.578125,
+      "first_default_top5": [
+        {
+          "token": " air",
+          "logprob": -2.578125
+        },
+        {
+          "token": " ____",
+          "logprob": -2.578125
+        },
+        {
+          "token": " ________",
+          "logprob": -2.953125
+        },
+        {
+          "token": " ",
+          "logprob": -3.078125
+        },
+        {
+          "token": " the",
+          "logprob": -3.078125
+        }
+      ],
+      "experiment": "suppress_L25_output",
+      "feature": "L25_output",
+      "role": "Output driver"
+    },
+    {
+      "default_text": "<bos>Fish is to water as bird is to air.\n\nThe fish",
+      "steered_text": "<bos>Fish is to water as bird is to ________.\n\nA)",
+      "first_steered_token": " ________",
+      "first_steered_logprob": -1.8359375,
+      "first_steered_top5": [
+        {
+          "token": " ________",
+          "logprob": -1.8359375
+        },
+        {
+          "token": " ",
+          "logprob": -1.9609375
+        },
+        {
+          "token": " ____",
+          "logprob": -2.34375
+        },
+        {
+          "token": "?",
+          "logprob": -2.46875
+        },
+        {
+          "token": " ?",
+          "logprob": -2.96875
+        }
+      ],
+      "first_default_token": " air",
+      "first_default_logprob": -2.578125,
+      "first_default_top5": [
+        {
+          "token": " air",
+          "logprob": -2.578125
+        },
+        {
+          "token": " ____",
+          "logprob": -2.578125
+        },
+        {
+          "token": " ________",
+          "logprob": -2.953125
+        },
+        {
+          "token": " ",
+          "logprob": -3.078125
+        },
+        {
+          "token": " the",
+          "logprob": -3.078125
+        }
+      ],
+      "experiment": "suppress_L22_relay_a",
+      "feature": "L22_relay_a",
+      "role": "Late relay (shared)"
+    },
+    {
+      "default_text": "<bos>Fish is to water as bird is to air.\n\nThe fish",
+      "steered_text": "<bos>Fish is to water as bird is to ________________.\n\nA",
+      "first_steered_token": " ",
+      "first_steered_logprob": -1.6484375,
+      "first_steered_top5": [
+        {
+          "token": " ",
+          "logprob": -1.6484375
+        },
+        {
+          "token": "?",
+          "logprob": -2.65625
+        },
+        {
+          "token": ":",
+          "logprob": -2.78125
+        },
+        {
+          "token": "\n\n",
+          "logprob": -2.78125
+        },
+        {
+          "token": " \u2014",
+          "logprob": -3.03125
+        }
+      ],
+      "first_default_token": " air",
+      "first_default_logprob": -2.578125,
+      "first_default_top5": [
+        {
+          "token": " air",
+          "logprob": -2.578125
+        },
+        {
+          "token": " ____",
+          "logprob": -2.578125
+        },
+        {
+          "token": " ________",
+          "logprob": -2.953125
+        },
+        {
+          "token": " ",
+          "logprob": -3.078125
+        },
+        {
+          "token": " the",
+          "logprob": -3.078125
+        }
+      ],
+      "experiment": "suppress_L22_relay_b",
+      "feature": "L22_relay_b",
+      "role": "Late relay"
+    },
+    {
+      "default_text": "<bos>Fish is to water as bird is to air.\n\nThe fish",
+      "steered_text": "<bos>Fish is to water as bird is to ________________.\n\nA",
+      "first_steered_token": " ",
+      "first_steered_logprob": -2.09375,
+      "first_steered_top5": [
+        {
+          "token": " ",
+          "logprob": -2.09375
+        },
+        {
+          "token": " -",
+          "logprob": -2.46875
+        },
+        {
+          "token": " \u2014",
+          "logprob": -2.84375
+        },
+        {
+          "token": " what",
+          "logprob": -2.96875
+        },
+        {
+          "token": " the",
+          "logprob": -2.96875
+        }
+      ],
+      "first_default_token": " air",
+      "first_default_logprob": -2.578125,
+      "first_default_top5": [
+        {
+          "token": " air",
+          "logprob": -2.578125
+        },
+        {
+          "token": " ____",
+          "logprob": -2.578125
+        },
+        {
+          "token": " ________",
+          "logprob": -2.953125
+        },
+        {
+          "token": " ",
+          "logprob": -3.078125
+        },
+        {
+          "token": " the",
+          "logprob": -3.078125
+        }
+      ],
+      "experiment": "suppress_L22_relay_c",
+      "feature": "L22_relay_c",
+      "role": "Late relay"
+    },
+    {
+      "default_text": "<bos>Fish is to water as bird is to air.\n\nThe fish",
+      "steered_text": "<bos>Fish is to water as bird is to air. The fish is",
+      "first_steered_token": " air",
+      "first_steered_logprob": -1.4453125,
+      "first_steered_top5": [
+        {
+          "token": " air",
+          "logprob": -1.4453125
+        },
+        {
+          "token": " ",
+          "logprob": -2.0625
+        },
+        {
+          "token": " what",
+          "logprob": -2.0625
+        },
+        {
+          "token": " sky",
+          "logprob": -2.1875
+        },
+        {
+          "token": " the",
+          "logprob": -2.3125
+        }
+      ],
+      "first_default_token": " air",
+      "first_default_logprob": -2.578125,
+      "first_default_top5": [
+        {
+          "token": " air",
+          "logprob": -2.578125
+        },
+        {
+          "token": " ____",
+          "logprob": -2.578125
+        },
+        {
+          "token": " ________",
+          "logprob": -2.953125
+        },
+        {
+          "token": " ",
+          "logprob": -3.078125
+        },
+        {
+          "token": " the",
+          "logprob": -3.078125
+        }
+      ],
+      "experiment": "suppress_L24_gate_a",
+      "feature": "L24_gate_a",
+      "role": "Suppression gate"
+    },
+    {
+      "default_text": "<bos>Fish is to water as bird is to air.\n\nThe fish",
+      "steered_text": "<bos>Fish is to water as bird is to the sky. The the",
+      "first_steered_token": " the",
+      "first_steered_logprob": -1.25,
+      "first_steered_top5": [
+        {
+          "token": " the",
+          "logprob": -1.25
+        },
+        {
+          "token": " what",
+          "logprob": -2.875
+        },
+        {
+          "token": "...",
+          "logprob": -2.875
+        },
+        {
+          "token": " ____",
+          "logprob": -3
+        },
+        {
+          "token": "\u2026",
+          "logprob": -3.125
+        }
+      ],
+      "first_default_token": " air",
+      "first_default_logprob": -2.578125,
+      "first_default_top5": [
+        {
+          "token": " air",
+          "logprob": -2.578125
+        },
+        {
+          "token": " ____",
+          "logprob": -2.578125
+        },
+        {
+          "token": " ________",
+          "logprob": -2.953125
+        },
+        {
+          "token": " ",
+          "logprob": -3.078125
+        },
+        {
+          "token": " the",
+          "logprob": -3.078125
+        }
+      ],
+      "experiment": "suppress_L24_gate_b",
+      "feature": "L24_gate_b",
+      "role": "Suppression gate"
+    },
+    {
+      "default_text": "<bos>Fish is to water as bird is to air.\n\nThe fish",
+      "steered_text": "<bos>Fish is to water as bird is to air.\n\nThe ",
+      "first_steered_token": " air",
+      "first_steered_logprob": -2.25,
+      "first_steered_top5": [
+        {
+          "token": " air",
+          "logprob": -2.25
+        },
+        {
+          "token": " sky",
+          "logprob": -2.5
+        },
+        {
+          "token": " -",
+          "logprob": -2.625
+        },
+        {
+          "token": " ",
+          "logprob": -2.75
+        },
+        {
+          "token": " what",
+          "logprob": -3
+        }
+      ],
+      "first_default_token": " air",
+      "first_default_logprob": -2.578125,
+      "first_default_top5": [
+        {
+          "token": " air",
+          "logprob": -2.578125
+        },
+        {
+          "token": " ____",
+          "logprob": -2.578125
+        },
+        {
+          "token": " ________",
+          "logprob": -2.953125
+        },
+        {
+          "token": " ",
+          "logprob": -3.078125
+        },
+        {
+          "token": " the",
+          "logprob": -3.078125
+        }
+      ],
+      "experiment": "suppress_L20_hub",
+      "feature": "L20_hub",
+      "role": "Integration hub (shared with Puppy)"
+    },
+    {
+      "default_text": "<bos>Fish is to water as bird is to air.\n\nThe fish",
+      "steered_text": "<bos>Fish is to water as bird is to\n\nThe the the the",
+      "first_steered_token": "\n\n",
+      "first_steered_logprob": -1.6875,
+      "first_steered_top5": [
+        {
+          "token": "\n\n",
+          "logprob": -1.6875
+        },
+        {
+          "token": " the",
+          "logprob": -1.6875
+        },
+        {
+          "token": " ",
+          "logprob": -1.9375
+        },
+        {
+          "token": "\n",
+          "logprob": -2.3125
+        },
+        {
+          "token": "?",
+          "logprob": -2.4375
+        }
+      ],
+      "first_default_token": " air",
+      "first_default_logprob": -2.578125,
+      "first_default_top5": [
+        {
+          "token": " air",
+          "logprob": -2.578125
+        },
+        {
+          "token": " ____",
+          "logprob": -2.578125
+        },
+        {
+          "token": " ________",
+          "logprob": -2.953125
+        },
+        {
+          "token": " ",
+          "logprob": -3.078125
+        },
+        {
+          "token": " the",
+          "logprob": -3.078125
+        }
+      ],
+      "experiment": "full_backbone_suppress"
+    },
+    {
+      "default_text": "<bos>Cat is to land as bird is to fly.\n\nThe cat",
+      "steered_text": "<bos>Cat is to land as bird is to\nThe air in the",
+      "first_steered_token": "\n",
+      "first_steered_logprob": -2.453125,
+      "first_steered_top5": [
+        {
+          "token": " in",
+          "logprob": -2.453125
+        },
+        {
+          "token": "\n",
+          "logprob": -2.453125
+        },
+        {
+          "token": " ____",
+          "logprob": -2.703125
+        },
+        {
+          "token": " ",
+          "logprob": -2.828125
+        },
+        {
+          "token": " the",
+          "logprob": -2.953125
+        }
+      ],
+      "first_default_token": " fly",
+      "first_default_logprob": -2.34375,
+      "first_default_top5": [
+        {
+          "token": " fly",
+          "logprob": -2.34375
+        },
+        {
+          "token": " ____",
+          "logprob": -2.34375
+        },
+        {
+          "token": "\n",
+          "logprob": -2.46875
+        },
+        {
+          "token": " ________",
+          "logprob": -2.71875
+        },
+        {
+          "token": "\n\n",
+          "logprob": -2.96875
+        }
+      ],
+      "experiment": "sufficiency_L22_backward",
+      "altered_prompt": "Cat is to land as bird is to"
+    },
+    {
+      "default_text": "<bos>Fish is to water as eagle is to sky.\n\nThe eagle",
+      "steered_text": "<bos>Fish is to water as eagle is to air.\n\nThe air",
+      "first_steered_token": " air",
+      "first_steered_logprob": -1.1484375,
+      "first_steered_top5": [
+        {
+          "token": " air",
+          "logprob": -1.1484375
+        },
+        {
+          "token": " the",
+          "logprob": -1.6484375
+        },
+        {
+          "token": " ",
+          "logprob": -3.28125
+        },
+        {
+          "token": " ____",
+          "logprob": -3.40625
+        },
+        {
+          "token": " sky",
+          "logprob": -3.53125
+        }
+      ],
+      "first_default_token": " sky",
+      "first_default_logprob": -2.015625,
+      "first_default_top5": [
+        {
+          "token": " sky",
+          "logprob": -2.015625
+        },
+        {
+          "token": " the",
+          "logprob": -2.640625
+        },
+        {
+          "token": " air",
+          "logprob": -3.015625
+        },
+        {
+          "token": " ____",
+          "logprob": -3.140625
+        },
+        {
+          "token": " ________",
+          "logprob": -3.140625
+        }
+      ],
+      "experiment": "sufficiency_L22_backward",
+      "altered_prompt": "Fish is to water as eagle is to"
+    },
+    {
+      "default_text": "<bos>Fish is to water as bird is to air.\n\nThe fish",
+      "steered_text": "<bos>Fish is to water as bird is to sky.\n\nThe fish",
+      "first_steered_token": " sky",
+      "first_steered_logprob": -1.71875,
+      "first_steered_top5": [
+        {
+          "token": " sky",
+          "logprob": -1.71875
+        },
+        {
+          "token": " air",
+          "logprob": -1.84375
+        },
+        {
+          "token": " ____",
+          "logprob": -2.96875
+        },
+        {
+          "token": " the",
+          "logprob": -2.96875
+        },
+        {
+          "token": "\n\n",
+          "logprob": -3.46875
+        }
+      ],
+      "first_default_token": " air",
+      "first_default_logprob": -2.578125,
+      "first_default_top5": [
+        {
+          "token": " air",
+          "logprob": -2.578125
+        },
+        {
+          "token": " ____",
+          "logprob": -2.578125
+        },
+        {
+          "token": " ________",
+          "logprob": -2.953125
+        },
+        {
+          "token": " ",
+          "logprob": -3.078125
+        },
+        {
+          "token": " the",
+          "logprob": -3.078125
+        }
+      ],
+      "experiment": "specificity_L6_2267",
+      "desc": "formal text/code (shared recurring)"
+    },
+    {
+      "default_text": "<bos>Fish is to water as bird is to air.\n\nThe fish",
+      "steered_text": "<bos>Fish is to water as bird is to air.\n\nThe fish",
+      "first_steered_token": " air",
+      "first_steered_logprob": -0.875,
+      "first_steered_top5": [
+        {
+          "token": " air",
+          "logprob": -0.875
+        },
+        {
+          "token": " sky",
+          "logprob": -1.125
+        },
+        {
+          "token": " the",
+          "logprob": -2.75
+        },
+        {
+          "token": " tree",
+          "logprob": -3.5625
+        },
+        {
+          "token": " water",
+          "logprob": -3.5625
+        }
+      ],
+      "first_default_token": " air",
+      "first_default_logprob": -2.578125,
+      "first_default_top5": [
+        {
+          "token": " air",
+          "logprob": -2.578125
+        },
+        {
+          "token": " ____",
+          "logprob": -2.578125
+        },
+        {
+          "token": " ________",
+          "logprob": -2.953125
+        },
+        {
+          "token": " ",
+          "logprob": -3.078125
+        },
+        {
+          "token": " the",
+          "logprob": -3.078125
+        }
+      ],
+      "experiment": "specificity_L5_5793",
+      "desc": "analogies feature"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+# Neuronpedia API Configuration for Supernode Detector
+model:
+  name: "gemma-2-2b"
+  layers: 26
+
+api:
+  base_url: "https://neuronpedia.org/api"
+  api_key: "your-neuronpedia-api-key-here"
+  rate_limit_delay: 0.5  # seconds between requests
+
+# Supernode clustering
+supernode_clustering:
+  algorithm: "louvain"  # louvain, leiden, or greedy (auto-selects best)
+  min_cluster_size: 3
+  max_cluster_size: 50
+  similarity_threshold: 0.4
+
+# Output settings
+output:
+  save_intermediate: true
+  visualization_format: "png"
+  report_format: "markdown"

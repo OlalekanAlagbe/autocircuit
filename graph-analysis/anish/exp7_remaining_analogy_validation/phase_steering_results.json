@@ -1,0 +1,417 @@
+{
+  "analog_berlin": [
+    {
+      "feature": "P1_L0_11651",
+      "layer": 0,
+      "index": 11651,
+      "label": "the word 'to'",
+      "phase": 1,
+      "first_token": "Berlin",
+      "disrupted": true
+    },
+    {
+      "feature": "P1_L1_11356",
+      "layer": 1,
+      "index": 11356,
+      "label": "'to' followed by a verb",
+      "phase": 1,
+      "first_token": "Germany",
+      "disrupted": false
+    },
+    {
+      "feature": "P1_L4_10752",
+      "layer": 4,
+      "index": 10752,
+      "label": "'to be' preceded by 'to'",
+      "phase": 1,
+      "first_token": "Germany",
+      "disrupted": false
+    },
+    {
+      "feature": "P1_L5_9672",
+      "layer": 5,
+      "index": 9672,
+      "label": "the phrase 'it is to'",
+      "phase": 1,
+      "first_token": "Germany",
+      "disrupted": false
+    },
+    {
+      "feature": "P2_L5_5793",
+      "layer": 5,
+      "index": 5793,
+      "label": "analogies",
+      "phase": 2,
+      "first_token": "Germany",
+      "disrupted": false
+    },
+    {
+      "feature": "P2_L5_2141",
+      "layer": 5,
+      "index": 2141,
+      "label": "comparisons of public figures",
+      "phase": 2,
+      "first_token": "Germany",
+      "disrupted": false
+    },
+    {
+      "feature": "P2_L8_13766",
+      "layer": 8,
+      "index": 13766,
+      "label": "analogies or comparisons",
+      "phase": 2,
+      "first_token": "Germany",
+      "disrupted": false
+    },
+    {
+      "feature": "P2_L9_13344",
+      "layer": 9,
+      "index": 13344,
+      "label": "comparison between two things",
+      "phase": 2,
+      "first_token": "Germany",
+      "disrupted": false
+    },
+    {
+      "feature": "P3_L13_10969",
+      "layer": 13,
+      "index": 10969,
+      "label": "comparisons between disciplines",
+      "phase": 3,
+      "first_token": "Germany",
+      "disrupted": false
+    }
+  ],
+  "analog_rome": [
+    {
+      "feature": "P1_L0_11651",
+      "layer": 0,
+      "index": 11651,
+      "label": "the word 'to'",
+      "phase": 1,
+      "first_token": "Rome",
+      "disrupted": true
+    },
+    {
+      "feature": "P1_L1_11356",
+      "layer": 1,
+      "index": 11356,
+      "label": "'to' followed by a verb",
+      "phase": 1,
+      "first_token": "Italy",
+      "disrupted": false
+    },
+    {
+      "feature": "P1_L4_10752",
+      "layer": 4,
+      "index": 10752,
+      "label": "'to be' preceded by 'to'",
+      "phase": 1,
+      "first_token": "Italy",
+      "disrupted": false
+    },
+    {
+      "feature": "P1_L5_9672",
+      "layer": 5,
+      "index": 9672,
+      "label": "the phrase 'it is to'",
+      "phase": 1,
+      "first_token": "Italy",
+      "disrupted": false
+    },
+    {
+      "feature": "P2_L5_5793",
+      "layer": 5,
+      "index": 5793,
+      "label": "analogies",
+      "phase": 2,
+      "first_token": "Italy",
+      "disrupted": false
+    },
+    {
+      "feature": "P2_L5_2141",
+      "layer": 5,
+      "index": 2141,
+      "label": "comparisons of public figures",
+      "phase": 2,
+      "first_token": "Italy",
+      "disrupted": false
+    },
+    {
+      "feature": "P2_L8_13766",
+      "layer": 8,
+      "index": 13766,
+      "label": "analogies or comparisons",
+      "phase": 2,
+      "first_token": "Italy",
+      "disrupted": false
+    },
+    {
+      "feature": "P2_L9_13344",
+      "layer": 9,
+      "index": 13344,
+      "label": "comparison between two things",
+      "phase": 2,
+      "first_token": "Italy",
+      "disrupted": false
+    },
+    {
+      "feature": "P3_L13_10969",
+      "layer": 13,
+      "index": 10969,
+      "label": "comparisons between disciplines",
+      "phase": 3,
+      "first_token": "Italy",
+      "disrupted": false
+    }
+  ],
+  "analog_tokyo": [
+    {
+      "feature": "P1_L0_11651",
+      "layer": 0,
+      "index": 11651,
+      "label": "the word 'to'",
+      "phase": 1,
+      "first_token": "Tokyo",
+      "disrupted": true
+    },
+    {
+      "feature": "P1_L1_11356",
+      "layer": 1,
+      "index": 11356,
+      "label": "'to' followed by a verb",
+      "phase": 1,
+      "first_token": "Japan",
+      "disrupted": false
+    },
+    {
+      "feature": "P1_L4_10752",
+      "layer": 4,
+      "index": 10752,
+      "label": "'to be' preceded by 'to'",
+      "phase": 1,
+      "first_token": "Japan",
+      "disrupted": false
+    },
+    {
+      "feature": "P1_L5_9672",
+      "layer": 5,
+      "index": 9672,
+      "label": "the phrase 'it is to'",
+      "phase": 1,
+      "first_token": "Japan",
+      "disrupted": false
+    },
+    {
+      "feature": "P2_L5_5793",
+      "layer": 5,
+      "index": 5793,
+      "label": "analogies",
+      "phase": 2,
+      "first_token": "Japan",
+      "disrupted": false
+    },
+    {
+      "feature": "P2_L5_2141",
+      "layer": 5,
+      "index": 2141,
+      "label": "comparisons of public figures",
+      "phase": 2,
+      "first_token": "Japan",
+      "disrupted": false
+    },
+    {
+      "feature": "P2_L8_13766",
+      "layer": 8,
+      "index": 13766,
+      "label": "analogies or comparisons",
+      "phase": 2,
+      "first_token": "Japan",
+      "disrupted": false
+    },
+    {
+      "feature": "P2_L9_13344",
+      "layer": 9,
+      "index": 13344,
+      "label": "comparison between two things",
+      "phase": 2,
+      "first_token": "Japan",
+      "disrupted": false
+    },
+    {
+      "feature": "P3_L13_10969",
+      "layer": 13,
+      "index": 10969,
+      "label": "comparisons between disciplines",
+      "phase": 3,
+      "first_token": "Japan",
+      "disrupted": false
+    }
+  ],
+  "analog_teacher": [
+    {
+      "feature": "P1_L0_11651",
+      "layer": 0,
+      "index": 11651,
+      "label": "the word 'to'",
+      "phase": 1,
+      "first_token": "school",
+      "disrupted": false
+    },
+    {
+      "feature": "P1_L1_11356",
+      "layer": 1,
+      "index": 11356,
+      "label": "'to' followed by a verb",
+      "phase": 1,
+      "first_token": "school",
+      "disrupted": false
+    },
+    {
+      "feature": "P1_L4_10752",
+      "layer": 4,
+      "index": 10752,
+      "label": "'to be' preceded by 'to'",
+      "phase": 1,
+      "first_token": "classroom",
+      "disrupted": true
+    },
+    {
+      "feature": "P1_L5_9672",
+      "layer": 5,
+      "index": 9672,
+      "label": "the phrase 'it is to'",
+      "phase": 1,
+      "first_token": "school",
+      "disrupted": false
+    },
+    {
+      "feature": "P2_L5_5793",
+      "layer": 5,
+      "index": 5793,
+      "label": "analogies",
+      "phase": 2,
+      "first_token": "school",
+      "disrupted": false
+    },
+    {
+      "feature": "P2_L5_2141",
+      "layer": 5,
+      "index": 2141,
+      "label": "comparisons of public figures",
+      "phase": 2,
+      "first_token": "school",
+      "disrupted": false
+    },
+    {
+      "feature": "P2_L8_13766",
+      "layer": 8,
+      "index": 13766,
+      "label": "analogies or comparisons",
+      "phase": 2,
+      "first_token": "school",
+      "disrupted": false
+    },
+    {
+      "feature": "P2_L9_13344",
+      "layer": 9,
+      "index": 13344,
+      "label": "comparison between two things",
+      "phase": 2,
+      "first_token": "school",
+      "disrupted": false
+    },
+    {
+      "feature": "P3_L13_10969",
+      "layer": 13,
+      "index": 10969,
+      "label": "comparisons between disciplines",
+      "phase": 3,
+      "first_token": "school",
+      "disrupted": false
+    }
+  ],
+  "analog_bird": [
+    {
+      "feature": "P1_L0_11651",
+      "layer": 0,
+      "index": 11651,
+      "label": "the word 'to'",
+      "phase": 1,
+      "first_token": "water",
+      "disrupted": true
+    },
+    {
+      "feature": "P1_L1_11356",
+      "layer": 1,
+      "index": 11356,
+      "label": "'to' followed by a verb",
+      "phase": 1,
+      "first_token": "air",
+      "disrupted": false
+    },
+    {
+      "feature": "P1_L4_10752",
+      "layer": 4,
+      "index": 10752,
+      "label": "'to be' preceded by 'to'",
+      "phase": 1,
+      "first_token": "sky",
+      "disrupted": true
+    },
+    {
+      "feature": "P1_L5_9672",
+      "layer": 5,
+      "index": 9672,
+      "label": "the phrase 'it is to'",
+      "phase": 1,
+      "first_token": "sky",
+      "disrupted": true
+    },
+    {
+      "feature": "P2_L5_5793",
+      "layer": 5,
+      "index": 5793,
+      "label": "analogies",
+      "phase": 2,
+      "first_token": "air",
+      "disrupted": false
+    },
+    {
+      "feature": "P2_L5_2141",
+      "layer": 5,
+      "index": 2141,
+      "label": "comparisons of public figures",
+      "phase": 2,
+      "first_token": "air",
+      "disrupted": false
+    },
+    {
+      "feature": "P2_L8_13766",
+      "layer": 8,
+      "index": 13766,
+      "label": "analogies or comparisons",
+      "phase": 2,
+      "first_token": "fish",
+      "disrupted": true
+    },
+    {
+      "feature": "P2_L9_13344",
+      "layer": 9,
+      "index": 13344,
+      "label": "comparison between two things",
+      "phase": 2,
+      "first_token": "sky",
+      "disrupted": true
+    },
+    {
+      "feature": "P3_L13_10969",
+      "layer": 13,
+      "index": 10969,
+      "label": "comparisons between disciplines",
+      "phase": 3,
+      "first_token": "air",
+      "disrupted": false
+    }
+  ]
+}
