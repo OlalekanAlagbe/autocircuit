@@ -33,8 +33,16 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Build site
+      - name: Build site (HTML)
         run: python3 docs/build.py
+
+      - name: Install pandoc and LaTeX for PDF build
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y pandoc texlive-xetex texlive-fonts-recommended fonts-dejavu
+
+      - name: Build PDF
+        run: python3 docs/build_pdf.py
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
