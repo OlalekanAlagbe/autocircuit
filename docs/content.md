@@ -14,9 +14,6 @@ authors:
   - name: "Konstantinos Krampis"
     url: "https://www.linkedin.com/in/kkrampis/"
 links:
-  - label: "Paper"
-    icon: "ai ai-arxiv"
-    url: "#"
   - label: "PDF"
     icon: "fa-solid fa-file-pdf"
     url: "paper.pdf"
