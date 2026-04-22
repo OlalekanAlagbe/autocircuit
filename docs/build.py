@@ -94,19 +94,36 @@ FIGURES["fig-circuit-flow"] = """
 </div>"""
 
 FIGURES["fig-venn"] = """
-<svg viewBox="0 0 560 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:560px;display:block;margin:0 auto;">
-  <circle cx="185" cy="100" r="90" class="svg-circle-blue"/>
-  <circle cx="375" cy="100" r="90" class="svg-circle-purple"/>
-  <text x="118" y="75"  text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" font-weight="700" class="svg-text-blue">Capital</text>
-  <text x="118" y="90"  text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" font-weight="700" class="svg-text-blue">Analogies</text>
-  <text x="118" y="110" text-anchor="middle" font-family="DM Mono,monospace" font-size="9" class="svg-text-muted">Berlin, Rome, Tokyo</text>
-  <text x="442" y="75"  text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" font-weight="700" style="fill:var(--purple)">Semantic</text>
-  <text x="442" y="90"  text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" font-weight="700" style="fill:var(--purple)">Role Analogies</text>
-  <text x="442" y="110" text-anchor="middle" font-family="DM Mono,monospace" font-size="9" class="svg-text-muted">Teacher, Bird</text>
-  <text x="280" y="88"  text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" font-weight="700" class="svg-text-green">180 shared</text>
-  <text x="280" y="102" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" font-weight="700" class="svg-text-green">features</text>
-  <text x="280" y="118" text-anchor="middle" font-family="DM Mono,monospace" font-size="8.5" class="svg-text-muted">L5 #5793 &#8220;analogies&#8221;</text>
-  <text x="280" y="131" text-anchor="middle" font-family="DM Mono,monospace" font-size="8.5" class="svg-text-muted">L8 #13766 &#8220;analogies or comparisons&#8221;</text>
+<svg viewBox="0 0 640 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:640px;display:block;margin:1em auto;">
+  <!-- outer ring: 510 features active in ≥3/5 graphs -->
+  <ellipse cx="220" cy="130" rx="165" ry="110" class="svg-circle-blue" opacity="0.18"/>
+  <ellipse cx="420" cy="130" rx="165" ry="110" class="svg-circle-purple" opacity="0.18"/>
+  <!-- mid ring: 277 features active in ≥4/5 graphs -->
+  <ellipse cx="220" cy="130" rx="118" ry="78" class="svg-circle-blue" opacity="0.28"/>
+  <ellipse cx="420" cy="130" rx="118" ry="78" class="svg-circle-purple" opacity="0.28"/>
+  <!-- inner core: 180 features active in all 5/5 graphs -->
+  <ellipse cx="320" cy="130" rx="72" ry="58" style="fill:var(--green)" opacity="0.55"/>
+  <!-- circle outlines -->
+  <ellipse cx="220" cy="130" rx="165" ry="110" fill="none" stroke-width="1.5" class="svg-divider" opacity="0.5"/>
+  <ellipse cx="420" cy="130" rx="165" ry="110" fill="none" stroke-width="1.5" class="svg-divider" opacity="0.5"/>
+  <!-- Labels: circle titles -->
+  <text x="110" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="12" font-weight="700" class="svg-text-blue">Capital</text>
+  <text x="110" y="70" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="12" font-weight="700" class="svg-text-blue">Analogies</text>
+  <text x="110" y="86" text-anchor="middle" font-family="DM Mono,monospace" font-size="9" class="svg-text-muted">Berlin · Rome · Tokyo</text>
+  <text x="530" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="12" font-weight="700" class="svg-text-purple">Semantic Role</text>
+  <text x="530" y="70" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="12" font-weight="700" class="svg-text-purple">Analogies</text>
+  <text x="530" y="86" text-anchor="middle" font-family="DM Mono,monospace" font-size="9" class="svg-text-muted">Teacher · Bird</text>
+  <!-- ≥3/5 label (outer) -->
+  <text x="150" y="215" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" class="svg-text-blue" opacity="0.85">510 features</text>
+  <text x="150" y="228" text-anchor="middle" font-family="DM Mono,monospace" font-size="9" class="svg-text-muted">active in ≥3/5 graphs</text>
+  <!-- ≥4/5 label -->
+  <text x="320" y="222" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" class="svg-text-purple" opacity="0.85">277 features</text>
+  <text x="320" y="235" text-anchor="middle" font-family="DM Mono,monospace" font-size="9" class="svg-text-muted">active in ≥4/5 graphs</text>
+  <!-- Core 180 label -->
+  <text x="320" y="116" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="13" font-weight="700" class="svg-text-green">180 features</text>
+  <text x="320" y="131" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" class="svg-text-green">active in all 5/5 graphs</text>
+  <text x="320" y="147" text-anchor="middle" font-family="DM Mono,monospace" font-size="8" class="svg-text-muted">incl. L5#5793 "analogies"</text>
+  <text x="320" y="159" text-anchor="middle" font-family="DM Mono,monospace" font-size="8" class="svg-text-muted">L8#13766 "analogies or comparisons"</text>
 </svg>"""
 
 FIGURES["fig-activation"] = """
@@ -139,11 +156,20 @@ def parse_frontmatter(text):
 
 
 def md_to_html(text):
-    """Convert markdown to HTML with tables and fenced-code support."""
-    return md_lib.markdown(
-        text,
-        extensions=["tables", "fenced_code", "nl2br", "attr_list"],
-    )
+    """Convert markdown to HTML. Protects $$...$$ math blocks from markdown mangling."""
+    placeholders = {}
+    def save_math(m):
+        key = f'MATHBLOCK{len(placeholders)}ENDMATH'
+        placeholders[key] = f'<div class="math-display">\\[{m.group(1)}\\]</div>'
+        return f'\n\n{key}\n\n'
+    text = re.sub(r'\$\$(.+?)\$\$', save_math, text, flags=re.DOTALL)
+
+    html = md_lib.markdown(text, extensions=["tables", "fenced_code", "nl2br", "attr_list"])
+
+    for key, val in placeholders.items():
+        html = html.replace(f'<p>{key}</p>', val)
+        html = html.replace(key, val)
+    return html
 
 
 def resolve_figures(html):
@@ -264,6 +290,7 @@ hr.section-divider{background-color:var(--border);height:1px;border:none;width:9
 .svg-text-blue{fill:var(--svg-text-blue);font-weight:600;}
 .svg-text-orange{fill:var(--svg-text-orange);font-weight:600;}
 .svg-text-green{fill:var(--green);font-weight:700;}
+.svg-text-purple{fill:var(--purple);font-weight:600;}
 .svg-divider{stroke:var(--border);}
 .svg-arrow{fill:var(--text-muted);}
 .svg-bar-blue{fill:var(--svg-bar-blue);}
@@ -456,6 +483,9 @@ function toggleTheme(){
         '<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">',
         '<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">',
         SITE_CSS,
+        '<style>.math-display{overflow-x:auto;padding:0.5em 0;text-align:center;}</style>',
+        '<script>MathJax={tex:{inlineMath:[["$","$"],["\\\\(","\\\\)"]],displayMath:[["\\\\[","\\\\]"]]},svg:{fontCache:"global"}};</script>',
+        '<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>',
         '</head>',
         '<body>',
         toggle_js,
@@ -523,7 +553,7 @@ li{margin:3px 0;font-size:.78em;}
 .svg-box-orange{fill:rgba(210,153,34,.12);stroke:#d29922;stroke-width:1.5;}
 .svg-text-main{fill:#c9d1d9;}.svg-text-muted{fill:#8b949e;}
 .svg-text-blue{fill:#58a6ff;font-weight:600;}.svg-text-orange{fill:#d29922;font-weight:600;}
-.svg-text-green{fill:#3fb950;font-weight:700;}.svg-divider{stroke:#30363d;}
+.svg-text-green{fill:#3fb950;font-weight:700;}.svg-text-purple{fill:#bc8cff;font-weight:600;}.svg-divider{stroke:#30363d;}
 .svg-arrow{fill:#8b949e;}.svg-bar-blue{fill:#3273dc;}.svg-bar-orange{fill:#d29922;}
 .svg-bar-purple{fill:#bc8cff;}.svg-bar-label{fill:#8b949e;}
 .svg-circle-blue{fill:rgba(88,166,255,.12);stroke:#58a6ff;stroke-width:1.8;}
