@@ -14,12 +14,12 @@ authors:
   - name: "Konstantinos Krampis"
     url: "https://www.linkedin.com/in/kkrampis/"
 links:
-  - label: "Paper"
-    icon: "ai ai-arxiv"
-    url: "#"
   - label: "PDF"
     icon: "fa-solid fa-file-pdf"
     url: "paper.pdf"
+  - label: "Supplementary"
+    icon: "fa-solid fa-file-lines"
+    url: "supplementary.html"
   - label: "Code"
     icon: "fab fa-github"
     url: "https://github.com/kkrampis/autocircuit"
@@ -44,6 +44,14 @@ bibtex: |
     note    = {Neuronpedia API gemmascope-transcoder-16k SAE analysis}
   }
 supplementary:
+  - label: "Supplementary Material"
+    icon: "fa-solid fa-file-lines"
+    url: "supplementary.html"
+    description: "Full supplementary document: all inference prompts, agent pipeline prompts used by Olalekan, links to all five Neuronpedia attribution graphs, and tooling reference."
+    sublinks:
+      - label: "PDF version"
+        url: "supplementary.pdf"
+        desc: "Downloadable PDF of the supplementary material"
   - label: "Interactive Presentation"
     icon: "fa-solid fa-display"
     url: "presentation.html"
@@ -51,7 +59,7 @@ supplementary:
   - label: "Live Attribution Graphs"
     icon: "fa-solid fa-brain"
     url: "https://www.neuronpedia.org/gemma-2-2b/graph?slug=analog_berlin"
-    description: "Interactive Neuronpedia attribution graph viewer for all five prompts."
+    description: "Interactive Neuronpedia attribution graph viewer for all five prompts. Full graph list with prompts in Supplementary Material."
     sublinks:
       - label: "analog_berlin"
         url: "https://www.neuronpedia.org/gemma-2-2b/graph?slug=analog_berlin"
@@ -625,6 +633,20 @@ We have identified and characterized the **analogical reasoning circuit in Gemma
 4. **Cross-domain generalization is confirmed.** The same core features, including L5 SAE#5793 ("analogies"), activate for both geographic and semantic role analogies — a domain-agnostic relational reasoning primitive consistent with behavioral findings [1, 10, 11].
 5. **Phase 2 implements relational transfer, collectively but not individually.** Simultaneous suppression collapses every circuit; capital analogies revert to the source-pair answer.
 6. **Circuit fragility tracks prediction confidence.** High-confidence predictions route through redundant parallel causal paths (1–4 necessary features); low-confidence predictions rely on fragile non-redundant chains (up to 8/10 necessary).
+
+---
+
+## Attribution Graphs
+
+The five Neuronpedia attribution graphs generated for this study are publicly available for interactive exploration. Full graph descriptions, inference prompts, and the agent pipeline methodology are documented in the [Supplementary Material](supplementary.html).
+
+| Prompt | Neuronpedia Graph |
+|--------|------------------|
+| Paris is to France as Berlin is to | [analog\_berlin](https://www.neuronpedia.org/gemma-2-2b/graph?slug=analog_berlin) |
+| Paris is to France as Rome is to | [analog\_rome](https://www.neuronpedia.org/gemma-2-2b/graph?slug=analog_rome) |
+| Paris is to France as Tokyo is to | [analog\_tokyo](https://www.neuronpedia.org/gemma-2-2b/graph?slug=analog_tokyo) |
+| Doctor is to hospital as teacher is to | [analog\_teacher](https://www.neuronpedia.org/gemma-2-2b/graph?slug=analog_teacher) |
+| Fish is to water as bird is to | [analog\_bird](https://www.neuronpedia.org/gemma-2-2b/graph?slug=analog_bird) |
 
 ---
 
