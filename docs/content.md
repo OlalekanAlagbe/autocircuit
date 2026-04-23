@@ -26,9 +26,6 @@ links:
   - label: "Presentation"
     icon: "fa-solid fa-display"
     url: "presentation.html"
-  - label: "Attribution Graphs"
-    icon: "fa-solid fa-brain"
-    url: "https://www.neuronpedia.org/gemma-2-2b/graph?slug=analog_berlin"
 tldr: >
   We identify a shared 180-feature analogical reasoning circuit in Gemma-2-2B
   that generalizes across geographic and semantic analogies, including a dedicated
