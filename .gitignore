@@ -1,0 +1,223 @@
+# ============================================================
+# Python
+# ============================================================
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# ============================================================
+# Virtual Environments
+# ============================================================
+venv/
+ENV/
+env/
+.venv
+*.venv/
+
+# ============================================================
+# IDE & Editors
+# ============================================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.sublime-project
+*.sublime-workspace
+
+# ============================================================
+# OS Generated Files
+# ============================================================
+.DS_Store
+Thumbs.db
+nul
+Desktop.ini
+.AppleDouble
+.LSOverride
+
+# ============================================================
+# Claude Code Temporary Files
+# ============================================================
+tmpclaude-*.cwd
+tmpclaude-*-cwd
+**/tmpclaude/
+.claude/settings.local.json
+C\:Users*/
+*AppDataLocalTempclaudeC--*
+
+# ============================================================
+# Neuronpedia Pipeline — Generated Data & Outputs
+# ============================================================
+# Entire data directory (generated outputs, 700+ MB)
+neuronpedia_pipeline/data/
+
+# Pipeline output (test run results)
+neuronpedia_pipeline/output/
+
+# Config with API key
+neuronpedia_pipeline/config/neuronpedia_config.yaml
+
+# Script archive (deprecated files)
+neuronpedia_pipeline/scripts/archive/
+
+# Skill archives and zips
+neuronpedia_pipeline/skills/archive_*/
+neuronpedia_pipeline/skills/_archive/
+neuronpedia_pipeline/skills/*.zip
+
+# Documentation (README covers essentials)
+neuronpedia_pipeline/docs/
+
+# Superpowers (external dependency)
+neuronpedia_pipeline/superpowers/
+
+# Empty output directory
+neuronpedia_pipeline/visualizations/
+
+# Scripts directory markdown files (policies, guides)
+neuronpedia_pipeline/scripts/*.md
+
+# Claude Code plugin config
+neuronpedia_pipeline/.claude-plugin/
+
+# Root-level generated/session files
+neuronpedia_pipeline/DATA_PROVENANCE.md
+neuronpedia_pipeline/SESSION_CONTINUATION_GUIDE.md
+neuronpedia_pipeline/VALIDATION_PRESENTATION.md
+neuronpedia_pipeline/Traceback_Graphing_Presentation.pptx
+neuronpedia_pipeline/semantic_taxonomy_annotations.csv
+neuronpedia_pipeline/semantic_taxonomy_annotations_auto.csv
+
+# ============================================================
+# Supernode Detector — Generated Outputs
+# ============================================================
+supernode_detector/output/
+supernode_detector/data/
+supernode_detector/config/neuronpedia_config.yaml
+supernode_detector/*.PNG
+
+# ============================================================
+# Backup Directories
+# ============================================================
+*_backup_*/
+*_backup/
+backup_*/
+backup/
+*.bak
+*.backup
+
+# ============================================================
+# Logs and Temporary Files
+# ============================================================
+*.log
+*.tmp
+*.temp
+*.cache
+logs/
+**/logs/
+
+# ============================================================
+# Jupyter Notebooks
+# ============================================================
+.ipynb_checkpoints/
+*.ipynb
+**/.ipynb_checkpoints/
+
+# ============================================================
+# Environment Variables & Secrets
+# ============================================================
+.env
+.env.local
+.env.*.local
+secrets/
+*.secret
+credentials.json
+
+# ============================================================
+# Large Data Files (if needed)
+# ============================================================
+*.h5
+*.hdf5
+*.pkl
+*.pickle
+*.model
+*.pt
+*.pth
+*.ckpt
+
+# ============================================================
+# Documentation Build Artifacts
+# ============================================================
+docs/_build/
+site/
+.doctrees/
+
+# ============================================================
+# Temporary Office Files
+# ============================================================
+~$*.pptx
+~$*.xlsx
+~$*.docx
+
+# ============================================================
+# Copy / Duplicate Directories
+# ============================================================
+*- Copy/
+* - Copy/
+
+# (Old Data rule removed — covered by blanket data/ ignore above)
+
+# ============================================================
+# Superpowers (external dependency)
+# ============================================================
+neuronpedia_pipeline/superpowers/.git/
+
+# ============================================================
+# Claude Project Settings (local only)
+# ============================================================
+neuronpedia_pipeline/.claude/
+
+# (Stage 2 HTML rule removed — covered by blanket data/ ignore above)
+
+# ============================================================
+# Archive (old code moved during cleanup)
+# ============================================================
+Archive/
+
+# ============================================================
+# Cleanup Artifacts (one-time use)
+# ============================================================
+CODE_REVIEW_CHECKLIST.md
+PRE_COMMIT_REVIEW.md
+READY_TO_COMMIT.md
+CLEANUP_COMPLETE.md
+CLEANUP_PLAN.md
+
+# ============================================================
+# Generated site files (built by docs/build.py in CI)
+# ============================================================
+docs/index.html
+docs/presentation.html
+
+docs/paper.pdf
+docs/supplementary.html
+docs/supplementary.pdf

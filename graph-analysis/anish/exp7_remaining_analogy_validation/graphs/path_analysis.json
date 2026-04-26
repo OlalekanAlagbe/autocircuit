@@ -1,0 +1,5091 @@
+{
+  "analog_rome": {
+    "slug": "analog_rome",
+    "prompt": "Paris is to France as Rome is to",
+    "expected_token": "Italy",
+    "logit_node": {
+      "node_id": "27_11474_8",
+      "clerp": "Output \" Italy\" (p=0.974)",
+      "token_prob": 0.9738622903823853
+    },
+    "graph_stats": {
+      "total_nodes": 963,
+      "total_edges": 27608,
+      "embedding_nodes": 9,
+      "transcoder_nodes": 825,
+      "error_nodes": 128
+    },
+    "backward_paths": [
+      {
+        "path_index": 1,
+        "direction": "backward",
+        "weight_product": 2.228832244873047,
+        "nodes": [
+          {
+            "node_id": "27_11474_8",
+            "layer": "27",
+            "index": 11474,
+            "ctx_idx": 8,
+            "feature_type": "logit",
+            "activation": null,
+            "influence": null,
+            "edge_weight": null,
+            "clerp": "Output \" Italy\" (p=0.974)"
+          },
+          {
+            "node_id": "E_11344_6",
+            "layer": "E",
+            "index": 11344,
+            "ctx_idx": 6,
+            "feature_type": "embedding",
+            "activation": null,
+            "influence": 0.08138980716466904,
+            "edge_weight": 2.228832244873047,
+            "clerp": ""
+          }
+        ]
+      },
+      {
+        "path_index": 2,
+        "direction": "backward",
+        "weight_product": 9.630578707569612,
+        "nodes": [
+          {
+            "node_id": "27_11474_8",
+            "layer": "27",
+            "index": 11474,
+            "ctx_idx": 8,
+            "feature_type": "logit",
+            "activation": null,
+            "influence": null,
+            "edge_weight": null,
+            "clerp": "Output \" Italy\" (p=0.974)"
+          },
+          {
+            "node_id": "25_286_8",
+            "layer": "25",
+            "index": 286,
+            "ctx_idx": 8,
+            "feature_type": "cross layer transcoder",
+            "activation": 27.687789916992188,
+            "influence": 0.23913730680942535,
+            "edge_weight": -1.8830147981643677,
+            "clerp": ""
+          },
+          {
+            "node_id": "E_6081_4",
+            "layer": "E",
+            "index": 6081,
+            "ctx_idx": 4,
+            "feature_type": "embedding",
+            "activation": null,
+            "influence": 0.11711493879556656,
+            "edge_weight": 5.114446640014648,
+            "clerp": ""
+          }
+        ]
+      },
+      {
+        "path_index": 3,
+        "direction": "backward",
+        "weight_product": 34.22068745478282,
+        "nodes": [
+          {
+            "node_id": "27_11474_8",
+            "layer": "27",
+            "index": 11474,
+            "ctx_idx": 8,
+            "feature_type": "logit",
+            "activation": null,
+            "influence": null,
+            "edge_weight": null,
+            "clerp": "Output \" Italy\" (p=0.974)"
+          },
+          {
+            "node_id": "24_16122_8",
+            "layer": "24",
+            "index": 16122,
+            "ctx_idx": 8,
+            "feature_type": "cross layer transcoder",
+            "activation": 25.41939926147461,
+            "influence": 0.2314729243516922,
+            "edge_weight": -1.881843090057373,
+            "clerp": ""
+          },
+          {
+            "node_id": "E_11344_6",
+            "layer": "E",
+            "index": 11344,
+            "ctx_idx": 6,
+            "feature_type": "embedding",
+            "activation": null,
+            "influence": 0.08138980716466904,
+            "edge_weight": 18.18466567993164,
+            "clerp": ""
+          }
+        ]
+      },
+      {
+        "path_index": 4,
+        "direction": "backward",
+        "weight_product": 1.3900270462036133,
+        "nodes": [
+          {
+            "node_id": "27_11474_8",
+            "layer": "27",
+            "index": 11474,
+            "ctx_idx": 8,
+            "feature_type": "logit",
+            "activation": null,
+            "influence": null,
+            "edge_weight": null,
+            "clerp": "Output \" Italy\" (p=0.974)"
+          },
+          {
+            "node_id": "E_6081_4",
+            "layer": "E",
+            "index": 6081,
+            "ctx_idx": 4,
+            "feature_type": "embedding",
+            "activation": null,
+            "influence": 0.11711493879556656,
+            "edge_weight": 1.3900270462036133,
+            "clerp": ""
+          }
+        ]
+      },
+      {
+        "path_index": 5,
+        "direction": "backward",
+        "weight_product": 10.687721691566367,
+        "nodes": [
+          {
+            "node_id": "27_11474_8",
+            "layer": "27",
+            "index": 11474,
+            "ctx_idx": 8,
+            "feature_type": "logit",
+            "activation": null,
+            "influence": null,
+            "edge_weight": null,
+            "clerp": "Output \" Italy\" (p=0.974)"
+          },
+          {
+            "node_id": "20_15360_8",
+            "layer": "20",
+            "index": 15360,
+            "ctx_idx": 8,
+            "feature_type": "cross layer transcoder",
+            "activation": 23.266868591308594,
+            "influence": 0.25125521421432495,
+            "edge_weight": 1.3225111961364746,
+            "clerp": ""
+          },
+          {
+            "node_id": "E_6081_4",
+            "layer": "E",
+            "index": 6081,
+            "ctx_idx": 4,
+            "feature_type": "embedding",
+            "activation": null,
+            "influence": 0.11711493879556656,
+            "edge_weight": 8.081384658813477,
+            "clerp": ""
+          }
+        ]
+      }
+    ],
+    "forward_paths": [
+      {
+        "path_index": 1,
+        "direction": "forward",
+        "weight_product": 78177.52883120565,
+        "nodes": [
+          {
+            "node_id": "E_603_7",
+            "layer": "E",
+            "index": 603,
+            "ctx_idx": 7,
+            "feature_type": "embedding",
+            "activation": null,
+            "influence": 0.2885165214538574,
+            "edge_weight": null,
+            "clerp": ""
+          },
+          {
+            "node_id": "0_11375_7",
+            "layer": "0",
+            "index": 11375,
+            "ctx_idx": 7,
+            "feature_type": "cross layer transcoder",
+            "activation": 35.06489562988281,
+            "influence": 0.4786009192466736,
+            "edge_weight": 32.53070068359375,
+            "clerp": ""
+          },
+          {
+            "node_id": "1_1321_7",
+            "layer": "1",
+            "index": 1321,
+            "ctx_idx": 7,
+            "feature_type": "cross layer transcoder",
+            "activation": 10.511919975280762,
+            "influence": 0.7964490056037903,
+            "edge_weight": -5.700238227844238,
+            "clerp": ""
+          },
+          {
+            "node_id": "4_1802_7",
+            "layer": "4",
+            "index": 1802,
+            "ctx_idx": 7,
+            "feature_type": "cross layer transcoder",
+            "activation": 9.506841659545898,
+            "influence": 0.7641406655311584,
+            "edge_weight": -1.0157089233398438,
+            "clerp": ""
+          },
+          {
+            "node_id": "5_5793_7",
+            "layer": "5",
+            "index": 5793,
+            "ctx_idx": 7,
+            "feature_type": "cross layer transcoder",
+            "activation": 14.354049682617188,
+            "influence": 0.7879239916801453,
+            "edge_weight": 1.9698115587234497,
+            "clerp": ""
+          },
+          {
+            "node_id": "9_13344_7",
+            "layer": "9",
+            "index": 13344,
+            "ctx_idx": 7,
+            "feature_type": "cross layer transcoder",
+            "activation": 15.954924583435059,
+            "influence": 0.7526604533195496,
+            "edge_weight": 2.1491172313690186,
+            "clerp": ""
+          },
+          {
+            "node_id": "13_10969_8",
+            "layer": "13",
+            "index": 10969,
+            "ctx_idx": 8,
+            "feature_type": "cross layer transcoder",
+            "activation": 12.503474235534668,
+            "influence": 0.58544921875,
+            "edge_weight": 0.8418462872505188,
+            "clerp": ""
+          },
+          {
+            "node_id": "20_7666_8",
+            "layer": "20",
+            "index": 7666,
+            "ctx_idx": 8,
+            "feature_type": "cross layer transcoder",
+            "activation": 52.318687438964844,
+            "influence": 0.3010914623737335,
+            "edge_weight": 1.1606770753860474,
+            "clerp": ""
+          },
+          {
+            "node_id": "21_12427_8",
+            "layer": "21",
+            "index": 12427,
+            "ctx_idx": 8,
+            "feature_type": "cross layer transcoder",
+            "activation": 37.596168518066406,
+            "influence": 0.6221417784690857,
+            "edge_weight": 10.100824356079102,
+            "clerp": ""
+          },
+          {
+            "node_id": "22_12202_8",
+            "layer": "22",
+            "index": 12202,
+            "ctx_idx": 8,
+            "feature_type": "cross layer transcoder",
+            "activation": 17.853437423706055,
+            "influence": 0.6454276442527771,
+            "edge_weight": 7.526444435119629,
+            "clerp": ""
+          },
+          {
+            "node_id": "24_13277_8",
+            "layer": "24",
+            "index": 13277,
+            "ctx_idx": 8,
+            "feature_type": "cross layer transcoder",
+            "activation": 135.78469848632812,
+            "influence": 0.29716625809669495,
+            "edge_weight": 1.3199290037155151,
+            "clerp": ""
+          }
+        ]
+      },
+      {
+        "path_index": 2,
+        "direction": "forward",
+        "weight_product": 91597.38394721704,
+        "nodes": [
+          {
+            "node_id": "E_577_8",
+            "layer": "E",
+            "index": 577,
+            "ctx_idx": 8,
+            "feature_type": "embedding",
+            "activation": null,
+            "influence": 0.22355446219444275,
+            "edge_weight": null,
+            "clerp": ""
+          },
+          {
+            "node_id": "0_8444_8",
+            "layer": "0",
+            "index": 8444,
+            "ctx_idx": 8,
+            "feature_type": "cross layer transcoder",
+            "activation": 38.72483444213867,
+            "influence": 0.33796417713165283,
+            "edge_weight": 41.29847717285156,
+            "clerp": ""
+          },
+          {
+            "node_id": "3_10018_8",
+            "layer": "3",
+            "index": 10018,
+            "ctx_idx": 8,
+            "feature_type": "cross layer transcoder",
+            "activation": 19.8446044921875,
+            "influence": 0.4151272773742676,
+            "edge_weight": -9.058262825012207,
+            "clerp": ""
+          },
+          {
+            "node_id": "4_10752_8",
+            "layer": "4",
+            "index": 10752,
+            "ctx_idx": 8,
+            "feature_type": "cross layer transcoder",
+            "activation": 10.579398155212402,
+            "influence": 0.7135133147239685,
+            "edge_weight": 10.183457374572754,
+            "clerp": ""
+          },
+          {
+            "node_id": "23_5917_8",
+            "layer": "23",
+            "index": 5917,
+            "ctx_idx": 8,
+            "feature_type": "cross layer transcoder",
+            "activation": 10.99868392944336,
+            "influence": 0.6266370415687561,
+            "edge_weight": 1.265826940536499,
+            "clerp": ""
+          },
+          {
+            "node_id": "25_4717_8",
+            "layer": "25",
+            "index": 4717,
+            "ctx_idx": 8,
+            "feature_type": "cross layer transcoder",
+            "activation": 265.1966552734375,
+            "influence": 0.29310473799705505,
+            "edge_weight": 16.850522994995117,
+            "clerp": ""
+          },
+          {
+            "node_id": "27_11474_8",
+            "layer": "27",
+            "index": 11474,
+            "ctx_idx": 8,
+            "feature_type": "logit",
+            "activation": null,
+            "influence": null,
+            "edge_weight": 1.1272523403167725,
+            "clerp": "Output \" Italy\" (p=0.974)"
+          }
+        ]
+      },
+      {
+        "path_index": 3,
+        "direction": "forward",
+        "weight_product": 379.343304762832,
+        "nodes": [
+          {
+            "node_id": "E_685_5",
+            "layer": "E",
+            "index": 685,
+            "ctx_idx": 5,
+            "feature_type": "embedding",
+            "activation": null,
+            "influence": 0.21276241540908813,
+            "edge_weight": null,
+            "clerp": ""
+          },
+          {
+            "node_id": "0_1053_5",
+            "layer": "0",
+            "index": 1053,
+            "ctx_idx": 5,
+            "feature_type": "cross layer transcoder",
+            "activation": 28.154382705688477,
+            "influence": 0.32726776599884033,
+            "edge_weight": 34.172401428222656,
+            "clerp": ""
+          },
+          {
+            "node_id": "2_3732_5",
+            "layer": "2",
+            "index": 3732,
+            "ctx_idx": 5,
+            "feature_type": "cross layer transcoder",
+            "activation": 8.200454711914062,
+            "influence": 0.5237704515457153,
+            "edge_weight": -6.529596328735352,
+            "clerp": ""
+          },
+          {
+            "node_id": "4_14496_5",
+            "layer": "4",
+            "index": 14496,
+            "ctx_idx": 5,
+            "feature_type": "cross layer transcoder",
+            "activation": 3.287597179412842,
+            "influence": 0.7799310088157654,
+            "edge_weight": -1.1172252893447876,
+            "clerp": ""
+          },
+          {
+            "node_id": "5_2334_5",
+            "layer": "5",
+            "index": 2334,
+            "ctx_idx": 5,
+            "feature_type": "cross layer transcoder",
+            "activation": 5.849957466125488,
+            "influence": 0.6646351218223572,
+            "edge_weight": -0.4109173119068146,
+            "clerp": ""
+          },
+          {
+            "node_id": "6_2267_5",
+            "layer": "6",
+            "index": 2267,
+            "ctx_idx": 5,
+            "feature_type": "cross layer transcoder",
+            "activation": 13.695902824401855,
+            "influence": 0.7159035205841064,
+            "edge_weight": -0.7796075344085693,
+            "clerp": ""
+          },
+          {
+            "node_id": "10_14542_5",
+            "layer": "10",
+            "index": 14542,
+            "ctx_idx": 5,
+            "feature_type": "cross layer transcoder",
+            "activation": 7.2779340744018555,
+            "influence": 0.7928341031074524,
+            "edge_weight": 0.6322007775306702,
+            "clerp": ""
+          },
+          {
+            "node_id": "14_11455_5",
+            "layer": "14",
+            "index": 11455,
+            "ctx_idx": 5,
+            "feature_type": "cross layer transcoder",
+            "activation": 32.50252914428711,
+            "influence": 0.7024542689323425,
+            "edge_weight": -1.2583154439926147,
+            "clerp": ""
+          },
+          {
+            "node_id": "20_6648_6",
+            "layer": "20",
+            "index": 6648,
+            "ctx_idx": 6,
+            "feature_type": "cross layer transcoder",
+            "activation": 38.167999267578125,
+            "influence": 0.7606149315834045,
+            "edge_weight": 4.085902214050293,
+            "clerp": ""
+          },
+          {
+            "node_id": "21_11272_6",
+            "layer": "21",
+            "index": 11272,
+            "ctx_idx": 6,
+            "feature_type": "cross layer transcoder",
+            "activation": 16.42506217956543,
+            "influence": 0.44994205236434937,
+            "edge_weight": 0.7379038333892822,
+            "clerp": ""
+          },
+          {
+            "node_id": "24_16122_8",
+            "layer": "24",
+            "index": 16122,
+            "ctx_idx": 8,
+            "feature_type": "cross layer transcoder",
+            "activation": 25.41939926147461,
+            "influence": 0.2314729243516922,
+            "edge_weight": 1.9804645776748657,
+            "clerp": ""
+          }
+        ]
+      },
+      {
+        "path_index": 4,
+        "direction": "forward",
+        "weight_product": 243704.20044506184,
+        "nodes": [
+          {
+            "node_id": "E_603_2",
+            "layer": "E",
+            "index": 603,
+            "ctx_idx": 2,
+            "feature_type": "embedding",
+            "activation": null,
+            "influence": 0.19563525915145874,
+            "edge_weight": null,
+            "clerp": ""
+          },
+          {
+            "node_id": "0_11375_2",
+            "layer": "0",
+            "index": 11375,
+            "ctx_idx": 2,
+            "feature_type": "cross layer transcoder",
+            "activation": 31.778850555419922,
+            "influence": 0.31207406520843506,
+            "edge_weight": 29.24640655517578,
+            "clerp": ""
+          },
+          {
+            "node_id": "2_15420_2",
+            "layer": "2",
+            "index": 15420,
+            "ctx_idx": 2,
+            "feature_type": "cross layer transcoder",
+            "activation": 7.430013656616211,
+            "influence": 0.6319164037704468,
+            "edge_weight": -6.02652645111084,
+            "clerp": ""
+          },
+          {
+            "node_id": "4_14857_2",
+            "layer": "4",
+            "index": 14857,
+            "ctx_idx": 2,
+            "feature_type": "cross layer transcoder",
+            "activation": 11.089875221252441,
+            "influence": 0.7920236587524414,
+            "edge_weight": 1.8177963495254517,
+            "clerp": ""
+          },
+          {
+            "node_id": "6_4662_2",
+            "layer": "6",
+            "index": 4662,
+            "ctx_idx": 2,
+            "feature_type": "cross layer transcoder",
+            "activation": 17.16059112548828,
+            "influence": 0.5685251355171204,
+            "edge_weight": -0.47050338983535767,
+            "clerp": ""
+          },
+          {
+            "node_id": "7_7929_2",
+            "layer": "7",
+            "index": 7929,
+            "ctx_idx": 2,
+            "feature_type": "cross layer transcoder",
+            "activation": 11.131025314331055,
+            "influence": 0.7536441087722778,
+            "edge_weight": 4.956672668457031,
+            "clerp": ""
+          },
+          {
+            "node_id": "17_8341_8",
+            "layer": "17",
+            "index": 8341,
+            "ctx_idx": 8,
+            "feature_type": "cross layer transcoder",
+            "activation": 21.411296844482422,
+            "influence": 0.3087835907936096,
+            "edge_weight": 0.2549862563610077,
+            "clerp": ""
+          },
+          {
+            "node_id": "21_11272_8",
+            "layer": "21",
+            "index": 11272,
+            "ctx_idx": 8,
+            "feature_type": "cross layer transcoder",
+            "activation": 34.436912536621094,
+            "influence": 0.25705310702323914,
+            "edge_weight": 6.183249473571777,
+            "clerp": ""
+          },
+          {
+            "node_id": "24_16122_8",
+            "layer": "24",
+            "index": 16122,
+            "ctx_idx": 8,
+            "feature_type": "cross layer transcoder",
+            "activation": 25.41939926147461,
+            "influence": 0.2314729243516922,
+            "edge_weight": 17.10926628112793,
+            "clerp": ""
+          },
+          {
+            "node_id": "25_10521_8",
+            "layer": "25",
+            "index": 10521,
+            "ctx_idx": 8,
+            "feature_type": "cross layer transcoder",
+            "activation": 20.52365493774414,
+            "influence": 0.2737891376018524,
+            "edge_weight": -9.31058406829834,
+            "clerp": ""
+          },
+          {
+            "node_id": "27_11474_8",
+            "layer": "27",
+            "index": 11474,
+            "ctx_idx": 8,
+            "feature_type": "logit",
+            "activation": null,
+            "influence": null,
+            "edge_weight": -1.29862380027771,
+            "clerp": "Output \" Italy\" (p=0.974)"
+          }
+        ]
+      },
+      {
+        "path_index": 5,
+        "direction": "forward",
+        "weight_product": 572505.7514661971,
+        "nodes": [
+          {
+            "node_id": "E_577_3",
+            "layer": "E",
+            "index": 577,
+            "ctx_idx": 3,
+            "feature_type": "embedding",
+            "activation": null,
+            "influence": 0.17352980375289917,
+            "edge_weight": null,
+            "clerp": ""
+          },
+          {
+            "node_id": "0_8444_3",
+            "layer": "0",
+            "index": 8444,
+            "ctx_idx": 3,
+            "feature_type": "cross layer transcoder",
+            "activation": 38.478145599365234,
+            "influence": 0.24532023072242737,
+            "edge_weight": 39.71845626831055,
+            "clerp": ""
+          },
+          {
+            "node_id": "3_10018_3",
+            "layer": "3",
+            "index": 10018,
+            "ctx_idx": 3,
+            "feature_type": "cross layer transcoder",
+            "activation": 23.133647918701172,
+            "influence": 0.3593571186065674,
+            "edge_weight": -8.637641906738281,
+            "clerp": ""
+          },
+          {
+            "node_id": "4_10752_3",
+            "layer": "4",
+            "index": 10752,
+            "ctx_idx": 3,
+            "feature_type": "cross layer transcoder",
+            "activation": 14.011046409606934,
+            "influence": 0.5898934602737427,
+            "edge_weight": 11.437172889709473,
+            "clerp": ""
+          },
+          {
+            "node_id": "5_7191_3",
+            "layer": "5",
+            "index": 7191,
+            "ctx_idx": 3,
+            "feature_type": "cross layer transcoder",
+            "activation": 14.281806945800781,
+            "influence": 0.6437854766845703,
+            "edge_weight": 3.0529396533966064,
+            "clerp": ""
+          },
+          {
+            "node_id": "8_13766_3",
+            "layer": "8",
+            "index": 13766,
+            "ctx_idx": 3,
+            "feature_type": "cross layer transcoder",
+            "activation": 19.217327117919922,
+            "influence": 0.6857449412345886,
+            "edge_weight": 0.83802729845047,
+            "clerp": ""
+          },
+          {
+            "node_id": "15_11238_4",
+            "layer": "15",
+            "index": 11238,
+            "ctx_idx": 4,
+            "feature_type": "cross layer transcoder",
+            "activation": 41.526981353759766,
+            "influence": 0.6462400555610657,
+            "edge_weight": 1.836318016052246,
+            "clerp": ""
+          },
+          {
+            "node_id": "17_14546_8",
+            "layer": "17",
+            "index": 14546,
+            "ctx_idx": 8,
+            "feature_type": "cross layer transcoder",
+            "activation": 15.746177673339844,
+            "influence": 0.4510738253593445,
+            "edge_weight": -1.5277584791183472,
+            "clerp": ""
+          },
+          {
+            "node_id": "19_5699_8",
+            "layer": "19",
+            "index": 5699,
+            "ctx_idx": 8,
+            "feature_type": "cross layer transcoder",
+            "activation": 13.009803771972656,
+            "influence": 0.5442460179328918,
+            "edge_weight": 3.4309144020080566,
+            "clerp": ""
+          },
+          {
+            "node_id": "20_411_8",
+            "layer": "20",
+            "index": 411,
+            "ctx_idx": 8,
+            "feature_type": "cross layer transcoder",
+            "activation": 10.979911804199219,
+            "influence": 0.5865676403045654,
+            "edge_weight": 1.9462374448776245,
+            "clerp": ""
+          },
+          {
+            "node_id": "22_14727_8",
+            "layer": "22",
+            "index": 14727,
+            "ctx_idx": 8,
+            "feature_type": "cross layer transcoder",
+            "activation": 11.063697814941406,
+            "influence": 0.6642597317695618,
+            "edge_weight": 3.0443103313446045,
+            "clerp": ""
+          }
+        ]
+      }
+    ],
+    "backbone": {
+      "L0_F1053": {
+        "layer": 0,
+        "index": 1053,
+        "role": "Early feature detector",
+        "activation": 28.15,
+        "influence": 0.3273,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          3
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 5
+      },
+      "L0_F8444": {
+        "layer": 0,
+        "index": 8444,
+        "role": "Early feature detector",
+        "activation": 38.72,
+        "influence": 0.338,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          2
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 8
+      },
+      "L0_F11375": {
+        "layer": 0,
+        "index": 11375,
+        "role": "Early feature detector",
+        "activation": 31.78,
+        "influence": 0.3121,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          4
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 2
+      },
+      "L1_F1321": {
+        "layer": 1,
+        "index": 1321,
+        "role": "Early feature detector",
+        "activation": 10.51,
+        "influence": 0.7964,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          1
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 7
+      },
+      "L2_F3732": {
+        "layer": 2,
+        "index": 3732,
+        "role": "Early feature detector",
+        "activation": 8.2,
+        "influence": 0.5238,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          3
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 5
+      },
+      "L2_F15420": {
+        "layer": 2,
+        "index": 15420,
+        "role": "Early feature detector",
+        "activation": 7.43,
+        "influence": 0.6319,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          4
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 2
+      },
+      "L3_F10018": {
+        "layer": 3,
+        "index": 10018,
+        "role": "Early feature detector",
+        "activation": 19.84,
+        "influence": 0.4151,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          2
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 8
+      },
+      "L4_F1802": {
+        "layer": 4,
+        "index": 1802,
+        "role": "Early feature detector",
+        "activation": 9.51,
+        "influence": 0.7641,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          1
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 7
+      },
+      "L4_F10752": {
+        "layer": 4,
+        "index": 10752,
+        "role": "Early feature detector",
+        "activation": 14.01,
+        "influence": 0.5899,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          5
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 3
+      },
+      "L4_F14496": {
+        "layer": 4,
+        "index": 14496,
+        "role": "Early feature detector",
+        "activation": 3.29,
+        "influence": 0.7799,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          3
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 5
+      },
+      "L4_F14857": {
+        "layer": 4,
+        "index": 14857,
+        "role": "Early feature detector",
+        "activation": 11.09,
+        "influence": 0.792,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          4
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 2
+      },
+      "L5_F2334": {
+        "layer": 5,
+        "index": 2334,
+        "role": "Early-mid feature",
+        "activation": 5.85,
+        "influence": 0.6646,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          3
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 5
+      },
+      "L5_F5793": {
+        "layer": 5,
+        "index": 5793,
+        "role": "Early-mid feature",
+        "activation": 14.35,
+        "influence": 0.7879,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          1
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 7
+      },
+      "L5_F7191": {
+        "layer": 5,
+        "index": 7191,
+        "role": "Early-mid feature",
+        "activation": 14.28,
+        "influence": 0.6438,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          5
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 3
+      },
+      "L6_F2267": {
+        "layer": 6,
+        "index": 2267,
+        "role": "Early-mid feature",
+        "activation": 13.7,
+        "influence": 0.7159,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          3
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 5
+      },
+      "L6_F4662": {
+        "layer": 6,
+        "index": 4662,
+        "role": "Early-mid feature",
+        "activation": 17.16,
+        "influence": 0.5685,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          4
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 2
+      },
+      "L7_F7929": {
+        "layer": 7,
+        "index": 7929,
+        "role": "Early-mid feature",
+        "activation": 11.13,
+        "influence": 0.7536,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          4
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 2
+      },
+      "L8_F13766": {
+        "layer": 8,
+        "index": 13766,
+        "role": "Early-mid feature",
+        "activation": 19.22,
+        "influence": 0.6857,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          5
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 3
+      },
+      "L9_F13344": {
+        "layer": 9,
+        "index": 13344,
+        "role": "Early-mid feature",
+        "activation": 15.95,
+        "influence": 0.7527,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          1
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 7
+      },
+      "L10_F14542": {
+        "layer": 10,
+        "index": 14542,
+        "role": "Mid-layer relay",
+        "activation": 7.28,
+        "influence": 0.7928,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          3
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 5
+      },
+      "L13_F10969": {
+        "layer": 13,
+        "index": 10969,
+        "role": "Mid-layer relay",
+        "activation": 12.5,
+        "influence": 0.5854,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          1
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 8
+      },
+      "L14_F11455": {
+        "layer": 14,
+        "index": 11455,
+        "role": "Mid-layer relay",
+        "activation": 32.5,
+        "influence": 0.7025,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          3
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 5
+      },
+      "L15_F11238": {
+        "layer": 15,
+        "index": 11238,
+        "role": "Mid-layer relay",
+        "activation": 41.53,
+        "influence": 0.6462,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          5
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 4
+      },
+      "L17_F8341": {
+        "layer": 17,
+        "index": 8341,
+        "role": "Mid-layer relay",
+        "activation": 21.41,
+        "influence": 0.3088,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          4
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 8
+      },
+      "L17_F14546": {
+        "layer": 17,
+        "index": 14546,
+        "role": "Mid-layer relay",
+        "activation": 15.75,
+        "influence": 0.4511,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          5
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 8
+      },
+      "L19_F5699": {
+        "layer": 19,
+        "index": 5699,
+        "role": "Mid-late relay/integration hub",
+        "activation": 13.01,
+        "influence": 0.5442,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          5
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 8
+      },
+      "L20_F411": {
+        "layer": 20,
+        "index": 411,
+        "role": "Mid-late relay/integration hub",
+        "activation": 10.98,
+        "influence": 0.5866,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          5
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 8
+      },
+      "L20_F6648": {
+        "layer": 20,
+        "index": 6648,
+        "role": "Mid-late relay/integration hub",
+        "activation": 38.17,
+        "influence": 0.7606,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          3
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 6
+      },
+      "L20_F7666": {
+        "layer": 20,
+        "index": 7666,
+        "role": "Mid-late relay/integration hub",
+        "activation": 52.32,
+        "influence": 0.3011,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          1
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 8
+      },
+      "L20_F15360": {
+        "layer": 20,
+        "index": 15360,
+        "role": "Mid-late relay/integration hub",
+        "activation": 23.27,
+        "influence": 0.2513,
+        "clerp": "",
+        "on_backward_paths": [
+          5
+        ],
+        "on_forward_paths": [],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 8
+      },
+      "L21_F11272": {
+        "layer": 21,
+        "index": 11272,
+        "role": "Mid-late relay/integration hub",
+        "activation": 16.43,
+        "influence": 0.4499,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          3
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 6
+      },
+      "L21_F12427": {
+        "layer": 21,
+        "index": 12427,
+        "role": "Mid-late relay/integration hub",
+        "activation": 37.6,
+        "influence": 0.6221,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          1
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 8
+      },
+      "L22_F12202": {
+        "layer": 22,
+        "index": 12202,
+        "role": "Mid-late relay/integration hub",
+        "activation": 17.85,
+        "influence": 0.6454,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          1
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 8
+      },
+      "L22_F14727": {
+        "layer": 22,
+        "index": 14727,
+        "role": "Mid-late relay/integration hub",
+        "activation": 11.06,
+        "influence": 0.6643,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          5
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 8
+      },
+      "L23_F5917": {
+        "layer": 23,
+        "index": 5917,
+        "role": "Late-layer amplifier/output driver",
+        "activation": 11.0,
+        "influence": 0.6266,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          2
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 8
+      },
+      "L24_F13277": {
+        "layer": 24,
+        "index": 13277,
+        "role": "Late-layer amplifier/output driver",
+        "activation": 135.78,
+        "influence": 0.2972,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          1
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 8
+      },
+      "L24_F16122": {
+        "layer": 24,
+        "index": 16122,
+        "role": "Convergence hub (3 paths) - Late-layer amplifier/output driver",
+        "activation": 25.42,
+        "influence": 0.2315,
+        "clerp": "",
+        "on_backward_paths": [
+          3
+        ],
+        "on_forward_paths": [
+          3,
+          4
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 8
+      },
+      "L25_F286": {
+        "layer": 25,
+        "index": 286,
+        "role": "Late-layer amplifier/output driver",
+        "activation": 27.69,
+        "influence": 0.2391,
+        "clerp": "",
+        "on_backward_paths": [
+          2
+        ],
+        "on_forward_paths": [],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 8
+      },
+      "L25_F4717": {
+        "layer": 25,
+        "index": 4717,
+        "role": "Late-layer amplifier/output driver",
+        "activation": 265.2,
+        "influence": 0.2931,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          2
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 8
+      },
+      "L25_F10521": {
+        "layer": 25,
+        "index": 10521,
+        "role": "Late-layer amplifier/output driver",
+        "activation": 20.52,
+        "influence": 0.2738,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          4
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 8
+      }
+    }
+  },
+  "analog_tokyo": {
+    "slug": "analog_tokyo",
+    "prompt": "Paris is to France as Tokyo is to",
+    "expected_token": "Japan",
+    "logit_node": {
+      "node_id": "27_5928_8",
+      "clerp": "Output \" Japan\" (p=0.990)",
+      "token_prob": 0.990234375
+    },
+    "graph_stats": {
+      "total_nodes": 905,
+      "total_edges": 22414,
+      "embedding_nodes": 9,
+      "transcoder_nodes": 768,
+      "error_nodes": 127
+    },
+    "backward_paths": [
+      {
+        "path_index": 1,
+        "direction": "backward",
+        "weight_product": 4.201445579528809,
+        "nodes": [
+          {
+            "node_id": "27_5928_8",
+            "layer": "27",
+            "index": 5928,
+            "ctx_idx": 8,
+            "feature_type": "logit",
+            "activation": null,
+            "influence": null,
+            "edge_weight": null,
+            "clerp": "Output \" Japan\" (p=0.990)"
+          },
+          {
+            "node_id": "E_22099_6",
+            "layer": "E",
+            "index": 22099,
+            "ctx_idx": 6,
+            "feature_type": "embedding",
+            "activation": null,
+            "influence": 0.08396482467651367,
+            "edge_weight": 4.201445579528809,
+            "clerp": ""
+          }
+        ]
+      },
+      {
+        "path_index": 2,
+        "direction": "backward",
+        "weight_product": 3605.2708757941236,
+        "nodes": [
+          {
+            "node_id": "27_5928_8",
+            "layer": "27",
+            "index": 5928,
+            "ctx_idx": 8,
+            "feature_type": "logit",
+            "activation": null,
+            "influence": null,
+            "edge_weight": null,
+            "clerp": "Output \" Japan\" (p=0.990)"
+          },
+          {
+            "node_id": "23_850_8",
+            "layer": "23",
+            "index": 850,
+            "ctx_idx": 8,
+            "feature_type": "cross layer transcoder",
+            "activation": 52.077362060546875,
+            "influence": 0.24604296684265137,
+            "edge_weight": -3.9415502548217773,
+            "clerp": ""
+          },
+          {
+            "node_id": "20_1194_8",
+            "layer": "20",
+            "index": 1194,
+            "ctx_idx": 8,
+            "feature_type": "cross layer transcoder",
+            "activation": 63.731910705566406,
+            "influence": 0.2329917997121811,
+            "edge_weight": 46.07575988769531,
+            "clerp": ""
+          },
+          {
+            "node_id": "E_22099_6",
+            "layer": "E",
+            "index": 22099,
+            "ctx_idx": 6,
+            "feature_type": "embedding",
+            "activation": null,
+            "influence": 0.08396482467651367,
+            "edge_weight": 19.851728439331055,
+            "clerp": ""
+          }
+        ]
+      },
+      {
+        "path_index": 3,
+        "direction": "backward",
+        "weight_product": 75.27303178515876,
+        "nodes": [
+          {
+            "node_id": "27_5928_8",
+            "layer": "27",
+            "index": 5928,
+            "ctx_idx": 8,
+            "feature_type": "logit",
+            "activation": null,
+            "influence": null,
+            "edge_weight": null,
+            "clerp": "Output \" Japan\" (p=0.990)"
+          },
+          {
+            "node_id": "20_1194_8",
+            "layer": "20",
+            "index": 1194,
+            "ctx_idx": 8,
+            "feature_type": "cross layer transcoder",
+            "activation": 63.731910705566406,
+            "influence": 0.2329917997121811,
+            "edge_weight": 3.791762113571167,
+            "clerp": ""
+          },
+          {
+            "node_id": "E_22099_6",
+            "layer": "E",
+            "index": 22099,
+            "ctx_idx": 6,
+            "feature_type": "embedding",
+            "activation": null,
+            "influence": 0.08396482467651367,
+            "edge_weight": 19.851728439331055,
+            "clerp": ""
+          }
+        ]
+      },
+      {
+        "path_index": 4,
+        "direction": "backward",
+        "weight_product": 912.0066832263537,
+        "nodes": [
+          {
+            "node_id": "27_5928_8",
+            "layer": "27",
+            "index": 5928,
+            "ctx_idx": 8,
+            "feature_type": "logit",
+            "activation": null,
+            "influence": null,
+            "edge_weight": null,
+            "clerp": "Output \" Japan\" (p=0.990)"
+          },
+          {
+            "node_id": "25_12223_8",
+            "layer": "25",
+            "index": 12223,
+            "ctx_idx": 8,
+            "feature_type": "cross layer transcoder",
+            "activation": 30.769649505615234,
+            "influence": 0.2845529019832611,
+            "edge_weight": -2.005678176879883,
+            "clerp": ""
+          },
+          {
+            "node_id": "20_1194_8",
+            "layer": "20",
+            "index": 1194,
+            "ctx_idx": 8,
+            "feature_type": "cross layer transcoder",
+            "activation": 63.731910705566406,
+            "influence": 0.2329917997121811,
+            "edge_weight": 22.90542984008789,
+            "clerp": ""
+          },
+          {
+            "node_id": "E_22099_6",
+            "layer": "E",
+            "index": 22099,
+            "ctx_idx": 6,
+            "feature_type": "embedding",
+            "activation": null,
+            "influence": 0.08396482467651367,
+            "edge_weight": 19.851728439331055,
+            "clerp": ""
+          }
+        ]
+      },
+      {
+        "path_index": 5,
+        "direction": "backward",
+        "weight_product": 105.34588358048212,
+        "nodes": [
+          {
+            "node_id": "27_5928_8",
+            "layer": "27",
+            "index": 5928,
+            "ctx_idx": 8,
+            "feature_type": "logit",
+            "activation": null,
+            "influence": null,
+            "edge_weight": null,
+            "clerp": "Output \" Japan\" (p=0.990)"
+          },
+          {
+            "node_id": "25_286_8",
+            "layer": "25",
+            "index": 286,
+            "ctx_idx": 8,
+            "feature_type": "cross layer transcoder",
+            "activation": 34.02570343017578,
+            "influence": 0.29079562425613403,
+            "edge_weight": -1.9606252908706665,
+            "clerp": ""
+          },
+          {
+            "node_id": "20_15360_8",
+            "layer": "20",
+            "index": 15360,
+            "ctx_idx": 8,
+            "feature_type": "cross layer transcoder",
+            "activation": 28.843799591064453,
+            "influence": 0.296379417181015,
+            "edge_weight": 6.445234298706055,
+            "clerp": ""
+          },
+          {
+            "node_id": "E_6081_4",
+            "layer": "E",
+            "index": 6081,
+            "ctx_idx": 4,
+            "feature_type": "embedding",
+            "activation": null,
+            "influence": 0.11979248374700546,
+            "edge_weight": 8.336509704589844,
+            "clerp": ""
+          }
+        ]
+      }
+    ],
+    "forward_paths": [
+      {
+        "path_index": 1,
+        "direction": "forward",
+        "weight_product": 2052670.6163179213,
+        "nodes": [
+          {
+            "node_id": "E_603_7",
+            "layer": "E",
+            "index": 603,
+            "ctx_idx": 7,
+            "feature_type": "embedding",
+            "activation": null,
+            "influence": 0.31601542234420776,
+            "edge_weight": null,
+            "clerp": ""
+          },
+          {
+            "node_id": "0_11375_7",
+            "layer": "0",
+            "index": 11375,
+            "ctx_idx": 7,
+            "feature_type": "cross layer transcoder",
+            "activation": 34.83515167236328,
+            "influence": 0.4945853054523468,
+            "edge_weight": 32.34050369262695,
+            "clerp": ""
+          },
+          {
+            "node_id": "2_15420_7",
+            "layer": "2",
+            "index": 15420,
+            "ctx_idx": 7,
+            "feature_type": "cross layer transcoder",
+            "activation": 10.208279609680176,
+            "influence": 0.7898950576782227,
+            "edge_weight": -7.152538299560547,
+            "clerp": ""
+          },
+          {
+            "node_id": "5_9672_7",
+            "layer": "5",
+            "index": 9672,
+            "ctx_idx": 7,
+            "feature_type": "cross layer transcoder",
+            "activation": 19.234302520751953,
+            "influence": 0.7083306908607483,
+            "edge_weight": 1.2682050466537476,
+            "clerp": ""
+          },
+          {
+            "node_id": "8_13766_7",
+            "layer": "8",
+            "index": 13766,
+            "ctx_idx": 7,
+            "feature_type": "cross layer transcoder",
+            "activation": 29.312314987182617,
+            "influence": 0.6983885169029236,
+            "edge_weight": 5.876903533935547,
+            "clerp": ""
+          },
+          {
+            "node_id": "9_13344_7",
+            "layer": "9",
+            "index": 13344,
+            "ctx_idx": 7,
+            "feature_type": "cross layer transcoder",
+            "activation": 15.570544242858887,
+            "influence": 0.7235674858093262,
+            "edge_weight": 7.150157928466797,
+            "clerp": ""
+          },
+          {
+            "node_id": "20_11695_8",
+            "layer": "20",
+            "index": 11695,
+            "ctx_idx": 8,
+            "feature_type": "cross layer transcoder",
+            "activation": 24.32306671142578,
+            "influence": 0.3017300069332123,
+            "edge_weight": 0.2517155706882477,
+            "clerp": ""
+          },
+          {
+            "node_id": "23_850_8",
+            "layer": "23",
+            "index": 850,
+            "ctx_idx": 8,
+            "feature_type": "cross layer transcoder",
+            "activation": 52.077362060546875,
+            "influence": 0.24604296684265137,
+            "edge_weight": -16.725324630737305,
+            "clerp": ""
+          },
+          {
+            "node_id": "25_12223_8",
+            "layer": "25",
+            "index": 12223,
+            "ctx_idx": 8,
+            "feature_type": "cross layer transcoder",
+            "activation": 30.769649505615234,
+            "influence": 0.2845529019832611,
+            "edge_weight": -19.720264434814453,
+            "clerp": ""
+          },
+          {
+            "node_id": "27_5928_8",
+            "layer": "27",
+            "index": 5928,
+            "ctx_idx": 8,
+            "feature_type": "logit",
+            "activation": null,
+            "influence": null,
+            "edge_weight": -2.005678176879883,
+            "clerp": "Output \" Japan\" (p=0.990)"
+          }
+        ]
+      },
+      {
+        "path_index": 2,
+        "direction": "forward",
+        "weight_product": 15788.124939189463,
+        "nodes": [
+          {
+            "node_id": "E_577_8",
+            "layer": "E",
+            "index": 577,
+            "ctx_idx": 8,
+            "feature_type": "embedding",
+            "activation": null,
+            "influence": 0.25554731488227844,
+            "edge_weight": null,
+            "clerp": ""
+          },
+          {
+            "node_id": "0_8444_8",
+            "layer": "0",
+            "index": 8444,
+            "ctx_idx": 8,
+            "feature_type": "cross layer transcoder",
+            "activation": 38.68691635131836,
+            "influence": 0.3776235580444336,
+            "edge_weight": 41.366294860839844,
+            "clerp": ""
+          },
+          {
+            "node_id": "3_10018_8",
+            "layer": "3",
+            "index": 10018,
+            "ctx_idx": 8,
+            "feature_type": "cross layer transcoder",
+            "activation": 19.794830322265625,
+            "influence": 0.4897220730781555,
+            "edge_weight": -9.156185150146484,
+            "clerp": ""
+          },
+          {
+            "node_id": "4_10752_8",
+            "layer": "4",
+            "index": 10752,
+            "ctx_idx": 8,
+            "feature_type": "cross layer transcoder",
+            "activation": 10.749449729919434,
+            "influence": 0.6447907090187073,
+            "edge_weight": 10.41604995727539,
+            "clerp": ""
+          },
+          {
+            "node_id": "5_7191_8",
+            "layer": "5",
+            "index": 7191,
+            "ctx_idx": 8,
+            "feature_type": "cross layer transcoder",
+            "activation": 8.823692321777344,
+            "influence": 0.7296894788742065,
+            "edge_weight": 2.468770980834961,
+            "clerp": ""
+          },
+          {
+            "node_id": "24_13277_8",
+            "layer": "24",
+            "index": 13277,
+            "ctx_idx": 8,
+            "feature_type": "cross layer transcoder",
+            "activation": 129.2322998046875,
+            "influence": 0.37105676531791687,
+            "edge_weight": 0.8318183422088623,
+            "clerp": ""
+          },
+          {
+            "node_id": "25_10152_8",
+            "layer": "25",
+            "index": 10152,
+            "ctx_idx": 8,
+            "feature_type": "cross layer transcoder",
+            "activation": 15.101943016052246,
+            "influence": 0.7057276368141174,
+            "edge_weight": 18.968046188354492,
+            "clerp": ""
+          },
+          {
+            "node_id": "27_5928_8",
+            "layer": "27",
+            "index": 5928,
+            "ctx_idx": 8,
+            "feature_type": "logit",
+            "activation": null,
+            "influence": null,
+            "edge_weight": 0.10273878276348114,
+            "clerp": "Output \" Japan\" (p=0.990)"
+          }
+        ]
+      },
+      {
+        "path_index": 3,
+        "direction": "forward",
+        "weight_product": 90246.44726550559,
+        "nodes": [
+          {
+            "node_id": "E_685_5",
+            "layer": "E",
+            "index": 685,
+            "ctx_idx": 5,
+            "feature_type": "embedding",
+            "activation": null,
+            "influence": 0.21845902502536774,
+            "edge_weight": null,
+            "clerp": ""
+          },
+          {
+            "node_id": "0_1053_5",
+            "layer": "0",
+            "index": 1053,
+            "ctx_idx": 5,
+            "feature_type": "cross layer transcoder",
+            "activation": 28.154382705688477,
+            "influence": 0.3432152569293976,
+            "edge_weight": 34.172401428222656,
+            "clerp": ""
+          },
+          {
+            "node_id": "1_10469_5",
+            "layer": "1",
+            "index": 10469,
+            "ctx_idx": 5,
+            "feature_type": "cross layer transcoder",
+            "activation": 11.083824157714844,
+            "influence": 0.5145560503005981,
+            "edge_weight": -5.92622709274292,
+            "clerp": ""
+          },
+          {
+            "node_id": "3_3205_5",
+            "layer": "3",
+            "index": 3205,
+            "ctx_idx": 5,
+            "feature_type": "cross layer transcoder",
+            "activation": 6.287196159362793,
+            "influence": 0.7658699750900269,
+            "edge_weight": 3.754513740539551,
+            "clerp": ""
+          },
+          {
+            "node_id": "6_2267_5",
+            "layer": "6",
+            "index": 2267,
+            "ctx_idx": 5,
+            "feature_type": "cross layer transcoder",
+            "activation": 13.695902824401855,
+            "influence": 0.6776686310768127,
+            "edge_weight": -0.5023651123046875,
+            "clerp": ""
+          },
+          {
+            "node_id": "9_1195_5",
+            "layer": "9",
+            "index": 1195,
+            "ctx_idx": 5,
+            "feature_type": "cross layer transcoder",
+            "activation": 5.0320305824279785,
+            "influence": 0.7435643672943115,
+            "edge_weight": 0.7125264406204224,
+            "clerp": ""
+          },
+          {
+            "node_id": "10_6033_5",
+            "layer": "10",
+            "index": 6033,
+            "ctx_idx": 5,
+            "feature_type": "cross layer transcoder",
+            "activation": 21.98015785217285,
+            "influence": 0.669024646282196,
+            "edge_weight": -1.1707407236099243,
+            "clerp": ""
+          },
+          {
+            "node_id": "13_14536_5",
+            "layer": "13",
+            "index": 14536,
+            "ctx_idx": 5,
+            "feature_type": "cross layer transcoder",
+            "activation": 32.09868240356445,
+            "influence": 0.7637715935707092,
+            "edge_weight": 6.067239284515381,
+            "clerp": ""
+          },
+          {
+            "node_id": "14_11455_5",
+            "layer": "14",
+            "index": 11455,
+            "ctx_idx": 5,
+            "feature_type": "cross layer transcoder",
+            "activation": 32.50252914428711,
+            "influence": 0.5940936207771301,
+            "edge_weight": 9.645309448242188,
+            "clerp": ""
+          },
+          {
+            "node_id": "20_6648_6",
+            "layer": "20",
+            "index": 6648,
+            "ctx_idx": 6,
+            "feature_type": "cross layer transcoder",
+            "activation": 35.69485855102539,
+            "influence": 0.7716057896614075,
+            "edge_weight": 3.888706922531128,
+            "clerp": ""
+          },
+          {
+            "node_id": "21_12003_6",
+            "layer": "21",
+            "index": 12003,
+            "ctx_idx": 6,
+            "feature_type": "cross layer transcoder",
+            "activation": 25.022655487060547,
+            "influence": 0.6575069427490234,
+            "edge_weight": 1.2445975542068481,
+            "clerp": ""
+          }
+        ]
+      },
+      {
+        "path_index": 4,
+        "direction": "forward",
+        "weight_product": 1013009.5093830223,
+        "nodes": [
+          {
+            "node_id": "E_603_2",
+            "layer": "E",
+            "index": 603,
+            "ctx_idx": 2,
+            "feature_type": "embedding",
+            "activation": null,
+            "influence": 0.20128165185451508,
+            "edge_weight": null,
+            "clerp": ""
+          },
+          {
+            "node_id": "0_11375_2",
+            "layer": "0",
+            "index": 11375,
+            "ctx_idx": 2,
+            "feature_type": "cross layer transcoder",
+            "activation": 31.778850555419922,
+            "influence": 0.31987428665161133,
+            "edge_weight": 29.24640655517578,
+            "clerp": ""
+          },
+          {
+            "node_id": "2_15420_2",
+            "layer": "2",
+            "index": 15420,
+            "ctx_idx": 2,
+            "feature_type": "cross layer transcoder",
+            "activation": 7.430013656616211,
+            "influence": 0.6600335240364075,
+            "edge_weight": -6.02652645111084,
+            "clerp": ""
+          },
+          {
+            "node_id": "3_15381_2",
+            "layer": "3",
+            "index": 15381,
+            "ctx_idx": 2,
+            "feature_type": "cross layer transcoder",
+            "activation": 5.005594253540039,
+            "influence": 0.786178469657898,
+            "edge_weight": 0.8663347363471985,
+            "clerp": ""
+          },
+          {
+            "node_id": "4_128_2",
+            "layer": "4",
+            "index": 128,
+            "ctx_idx": 2,
+            "feature_type": "cross layer transcoder",
+            "activation": 10.745733261108398,
+            "influence": 0.5900912284851074,
+            "edge_weight": -0.6952153444290161,
+            "clerp": ""
+          },
+          {
+            "node_id": "6_4662_2",
+            "layer": "6",
+            "index": 4662,
+            "ctx_idx": 2,
+            "feature_type": "cross layer transcoder",
+            "activation": 17.16059112548828,
+            "influence": 0.5969134569168091,
+            "edge_weight": 6.022445201873779,
+            "clerp": ""
+          },
+          {
+            "node_id": "8_6462_6",
+            "layer": "8",
+            "index": 6462,
+            "ctx_idx": 6,
+            "feature_type": "cross layer transcoder",
+            "activation": 10.824298858642578,
+            "influence": 0.6326799392700195,
+            "edge_weight": 2.053314685821533,
+            "clerp": ""
+          },
+          {
+            "node_id": "16_12678_6",
+            "layer": "16",
+            "index": 12678,
+            "ctx_idx": 6,
+            "feature_type": "cross layer transcoder",
+            "activation": 32.84952163696289,
+            "influence": 0.7364057302474976,
+            "edge_weight": 3.4026103019714355,
+            "clerp": ""
+          },
+          {
+            "node_id": "18_5424_6",
+            "layer": "18",
+            "index": 5424,
+            "ctx_idx": 6,
+            "feature_type": "cross layer transcoder",
+            "activation": 35.882179260253906,
+            "influence": 0.6633446216583252,
+            "edge_weight": 3.233628034591675,
+            "clerp": ""
+          },
+          {
+            "node_id": "20_1194_6",
+            "layer": "20",
+            "index": 1194,
+            "ctx_idx": 6,
+            "feature_type": "cross layer transcoder",
+            "activation": 61.395538330078125,
+            "influence": 0.3066368103027344,
+            "edge_weight": 1.7704188823699951,
+            "clerp": ""
+          },
+          {
+            "node_id": "23_850_6",
+            "layer": "23",
+            "index": 850,
+            "ctx_idx": 6,
+            "feature_type": "cross layer transcoder",
+            "activation": 41.586936950683594,
+            "influence": 0.7738611698150635,
+            "edge_weight": 39.615230560302734,
+            "clerp": ""
+          }
+        ]
+      },
+      {
+        "path_index": 5,
+        "direction": "forward",
+        "weight_product": 2433566.4210157553,
+        "nodes": [
+          {
+            "node_id": "E_577_3",
+            "layer": "E",
+            "index": 577,
+            "ctx_idx": 3,
+            "feature_type": "embedding",
+            "activation": null,
+            "influence": 0.17781127989292145,
+            "edge_weight": null,
+            "clerp": ""
+          },
+          {
+            "node_id": "0_8444_3",
+            "layer": "0",
+            "index": 8444,
+            "ctx_idx": 3,
+            "feature_type": "cross layer transcoder",
+            "activation": 38.478145599365234,
+            "influence": 0.27096375823020935,
+            "edge_weight": 39.71845626831055,
+            "clerp": ""
+          },
+          {
+            "node_id": "3_10018_3",
+            "layer": "3",
+            "index": 10018,
+            "ctx_idx": 3,
+            "feature_type": "cross layer transcoder",
+            "activation": 23.133647918701172,
+            "influence": 0.3688552677631378,
+            "edge_weight": -8.637641906738281,
+            "clerp": ""
+          },
+          {
+            "node_id": "4_10752_3",
+            "layer": "4",
+            "index": 10752,
+            "ctx_idx": 3,
+            "feature_type": "cross layer transcoder",
+            "activation": 14.011046409606934,
+            "influence": 0.5345838665962219,
+            "edge_weight": 11.437172889709473,
+            "clerp": ""
+          },
+          {
+            "node_id": "8_2742_3",
+            "layer": "8",
+            "index": 2742,
+            "ctx_idx": 3,
+            "feature_type": "cross layer transcoder",
+            "activation": 12.441694259643555,
+            "influence": 0.7945497035980225,
+            "edge_weight": 3.671653985977173,
+            "clerp": ""
+          },
+          {
+            "node_id": "15_10550_4",
+            "layer": "15",
+            "index": 10550,
+            "ctx_idx": 4,
+            "feature_type": "cross layer transcoder",
+            "activation": 31.692750930786133,
+            "influence": 0.3935311436653137,
+            "edge_weight": -0.5356746912002563,
+            "clerp": ""
+          },
+          {
+            "node_id": "17_14546_8",
+            "layer": "17",
+            "index": 14546,
+            "ctx_idx": 8,
+            "feature_type": "cross layer transcoder",
+            "activation": 14.436286926269531,
+            "influence": 0.5393143892288208,
+            "edge_weight": 7.3977766036987305,
+            "clerp": ""
+          },
+          {
+            "node_id": "19_5699_8",
+            "layer": "19",
+            "index": 5699,
+            "ctx_idx": 8,
+            "feature_type": "cross layer transcoder",
+            "activation": 11.493675231933594,
+            "influence": 0.6438806653022766,
+            "edge_weight": 3.353497266769409,
+            "clerp": ""
+          },
+          {
+            "node_id": "20_411_8",
+            "layer": "20",
+            "index": 411,
+            "ctx_idx": 8,
+            "feature_type": "cross layer transcoder",
+            "activation": 10.802955627441406,
+            "influence": 0.6345698237419128,
+            "edge_weight": 1.8030099868774414,
+            "clerp": ""
+          },
+          {
+            "node_id": "21_7764_8",
+            "layer": "21",
+            "index": 7764,
+            "ctx_idx": 8,
+            "feature_type": "cross layer transcoder",
+            "activation": 11.076942443847656,
+            "influence": 0.41111844778060913,
+            "edge_weight": -1.950606346130371,
+            "clerp": ""
+          },
+          {
+            "node_id": "23_13914_8",
+            "layer": "23",
+            "index": 13914,
+            "ctx_idx": 8,
+            "feature_type": "cross layer transcoder",
+            "activation": 38.082908630371094,
+            "influence": 0.6198781728744507,
+            "edge_weight": 3.6141581535339355,
+            "clerp": ""
+          }
+        ]
+      }
+    ],
+    "backbone": {
+      "L0_F1053": {
+        "layer": 0,
+        "index": 1053,
+        "role": "Early feature detector",
+        "activation": 28.15,
+        "influence": 0.3432,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          3
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 5
+      },
+      "L0_F8444": {
+        "layer": 0,
+        "index": 8444,
+        "role": "Early feature detector",
+        "activation": 38.69,
+        "influence": 0.3776,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          2
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 8
+      },
+      "L0_F11375": {
+        "layer": 0,
+        "index": 11375,
+        "role": "Early feature detector",
+        "activation": 31.78,
+        "influence": 0.3199,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          4
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 2
+      },
+      "L1_F10469": {
+        "layer": 1,
+        "index": 10469,
+        "role": "Early feature detector",
+        "activation": 11.08,
+        "influence": 0.5146,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          3
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 5
+      },
+      "L2_F15420": {
+        "layer": 2,
+        "index": 15420,
+        "role": "Early feature detector",
+        "activation": 7.43,
+        "influence": 0.66,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          4
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 2
+      },
+      "L3_F3205": {
+        "layer": 3,
+        "index": 3205,
+        "role": "Early feature detector",
+        "activation": 6.29,
+        "influence": 0.7659,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          3
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 5
+      },
+      "L3_F10018": {
+        "layer": 3,
+        "index": 10018,
+        "role": "Early feature detector",
+        "activation": 19.79,
+        "influence": 0.4897,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          2
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 8
+      },
+      "L3_F15381": {
+        "layer": 3,
+        "index": 15381,
+        "role": "Early feature detector",
+        "activation": 5.01,
+        "influence": 0.7862,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          4
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 2
+      },
+      "L4_F128": {
+        "layer": 4,
+        "index": 128,
+        "role": "Early feature detector",
+        "activation": 10.75,
+        "influence": 0.5901,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          4
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 2
+      },
+      "L4_F10752": {
+        "layer": 4,
+        "index": 10752,
+        "role": "Early feature detector",
+        "activation": 14.01,
+        "influence": 0.5346,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          5
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 3
+      },
+      "L5_F7191": {
+        "layer": 5,
+        "index": 7191,
+        "role": "Early-mid feature",
+        "activation": 8.82,
+        "influence": 0.7297,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          2
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 8
+      },
+      "L5_F9672": {
+        "layer": 5,
+        "index": 9672,
+        "role": "Early-mid feature",
+        "activation": 19.23,
+        "influence": 0.7083,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          1
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 7
+      },
+      "L6_F2267": {
+        "layer": 6,
+        "index": 2267,
+        "role": "Early-mid feature",
+        "activation": 13.7,
+        "influence": 0.6777,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          3
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 5
+      },
+      "L6_F4662": {
+        "layer": 6,
+        "index": 4662,
+        "role": "Early-mid feature",
+        "activation": 17.16,
+        "influence": 0.5969,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          4
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 2
+      },
+      "L8_F2742": {
+        "layer": 8,
+        "index": 2742,
+        "role": "Early-mid feature",
+        "activation": 12.44,
+        "influence": 0.7945,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          5
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 3
+      },
+      "L8_F6462": {
+        "layer": 8,
+        "index": 6462,
+        "role": "Early-mid feature",
+        "activation": 10.82,
+        "influence": 0.6327,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          4
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 6
+      },
+      "L8_F13766": {
+        "layer": 8,
+        "index": 13766,
+        "role": "Early-mid feature",
+        "activation": 29.31,
+        "influence": 0.6984,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          1
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 7
+      },
+      "L9_F1195": {
+        "layer": 9,
+        "index": 1195,
+        "role": "Early-mid feature",
+        "activation": 5.03,
+        "influence": 0.7436,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          3
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 5
+      },
+      "L9_F13344": {
+        "layer": 9,
+        "index": 13344,
+        "role": "Early-mid feature",
+        "activation": 15.57,
+        "influence": 0.7236,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          1
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 7
+      },
+      "L10_F6033": {
+        "layer": 10,
+        "index": 6033,
+        "role": "Mid-layer relay",
+        "activation": 21.98,
+        "influence": 0.669,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          3
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 5
+      },
+      "L13_F14536": {
+        "layer": 13,
+        "index": 14536,
+        "role": "Mid-layer relay",
+        "activation": 32.1,
+        "influence": 0.7638,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          3
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 5
+      },
+      "L14_F11455": {
+        "layer": 14,
+        "index": 11455,
+        "role": "Mid-layer relay",
+        "activation": 32.5,
+        "influence": 0.5941,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          3
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 5
+      },
+      "L15_F10550": {
+        "layer": 15,
+        "index": 10550,
+        "role": "Mid-layer relay",
+        "activation": 31.69,
+        "influence": 0.3935,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          5
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 4
+      },
+      "L16_F12678": {
+        "layer": 16,
+        "index": 12678,
+        "role": "Mid-layer relay",
+        "activation": 32.85,
+        "influence": 0.7364,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          4
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 6
+      },
+      "L17_F14546": {
+        "layer": 17,
+        "index": 14546,
+        "role": "Mid-layer relay",
+        "activation": 14.44,
+        "influence": 0.5393,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          5
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 8
+      },
+      "L18_F5424": {
+        "layer": 18,
+        "index": 5424,
+        "role": "Mid-late relay/integration hub",
+        "activation": 35.88,
+        "influence": 0.6633,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          4
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 6
+      },
+      "L19_F5699": {
+        "layer": 19,
+        "index": 5699,
+        "role": "Mid-late relay/integration hub",
+        "activation": 11.49,
+        "influence": 0.6439,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          5
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 8
+      },
+      "L20_F411": {
+        "layer": 20,
+        "index": 411,
+        "role": "Mid-late relay/integration hub",
+        "activation": 10.8,
+        "influence": 0.6346,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          5
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 8
+      },
+      "L20_F1194": {
+        "layer": 20,
+        "index": 1194,
+        "role": "Mid-late relay/integration hub",
+        "activation": 61.4,
+        "influence": 0.3066,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          4
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 6
+      },
+      "L20_F6648": {
+        "layer": 20,
+        "index": 6648,
+        "role": "Mid-late relay/integration hub",
+        "activation": 35.69,
+        "influence": 0.7716,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          3
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 6
+      },
+      "L20_F11695": {
+        "layer": 20,
+        "index": 11695,
+        "role": "Mid-late relay/integration hub",
+        "activation": 24.32,
+        "influence": 0.3017,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          1
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 8
+      },
+      "L20_F15360": {
+        "layer": 20,
+        "index": 15360,
+        "role": "Mid-late relay/integration hub",
+        "activation": 28.84,
+        "influence": 0.2964,
+        "clerp": "",
+        "on_backward_paths": [
+          5
+        ],
+        "on_forward_paths": [],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 8
+      },
+      "L21_F7764": {
+        "layer": 21,
+        "index": 7764,
+        "role": "Mid-late relay/integration hub",
+        "activation": 11.08,
+        "influence": 0.4111,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          5
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 8
+      },
+      "L21_F12003": {
+        "layer": 21,
+        "index": 12003,
+        "role": "Mid-late relay/integration hub",
+        "activation": 25.02,
+        "influence": 0.6575,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          3
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 6
+      },
+      "L23_F850": {
+        "layer": 23,
+        "index": 850,
+        "role": "Late-layer amplifier/output driver",
+        "activation": 41.59,
+        "influence": 0.7739,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          4
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 6
+      },
+      "L23_F13914": {
+        "layer": 23,
+        "index": 13914,
+        "role": "Late-layer amplifier/output driver",
+        "activation": 38.08,
+        "influence": 0.6199,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          5
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 8
+      },
+      "L24_F13277": {
+        "layer": 24,
+        "index": 13277,
+        "role": "Late-layer amplifier/output driver",
+        "activation": 129.23,
+        "influence": 0.3711,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          2
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 8
+      },
+      "L25_F286": {
+        "layer": 25,
+        "index": 286,
+        "role": "Late-layer amplifier/output driver",
+        "activation": 34.03,
+        "influence": 0.2908,
+        "clerp": "",
+        "on_backward_paths": [
+          5
+        ],
+        "on_forward_paths": [],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 8
+      },
+      "L25_F10152": {
+        "layer": 25,
+        "index": 10152,
+        "role": "Late-layer amplifier/output driver",
+        "activation": 15.1,
+        "influence": 0.7057,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          2
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 8
+      },
+      "L25_F12223": {
+        "layer": 25,
+        "index": 12223,
+        "role": "Late-layer amplifier/output driver",
+        "activation": 30.77,
+        "influence": 0.2846,
+        "clerp": "",
+        "on_backward_paths": [
+          4
+        ],
+        "on_forward_paths": [
+          1
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 8
+      }
+    }
+  },
+  "analog_teacher": {
+    "slug": "analog_teacher",
+    "prompt": "Doctor is to hospital as teacher is to",
+    "expected_token": "school",
+    "logit_node": {
+      "node_id": "27_2493_8",
+      "clerp": "Output \" school\" (p=0.486)",
+      "token_prob": 0.48596903681755066
+    },
+    "graph_stats": {
+      "total_nodes": 1040,
+      "total_edges": 35481,
+      "embedding_nodes": 9,
+      "transcoder_nodes": 873,
+      "error_nodes": 148
+    },
+    "backward_paths": [
+      {
+        "path_index": 1,
+        "direction": "backward",
+        "weight_product": 5.200218200683594,
+        "nodes": [
+          {
+            "node_id": "27_2493_8",
+            "layer": "27",
+            "index": 2493,
+            "ctx_idx": 8,
+            "feature_type": "logit",
+            "activation": null,
+            "influence": null,
+            "edge_weight": null,
+            "clerp": "Output \" school\" (p=0.486)"
+          },
+          {
+            "node_id": "E_9382_6",
+            "layer": "E",
+            "index": 9382,
+            "ctx_idx": 6,
+            "feature_type": "embedding",
+            "activation": null,
+            "influence": 0.08023368567228317,
+            "edge_weight": 5.200218200683594,
+            "clerp": ""
+          }
+        ]
+      },
+      {
+        "path_index": 2,
+        "direction": "backward",
+        "weight_product": 62.121651520280466,
+        "nodes": [
+          {
+            "node_id": "27_2493_8",
+            "layer": "27",
+            "index": 2493,
+            "ctx_idx": 8,
+            "feature_type": "logit",
+            "activation": null,
+            "influence": null,
+            "edge_weight": null,
+            "clerp": "Output \" school\" (p=0.486)"
+          },
+          {
+            "node_id": "25_4975_8",
+            "layer": "25",
+            "index": 4975,
+            "ctx_idx": 8,
+            "feature_type": "cross layer transcoder",
+            "activation": 28.015602111816406,
+            "influence": 0.24718916416168213,
+            "edge_weight": -4.139813423156738,
+            "clerp": ""
+          },
+          {
+            "node_id": "E_9382_6",
+            "layer": "E",
+            "index": 9382,
+            "ctx_idx": 6,
+            "feature_type": "embedding",
+            "activation": null,
+            "influence": 0.08023368567228317,
+            "edge_weight": 15.005906105041504,
+            "clerp": ""
+          }
+        ]
+      },
+      {
+        "path_index": 3,
+        "direction": "backward",
+        "weight_product": 57.49863364409612,
+        "nodes": [
+          {
+            "node_id": "27_2493_8",
+            "layer": "27",
+            "index": 2493,
+            "ctx_idx": 8,
+            "feature_type": "logit",
+            "activation": null,
+            "influence": null,
+            "edge_weight": null,
+            "clerp": "Output \" school\" (p=0.486)"
+          },
+          {
+            "node_id": "18_6532_8",
+            "layer": "18",
+            "index": 6532,
+            "ctx_idx": 8,
+            "feature_type": "cross layer transcoder",
+            "activation": 41.125362396240234,
+            "influence": 0.2631834149360657,
+            "edge_weight": 1.9615988731384277,
+            "clerp": ""
+          },
+          {
+            "node_id": "E_9382_6",
+            "layer": "E",
+            "index": 9382,
+            "ctx_idx": 6,
+            "feature_type": "embedding",
+            "activation": null,
+            "influence": 0.08023368567228317,
+            "edge_weight": 29.31212615966797,
+            "clerp": ""
+          }
+        ]
+      },
+      {
+        "path_index": 4,
+        "direction": "backward",
+        "weight_product": 1.7094882726669312,
+        "nodes": [
+          {
+            "node_id": "27_2493_8",
+            "layer": "27",
+            "index": 2493,
+            "ctx_idx": 8,
+            "feature_type": "logit",
+            "activation": null,
+            "influence": null,
+            "edge_weight": null,
+            "clerp": "Output \" school\" (p=0.486)"
+          },
+          {
+            "node_id": "0_17_8",
+            "layer": "0",
+            "index": 17,
+            "ctx_idx": 8,
+            "feature_type": "mlp reconstruction error",
+            "activation": null,
+            "influence": 0.2586469352245331,
+            "edge_weight": 1.7094882726669312,
+            "clerp": ""
+          }
+        ]
+      },
+      {
+        "path_index": 5,
+        "direction": "backward",
+        "weight_product": 15.996259259706449,
+        "nodes": [
+          {
+            "node_id": "27_2493_8",
+            "layer": "27",
+            "index": 2493,
+            "ctx_idx": 8,
+            "feature_type": "logit",
+            "activation": null,
+            "influence": null,
+            "edge_weight": null,
+            "clerp": "Output \" school\" (p=0.486)"
+          },
+          {
+            "node_id": "20_6179_8",
+            "layer": "20",
+            "index": 6179,
+            "ctx_idx": 8,
+            "feature_type": "cross layer transcoder",
+            "activation": 27.666790008544922,
+            "influence": 0.28572115302085876,
+            "edge_weight": 1.5986826419830322,
+            "clerp": ""
+          },
+          {
+            "node_id": "E_9382_6",
+            "layer": "E",
+            "index": 9382,
+            "ctx_idx": 6,
+            "feature_type": "embedding",
+            "activation": null,
+            "influence": 0.08023368567228317,
+            "edge_weight": 10.005900382995605,
+            "clerp": ""
+          }
+        ]
+      }
+    ],
+    "forward_paths": [
+      {
+        "path_index": 1,
+        "direction": "forward",
+        "weight_product": 30.723776596499224,
+        "nodes": [
+          {
+            "node_id": "E_603_7",
+            "layer": "E",
+            "index": 603,
+            "ctx_idx": 7,
+            "feature_type": "embedding",
+            "activation": null,
+            "influence": 0.2676291763782501,
+            "edge_weight": null,
+            "clerp": ""
+          },
+          {
+            "node_id": "22_15670_7",
+            "layer": "22",
+            "index": 15670,
+            "ctx_idx": 7,
+            "feature_type": "cross layer transcoder",
+            "activation": 87.44439697265625,
+            "influence": 0.7907889485359192,
+            "edge_weight": -37.9835319519043,
+            "clerp": ""
+          },
+          {
+            "node_id": "25_4717_8",
+            "layer": "25",
+            "index": 4717,
+            "ctx_idx": 8,
+            "feature_type": "cross layer transcoder",
+            "activation": 135.64385986328125,
+            "influence": 0.37217140197753906,
+            "edge_weight": -1.2461860179901123,
+            "clerp": ""
+          },
+          {
+            "node_id": "27_2493_8",
+            "layer": "27",
+            "index": 2493,
+            "ctx_idx": 8,
+            "feature_type": "logit",
+            "activation": null,
+            "influence": null,
+            "edge_weight": 0.6490772366523743,
+            "clerp": "Output \" school\" (p=0.486)"
+          }
+        ]
+      },
+      {
+        "path_index": 2,
+        "direction": "forward",
+        "weight_product": 4327536.829609601,
+        "nodes": [
+          {
+            "node_id": "E_577_8",
+            "layer": "E",
+            "index": 577,
+            "ctx_idx": 8,
+            "feature_type": "embedding",
+            "activation": null,
+            "influence": 0.23962299525737762,
+            "edge_weight": null,
+            "clerp": ""
+          },
+          {
+            "node_id": "0_8444_8",
+            "layer": "0",
+            "index": 8444,
+            "ctx_idx": 8,
+            "feature_type": "cross layer transcoder",
+            "activation": 38.76065444946289,
+            "influence": 0.3116399645805359,
+            "edge_weight": 41.80119705200195,
+            "clerp": ""
+          },
+          {
+            "node_id": "3_10018_8",
+            "layer": "3",
+            "index": 10018,
+            "ctx_idx": 8,
+            "feature_type": "cross layer transcoder",
+            "activation": 16.58184814453125,
+            "influence": 0.5010469555854797,
+            "edge_weight": -9.077902793884277,
+            "clerp": ""
+          },
+          {
+            "node_id": "4_10752_8",
+            "layer": "4",
+            "index": 10752,
+            "ctx_idx": 8,
+            "feature_type": "cross layer transcoder",
+            "activation": 9.746960639953613,
+            "influence": 0.6793504357337952,
+            "edge_weight": 8.799691200256348,
+            "clerp": ""
+          },
+          {
+            "node_id": "5_7191_8",
+            "layer": "5",
+            "index": 7191,
+            "ctx_idx": 8,
+            "feature_type": "cross layer transcoder",
+            "activation": 8.463903427124023,
+            "influence": 0.7560944557189941,
+            "edge_weight": 2.4412405490875244,
+            "clerp": ""
+          },
+          {
+            "node_id": "7_749_8",
+            "layer": "7",
+            "index": 749,
+            "ctx_idx": 8,
+            "feature_type": "cross layer transcoder",
+            "activation": 10.159320831298828,
+            "influence": 0.7351625561714172,
+            "edge_weight": -0.9846687316894531,
+            "clerp": ""
+          },
+          {
+            "node_id": "10_5559_8",
+            "layer": "10",
+            "index": 5559,
+            "ctx_idx": 8,
+            "feature_type": "cross layer transcoder",
+            "activation": 27.104930877685547,
+            "influence": 0.6686089634895325,
+            "edge_weight": 2.029813289642334,
+            "clerp": ""
+          },
+          {
+            "node_id": "11_16076_8",
+            "layer": "11",
+            "index": 16076,
+            "ctx_idx": 8,
+            "feature_type": "cross layer transcoder",
+            "activation": 14.631698608398438,
+            "influence": 0.7652231454849243,
+            "edge_weight": -22.60575294494629,
+            "clerp": ""
+          },
+          {
+            "node_id": "15_3343_8",
+            "layer": "15",
+            "index": 3343,
+            "ctx_idx": 8,
+            "feature_type": "cross layer transcoder",
+            "activation": 26.49038314819336,
+            "influence": 0.7056048512458801,
+            "edge_weight": 1.8584216833114624,
+            "clerp": ""
+          },
+          {
+            "node_id": "18_13586_8",
+            "layer": "18",
+            "index": 13586,
+            "ctx_idx": 8,
+            "feature_type": "cross layer transcoder",
+            "activation": 18.65056610107422,
+            "influence": 0.7620691061019897,
+            "edge_weight": 3.563422203063965,
+            "clerp": ""
+          },
+          {
+            "node_id": "21_2655_8",
+            "layer": "21",
+            "index": 2655,
+            "ctx_idx": 8,
+            "feature_type": "cross layer transcoder",
+            "activation": 38.541107177734375,
+            "influence": 0.6639242768287659,
+            "edge_weight": 1.7742375135421753,
+            "clerp": ""
+          }
+        ]
+      },
+      {
+        "path_index": 3,
+        "direction": "forward",
+        "weight_product": 26120.5493393029,
+        "nodes": [
+          {
+            "node_id": "E_685_5",
+            "layer": "E",
+            "index": 685,
+            "ctx_idx": 5,
+            "feature_type": "embedding",
+            "activation": null,
+            "influence": 0.22684891521930695,
+            "edge_weight": null,
+            "clerp": ""
+          },
+          {
+            "node_id": "0_1053_5",
+            "layer": "0",
+            "index": 1053,
+            "ctx_idx": 5,
+            "feature_type": "cross layer transcoder",
+            "activation": 28.232580184936523,
+            "influence": 0.2889101803302765,
+            "edge_weight": 34.270179748535156,
+            "clerp": ""
+          },
+          {
+            "node_id": "2_3732_5",
+            "layer": "2",
+            "index": 3732,
+            "ctx_idx": 5,
+            "feature_type": "cross layer transcoder",
+            "activation": 9.111230850219727,
+            "influence": 0.4939686357975006,
+            "edge_weight": -6.363445281982422,
+            "clerp": ""
+          },
+          {
+            "node_id": "3_12009_5",
+            "layer": "3",
+            "index": 12009,
+            "ctx_idx": 5,
+            "feature_type": "cross layer transcoder",
+            "activation": 4.602808475494385,
+            "influence": 0.6721546053886414,
+            "edge_weight": -1.9649380445480347,
+            "clerp": ""
+          },
+          {
+            "node_id": "5_2267_5",
+            "layer": "5",
+            "index": 2267,
+            "ctx_idx": 5,
+            "feature_type": "cross layer transcoder",
+            "activation": 8.763803482055664,
+            "influence": 0.7305339574813843,
+            "edge_weight": -1.9526418447494507,
+            "clerp": ""
+          },
+          {
+            "node_id": "7_3099_5",
+            "layer": "7",
+            "index": 3099,
+            "ctx_idx": 5,
+            "feature_type": "cross layer transcoder",
+            "activation": 17.265155792236328,
+            "influence": 0.6922955513000488,
+            "edge_weight": -4.016887187957764,
+            "clerp": ""
+          },
+          {
+            "node_id": "11_2279_5",
+            "layer": "11",
+            "index": 2279,
+            "ctx_idx": 5,
+            "feature_type": "cross layer transcoder",
+            "activation": 15.178422927856445,
+            "influence": 0.6580751538276672,
+            "edge_weight": 0.7005424499511719,
+            "clerp": ""
+          },
+          {
+            "node_id": "14_11455_5",
+            "layer": "14",
+            "index": 11455,
+            "ctx_idx": 5,
+            "feature_type": "cross layer transcoder",
+            "activation": 32.23057556152344,
+            "influence": 0.6689656972885132,
+            "edge_weight": -1.1879515647888184,
+            "clerp": ""
+          },
+          {
+            "node_id": "15_13802_6",
+            "layer": "15",
+            "index": 13802,
+            "ctx_idx": 6,
+            "feature_type": "cross layer transcoder",
+            "activation": 23.707962036132812,
+            "influence": 0.7698769569396973,
+            "edge_weight": 2.253627300262451,
+            "clerp": ""
+          },
+          {
+            "node_id": "18_11952_6",
+            "layer": "18",
+            "index": 11952,
+            "ctx_idx": 6,
+            "feature_type": "cross layer transcoder",
+            "activation": 46.312843322753906,
+            "influence": 0.7234412431716919,
+            "edge_weight": 3.863706588745117,
+            "clerp": ""
+          },
+          {
+            "node_id": "25_4717_8",
+            "layer": "25",
+            "index": 4717,
+            "ctx_idx": 8,
+            "feature_type": "cross layer transcoder",
+            "activation": 135.64385986328125,
+            "influence": 0.37217140197753906,
+            "edge_weight": 1.072489619255066,
+            "clerp": ""
+          }
+        ]
+      },
+      {
+        "path_index": 4,
+        "direction": "forward",
+        "weight_product": 2957.103510736741,
+        "nodes": [
+          {
+            "node_id": "E_603_2",
+            "layer": "E",
+            "index": 603,
+            "ctx_idx": 2,
+            "feature_type": "embedding",
+            "activation": null,
+            "influence": 0.20811858773231506,
+            "edge_weight": null,
+            "clerp": ""
+          },
+          {
+            "node_id": "0_13004_2",
+            "layer": "0",
+            "index": 13004,
+            "ctx_idx": 2,
+            "feature_type": "cross layer transcoder",
+            "activation": 6.59709358215332,
+            "influence": 0.6114770174026489,
+            "edge_weight": 36.48748779296875,
+            "clerp": ""
+          },
+          {
+            "node_id": "1_961_2",
+            "layer": "1",
+            "index": 961,
+            "ctx_idx": 2,
+            "feature_type": "cross layer transcoder",
+            "activation": 5.652373313903809,
+            "influence": 0.6501092910766602,
+            "edge_weight": -0.7537948489189148,
+            "clerp": ""
+          },
+          {
+            "node_id": "4_14857_2",
+            "layer": "4",
+            "index": 14857,
+            "ctx_idx": 2,
+            "feature_type": "cross layer transcoder",
+            "activation": 17.827852249145508,
+            "influence": 0.6752883791923523,
+            "edge_weight": 1.8015716075897217,
+            "clerp": ""
+          },
+          {
+            "node_id": "5_8174_2",
+            "layer": "5",
+            "index": 8174,
+            "ctx_idx": 2,
+            "feature_type": "cross layer transcoder",
+            "activation": 11.571843147277832,
+            "influence": 0.5971222519874573,
+            "edge_weight": -1.0193742513656616,
+            "clerp": ""
+          },
+          {
+            "node_id": "7_15132_2",
+            "layer": "7",
+            "index": 15132,
+            "ctx_idx": 2,
+            "feature_type": "cross layer transcoder",
+            "activation": 18.141061782836914,
+            "influence": 0.7136313319206238,
+            "edge_weight": 1.7697197198867798,
+            "clerp": ""
+          },
+          {
+            "node_id": "9_6399_2",
+            "layer": "9",
+            "index": 6399,
+            "ctx_idx": 2,
+            "feature_type": "cross layer transcoder",
+            "activation": 12.683549880981445,
+            "influence": 0.7746531367301941,
+            "edge_weight": 1.5628236532211304,
+            "clerp": ""
+          },
+          {
+            "node_id": "15_13801_6",
+            "layer": "15",
+            "index": 13801,
+            "ctx_idx": 6,
+            "feature_type": "cross layer transcoder",
+            "activation": 12.972589492797852,
+            "influence": 0.33352339267730713,
+            "edge_weight": 0.14923816919326782,
+            "clerp": ""
+          },
+          {
+            "node_id": "18_6532_8",
+            "layer": "18",
+            "index": 6532,
+            "ctx_idx": 8,
+            "feature_type": "cross layer transcoder",
+            "activation": 41.125362396240234,
+            "influence": 0.2631834149360657,
+            "edge_weight": 6.1483306884765625,
+            "clerp": ""
+          },
+          {
+            "node_id": "24_15259_8",
+            "layer": "24",
+            "index": 15259,
+            "ctx_idx": 8,
+            "feature_type": "cross layer transcoder",
+            "activation": 12.672308921813965,
+            "influence": 0.4533350467681885,
+            "edge_weight": 15.455835342407227,
+            "clerp": ""
+          },
+          {
+            "node_id": "25_4717_8",
+            "layer": "25",
+            "index": 4717,
+            "ctx_idx": 8,
+            "feature_type": "cross layer transcoder",
+            "activation": 135.64385986328125,
+            "influence": 0.37217140197753906,
+            "edge_weight": 1.4925886392593384,
+            "clerp": ""
+          }
+        ]
+      },
+      {
+        "path_index": 5,
+        "direction": "forward",
+        "weight_product": 1450463.2612884007,
+        "nodes": [
+          {
+            "node_id": "E_577_3",
+            "layer": "E",
+            "index": 577,
+            "ctx_idx": 3,
+            "feature_type": "embedding",
+            "activation": null,
+            "influence": 0.18205086886882782,
+            "edge_weight": null,
+            "clerp": ""
+          },
+          {
+            "node_id": "0_8444_3",
+            "layer": "0",
+            "index": 8444,
+            "ctx_idx": 3,
+            "feature_type": "cross layer transcoder",
+            "activation": 38.66899108886719,
+            "influence": 0.25407570600509644,
+            "edge_weight": 39.880802154541016,
+            "clerp": ""
+          },
+          {
+            "node_id": "9_65_8",
+            "layer": "9",
+            "index": 65,
+            "ctx_idx": 8,
+            "feature_type": "cross layer transcoder",
+            "activation": 22.40972900390625,
+            "influence": 0.7513652443885803,
+            "edge_weight": -8.92626667022705,
+            "clerp": ""
+          },
+          {
+            "node_id": "11_16076_8",
+            "layer": "11",
+            "index": 16076,
+            "ctx_idx": 8,
+            "feature_type": "cross layer transcoder",
+            "activation": 14.631698608398438,
+            "influence": 0.7652231454849243,
+            "edge_weight": -17.270490646362305,
+            "clerp": ""
+          },
+          {
+            "node_id": "15_3343_8",
+            "layer": "15",
+            "index": 3343,
+            "ctx_idx": 8,
+            "feature_type": "cross layer transcoder",
+            "activation": 26.49038314819336,
+            "influence": 0.7056048512458801,
+            "edge_weight": 1.8584216833114624,
+            "clerp": ""
+          },
+          {
+            "node_id": "18_13586_8",
+            "layer": "18",
+            "index": 13586,
+            "ctx_idx": 8,
+            "feature_type": "cross layer transcoder",
+            "activation": 18.65056610107422,
+            "influence": 0.7620691061019897,
+            "edge_weight": 3.563422203063965,
+            "clerp": ""
+          },
+          {
+            "node_id": "21_2655_8",
+            "layer": "21",
+            "index": 2655,
+            "ctx_idx": 8,
+            "feature_type": "cross layer transcoder",
+            "activation": 38.541107177734375,
+            "influence": 0.6639242768287659,
+            "edge_weight": 1.7742375135421753,
+            "clerp": ""
+          },
+          {
+            "node_id": "22_4751_8",
+            "layer": "22",
+            "index": 4751,
+            "ctx_idx": 8,
+            "feature_type": "cross layer transcoder",
+            "activation": 26.116363525390625,
+            "influence": 0.7853443622589111,
+            "edge_weight": 4.495445251464844,
+            "clerp": ""
+          },
+          {
+            "node_id": "23_10032_8",
+            "layer": "23",
+            "index": 10032,
+            "ctx_idx": 8,
+            "feature_type": "cross layer transcoder",
+            "activation": 14.001777648925781,
+            "influence": 0.596630334854126,
+            "edge_weight": 3.4437713623046875,
+            "clerp": ""
+          },
+          {
+            "node_id": "25_4717_8",
+            "layer": "25",
+            "index": 4717,
+            "ctx_idx": 8,
+            "feature_type": "cross layer transcoder",
+            "activation": 135.64385986328125,
+            "influence": 0.37217140197753906,
+            "edge_weight": 1.998212218284607,
+            "clerp": ""
+          },
+          {
+            "node_id": "27_2493_8",
+            "layer": "27",
+            "index": 2493,
+            "ctx_idx": 8,
+            "feature_type": "logit",
+            "activation": null,
+            "influence": null,
+            "edge_weight": 0.6490772366523743,
+            "clerp": "Output \" school\" (p=0.486)"
+          }
+        ]
+      }
+    ],
+    "backbone": {
+      "L0_F17": {
+        "layer": 0,
+        "index": 17,
+        "role": "Early feature detector",
+        "activation": null,
+        "influence": 0.2586,
+        "clerp": "",
+        "on_backward_paths": [
+          4
+        ],
+        "on_forward_paths": [],
+        "feature_type": "mlp reconstruction error",
+        "ctx_idx": 8
+      },
+      "L0_F1053": {
+        "layer": 0,
+        "index": 1053,
+        "role": "Early feature detector",
+        "activation": 28.23,
+        "influence": 0.2889,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          3
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 5
+      },
+      "L0_F8444": {
+        "layer": 0,
+        "index": 8444,
+        "role": "Early feature detector",
+        "activation": 38.76,
+        "influence": 0.3116,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          2
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 8
+      },
+      "L0_F13004": {
+        "layer": 0,
+        "index": 13004,
+        "role": "Early feature detector",
+        "activation": 6.6,
+        "influence": 0.6115,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          4
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 2
+      },
+      "L1_F961": {
+        "layer": 1,
+        "index": 961,
+        "role": "Early feature detector",
+        "activation": 5.65,
+        "influence": 0.6501,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          4
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 2
+      },
+      "L2_F3732": {
+        "layer": 2,
+        "index": 3732,
+        "role": "Early feature detector",
+        "activation": 9.11,
+        "influence": 0.494,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          3
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 5
+      },
+      "L3_F10018": {
+        "layer": 3,
+        "index": 10018,
+        "role": "Early feature detector",
+        "activation": 16.58,
+        "influence": 0.501,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          2
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 8
+      },
+      "L3_F12009": {
+        "layer": 3,
+        "index": 12009,
+        "role": "Early feature detector",
+        "activation": 4.6,
+        "influence": 0.6722,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          3
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 5
+      },
+      "L4_F10752": {
+        "layer": 4,
+        "index": 10752,
+        "role": "Early feature detector",
+        "activation": 9.75,
+        "influence": 0.6794,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          2
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 8
+      },
+      "L4_F14857": {
+        "layer": 4,
+        "index": 14857,
+        "role": "Early feature detector",
+        "activation": 17.83,
+        "influence": 0.6753,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          4
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 2
+      },
+      "L5_F2267": {
+        "layer": 5,
+        "index": 2267,
+        "role": "Early-mid feature",
+        "activation": 8.76,
+        "influence": 0.7305,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          3
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 5
+      },
+      "L5_F7191": {
+        "layer": 5,
+        "index": 7191,
+        "role": "Early-mid feature",
+        "activation": 8.46,
+        "influence": 0.7561,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          2
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 8
+      },
+      "L5_F8174": {
+        "layer": 5,
+        "index": 8174,
+        "role": "Early-mid feature",
+        "activation": 11.57,
+        "influence": 0.5971,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          4
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 2
+      },
+      "L7_F749": {
+        "layer": 7,
+        "index": 749,
+        "role": "Early-mid feature",
+        "activation": 10.16,
+        "influence": 0.7352,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          2
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 8
+      },
+      "L7_F3099": {
+        "layer": 7,
+        "index": 3099,
+        "role": "Early-mid feature",
+        "activation": 17.27,
+        "influence": 0.6923,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          3
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 5
+      },
+      "L7_F15132": {
+        "layer": 7,
+        "index": 15132,
+        "role": "Early-mid feature",
+        "activation": 18.14,
+        "influence": 0.7136,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          4
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 2
+      },
+      "L9_F65": {
+        "layer": 9,
+        "index": 65,
+        "role": "Early-mid feature",
+        "activation": 22.41,
+        "influence": 0.7514,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          5
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 8
+      },
+      "L9_F6399": {
+        "layer": 9,
+        "index": 6399,
+        "role": "Early-mid feature",
+        "activation": 12.68,
+        "influence": 0.7747,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          4
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 2
+      },
+      "L10_F5559": {
+        "layer": 10,
+        "index": 5559,
+        "role": "Mid-layer relay",
+        "activation": 27.1,
+        "influence": 0.6686,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          2
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 8
+      },
+      "L11_F2279": {
+        "layer": 11,
+        "index": 2279,
+        "role": "Mid-layer relay",
+        "activation": 15.18,
+        "influence": 0.6581,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          3
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 5
+      },
+      "L11_F16076": {
+        "layer": 11,
+        "index": 16076,
+        "role": "Mid-layer relay",
+        "activation": 14.63,
+        "influence": 0.7652,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          2,
+          5
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 8
+      },
+      "L14_F11455": {
+        "layer": 14,
+        "index": 11455,
+        "role": "Mid-layer relay",
+        "activation": 32.23,
+        "influence": 0.669,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          3
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 5
+      },
+      "L15_F3343": {
+        "layer": 15,
+        "index": 3343,
+        "role": "Mid-layer relay",
+        "activation": 26.49,
+        "influence": 0.7056,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          2,
+          5
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 8
+      },
+      "L15_F13801": {
+        "layer": 15,
+        "index": 13801,
+        "role": "Mid-layer relay",
+        "activation": 12.97,
+        "influence": 0.3335,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          4
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 6
+      },
+      "L15_F13802": {
+        "layer": 15,
+        "index": 13802,
+        "role": "Mid-layer relay",
+        "activation": 23.71,
+        "influence": 0.7699,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          3
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 6
+      },
+      "L18_F6532": {
+        "layer": 18,
+        "index": 6532,
+        "role": "Mid-late relay/integration hub",
+        "activation": 41.13,
+        "influence": 0.2632,
+        "clerp": "",
+        "on_backward_paths": [
+          3
+        ],
+        "on_forward_paths": [
+          4
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 8
+      },
+      "L18_F11952": {
+        "layer": 18,
+        "index": 11952,
+        "role": "Mid-late relay/integration hub",
+        "activation": 46.31,
+        "influence": 0.7234,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          3
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 6
+      },
+      "L18_F13586": {
+        "layer": 18,
+        "index": 13586,
+        "role": "Mid-late relay/integration hub",
+        "activation": 18.65,
+        "influence": 0.7621,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          2,
+          5
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 8
+      },
+      "L20_F6179": {
+        "layer": 20,
+        "index": 6179,
+        "role": "Mid-late relay/integration hub",
+        "activation": 27.67,
+        "influence": 0.2857,
+        "clerp": "",
+        "on_backward_paths": [
+          5
+        ],
+        "on_forward_paths": [],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 8
+      },
+      "L21_F2655": {
+        "layer": 21,
+        "index": 2655,
+        "role": "Mid-late relay/integration hub",
+        "activation": 38.54,
+        "influence": 0.6639,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          2,
+          5
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 8
+      },
+      "L22_F4751": {
+        "layer": 22,
+        "index": 4751,
+        "role": "Mid-late relay/integration hub",
+        "activation": 26.12,
+        "influence": 0.7853,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          5
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 8
+      },
+      "L22_F15670": {
+        "layer": 22,
+        "index": 15670,
+        "role": "Mid-late relay/integration hub",
+        "activation": 87.44,
+        "influence": 0.7908,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          1
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 7
+      },
+      "L23_F10032": {
+        "layer": 23,
+        "index": 10032,
+        "role": "Late-layer amplifier/output driver",
+        "activation": 14.0,
+        "influence": 0.5966,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          5
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 8
+      },
+      "L24_F15259": {
+        "layer": 24,
+        "index": 15259,
+        "role": "Late-layer amplifier/output driver",
+        "activation": 12.67,
+        "influence": 0.4533,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          4
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 8
+      },
+      "L25_F4717": {
+        "layer": 25,
+        "index": 4717,
+        "role": "Convergence hub (4 paths) - Late-layer amplifier/output driver",
+        "activation": 135.64,
+        "influence": 0.3722,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          1,
+          3,
+          4,
+          5
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 8
+      },
+      "L25_F4975": {
+        "layer": 25,
+        "index": 4975,
+        "role": "Late-layer amplifier/output driver",
+        "activation": 28.02,
+        "influence": 0.2472,
+        "clerp": "",
+        "on_backward_paths": [
+          2
+        ],
+        "on_forward_paths": [],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 8
+      }
+    }
+  },
+  "analog_bird": {
+    "slug": "analog_bird",
+    "prompt": "Fish is to water as bird is to",
+    "expected_token": "air",
+    "logit_node": {
+      "node_id": "27_2681_8",
+      "clerp": "Output \" air\" (p=0.117)",
+      "token_prob": 0.11670991033315659
+    },
+    "graph_stats": {
+      "total_nodes": 1071,
+      "total_edges": 38741,
+      "embedding_nodes": 9,
+      "transcoder_nodes": 896,
+      "error_nodes": 156
+    },
+    "backward_paths": [
+      {
+        "path_index": 1,
+        "direction": "backward",
+        "weight_product": 60.80875096295131,
+        "nodes": [
+          {
+            "node_id": "27_2681_8",
+            "layer": "27",
+            "index": 2681,
+            "ctx_idx": 8,
+            "feature_type": "logit",
+            "activation": null,
+            "influence": null,
+            "edge_weight": null,
+            "clerp": "Output \" air\" (p=0.117)"
+          },
+          {
+            "node_id": "22_4252_8",
+            "layer": "22",
+            "index": 4252,
+            "ctx_idx": 8,
+            "feature_type": "cross layer transcoder",
+            "activation": 29.42031478881836,
+            "influence": 0.2694365382194519,
+            "edge_weight": 5.040276050567627,
+            "clerp": ""
+          },
+          {
+            "node_id": "E_2003_4",
+            "layer": "E",
+            "index": 2003,
+            "ctx_idx": 4,
+            "feature_type": "embedding",
+            "activation": null,
+            "influence": 0.11517466604709625,
+            "edge_weight": 12.064567565917969,
+            "clerp": ""
+          }
+        ]
+      },
+      {
+        "path_index": 2,
+        "direction": "backward",
+        "weight_product": 908.1391068819738,
+        "nodes": [
+          {
+            "node_id": "27_2681_8",
+            "layer": "27",
+            "index": 2681,
+            "ctx_idx": 8,
+            "feature_type": "logit",
+            "activation": null,
+            "influence": null,
+            "edge_weight": null,
+            "clerp": "Output \" air\" (p=0.117)"
+          },
+          {
+            "node_id": "24_8106_8",
+            "layer": "24",
+            "index": 8106,
+            "ctx_idx": 8,
+            "feature_type": "cross layer transcoder",
+            "activation": 28.59163475036621,
+            "influence": 0.30208608508110046,
+            "edge_weight": -3.869243621826172,
+            "clerp": ""
+          },
+          {
+            "node_id": "22_4252_8",
+            "layer": "22",
+            "index": 4252,
+            "ctx_idx": 8,
+            "feature_type": "cross layer transcoder",
+            "activation": 29.42031478881836,
+            "influence": 0.2694365382194519,
+            "edge_weight": 19.454252243041992,
+            "clerp": ""
+          },
+          {
+            "node_id": "E_2003_4",
+            "layer": "E",
+            "index": 2003,
+            "ctx_idx": 4,
+            "feature_type": "embedding",
+            "activation": null,
+            "influence": 0.11517466604709625,
+            "edge_weight": 12.064567565917969,
+            "clerp": ""
+          }
+        ]
+      },
+      {
+        "path_index": 3,
+        "direction": "backward",
+        "weight_product": 2.606635570526123,
+        "nodes": [
+          {
+            "node_id": "27_2681_8",
+            "layer": "27",
+            "index": 2681,
+            "ctx_idx": 8,
+            "feature_type": "logit",
+            "activation": null,
+            "influence": null,
+            "edge_weight": null,
+            "clerp": "Output \" air\" (p=0.117)"
+          },
+          {
+            "node_id": "E_2003_4",
+            "layer": "E",
+            "index": 2003,
+            "ctx_idx": 4,
+            "feature_type": "embedding",
+            "activation": null,
+            "influence": 0.11517466604709625,
+            "edge_weight": 2.606635570526123,
+            "clerp": ""
+          }
+        ]
+      },
+      {
+        "path_index": 4,
+        "direction": "backward",
+        "weight_product": 2.4279797077178955,
+        "nodes": [
+          {
+            "node_id": "27_2681_8",
+            "layer": "27",
+            "index": 2681,
+            "ctx_idx": 8,
+            "feature_type": "logit",
+            "activation": null,
+            "influence": null,
+            "edge_weight": null,
+            "clerp": "Output \" air\" (p=0.117)"
+          },
+          {
+            "node_id": "E_577_8",
+            "layer": "E",
+            "index": 577,
+            "ctx_idx": 8,
+            "feature_type": "embedding",
+            "activation": null,
+            "influence": 0.19443461298942566,
+            "edge_weight": 2.4279797077178955,
+            "clerp": ""
+          }
+        ]
+      },
+      {
+        "path_index": 5,
+        "direction": "backward",
+        "weight_product": 1.8000158071517944,
+        "nodes": [
+          {
+            "node_id": "27_2681_8",
+            "layer": "27",
+            "index": 2681,
+            "ctx_idx": 8,
+            "feature_type": "logit",
+            "activation": null,
+            "influence": null,
+            "edge_weight": null,
+            "clerp": "Output \" air\" (p=0.117)"
+          },
+          {
+            "node_id": "E_13170_6",
+            "layer": "E",
+            "index": 13170,
+            "ctx_idx": 6,
+            "feature_type": "embedding",
+            "activation": null,
+            "influence": 0.21519628167152405,
+            "edge_weight": 1.8000158071517944,
+            "clerp": ""
+          }
+        ]
+      }
+    ],
+    "forward_paths": [
+      {
+        "path_index": 1,
+        "direction": "forward",
+        "weight_product": 53.70951804117309,
+        "nodes": [
+          {
+            "node_id": "E_603_7",
+            "layer": "E",
+            "index": 603,
+            "ctx_idx": 7,
+            "feature_type": "embedding",
+            "activation": null,
+            "influence": 0.24848511815071106,
+            "edge_weight": null,
+            "clerp": ""
+          },
+          {
+            "node_id": "22_15670_7",
+            "layer": "22",
+            "index": 15670,
+            "ctx_idx": 7,
+            "feature_type": "cross layer transcoder",
+            "activation": 117.12039184570312,
+            "influence": 0.7038370966911316,
+            "edge_weight": -36.146034240722656,
+            "clerp": ""
+          },
+          {
+            "node_id": "25_4717_8",
+            "layer": "25",
+            "index": 4717,
+            "ctx_idx": 8,
+            "feature_type": "cross layer transcoder",
+            "activation": 122.35220336914062,
+            "influence": 0.3302569091320038,
+            "edge_weight": -1.8804759979248047,
+            "clerp": ""
+          },
+          {
+            "node_id": "27_8203_8",
+            "layer": "27",
+            "index": 8203,
+            "ctx_idx": 8,
+            "feature_type": "logit",
+            "activation": null,
+            "influence": null,
+            "edge_weight": 0.790174126625061,
+            "clerp": "Output \" sky\" (p=0.075)"
+          }
+        ]
+      },
+      {
+        "path_index": 2,
+        "direction": "forward",
+        "weight_product": 316277.8528850272,
+        "nodes": [
+          {
+            "node_id": "E_685_5",
+            "layer": "E",
+            "index": 685,
+            "ctx_idx": 5,
+            "feature_type": "embedding",
+            "activation": null,
+            "influence": 0.2340816706418991,
+            "edge_weight": null,
+            "clerp": ""
+          },
+          {
+            "node_id": "0_1053_5",
+            "layer": "0",
+            "index": 1053,
+            "ctx_idx": 5,
+            "feature_type": "cross layer transcoder",
+            "activation": 28.617326736450195,
+            "influence": 0.29237040877342224,
+            "edge_weight": 34.2409782409668,
+            "clerp": ""
+          },
+          {
+            "node_id": "2_3732_5",
+            "layer": "2",
+            "index": 3732,
+            "ctx_idx": 5,
+            "feature_type": "cross layer transcoder",
+            "activation": 8.630891799926758,
+            "influence": 0.5007303953170776,
+            "edge_weight": -6.736969947814941,
+            "clerp": ""
+          },
+          {
+            "node_id": "4_14857_5",
+            "layer": "4",
+            "index": 14857,
+            "ctx_idx": 5,
+            "feature_type": "cross layer transcoder",
+            "activation": 8.418061256408691,
+            "influence": 0.6564583778381348,
+            "edge_weight": 2.8946545124053955,
+            "clerp": ""
+          },
+          {
+            "node_id": "6_2267_5",
+            "layer": "6",
+            "index": 2267,
+            "ctx_idx": 5,
+            "feature_type": "cross layer transcoder",
+            "activation": 12.670659065246582,
+            "influence": 0.7561666369438171,
+            "edge_weight": -1.2699298858642578,
+            "clerp": ""
+          },
+          {
+            "node_id": "11_2279_5",
+            "layer": "11",
+            "index": 2279,
+            "ctx_idx": 5,
+            "feature_type": "cross layer transcoder",
+            "activation": 14.675210952758789,
+            "influence": 0.7875890135765076,
+            "edge_weight": 0.6625818014144897,
+            "clerp": ""
+          },
+          {
+            "node_id": "14_11455_5",
+            "layer": "14",
+            "index": 11455,
+            "ctx_idx": 5,
+            "feature_type": "cross layer transcoder",
+            "activation": 30.152175903320312,
+            "influence": 0.699067234992981,
+            "edge_weight": -1.1897618770599365,
+            "clerp": ""
+          },
+          {
+            "node_id": "18_14713_7",
+            "layer": "18",
+            "index": 14713,
+            "ctx_idx": 7,
+            "feature_type": "cross layer transcoder",
+            "activation": 35.096153259277344,
+            "influence": 0.7689685225486755,
+            "edge_weight": 2.489867687225342,
+            "clerp": ""
+          },
+          {
+            "node_id": "19_10328_7",
+            "layer": "19",
+            "index": 10328,
+            "ctx_idx": 7,
+            "feature_type": "cross layer transcoder",
+            "activation": 35.45951843261719,
+            "influence": 0.7691860198974609,
+            "edge_weight": 22.051021575927734,
+            "clerp": ""
+          },
+          {
+            "node_id": "22_14727_7",
+            "layer": "22",
+            "index": 14727,
+            "ctx_idx": 7,
+            "feature_type": "cross layer transcoder",
+            "activation": 161.79205322265625,
+            "influence": 0.642355740070343,
+            "edge_weight": 4.1357831954956055,
+            "clerp": ""
+          },
+          {
+            "node_id": "25_4717_8",
+            "layer": "25",
+            "index": 4717,
+            "ctx_idx": 8,
+            "feature_type": "cross layer transcoder",
+            "activation": 122.35220336914062,
+            "influence": 0.3302569091320038,
+            "edge_weight": 2.0836234092712402,
+            "clerp": ""
+          }
+        ]
+      },
+      {
+        "path_index": 3,
+        "direction": "forward",
+        "weight_product": 223.5918383365232,
+        "nodes": [
+          {
+            "node_id": "E_13170_6",
+            "layer": "E",
+            "index": 13170,
+            "ctx_idx": 6,
+            "feature_type": "embedding",
+            "activation": null,
+            "influence": 0.21519628167152405,
+            "edge_weight": null,
+            "clerp": ""
+          },
+          {
+            "node_id": "20_3824_8",
+            "layer": "20",
+            "index": 3824,
+            "ctx_idx": 8,
+            "feature_type": "cross layer transcoder",
+            "activation": 33.4742431640625,
+            "influence": 0.5072530508041382,
+            "edge_weight": 56.876182556152344,
+            "clerp": ""
+          },
+          {
+            "node_id": "25_11801_8",
+            "layer": "25",
+            "index": 11801,
+            "ctx_idx": 8,
+            "feature_type": "cross layer transcoder",
+            "activation": 22.33786964416504,
+            "influence": 0.6638860702514648,
+            "edge_weight": 14.413707733154297,
+            "clerp": ""
+          },
+          {
+            "node_id": "27_2681_8",
+            "layer": "27",
+            "index": 2681,
+            "ctx_idx": 8,
+            "feature_type": "logit",
+            "activation": null,
+            "influence": null,
+            "edge_weight": -0.27274060249328613,
+            "clerp": "Output \" air\" (p=0.117)"
+          }
+        ]
+      },
+      {
+        "path_index": 4,
+        "direction": "forward",
+        "weight_product": 1884632.6892010234,
+        "nodes": [
+          {
+            "node_id": "E_577_8",
+            "layer": "E",
+            "index": 577,
+            "ctx_idx": 8,
+            "feature_type": "embedding",
+            "activation": null,
+            "influence": 0.19443461298942566,
+            "edge_weight": null,
+            "clerp": ""
+          },
+          {
+            "node_id": "0_8444_8",
+            "layer": "0",
+            "index": 8444,
+            "ctx_idx": 8,
+            "feature_type": "cross layer transcoder",
+            "activation": 39.139469146728516,
+            "influence": 0.2649233639240265,
+            "edge_weight": 41.746826171875,
+            "clerp": ""
+          },
+          {
+            "node_id": "3_10018_8",
+            "layer": "3",
+            "index": 10018,
+            "ctx_idx": 8,
+            "feature_type": "cross layer transcoder",
+            "activation": 19.61764144897461,
+            "influence": 0.4145682156085968,
+            "edge_weight": -9.188970565795898,
+            "clerp": ""
+          },
+          {
+            "node_id": "4_10752_8",
+            "layer": "4",
+            "index": 10752,
+            "ctx_idx": 8,
+            "feature_type": "cross layer transcoder",
+            "activation": 9.734829902648926,
+            "influence": 0.680992603302002,
+            "edge_weight": 10.104182243347168,
+            "clerp": ""
+          },
+          {
+            "node_id": "5_7191_8",
+            "layer": "5",
+            "index": 7191,
+            "ctx_idx": 8,
+            "feature_type": "cross layer transcoder",
+            "activation": 5.745591640472412,
+            "influence": 0.7956644296646118,
+            "edge_weight": 2.0178310871124268,
+            "clerp": ""
+          },
+          {
+            "node_id": "19_1254_8",
+            "layer": "19",
+            "index": 1254,
+            "ctx_idx": 8,
+            "feature_type": "cross layer transcoder",
+            "activation": 27.58292007446289,
+            "influence": 0.3101062774658203,
+            "edge_weight": -0.5903953313827515,
+            "clerp": ""
+          },
+          {
+            "node_id": "23_16077_8",
+            "layer": "23",
+            "index": 16077,
+            "ctx_idx": 8,
+            "feature_type": "cross layer transcoder",
+            "activation": 32.753353118896484,
+            "influence": 0.32380402088165283,
+            "edge_weight": 8.654911041259766,
+            "clerp": ""
+          },
+          {
+            "node_id": "24_12559_8",
+            "layer": "24",
+            "index": 12559,
+            "ctx_idx": 8,
+            "feature_type": "cross layer transcoder",
+            "activation": 11.41118049621582,
+            "influence": 0.5175437927246094,
+            "edge_weight": 24.5195255279541,
+            "clerp": ""
+          },
+          {
+            "node_id": "25_4717_8",
+            "layer": "25",
+            "index": 4717,
+            "ctx_idx": 8,
+            "feature_type": "cross layer transcoder",
+            "activation": 122.35220336914062,
+            "influence": 0.3302569091320038,
+            "edge_weight": 2.433940887451172,
+            "clerp": ""
+          },
+          {
+            "node_id": "27_8203_8",
+            "layer": "27",
+            "index": 8203,
+            "ctx_idx": 8,
+            "feature_type": "logit",
+            "activation": null,
+            "influence": null,
+            "edge_weight": 0.790174126625061,
+            "clerp": "Output \" sky\" (p=0.075)"
+          }
+        ]
+      },
+      {
+        "path_index": 5,
+        "direction": "forward",
+        "weight_product": 1501.765449584847,
+        "nodes": [
+          {
+            "node_id": "E_603_2",
+            "layer": "E",
+            "index": 603,
+            "ctx_idx": 2,
+            "feature_type": "embedding",
+            "activation": null,
+            "influence": 0.17361144721508026,
+            "edge_weight": null,
+            "clerp": ""
+          },
+          {
+            "node_id": "0_13004_2",
+            "layer": "0",
+            "index": 13004,
+            "ctx_idx": 2,
+            "feature_type": "cross layer transcoder",
+            "activation": 6.788370132446289,
+            "influence": 0.611801266670227,
+            "edge_weight": 36.03620147705078,
+            "clerp": ""
+          },
+          {
+            "node_id": "1_961_2",
+            "layer": "1",
+            "index": 961,
+            "ctx_idx": 2,
+            "feature_type": "cross layer transcoder",
+            "activation": 6.063662528991699,
+            "influence": 0.6546459197998047,
+            "edge_weight": -0.8432227373123169,
+            "clerp": ""
+          },
+          {
+            "node_id": "4_14857_2",
+            "layer": "4",
+            "index": 14857,
+            "ctx_idx": 2,
+            "feature_type": "cross layer transcoder",
+            "activation": 21.643661499023438,
+            "influence": 0.6848447322845459,
+            "edge_weight": 1.9126750230789185,
+            "clerp": ""
+          },
+          {
+            "node_id": "8_4440_2",
+            "layer": "8",
+            "index": 4440,
+            "ctx_idx": 2,
+            "feature_type": "cross layer transcoder",
+            "activation": 12.704483032226562,
+            "influence": 0.7990996837615967,
+            "edge_weight": 1.2200753688812256,
+            "clerp": ""
+          },
+          {
+            "node_id": "20_3094_5",
+            "layer": "20",
+            "index": 3094,
+            "ctx_idx": 5,
+            "feature_type": "cross layer transcoder",
+            "activation": 23.610004425048828,
+            "influence": 0.5201777815818787,
+            "edge_weight": 0.31403467059135437,
+            "clerp": ""
+          },
+          {
+            "node_id": "22_13619_5",
+            "layer": "22",
+            "index": 13619,
+            "ctx_idx": 5,
+            "feature_type": "cross layer transcoder",
+            "activation": 19.620441436767578,
+            "influence": 0.5379096865653992,
+            "edge_weight": 9.79301643371582,
+            "clerp": ""
+          },
+          {
+            "node_id": "24_4383_8",
+            "layer": "24",
+            "index": 4383,
+            "ctx_idx": 8,
+            "feature_type": "cross layer transcoder",
+            "activation": 16.39998435974121,
+            "influence": 0.33822616934776306,
+            "edge_weight": 2.2671990394592285,
+            "clerp": ""
+          },
+          {
+            "node_id": "27_955_8",
+            "layer": "27",
+            "index": 955,
+            "ctx_idx": 8,
+            "feature_type": "logit",
+            "activation": null,
+            "influence": null,
+            "edge_weight": -3.0374505519866943,
+            "clerp": "Output \"...\" (p=0.027)"
+          }
+        ]
+      }
+    ],
+    "backbone": {
+      "L0_F1053": {
+        "layer": 0,
+        "index": 1053,
+        "role": "Early feature detector",
+        "activation": 28.62,
+        "influence": 0.2924,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          2
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 5
+      },
+      "L0_F8444": {
+        "layer": 0,
+        "index": 8444,
+        "role": "Early feature detector",
+        "activation": 39.14,
+        "influence": 0.2649,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          4
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 8
+      },
+      "L0_F13004": {
+        "layer": 0,
+        "index": 13004,
+        "role": "Early feature detector",
+        "activation": 6.79,
+        "influence": 0.6118,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          5
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 2
+      },
+      "L1_F961": {
+        "layer": 1,
+        "index": 961,
+        "role": "Early feature detector",
+        "activation": 6.06,
+        "influence": 0.6546,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          5
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 2
+      },
+      "L2_F3732": {
+        "layer": 2,
+        "index": 3732,
+        "role": "Early feature detector",
+        "activation": 8.63,
+        "influence": 0.5007,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          2
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 5
+      },
+      "L3_F10018": {
+        "layer": 3,
+        "index": 10018,
+        "role": "Early feature detector",
+        "activation": 19.62,
+        "influence": 0.4146,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          4
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 8
+      },
+      "L4_F10752": {
+        "layer": 4,
+        "index": 10752,
+        "role": "Early feature detector",
+        "activation": 9.73,
+        "influence": 0.681,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          4
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 8
+      },
+      "L4_F14857": {
+        "layer": 4,
+        "index": 14857,
+        "role": "Early feature detector",
+        "activation": 8.42,
+        "influence": 0.6565,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          2
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 5
+      },
+      "L5_F7191": {
+        "layer": 5,
+        "index": 7191,
+        "role": "Early-mid feature",
+        "activation": 5.75,
+        "influence": 0.7957,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          4
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 8
+      },
+      "L6_F2267": {
+        "layer": 6,
+        "index": 2267,
+        "role": "Early-mid feature",
+        "activation": 12.67,
+        "influence": 0.7562,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          2
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 5
+      },
+      "L8_F4440": {
+        "layer": 8,
+        "index": 4440,
+        "role": "Early-mid feature",
+        "activation": 12.7,
+        "influence": 0.7991,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          5
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 2
+      },
+      "L11_F2279": {
+        "layer": 11,
+        "index": 2279,
+        "role": "Mid-layer relay",
+        "activation": 14.68,
+        "influence": 0.7876,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          2
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 5
+      },
+      "L14_F11455": {
+        "layer": 14,
+        "index": 11455,
+        "role": "Mid-layer relay",
+        "activation": 30.15,
+        "influence": 0.6991,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          2
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 5
+      },
+      "L18_F14713": {
+        "layer": 18,
+        "index": 14713,
+        "role": "Mid-late relay/integration hub",
+        "activation": 35.1,
+        "influence": 0.769,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          2
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 7
+      },
+      "L19_F1254": {
+        "layer": 19,
+        "index": 1254,
+        "role": "Mid-late relay/integration hub",
+        "activation": 27.58,
+        "influence": 0.3101,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          4
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 8
+      },
+      "L19_F10328": {
+        "layer": 19,
+        "index": 10328,
+        "role": "Mid-late relay/integration hub",
+        "activation": 35.46,
+        "influence": 0.7692,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          2
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 7
+      },
+      "L20_F3094": {
+        "layer": 20,
+        "index": 3094,
+        "role": "Mid-late relay/integration hub",
+        "activation": 23.61,
+        "influence": 0.5202,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          5
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 5
+      },
+      "L20_F3824": {
+        "layer": 20,
+        "index": 3824,
+        "role": "Mid-late relay/integration hub",
+        "activation": 33.47,
+        "influence": 0.5073,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          3
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 8
+      },
+      "L22_F4252": {
+        "layer": 22,
+        "index": 4252,
+        "role": "Mid-late relay/integration hub",
+        "activation": 29.42,
+        "influence": 0.2694,
+        "clerp": "",
+        "on_backward_paths": [
+          1,
+          2
+        ],
+        "on_forward_paths": [],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 8
+      },
+      "L22_F13619": {
+        "layer": 22,
+        "index": 13619,
+        "role": "Mid-late relay/integration hub",
+        "activation": 19.62,
+        "influence": 0.5379,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          5
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 5
+      },
+      "L22_F14727": {
+        "layer": 22,
+        "index": 14727,
+        "role": "Mid-late relay/integration hub",
+        "activation": 161.79,
+        "influence": 0.6424,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          2
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 7
+      },
+      "L22_F15670": {
+        "layer": 22,
+        "index": 15670,
+        "role": "Mid-late relay/integration hub",
+        "activation": 117.12,
+        "influence": 0.7038,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          1
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 7
+      },
+      "L23_F16077": {
+        "layer": 23,
+        "index": 16077,
+        "role": "Late-layer amplifier/output driver",
+        "activation": 32.75,
+        "influence": 0.3238,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          4
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 8
+      },
+      "L24_F4383": {
+        "layer": 24,
+        "index": 4383,
+        "role": "Late-layer amplifier/output driver",
+        "activation": 16.4,
+        "influence": 0.3382,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          5
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 8
+      },
+      "L24_F8106": {
+        "layer": 24,
+        "index": 8106,
+        "role": "Late-layer amplifier/output driver",
+        "activation": 28.59,
+        "influence": 0.3021,
+        "clerp": "",
+        "on_backward_paths": [
+          2
+        ],
+        "on_forward_paths": [],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 8
+      },
+      "L24_F12559": {
+        "layer": 24,
+        "index": 12559,
+        "role": "Late-layer amplifier/output driver",
+        "activation": 11.41,
+        "influence": 0.5175,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          4
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 8
+      },
+      "L25_F4717": {
+        "layer": 25,
+        "index": 4717,
+        "role": "Convergence hub (3 paths) - Late-layer amplifier/output driver",
+        "activation": 122.35,
+        "influence": 0.3303,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          1,
+          2,
+          4
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 8
+      },
+      "L25_F11801": {
+        "layer": 25,
+        "index": 11801,
+        "role": "Late-layer amplifier/output driver",
+        "activation": 22.34,
+        "influence": 0.6639,
+        "clerp": "",
+        "on_backward_paths": [],
+        "on_forward_paths": [
+          3
+        ],
+        "feature_type": "cross layer transcoder",
+        "ctx_idx": 8
+      }
+    }
+  }
+}
