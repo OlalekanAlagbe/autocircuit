@@ -25,7 +25,7 @@ from typing import Optional
 # ── API Keys ──────────────────────────────────────────────────────────────────
 NEURONPEDIA_API_KEY = os.environ.get(
     'NEURONPEDIA_API_KEY',
-    'sk-np-DinhN2coo82hQFJXSzNsAQtQl6RbvEj3XMVO6ZrLcME0'
+    'sk-np-KIWbSmJKRUIbNq7gfOHK06GZN08x7Zkurig2kddEYJI0'
 )
 # Note: No ANTHROPIC_API_KEY needed. This script is intended to be run by
 # Claude Code, which IS Claude — interpretations are produced by Claude Code
@@ -498,7 +498,49 @@ def interpret_prompt_graph(
               f"score={c['total_logit_score']}  "
               f"({c['num_features_voting']} features voting)")
 
-    # ── Step 5: Build the full interpretation data block for Claude Code ──
+    # ── Step 5: Trace causal paths through edge weights ────────────────────
+    # This is the structural complement to the band-by-band analysis above.
+    # The band analysis tells you WHICH features mattered (ranked by influence).
+    # The path analysis tells you HOW they are connected — the actual wiring
+    # of the circuit from input tokens to the final logit.
+    #
+    # We run this AFTER labeling (steps 3-4) so that format_causal_paths_for_narration
+    # can merge the human-readable labels into the path display.
+    # Claude Code reads both the band output (above) and the path output (below)
+    # together to write a complete mechanistic narrative.
+    print(f'\n{"─"*66}')
+    print('  CAUSAL PATH ANALYSIS — how did signals travel to the logit?')
+    print(f'{"─"*66}')
+    causal_paths = trace_causal_paths(
+        G               = G,
+        top_nodes       = top_nodes,
+        max_paths       = 5,
+        max_path_len    = 6,
+        min_edge_weight = 0.05,
+    )
+    path_narration = format_causal_paths_for_narration(
+        paths         = causal_paths,
+        labeled_nodes = all_labeled,
+        target_token  = target_token,
+        target_prob   = target_prob,
+    )
+
+    # Render the causal paths as a matplotlib figure saved to the graphs folder.
+    # This produces one PNG per prompt showing path nodes by layer position,
+    # edge widths proportional to weight, and colour-coded by direction.
+    # The returned path is passed to _append_prompt_to_paper so the paper
+    # embeds the figure inline with a markdown image link.
+    # If matplotlib is not installed the pipeline continues without error.
+    causal_paths_figure = visualize_causal_paths(
+        paths         = causal_paths,
+        labeled_nodes = all_labeled,
+        G             = G,
+        prompt        = prompt,
+        target_token  = target_token or '',
+        save_path     = None,   # auto-saves to graphs/{slug}__{token}_causal_paths.png
+    )
+
+    # ── Step 6: Build the full interpretation data block for Claude Code ──
     interpretation = _call_claude_for_interpretation(
         prompt         = prompt,
         target_token   = target_token,
@@ -507,36 +549,41 @@ def interpret_prompt_graph(
         top_candidates = top_candidates,
         nodes_by_layer = nodes_by_layer,
         band_titles    = band_titles,
+        causal_paths   = causal_paths,
         model_id       = MODEL_ID,
     )
 
     result = {
-        'prompt'             : prompt,
-        'predicted_token'    : target_token,
-        'token_prob'         : target_prob,
-        'top_candidates'     : top_candidates,
-        'nodes_by_layer'     : nodes_by_layer,
-        'labeled_nodes'      : all_labeled,
-        'interpretation_data': interpretation,
-        'saved_to'           : None,
+        'prompt'              : prompt,
+        'predicted_token'     : target_token,
+        'token_prob'          : target_prob,
+        'top_candidates'      : top_candidates,
+        'nodes_by_layer'      : nodes_by_layer,
+        'labeled_nodes'       : all_labeled,
+        'causal_paths'        : causal_paths,
+        'causal_paths_figure' : causal_paths_figure,
+        'interpretation_data' : interpretation,
+        'saved_to'            : None,
     }
 
-    # ── Step 6: Append this prompt's results to the research paper ────────
+    # ── Step 7: Append this prompt's results to the research paper ────────
     # Writing incrementally means Claude Code never has to hold 47
     # interpretations in memory simultaneously — each one is flushed to
     # disk as soon as it is complete.
     if paper_path:
         _append_prompt_to_paper(
-            paper_path     = paper_path,
-            prompt         = prompt,
-            target_token   = target_token,
-            target_prob    = target_prob,
-            top_candidates = top_candidates,
-            nodes_by_layer = nodes_by_layer,
-            all_labeled    = all_labeled,
+            paper_path          = paper_path,
+            prompt              = prompt,
+            target_token        = target_token,
+            target_prob         = target_prob,
+            top_candidates      = top_candidates,
+            nodes_by_layer      = nodes_by_layer,
+            all_labeled         = all_labeled,
+            causal_paths        = causal_paths,
+            causal_paths_figure = causal_paths_figure,
         )
 
-    # ── Step 7: Optionally save the full result dict ───────────────────────
+    # ── Step 8: Optionally save the full result dict ───────────────────────
     if save:
         fname = f'{slug}_interpretation.json'
         path  = GRAPHS_DIR / fname
@@ -550,16 +597,28 @@ def interpret_prompt_graph(
 
 def _append_prompt_to_paper(paper_path: str, prompt: str, target_token: str,
                              target_prob, top_candidates: list,
-                             nodes_by_layer: dict, all_labeled: list):
+                             nodes_by_layer: dict, all_labeled: list,
+                             causal_paths: list = None,
+                             causal_paths_figure: str = None):
     """
     Append a single prompt's interpretation results to the research paper
     markdown file. Called by interpret_prompt_graph() after each prompt
     completes so the paper is built incrementally — one section per prompt.
 
-    Claude Code reads each appended section and writes the mechanistic
-    narrative for that prompt into the paper immediately, before moving
-    to the next prompt. This keeps its working context small.
+    Includes:
+      - Token competition table
+      - Circuit walkthrough table (band by band)
+      - Causal paths table (edge chains to logit)
+      - Inline figure link — the causal paths PNG is embedded using a
+        markdown image tag so the figure appears directly in the paper
+        when rendered, not just saved to disk.
+      - [Claude Code — write narrative here] marker
+
+    The figure path is relative to the paper file so the markdown renders
+    correctly whether opened in VS Code, Obsidian, or any markdown viewer.
     """
+    causal_paths        = causal_paths        or []
+    causal_paths_figure = causal_paths_figure or None
     prob_str = f' (prob={target_prob:.4f})' if target_prob else ''
     slug     = prompt.lower().replace(' ', '_')[:40].strip('_')
 
@@ -606,12 +665,78 @@ def _append_prompt_to_paper(paper_path: str, prompt: str, target_token: str,
             )
         lines.append('')
 
+    # ── Causal paths section ───────────────────────────────────────────────
+    if causal_paths:
+        lines += ['**Causal paths (edge-weight chains to logit):**', '']
+        label_map = {
+            item.get('node_id', ''): item.get('explanation') or '(no label)'
+            for item in all_labeled
+        }
+        for i, p in enumerate(causal_paths, 1):
+            direction_str = {
+                'excitatory': '(+) excitatory',
+                'inhibitory': '(-) inhibitory',
+                'mixed'     : '(±) mixed',
+            }.get(p['direction'], p['direction'])
+            lines.append(
+                f'*Path {i} — {direction_str} | '
+                f'weight={p["total_weight"]} | hops={len(p["path"])-1}*'
+            )
+            for j, nid in enumerate(p['path']):
+                is_logit = (j == len(p['path']) - 1)
+                lbl = label_map.get(nid, '(no label)')
+                parts = nid.split('_')
+                layer_s = parts[0] if parts else '?'
+                if is_logit:
+                    lines.append(f'→ **LOGIT** Layer {layer_s} — `{target_token}`')
+                else:
+                    edge_w = p['edges'][j]
+                    sign   = '+' if edge_w >= 0 else ''
+                    lines.append(
+                        f'→ Layer {layer_s} `{lbl}` '
+                        f'— edge [{sign}{edge_w}]'
+                    )
+            lines.append('')
+
+    # ── Embed the causal paths figure inline ──────────────────────────────
+    # The PNG was saved to graphs/{slug}__{token}_causal_paths.png by
+    # visualize_causal_paths().  We embed it using a relative path from the
+    # paper file location so the figure renders in any markdown viewer.
+    if causal_paths_figure:
+        # Make the path relative to the paper file's directory
+        import os
+        paper_dir   = os.path.dirname(os.path.abspath(paper_path))
+        fig_abs     = os.path.abspath(causal_paths_figure)
+        try:
+            fig_rel = os.path.relpath(fig_abs, paper_dir)
+        except ValueError:
+            # On Windows, relpath can fail across drives — fall back to absolute
+            fig_rel = fig_abs
+        fig_rel_md = fig_rel.replace('\\', '/')   # ensure forward slashes in MD
+
+        token_display = (target_token or '').strip()
+        lines += [
+            '**Causal path diagram:**',
+            '',
+            f'![Causal paths for "{prompt[:50]}" → "{token_display}"]'
+            f'({fig_rel_md})',
+            '',
+            f'*Figure: Causal paths from input features to predicted token '
+            f'"{token_display}". '
+            f'Y-axis = transformer layer. '
+            f'Edge width = connection strength. '
+            f'Green = excitatory, red = inhibitory, orange = mixed.*',
+            '',
+        ]
+
     lines += [
         '**[Claude Code — write mechanistic narrative here]**',
         '',
-        '> *Narrate the full causal chain for this prompt: early recognition →*',
-        '> *middle mapping → late push → predicted token. Use the table above.*',
-        '> *Follow the style established in the first prompt narration.*',
+        '> *Using both the circuit walkthrough table AND the causal paths above*',
+        '> *(including the figure), narrate the complete mechanistic story:*',
+        '> *what did the model detect at each stage, how did signals travel*',
+        '> *through the edges, which path was dominant, and why did the winner*',
+        '> *beat the alternatives. Follow the style from the first prompt.*',
         '',
         '---',
     ]
@@ -631,6 +756,7 @@ def _call_claude_for_interpretation(
     model_id      : str,
     nodes_by_layer: dict = None,
     band_titles   : dict = None,
+    causal_paths  : list = None,
 ) -> str:
     """
     Build and print a structured layer-by-layer interpretation data block
@@ -640,10 +766,14 @@ def _call_claude_for_interpretation(
     learns the required voice and depth once.
     Subsequent calls: prints only the compact circuit data (no repeated
     example) to keep output manageable across 47 prompts.
+
+    Now also includes a summary of causal paths so Claude Code can
+    cross-reference the band-by-band analysis with the actual edge wiring.
     """
     global _INTERPRETATION_EXAMPLE_PRINTED
     nodes_by_layer = nodes_by_layer or {}
     band_titles    = band_titles    or {}
+    causal_paths   = causal_paths   or []
     prob_str = f'  (prob={target_prob:.4f})' if target_prob else ''
 
     lines = [
@@ -777,12 +907,68 @@ def _call_claude_for_interpretation(
         '     features were present for the winner but absent for the runner-ups?',
         '     Is the margin large (confident) or small (ambiguous)?',
         '',
+    ]
+
+    # ── Causal paths cross-reference ──────────────────────────────────────
+    # Include a compact summary of paths so Claude Code can cross-reference
+    # the band analysis (which features mattered) with the path analysis
+    # (how they were connected). This is where the two analyses converge.
+    if causal_paths:
+        lines += [
+            '  ┌─ CAUSAL PATHS SUMMARY (cross-reference with band analysis above)',
+            '  │  These are the actual edge-weight chains from the graph JSON.',
+            '  │  Use them to confirm or deepen your band narration:',
+            '  │    - Does the dominant excitatory path match the early→middle→late',
+            '  │      story you narrated above?',
+            '  │    - Are the inhibitory paths consistent with the token competition',
+            '  │      scores?  Do they explain why the runner-up tokens lost?',
+            '  │    - Are there any features in the paths that were NOT in the top-40',
+            '  │      band analysis?  If so, the path analysis has found a node that',
+            '  │      influence-ranking missed — note it explicitly.',
+            '  │',
+        ]
+        for i, p in enumerate(causal_paths, 1):
+            dir_marker = {
+                'excitatory': '(+)',
+                'inhibitory': '(-)',
+                'mixed'     : '(±)',
+            }.get(p['direction'], '(?)')
+            hop_count = len(p['path']) - 1
+            lines.append(
+                f"  │  Path {i} {dir_marker} weight={p['total_weight']}  "
+                f"hops={hop_count}  type={p['path_type']}"
+            )
+            for j, (nid, lbl) in enumerate(
+                zip(p['path'], p['node_labels'])
+            ):
+                is_last = j == len(p['path']) - 1
+                parts   = nid.split('_')
+                layer_s = parts[0] if parts else '?'
+                if is_last:
+                    lines.append(f'  │    └→ LOGIT L{layer_s}')
+                else:
+                    edge_w = p['edges'][j]
+                    sign   = '+' if edge_w >= 0 else ''
+                    lines.append(
+                        f'  │    ├→ L{layer_s} [{sign}{edge_w}] {lbl}'
+                    )
+        lines += [
+            '  │',
+            '  └─ Cross-reference complete. Incorporate path insights into',
+            '     your synthesis paragraph below.',
+            '',
+        ]
+
+    lines += [
         '  ┌─ SYNTHESIS',
-        '  │  Write one final paragraph tying the full causal chain together:',
+        '  │  Write one final paragraph tying the full causal chain together.',
+        '  │  Use BOTH the band analysis and the causal paths:',
         '  │    early recognition → middle mapping → late push → predicted token.',
-        '  │  Mention anything surprising: features active for unexpected reasons,',
-        '  │  alternative tokens that came close, or circuit behaviour that differs',
-        '  │  from what you would expect for this type of analogy.',
+        '  │  Identify the single dominant pathway (the one excitatory path with',
+        '  │  the highest weight) and name it explicitly.',
+        '  │  Mention anything surprising: unexpected features, inhibitory paths',
+        '  │  that reveal suppressed competitors, or path structure that differs',
+        '  │  from what the influence rankings alone would suggest.',
         '  └─',
         '',
         '╔══════════════════════════════════════════════════════════════════╗',
@@ -881,8 +1067,8 @@ def get_top_nodes(G: nx.DiGraph, n: int = 20, exclude_types: list = None) -> lis
             'layer'          : attrs.get('layer'),
             'ctx_idx'        : attrs.get('ctx_idx'),
             'feature_type'   : attrs.get('feature_type'),
-            'influence'      : round(attrs.get('influence', 0.0), 4),
-            'activation'     : round(attrs.get('activation', 0.0), 4),
+            'influence'      : round(attrs.get('influence') or 0.0, 4),
+            'activation'     : round(attrs.get('activation') or 0.0, 4),
             'is_target_logit': attrs.get('is_target_logit', False),
             'clerp'          : attrs.get('clerp', ''),
         })
@@ -940,12 +1126,35 @@ def get_nodes_by_layer(G: nx.DiGraph, layer: str) -> list:
 # CROSS-GRAPH PATTERN MINING
 # ═════════════════════════════════════════════════════════════════════════════
 
-def compare_graphs(graphs: list, min_appearances: int = None) -> list:
+def compare_graphs(graphs: list, min_appearances: int = None,
+                   threshold: float = 0.50) -> list:
     """
     Find nodes (features) that appear consistently across multiple graphs.
+
+    threshold : Fraction of graphs a feature must appear in to be considered
+                a recurring circuit component (default 0.50 = 50%).
+
+                With 12 prompts per category (the current dataset size),
+                the values mean:
+                  0.30 → appears in ≥ 4/10 graphs  (too permissive — noise risk)
+                  0.50 → appears in ≥ 6/10 graphs  (majority — recommended)
+                  0.67 → appears in ≥ 8/10 graphs  (strong consensus)
+
+                The threshold is applied as ceil(threshold × N) so it always
+                rounds up — e.g. 50% of 10 = 5.0 → 5, 50% of 7 = 3.5 → 4.
+
+    min_appearances : If passed directly as an integer, overrides threshold.
+                      Kept for backwards compatibility with old call sites
+                      that passed a raw integer.
     """
+    import math
     if min_appearances is None:
-        min_appearances = len(graphs) // 2 + 1
+        min_appearances = math.ceil(threshold * len(graphs))
+        print(f'[compare_graphs] threshold={threshold:.0%} × {len(graphs)} graphs '
+              f'→ min_appearances={min_appearances}')
+    else:
+        print(f'[compare_graphs] min_appearances={min_appearances} '
+              f'(passed directly, threshold parameter ignored)')
 
     registry = {}
 
@@ -1090,6 +1299,892 @@ def get_subgraph_node_ids_for_feature(G: nx.DiGraph, layer: str,
     print(f'[get_subgraph_node_ids_for_feature] layer={layer} feature={feature} '
           f'-> {len(seed_nodes)} seed(s), {len(result)} neighbour node(s)')
     return result
+
+
+# ═════════════════════════════════════════════════════════════════════════════
+# CAUSAL PATH TRACING  ← NEW
+# ═════════════════════════════════════════════════════════════════════════════
+
+def trace_causal_paths(
+    G              : nx.DiGraph,
+    top_nodes      : list,
+    max_paths      : int   = 5,
+    max_path_len   : int   = 6,
+    min_edge_weight: float = 0.05,
+) -> list:
+    """
+    Trace the strongest causal paths from influential feature nodes to the
+    final logit (predicted token) node, following edge weights through the
+    graph.
+
+    WHY THIS MATTERS
+    ----------------
+    get_top_nodes() gives you a ranked LIST of important features — but a
+    list has no structure.  It cannot tell you whether feature A caused
+    feature B, or whether they are independent parallel contributors, or
+    whether one suppresses the other.
+
+    The edges in the graph carry exactly this structural information.  Each
+    edge  source → target  with  weight W  means: "when source activates,
+    it changes target's activation by W units."  A positive weight is
+    excitatory (source amplifies target); a negative weight is inhibitory
+    (source suppresses target).
+
+    By following the highest-weight edges backwards from the logit node,
+    we can reconstruct the actual COMPUTATIONAL PATHWAY the information
+    travelled — not just a ranked list of individual actors, but the script
+    that connects them.
+
+    HOW THE ALGORITHM WORKS
+    -----------------------
+    1. Find the logit node (is_target_logit=True) — this is our destination.
+    2. From the logit node, walk BACKWARDS along incoming edges, always
+       following the edge with the highest absolute weight at each step.
+    3. Continue until we reach a node with no influential predecessors
+       (an input-level feature at an early layer) or until max_path_len
+       is reached.
+    4. Record the full path: [early_node → ... → mid_node → ... → logit].
+    5. Repeat starting from each of the top_nodes to find multiple paths.
+       Deduplicate paths that share the same sequence of node_ids.
+    6. Sort paths by their total path weight (product of absolute edge
+       weights along the path) — stronger paths rank higher.
+
+    WHAT THE EDGE WEIGHT SIGN MEANS
+    --------------------------------
+    Positive weight: excitatory connection — this predecessor is PUSHING
+        the target node toward higher activation, which contributes toward
+        the predicted token.
+    Negative weight: inhibitory connection — this predecessor is SUPPRESSING
+        the target node.  A negative-weight path to the logit means this
+        feature chain was actually working AGAINST the predicted token.
+        This is important: it tells you which early-layer features were
+        competing to produce a different answer.
+
+    EXAMPLE OUTPUT (for "A book of maps is called an" → " atlas")
+    -------------------------------------------------------------
+    Path 1 (excitatory, weight=1.83):
+      Layer 0 "books and reference materials" (inf=0.44)
+        → [+0.31] →
+      Layer 7 "reference codes and identifiers" (inf=0.81)
+        → [+0.67] →
+      Layer 14 "encyclopedic text patterns" (inf=1.23)
+        → [+1.12] →
+      Layer 22 "atlas and map-related terms" (inf=2.10)
+        → [+1.89] →
+      LOGIT: " atlas" (p=0.825)
+
+    This tells you the MECHANISM: layer-0 surface recognition passed its
+    signal to a reference-encoding feature at layer 7, which activated
+    encyclopedic-register features at layer 14, which converged on the
+    atlas-specific feature at layer 22 that directly pushed the logit.
+
+    Path 2 (inhibitory, weight=-0.43):
+      Layer 3 "index and catalogue terms" (inf=0.29)
+        → [-0.43] →
+      LOGIT: " atlas" (p=0.825)
+
+    This tells you " index" was a suppressed competitor: a layer-3 feature
+    was pushing toward " index" but lost the competition to Path 1.
+
+    Parameters
+    ----------
+    G               : NetworkX DiGraph from load_graph().
+    top_nodes       : List of top influential nodes from get_top_nodes().
+                      Used as starting points for path search.
+    max_paths       : Maximum number of distinct paths to return (default 5).
+                      More paths = richer picture but more output to read.
+    max_path_len    : Maximum number of hops in a single path (default 6).
+                      Gemma-2-2B has 26 layers; a path longer than 6 hops
+                      is likely traversing noise rather than true signal.
+    min_edge_weight : Minimum absolute edge weight to follow (default 0.05).
+                      Edges below this threshold are structural noise —
+                      the source barely influences the target.
+
+    Returns
+    -------
+    List of path dicts, sorted by abs(total_weight) descending:
+    [
+      {
+        'path'        : [node_id, node_id, ..., logit_node_id],
+        'edges'       : [weight, weight, ...],   # one per hop
+        'total_weight': float,                   # product of abs(weights)
+        'direction'   : 'excitatory' | 'inhibitory' | 'mixed',
+        'node_labels' : [layer/feature/clerp per node],
+        'path_type'   : 'direct' | 'multi-hop',
+      }
+    ]
+    Returns empty list if no logit node found or no paths above threshold.
+    """
+    # ── Step 1: Find the logit node ───────────────────────────────────────
+    logit_node = None
+    for node_id, attrs in G.nodes(data=True):
+        if attrs.get('is_target_logit'):
+            logit_node = node_id
+            break
+
+    if logit_node is None:
+        print('[trace_causal_paths] No logit node found in graph — cannot trace paths.')
+        return []
+
+    logit_clerp = G.nodes[logit_node].get('clerp', logit_node)
+    print(f'\n[trace_causal_paths] Tracing causal paths to logit: "{logit_clerp}"')
+    print(f'  Graph has {G.number_of_nodes()} nodes, {G.number_of_edges()} edges.')
+    print(f'  Settings: max_paths={max_paths}, max_path_len={max_path_len}, '
+          f'min_edge_weight={min_edge_weight}')
+
+    # Build a quick lookup: node_id → (layer, feature, influence, clerp)
+    def node_label(nid):
+        attrs = G.nodes[nid]
+        lyr   = attrs.get('layer', '?')
+        feat  = attrs.get('feature', '?')
+        clp   = attrs.get('clerp', '')
+        inf   = attrs.get('influence')
+        inf_s = f'inf={inf:.4f}' if inf is not None else 'inf=?'
+        return f'L{lyr}/F{feat} [{inf_s}] clerp="{clp}"'
+
+    # ── Step 2: For each top node, find the strongest path to the logit ───
+    # Strategy: greedy forward walk from each top node following the
+    # highest-weight outgoing edge at each step until we hit the logit node
+    # or run out of hops.  This is not exhaustive (not all paths) but finds
+    # the dominant causal pathway from each starting feature.
+
+    found_paths = []
+    seen_path_sigs = set()   # deduplicate by node sequence
+
+    # Also do a backwards walk from the logit to find paths not starting
+    # in top_nodes — sometimes the strongest path bypasses the top-40.
+    start_nodes = [n['node_id'] for n in top_nodes] + [logit_node]
+
+    for start_nid in start_nodes:
+        if start_nid == logit_node:
+            # Backwards walk from logit
+            path    = [logit_node]
+            weights = []
+            current = logit_node
+            for _hop in range(max_path_len - 1):
+                in_edges = [
+                    (u, data['weight'])
+                    for u, v, data in G.in_edges(current, data=True)
+                    if abs(data.get('weight', 0.0)) >= min_edge_weight
+                    and u not in path   # no cycles
+                ]
+                if not in_edges:
+                    break
+                # Follow the strongest incoming edge
+                best_pred, best_w = max(in_edges, key=lambda x: abs(x[1]))
+                weights.insert(0, best_w)
+                path.insert(0, best_pred)
+                current = best_pred
+            # Only keep if path has at least 2 nodes
+            if len(path) >= 2:
+                sig = tuple(path)
+                if sig not in seen_path_sigs:
+                    seen_path_sigs.add(sig)
+                    found_paths.append((path, weights))
+        else:
+            # Forward walk from top node toward logit
+            path    = [start_nid]
+            weights = []
+            current = start_nid
+            reached_logit = False
+            for _hop in range(max_path_len - 1):
+                out_edges = [
+                    (v, data['weight'])
+                    for u, v, data in G.out_edges(current, data=True)
+                    if abs(data.get('weight', 0.0)) >= min_edge_weight
+                    and v not in path   # no cycles
+                ]
+                if not out_edges:
+                    break
+                # Follow the strongest outgoing edge
+                best_succ, best_w = max(out_edges, key=lambda x: abs(x[1]))
+                weights.append(best_w)
+                path.append(best_succ)
+                current = best_succ
+                if best_succ == logit_node:
+                    reached_logit = True
+                    break
+            # Only keep paths that reach the logit node
+            if reached_logit and len(path) >= 2:
+                sig = tuple(path)
+                if sig not in seen_path_sigs:
+                    seen_path_sigs.add(sig)
+                    found_paths.append((path, weights))
+
+    # ── Step 3: Score and sort paths ──────────────────────────────────────
+    # Total weight = product of absolute edge weights.
+    # A path where every edge is strong (e.g. 0.8 × 0.7 × 0.9) scores
+    # higher than a path with one strong edge and several weak ones.
+    def score_path(weights):
+        if not weights:
+            return 0.0
+        score = 1.0
+        for w in weights:
+            score *= abs(w)
+        return round(score, 6)
+
+    def path_direction(weights):
+        pos = sum(1 for w in weights if w > 0)
+        neg = sum(1 for w in weights if w < 0)
+        if neg == 0:
+            return 'excitatory'
+        elif pos == 0:
+            return 'inhibitory'
+        else:
+            return 'mixed'
+
+    results = []
+    for path, weights in found_paths:
+        total_w   = score_path(weights)
+        direction = path_direction(weights)
+        path_type = 'direct' if len(path) == 2 else 'multi-hop'
+        results.append({
+            'path'        : path,
+            'edges'       : [round(w, 4) for w in weights],
+            'total_weight': total_w,
+            'direction'   : direction,
+            'node_labels' : [node_label(nid) for nid in path],
+            'path_type'   : path_type,
+        })
+
+    results.sort(key=lambda x: x['total_weight'], reverse=True)
+    results = results[:max_paths]
+
+    # ── Step 4: Print for Claude Code ─────────────────────────────────────
+    print(f'\n[trace_causal_paths] Found {len(results)} causal path(s) '
+          f'(showing top {max_paths}):')
+
+    for i, p in enumerate(results, 1):
+        direction_marker = {
+            'excitatory': '(+) excitatory — pushing TOWARD predicted token',
+            'inhibitory': '(-) inhibitory — pushing AGAINST predicted token',
+            'mixed'     : '(±) mixed — partially excitatory, partially inhibitory',
+        }[p['direction']]
+
+        print(f'\n  Path {i} | {direction_marker}')
+        print(f'  Total path weight: {p["total_weight"]}  '
+              f'| Type: {p["path_type"]}  '
+              f'| Hops: {len(p["path"]) - 1}')
+        print(f'  ──')
+
+        for j, (nid, label) in enumerate(zip(p['path'], p['node_labels'])):
+            is_last = (j == len(p['path']) - 1)
+            if is_last:
+                print(f'  → LOGIT  {label}')
+            else:
+                edge_w   = p['edges'][j]
+                sign_str = f'+{edge_w}' if edge_w >= 0 else str(edge_w)
+                print(f'  → NODE   {label}')
+                print(f'           ↓ edge weight [{sign_str}]')
+
+    return results
+
+
+def format_causal_paths_for_narration(
+    paths        : list,
+    labeled_nodes: list,
+    target_token : str,
+    target_prob  : float,
+) -> str:
+    """
+    Format the output of trace_causal_paths() into a structured block that
+    Claude Code reads to narrate the causal chain in the research paper.
+
+    This function bridges the gap between raw path data and the mechanistic
+    narrative.  It organises paths into three groups and gives Claude Code
+    explicit instructions on what each group means and how to reason about it.
+
+    THREE GROUPS
+    ------------
+    EXCITATORY PATHS: the dominant computation — features that collectively
+        built the case for the predicted token.  Narrate these as the
+        story of HOW the model arrived at its answer: what did it recognise
+        first, how did that signal propagate, what feature made the final
+        push to the logit.
+
+    INHIBITORY PATHS: suppressed competitors — features that were pushing
+        toward a different token but lost.  Narrate these as the story of
+        WHY the alternatives failed: what features were active for " index"
+        or " almanac" or whatever the runner-up was, and why they were
+        overpowered.
+
+    MIXED PATHS: ambiguous circuits where excitatory and inhibitory edges
+        are interleaved.  These often represent feature interactions where
+        one feature gates or modulates another.  Narrate these carefully —
+        a mixed path often reveals the most interesting circuit behaviour.
+
+    HOW PATHS RELATE TO labeled_nodes
+    ----------------------------------
+    The labeled_nodes list (from interpret_prompt_graph) gives you the
+    human-readable Neuronpedia label for each node.  This function merges
+    those labels into the path display so Claude Code sees, for each hop:
+
+        Layer 7 | inf=0.81 | "reference codes and identifiers"
+            ↓ edge weight [+0.67]
+        Layer 14 | inf=1.23 | "encyclopedic text patterns"
+
+    ...rather than raw node_ids.  The label is what makes the path
+    mechanistically interpretable — without it you have a chain of numbers,
+    with it you have a story.
+
+    Parameters
+    ----------
+    paths         : List returned by trace_causal_paths().
+    labeled_nodes : Flat list of labeled node dicts from interpret_prompt_graph().
+                    Used to enrich path nodes with human-readable labels.
+    target_token  : The predicted token string (e.g. ' atlas').
+    target_prob   : Probability of the predicted token (e.g. 0.825).
+
+    Returns
+    -------
+    A formatted string printed to stdout for Claude Code to read and narrate.
+    """
+    # Build lookup: node_id → explanation label
+    label_map = {
+        item.get('node_id', ''): item.get('explanation') or '(no label)'
+        for item in labeled_nodes
+    }
+
+    prob_str = f'p={target_prob:.4f}' if target_prob else 'p=?'
+
+    lines = [
+        '',
+        '╔══════════════════════════════════════════════════════════════════╗',
+        '║   CAUSAL PATH ANALYSIS  —  instructions for Claude Code          ║',
+        '╚══════════════════════════════════════════════════════════════════╝',
+        f'  Predicted token : "{target_token}" ({prob_str})',
+        f'  Paths found     : {len(paths)}',
+        '',
+        '  These paths show the ACTUAL WIRING of the circuit — how signals',
+        '  travelled through the network from input features to the final',
+        '  prediction.  Each hop is an edge in the attribution graph with a',
+        '  real weight from the JSON.',
+        '',
+        '  HOW TO NARRATE PATHS (Claude Code instructions):',
+        '',
+        '  EXCITATORY paths (+): narrate as the dominant computational story.',
+        '    "The circuit begins at layer X where feature Y detected [label].',
+        '    This signal passed through layer Z [label] with edge weight +W,',
+        '    amplifying the representation toward [target_token].  The chain',
+        '    converges at layer N where [label] delivers the final push to',
+        '    the logit with edge weight +W2."',
+        '',
+        '  INHIBITORY paths (-): narrate as the suppressed competitor story.',
+        '    "A parallel pathway through layer X [label] was pushing toward',
+        '    a competing token.  Its inhibitory connection (edge weight -W)',
+        '    to the logit reveals it was actively working against [target_token]',
+        '    — this is the mechanistic signature of token competition."',
+        '',
+        '  MIXED paths (±): narrate as a gating or modulation story.',
+        '    "Feature [label] at layer X appears to gate downstream processing',
+        '    — its positive edge to [B] amplifies the reference-document signal',
+        '    while its negative edge to [C] suppresses a competing pathway.',
+        '    This is a control feature, not a direct contributor."',
+        '',
+        '  KEY QUESTIONS TO ANSWER FOR EACH PATH:',
+        '    1. What does the FIRST node in the path represent?',
+        '       (This is what the model noticed in the input that started',
+        '        this chain of computation.)',
+        '    2. Does edge weight INCREASE or DECREASE along the path?',
+        '       (Increasing weights = signal is being amplified and focused.',
+        '        Decreasing weights = signal is diffusing and losing strength.)',
+        '    3. Is the final edge to the logit strong or weak?',
+        '       (Strong final edge = this path is a major contributor.',
+        '        Weak final edge = this path exists but barely mattered.)',
+        '    4. How does this path relate to the top_candidates token scores?',
+        '       (The excitatory paths explain why the winner won.',
+        '        The inhibitory paths explain why the runner-ups lost.)',
+        '',
+        '  ── PATHS ────────────────────────────────────────────────────────',
+        '',
+    ]
+
+    # Group paths by direction
+    excitatory = [p for p in paths if p['direction'] == 'excitatory']
+    inhibitory = [p for p in paths if p['direction'] == 'inhibitory']
+    mixed      = [p for p in paths if p['direction'] == 'mixed']
+
+    def render_path(p, idx):
+        """Render one path with labels merged in."""
+        direction_str = {
+            'excitatory': '(+) EXCITATORY — builds toward predicted token',
+            'inhibitory': '(-) INHIBITORY — pushes against predicted token',
+            'mixed'     : '(±) MIXED — gating / modulation behaviour',
+        }[p['direction']]
+
+        out = [
+            f'  Path {idx}  {direction_str}',
+            f'  Total weight={p["total_weight"]}  '
+            f'Hops={len(p["path"])-1}  Type={p["path_type"]}',
+            '  │',
+        ]
+        for j, nid in enumerate(p['path']):
+            is_logit = (j == len(p['path']) - 1)
+            attrs    = {}
+            label    = label_map.get(nid, '(no label)')
+
+            # Try to get layer/influence from node_id format L_layer
+            # node_ids are like "7_3099_1" → layer=7
+            parts = nid.split('_')
+            layer_s = parts[0] if parts else '?'
+            # Try to get influence from labeled_nodes
+            inf_val = next(
+                (item.get('influence') for item in labeled_nodes
+                 if item.get('node_id') == nid),
+                None
+            )
+            inf_s = f'inf={inf_val:.4f}' if inf_val is not None else ''
+
+            if is_logit:
+                out.append(f'  └→ LOGIT  Layer {layer_s} | "{target_token}" ({prob_str})')
+            else:
+                edge_w   = p['edges'][j]
+                sign_str = f'+{edge_w}' if edge_w >= 0 else str(edge_w)
+                out.append(f'  ├→ NODE   Layer {layer_s} {inf_s} | "{label}"')
+                out.append(f'  │         ↓ edge [{sign_str}]  '
+                           f'{"amplifies →" if edge_w > 0 else "suppresses ↓"}')
+        out.append('')
+        return out
+
+    path_idx = 1
+    if excitatory:
+        lines += [
+            '  ┌─ EXCITATORY PATHS — the dominant story of how the model',
+            '  │  built its case for the predicted token',
+            '  │',
+        ]
+        for p in excitatory:
+            lines += render_path(p, path_idx)
+            path_idx += 1
+        lines += [
+            '  └─ NARRATE EXCITATORY: Walk through each path step by step.',
+            '     Explain what the first node detected, how the signal was',
+            '     amplified or transformed at each hop, and what the final',
+            '     node contributed directly to the logit.',
+            '',
+        ]
+
+    if inhibitory:
+        lines += [
+            '  ┌─ INHIBITORY PATHS — the suppressed competitors',
+            '  │  These features were pushing for a different token',
+            '  │',
+        ]
+        for p in inhibitory:
+            lines += render_path(p, path_idx)
+            path_idx += 1
+        lines += [
+            '  └─ NARRATE INHIBITORY: Identify which competing token these',
+            '     paths were supporting.  Explain why they lost — was the',
+            '     inhibitory signal weak, or was it overpowered by stronger',
+            '     excitatory paths?',
+            '',
+        ]
+
+    if mixed:
+        lines += [
+            '  ┌─ MIXED PATHS — gating and modulation',
+            '  │',
+        ]
+        for p in mixed:
+            lines += render_path(p, path_idx)
+            path_idx += 1
+        lines += [
+            '  └─ NARRATE MIXED: Identify the feature that acts as a gate.',
+            '     Explain what it is modulating and whether this represents',
+            '     feature competition, conditional routing, or noise.',
+            '',
+        ]
+
+    if not paths:
+        lines += [
+            '  [No paths found above the minimum edge weight threshold.',
+            '   This may indicate the graph edges are all below 0.05 or',
+            '   that the logit node has no strong direct predecessors.',
+            '   Consider reducing min_edge_weight and re-running.]',
+            '',
+        ]
+
+    lines += [
+        '  ┌─ SYNTHESIS TASK (causal paths)',
+        '  │  After narrating each path above, write a paragraph that',
+        '  │  answers: what is the COMPLETE causal story from input to',
+        '  │  output for this prompt?',
+        '  │',
+        '  │  Specifically address:',
+        '  │    - Which excitatory path was the dominant mechanism?',
+        '  │    - Were there genuine competitors (inhibitory paths)?',
+        '  │    - Do the paths confirm or contradict the layer-band',
+        '  │      narrative from the band-by-band analysis above?',
+        '  │    - Is this a clean convergent circuit (one dominant path,',
+        '  │      weak competitors) or a genuinely ambiguous one (multiple',
+        '  │      paths of similar strength, many mixed edges)?',
+        '  └─',
+        '',
+        '╔══════════════════════════════════════════════════════════════════╗',
+        '║   END OF CAUSAL PATH DATA                                        ║',
+        '╚══════════════════════════════════════════════════════════════════╝',
+    ]
+
+    block = '\n'.join(lines)
+    print(block)
+    return block
+
+
+# ═════════════════════════════════════════════════════════════════════════════
+# CAUSAL PATH VISUALIZATION  ← NEW
+# ═════════════════════════════════════════════════════════════════════════════
+
+def visualize_causal_paths(
+    paths        : list,
+    labeled_nodes: list,
+    G            : nx.DiGraph,
+    prompt       : str,
+    target_token : str,
+    save_path    : str  = None,
+    figsize      : tuple = (14, 9),
+) -> None:
+    """
+    Render the causal paths from trace_causal_paths() as a publication-ready
+    matplotlib figure and save it to disk.
+
+    WHAT THE FIGURE SHOWS
+    ---------------------
+    Each path is drawn as a vertical chain of nodes connected by directed
+    edges.  Multiple paths are drawn side by side in columns.
+
+    Y-AXIS = transformer layer number (0 at top, max_layer at bottom).
+    This mirrors how transformer computation actually flows: information
+    enters at layer 0, is processed downward through the layers, and exits
+    at the logit node at the final layer.  A node's vertical position is
+    therefore its position in the causal chain — early-layer nodes sit near
+    the top, late-layer nodes near the bottom, the logit node at the very
+    bottom.
+
+    X-AXIS = path index (one column per path).  Paths are sorted left to
+    right by total weight (strongest path on the left).
+
+    NODE COLOUR = path direction:
+        Green  (#2ecc71) — excitatory node (part of a (+) path)
+        Red    (#e74c3c) — inhibitory node (part of a (-) path)
+        Orange (#f39c12) — mixed node (part of a (±) path)
+        Gold   (#f1c40f) — logit node (always the bottom node, shared)
+
+    EDGE WIDTH = proportional to absolute edge weight.
+    Thick edges are strong connections; thin edges are weak ones.
+    Positive edges are solid lines; negative edges are dashed lines
+    (dashed = inhibitory — the source is suppressing the target).
+
+    NODE LABEL = truncated Neuronpedia explanation (max 28 chars) + layer
+    number + influence score.  If no label is available, the raw node_id
+    is shown.  Labels are wrapped to avoid overlap.
+
+    WHY THIS IS USEFUL FOR THE PAPER
+    ---------------------------------
+    The band-by-band table in the paper tells you which features mattered.
+    The causal path figure shows HOW they were connected — it is the visual
+    equivalent of the mechanistic narrative.  A reader can look at the figure
+    and immediately see:
+        - Which layer the computation started at
+        - How many hops it took to reach the output
+        - Whether the signal was amplified (increasing edge widths) or
+          diffused (decreasing edge widths) along the way
+        - Whether there were competing inhibitory paths that nearly won
+
+    USAGE
+    -----
+    Call this immediately after trace_causal_paths() and
+    format_causal_paths_for_narration() inside interpret_prompt_graph,
+    or call it standalone after the fact using saved path data:
+
+        paths  = trace_causal_paths(G, top_nodes)
+        labels = label_nodes_batch(extract_node_ids_from_top(paths))
+        visualize_causal_paths(
+            paths         = paths,
+            labeled_nodes = all_labeled,
+            G             = G,
+            prompt        = "A book of maps is called an",
+            target_token  = " atlas",
+            save_path     = "graphs/atlas_causal_paths.png",
+        )
+
+    Parameters
+    ----------
+    paths         : List returned by trace_causal_paths().
+    labeled_nodes : Flat list of labeled node dicts from interpret_prompt_graph().
+                    Used to get human-readable labels for each node.
+    G             : The loaded NetworkX DiGraph (from load_graph()).
+                    Used to get layer numbers for nodes not in labeled_nodes.
+    prompt        : The original prompt string (for the figure title).
+    target_token  : The predicted token string (shown at logit node).
+    save_path     : File path to save the figure (PNG or PDF).
+                    If None, saves to graphs/{slug}_causal_paths.png.
+    figsize       : Matplotlib figure size tuple (width, height) in inches.
+                    Default (14, 9) is good for up to 5 paths.  Increase
+                    width for more paths, increase height for longer paths.
+
+    Returns
+    -------
+    None.  Saves the figure to save_path and prints the file path.
+    Requires matplotlib.  If matplotlib is not installed, prints a warning
+    and returns without error so the pipeline continues uninterrupted.
+    """
+    # ── Dependency check ──────────────────────────────────────────────────
+    try:
+        import matplotlib
+        matplotlib.use('Agg')   # non-interactive backend — safe for Claude Code
+        import matplotlib.pyplot as plt
+        import matplotlib.patches as mpatches
+        from matplotlib.lines   import Line2D
+    except ImportError:
+        print('[visualize_causal_paths] matplotlib not installed. '
+              'Run: pip install matplotlib --break-system-packages\n'
+              'Skipping visualization and continuing pipeline.')
+        return
+
+    if not paths:
+        print('[visualize_causal_paths] No paths to visualize — skipping.')
+        return
+
+    # ── Build label lookup ────────────────────────────────────────────────
+    label_map = {
+        item.get('node_id', ''): item.get('explanation') or ''
+        for item in labeled_nodes
+    }
+    inf_map = {
+        item.get('node_id', ''): item.get('influence')
+        for item in labeled_nodes
+    }
+
+    def get_layer(nid):
+        """Extract integer layer from node_id or from graph attrs."""
+        attrs = G.nodes.get(nid, {})
+        lyr   = attrs.get('layer')
+        if lyr is not None:
+            try:
+                return int(lyr)
+            except (TypeError, ValueError):
+                pass
+        # Fall back to parsing node_id  "layer_feature_ctx"
+        parts = nid.split('_')
+        try:
+            return int(parts[0])
+        except (IndexError, ValueError):
+            return 0
+
+    def get_label(nid, max_chars=28):
+        """Get truncated human-readable label for a node."""
+        lbl = label_map.get(nid, '')
+        if not lbl:
+            # Fall back to clerp from graph
+            lbl = G.nodes.get(nid, {}).get('clerp', '') or nid
+        if len(lbl) > max_chars:
+            lbl = lbl[:max_chars - 1] + '…'
+        return lbl
+
+    # ── Determine layer range across all paths ────────────────────────────
+    all_layers_in_paths = []
+    for p in paths:
+        for nid in p['path']:
+            all_layers_in_paths.append(get_layer(nid))
+    min_lyr = min(all_layers_in_paths) if all_layers_in_paths else 0
+    max_lyr = max(all_layers_in_paths) if all_layers_in_paths else 26
+
+    # ── Colour scheme ─────────────────────────────────────────────────────
+    COLOUR = {
+        'excitatory': '#27ae60',   # green  — building toward predicted token
+        'inhibitory': '#c0392b',   # red    — pushing against predicted token
+        'mixed'     : '#d35400',   # orange — gating / modulation
+        'logit'     : '#f39c12',   # amber  — final prediction node
+        'edge_pos'  : '#2c3e50',   # dark   — excitatory edge
+        'edge_neg'  : '#c0392b',   # red    — inhibitory edge
+        'bg'        : '#fafafa',
+        'title'     : '#2c3e50',
+        'label_fg'  : '#ffffff',
+    }
+
+    n_paths  = len(paths)
+    col_gap  = 1.0 / (n_paths + 1)   # horizontal spacing between path columns
+
+    fig, ax = plt.subplots(figsize=figsize)
+    ax.set_xlim(0, 1)
+    ax.set_ylim(max_lyr + 1, min_lyr - 1)   # y increases downward (layer 0 at top)
+    ax.set_facecolor(COLOUR['bg'])
+    fig.patch.set_facecolor(COLOUR['bg'])
+
+    # Draw layer grid lines
+    for lyr in range(min_lyr, max_lyr + 1):
+        ax.axhline(lyr, color='#e0e0e0', linewidth=0.5, zorder=0)
+        ax.text(-0.01, lyr, f'L{lyr}', fontsize=7, color='#aaaaaa',
+                va='center', ha='right', transform=ax.get_yaxis_transform())
+
+    # ── Draw each path as a column ────────────────────────────────────────
+    max_edge_w = max(
+        (abs(w) for p in paths for w in p['edges']),
+        default=1.0
+    )
+
+    for col_idx, p in enumerate(paths):
+        x = col_gap * (col_idx + 1)
+        direction = p['direction']
+        node_colour = COLOUR.get(direction, COLOUR['excitatory'])
+
+        node_positions = {}   # nid → (x, y) for edge drawing
+
+        for j, nid in enumerate(p['path']):
+            is_logit = (j == len(p['path']) - 1)
+            y = get_layer(nid)
+            node_positions[nid] = (x, y)
+
+            # Node circle
+            colour = COLOUR['logit'] if is_logit else node_colour
+            circle = plt.Circle(
+                (x, y), radius=0.07,
+                color=colour, zorder=3, clip_on=False
+            )
+            ax.add_patch(circle)
+
+            # Node label — layer + short explanation + influence
+            lbl  = get_label(nid)
+            inf  = inf_map.get(nid)
+            inf_s = f'\ninf={inf:.3f}' if inf is not None else ''
+            if is_logit:
+                display = f'LOGIT\n"{target_token}"'
+            else:
+                display = f'L{y}: {lbl}{inf_s}'
+
+            ax.text(
+                x + 0.09, y, display,
+                fontsize  = 7,
+                va        = 'center',
+                ha        = 'left',
+                color     = COLOUR['title'],
+                zorder    = 4,
+                wrap      = True,
+                bbox      = dict(
+                    boxstyle  = 'round,pad=0.2',
+                    facecolor = '#ffffff',
+                    edgecolor = colour,
+                    linewidth = 0.8,
+                    alpha     = 0.85,
+                ),
+            )
+
+        # Draw edges between consecutive nodes
+        for j in range(len(p['path']) - 1):
+            src = p['path'][j]
+            dst = p['path'][j + 1]
+            w   = p['edges'][j]
+
+            x0, y0 = node_positions[src]
+            x1, y1 = node_positions[dst]
+
+            # Edge width proportional to absolute weight
+            lw        = 1.0 + 5.0 * (abs(w) / max(max_edge_w, 1e-6))
+            linestyle = '--' if w < 0 else '-'
+            ecolour   = COLOUR['edge_neg'] if w < 0 else COLOUR['edge_pos']
+
+            ax.annotate(
+                '',
+                xy     = (x1, y1 - 0.07),
+                xytext = (x0, y0 + 0.07),
+                arrowprops = dict(
+                    arrowstyle = '-|>',
+                    color      = ecolour,
+                    lw         = lw,
+                    linestyle  = linestyle,
+                ),
+                zorder = 2,
+            )
+
+            # Edge weight label at midpoint
+            mx = (x0 + x1) / 2 - 0.04
+            my = (y0 + y1) / 2
+            sign = '+' if w >= 0 else ''
+            ax.text(
+                mx, my, f'{sign}{w:.3f}',
+                fontsize  = 6.5,
+                color     = ecolour,
+                ha        = 'right',
+                va        = 'center',
+                zorder    = 5,
+                bbox      = dict(
+                    boxstyle  = 'round,pad=0.1',
+                    facecolor = COLOUR['bg'],
+                    edgecolor = 'none',
+                    alpha     = 0.7,
+                ),
+            )
+
+        # Path header above each column
+        dir_symbol = {'excitatory': '(+)', 'inhibitory': '(-)', 'mixed': '(±)'}.get(
+            direction, ''
+        )
+        ax.text(
+            x, min_lyr - 0.6,
+            f'Path {col_idx+1} {dir_symbol}\nweight={p["total_weight"]:.4f}',
+            fontsize  = 7.5,
+            ha        = 'center',
+            va        = 'bottom',
+            color     = node_colour,
+            fontweight= 'bold',
+            zorder    = 5,
+        )
+
+    # ── Legend ────────────────────────────────────────────────────────────
+    legend_handles = [
+        mpatches.Patch(color=COLOUR['excitatory'], label='Excitatory (+)'),
+        mpatches.Patch(color=COLOUR['inhibitory'], label='Inhibitory (-)'),
+        mpatches.Patch(color=COLOUR['mixed'],      label='Mixed (±)'),
+        mpatches.Patch(color=COLOUR['logit'],      label='Logit node'),
+        Line2D([0], [0], color=COLOUR['edge_pos'], lw=2,
+               linestyle='-',  label='Positive edge'),
+        Line2D([0], [0], color=COLOUR['edge_neg'], lw=2,
+               linestyle='--', label='Negative edge'),
+    ]
+    ax.legend(
+        handles   = legend_handles,
+        loc       = 'lower right',
+        fontsize  = 7,
+        framealpha= 0.9,
+        edgecolor = '#cccccc',
+    )
+
+    # ── Axes and title ────────────────────────────────────────────────────
+    ax.set_yticks([])
+    ax.set_xticks([])
+    for spine in ax.spines.values():
+        spine.set_visible(False)
+
+    # Wrap long prompt strings
+    prompt_display = prompt if len(prompt) <= 60 else prompt[:57] + '...'
+    ax.set_title(
+        f'Causal paths → "{target_token}"\n'
+        f'Prompt: "{prompt_display}"',
+        fontsize  = 11,
+        color     = COLOUR['title'],
+        pad       = 14,
+        fontweight= 'normal',
+    )
+
+    plt.tight_layout()
+
+    # ── Save ──────────────────────────────────────────────────────────────
+    # Filename includes both the prompt slug AND the predicted token so files
+    # are immediately identifiable on disk without opening them.
+    # e.g. paris_is_to_france_as_berlin_is_to__germany_causal_paths.png
+    if save_path is None:
+        slug        = prompt.lower().replace(' ', '_')[:40].strip('_')
+        token_clean = (target_token or 'unknown').strip().lower()
+        token_clean = ''.join(c if c.isalnum() or c == '_' else '_'
+                              for c in token_clean).strip('_')[:20]
+        save_path = str(GRAPHS_DIR / f'{slug}__{token_clean}_causal_paths.png')
+
+    plt.savefig(save_path, dpi=150, bbox_inches='tight',
+                facecolor=COLOUR['bg'])
+    plt.close(fig)
+    print(f'[visualize_causal_paths] Saved → {save_path}')
+    return save_path   # return so caller can embed in paper
 
 
 # ═════════════════════════════════════════════════════════════════════════════
@@ -1279,13 +2374,11 @@ def save_circuit(name: str, nodes: list, description: str,
 
 
 # ═════════════════════════════════════════════════════════════════════════════
-# PROMPT DATASET  (scaled: 50 per category)
+# PROMPT DATASET  (scaled: 10 per category)
 # ═════════════════════════════════════════════════════════════════════════════
 
 def build_prompt_dataset() -> dict:
     """
-    Returns structured prompts organised by reasoning category.
-    50 prompts per category (200 total), designed for maximum circuit diversity.
 
     Design principles
     -----------------
@@ -1300,169 +2393,42 @@ def build_prompt_dataset() -> dict:
       'factual_recall': [
             'The capital of Nigeria is',
             'The capital of Ghana is',
-            'The capital of USA is',
-            'The capital of England is',
-            'The capital of Spain is',
-            'The capital of Canada is',
-            'The capital of China is',
-            # Authors / creators
             'Hamlet was written by',
-            'The Mona Lisa was painted by',
             'The theory of relativity was developed by',
-            # Biology / science
             'The powerhouse of the cell is the',
-            'Photosynthesis takes place inside the',
             'Water is composed of hydrogen and',
-
-             # History
             'The first US president was',
             'Napoleon was exiled to the island of',
-             # Geography / nature
             'The longest river in the world is the',
-            'Mount Everest is located in the',
-            'The largest ocean on Earth is the',
-            'The Sahara is a',
-            'The Amazon rainforest is primarily located in',
-
-            # Sport
-            'A game of chess ends when a king is put in',
-            'In tennis, a score of zero is called',
-            'The Olympic Games take place every',
-            'The sport of sumo wrestling originated in',
-
-             # Technology / computing
-            'The programming language Python was created by',
-            'HTML stands for HyperText Markup',
-            'Wi-Fi uses radio waves to transmit',
-            'A CPU stands for Central Processing',
-
-             # Art / culture
-            'The Eiffel Tower is located in',
-            'Beethoven composed his ninth symphony while being',
-            'The Louvre museum is in the city of',
-            'The Great Wall was built in',
-
-             # Language / misc
-            'The official language of Brazil is',
-            'The currency of Japan is the',
-            'The speed of light is approximately 300,000 kilometres per',
-            'The human body has',
-            'Honey is produced by',
+            'Mount Everest is located in the', 
         ],
-
-        
 
         # ── LINGUISTIC ────────────────────────────────────────────────────
                 'linguistic': [
-             # Antonyms
             'The opposite of hot is',
-            'The opposite of dark is',
-            'The antonym of large is',
-            'The opposite of loud is',
             'The antonym of ancient is',
-            'The opposite of weak is',
-            'The opposite of fast is',
-            'The antonym of north is',
-            'The opposite of begin is',
-            'The antonym of full is',
-
-            # Synonyms
             'A synonym for happy is',
             'Another word for fast is',
-            'A synonym for tired is',
-
-            # Plurals
             'The plural of child is',
             'The plural of mouse is',
-            'The plural of foot is',
-            'The plural of tooth is',
-            'The plural of goose is',
-
-              # Verb forms
-            'The past tense of run is',
             'The past tense of swim is',
             'The past tense of write is',
-            'The past tense of speak is',
-            'The past tense of fly is',
-
-             # Definitions / completions
-            'A word meaning the study of stars is the',
-            'Someone who practices medicine is called a',
             'A book of maps is called an',
-            'The fear of heights is called',
             'A person who writes books is called an',
-
-            # Word families / derived forms
-            'The adjective form of sun is',
-            'The noun form of happy is',
-            'The adverb form of quick is',
-            'The verb form of decision is',
-            'The adjective form of beauty is',
-
         ],
 
         # ── ANALOGICAL ────────────────────────────────────────────────────
-        # NOTE: duplicates removed; a missing comma after "steering wheel is to"
-        # was also fixed (it caused string concatenation with the next literal).
         'analogical': [
-            # Capital city analogies
             'Paris is to France as Berlin is to',
-            'Paris is to France as Rome is to',
-            'Paris is to France as Tokyo is to',
-            'London is to England as Rome is to',
-            'Tokyo is to Japan as Beijing is to',
-            'Madrid is to Spain as Lisbon is to',
             'Cairo is to Egypt as Nairobi is to',
-
-            # Animal analogies
             'Fish is to water as bird is to',
             'Puppy is to dog as kitten is to',
-
-            # Tool-function analogies
-            'Pen is to writing as brush is to',
             'Clock is to time as thermometer is to',
             'Book is to reading as radio is to',
-            'Fork is to eating as pen is to',
-            'Remote is to television as steering wheel is to',
-
-            # Part-whole
-            'Finger is to hand as toe is to',
-            'Page is to book as brick is to',
             'Leaf is to tree as petal is to',
             'Wheel is to car as wing is to',
-            'Chapter is to novel as verse is to',
-
-            # Job-workplace
-            'Doctor is to hospital as teacher is to',
-            'Chef is to kitchen as pilot is to',
             'Judge is to court as priest is to',
             'Soldier is to army as sailor is to',
-            'Farmer is to field as miner is to',
-
-            # Material-object
-            'Cotton is to shirt as leather is to',
-            'Glass is to window as stone is to',
-            'Clay is to pot as wax is to',
-
-            # Sequence / time
-            'Monday is to Tuesday as January is to',
-            'Morning is to noon as noon is to',
-            'Spring is to summer as autumn is to',
-            'First is to second as third is to',
-            'Dawn is to day as dusk is to',
-
-            # Cause-effect
-            'Fire is to ash as rain is to',
-            'Seed is to plant as egg is to',
-            'Study is to knowledge as exercise is to',
-            'Sun is to warmth as ice is to',
-            'Wind is to erosion as water is to',
-
-            # Scale / unit
-            'Second is to minute as minute is to',
-            'Gram is to kilogram as millilitre is to',
-            'Cent is to dollar as penny is to',
-            'Decade is to century as century is to',
         ],
     }
 
@@ -1517,14 +2483,17 @@ if __name__ == '__main__':
         print('    neighbourhood of a steered feature (Step 7 "nodes beneath")')
 
         print('\n-- New functions available --')
+        print('  trace_causal_paths(G, top_nodes)            -> edge-weight paths to logit')
+        print('  format_causal_paths_for_narration(...)       -> Claude Code narration block')
+        print('  visualize_causal_paths(paths, labels, G,...) -> matplotlib PNG figure')
         print('  extract_node_ids_from_recurring(recurring, top_n)')
         print('  get_subgraph_node_ids_for_feature(G, layer, feature, depth=1)')
-        print('  get_token_predictions(prompt)          -> ranked next-token list')
-        print('  get_logit_candidates_from_graph(data)  -> token votes from graph JSON')
-        print('  interpret_prompt_graph(G, graph_data)  -> per-prompt Claude narrative')
+        print('  get_token_predictions(prompt)               -> ranked next-token list')
+        print('  get_logit_candidates_from_graph(data)       -> token votes from graph JSON')
+        print('  interpret_prompt_graph(G, graph_data)       -> full per-prompt analysis')
 
         print('\nExample workflow:')
-        print('  recurring = compare_graphs(graphs, min_appearances=0.3)')
+        print('  recurring = compare_graphs(graphs, threshold=0.50)  # 50% of graphs')
         print('  node_ids  = extract_node_ids_from_recurring(recurring, top_n=15)')
         print('  labels    = label_nodes_batch(node_ids, delay=0.5)')
     else:

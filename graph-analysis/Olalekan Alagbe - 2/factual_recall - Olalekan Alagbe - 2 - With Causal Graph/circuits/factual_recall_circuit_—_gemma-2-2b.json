@@ -1,0 +1,171 @@
+{
+  "name": "Factual Recall Circuit \u2014 Gemma-2-2B",
+  "description": "Shared circuit for factual recall reasoning across 10 prompts spanning geography, history, science, and literature. 222 recurring features at 50% threshold. Top features are general structural/syntactic features in early layers (L0-L3), technical/code-register features in mid layers (L4-L7), and domain-specific knowledge features in late layers (L16-L25). Circuit confidence correlates with factual specificity of the training data: H2O/oxygen at 97.8%, Napoleon/Elba at 70.9%, Hamlet/William at 57.8%, Nigeria/capital at 17.3%.",
+  "prompt_category": "factual_recall",
+  "source_graphs": [
+    "the_capital_of_nigeria_is",
+    "the_capital_of_ghana_is",
+    "hamlet_was_written_by",
+    "the_theory_of_relativity_was_developed_b",
+    "the_powerhouse_of_the_cell_is_the",
+    "water_is_composed_of_hydrogen_and",
+    "the_first_us_president_was",
+    "napoleon_was_exiled_to_the_island_of",
+    "the_longest_river_in_the_world_is_the",
+    "mount_everest_is_located_in_the"
+  ],
+  "num_source_graphs": 10,
+  "nodes": [
+    {
+      "layer": "4",
+      "feature": "110446948",
+      "node_id": "4_14857_2",
+      "appearances": 34,
+      "out_of": 10,
+      "avg_influence": 0.6152,
+      "avg_activation": 15.7459,
+      "label": "code snippets and license agreements"
+    },
+    {
+      "layer": "6",
+      "feature": "2586668",
+      "node_id": "6_2267_4",
+      "appearances": 32,
+      "out_of": 10,
+      "avg_influence": 0.648,
+      "avg_activation": 17.1897,
+      "label": "words that appear in programming code, legal jargon, or scientific texts"
+    },
+    {
+      "layer": "3",
+      "feature": "5150441",
+      "node_id": "3_3205_2",
+      "appearances": 24,
+      "out_of": 10,
+      "avg_influence": 0.639,
+      "avg_activation": 14.5848,
+      "label": "code snippets and documentation references, possibly related to web development"
+    },
+    {
+      "layer": "7",
+      "feature": "4828270",
+      "node_id": "7_3099_2",
+      "appearances": 22,
+      "out_of": 10,
+      "avg_influence": 0.7077,
+      "avg_activation": 21.2768,
+      "label": "a variety of reference codes, abbreviations, and identifiers from different fields"
+    },
+    {
+      "layer": "0",
+      "feature": "40747877",
+      "node_id": "0_9026_2",
+      "appearances": 21,
+      "out_of": 10,
+      "avg_influence": 0.5454,
+      "avg_activation": 9.6543,
+      "label": "technical documents or data, including numbers, units, and references to figures or tables"
+    },
+    {
+      "layer": "4",
+      "feature": "47653198",
+      "node_id": "4_9757_1",
+      "appearances": 20,
+      "out_of": 10,
+      "avg_influence": 0.6173,
+      "avg_activation": 10.8729,
+      "label": "various acronyms, IDs, and symbols, possibly related to scientific data"
+    },
+    {
+      "layer": "0",
+      "feature": "2239785",
+      "node_id": "0_2115_2",
+      "appearances": 20,
+      "out_of": 10,
+      "avg_influence": 0.5995,
+      "avg_activation": 6.0865,
+      "label": "data reported as a percentage inside brackets, in a laboratory or medical context, and also recognizes countries"
+    },
+    {
+      "layer": "5",
+      "feature": "2584395",
+      "node_id": "5_2267_5",
+      "appearances": 19,
+      "out_of": 10,
+      "avg_influence": 0.6766,
+      "avg_activation": 9.9858,
+      "label": "law related terminology and references to specific cases or legal entities"
+    },
+    {
+      "layer": "0",
+      "feature": "11637899",
+      "node_id": "0_4823_1",
+      "appearances": 19,
+      "out_of": 10,
+      "avg_influence": 0.6524,
+      "avg_activation": 6.4901,
+      "label": "the word part followed by prepositions or words related to sections or components"
+    },
+    {
+      "layer": "0",
+      "feature": "74438300",
+      "node_id": "0_12200_1",
+      "appearances": 19,
+      "out_of": 10,
+      "avg_influence": 0.6433,
+      "avg_activation": 5.0747,
+      "label": "a variety of specific nouns"
+    },
+    {
+      "layer": "0",
+      "feature": "1708475",
+      "node_id": "0_1847_2",
+      "appearances": 19,
+      "out_of": 10,
+      "avg_influence": 0.5713,
+      "avg_activation": 6.3705,
+      "label": "scientific terms and experimental details related to biological and chemical research"
+    },
+    {
+      "layer": "0",
+      "feature": "70051365",
+      "node_id": "0_11835_2",
+      "appearances": 18,
+      "out_of": 10,
+      "avg_influence": 0.6317,
+      "avg_activation": 5.4978,
+      "label": "terms used in software code such as assembly, using, namespace, and license"
+    },
+    {
+      "layer": "1",
+      "feature": "99962728",
+      "node_id": "1_14137_1",
+      "appearances": 16,
+      "out_of": 10,
+      "avg_influence": 0.5813,
+      "avg_activation": 13.3352,
+      "label": "words or phrases that appear in legal or technical documents"
+    },
+    {
+      "layer": "0",
+      "feature": "2399144",
+      "node_id": "0_2189_2",
+      "appearances": 15,
+      "out_of": 10,
+      "avg_influence": 0.7105,
+      "avg_activation": 4.6445,
+      "label": "technical writing related to scientific studies"
+    },
+    {
+      "layer": "0",
+      "feature": "33329529",
+      "node_id": "0_8163_2",
+      "appearances": 14,
+      "out_of": 10,
+      "avg_influence": 0.6902,
+      "avg_activation": 3.3517,
+      "label": "words and phrases related to societal and political issues"
+    }
+  ],
+  "created_at": "2026-04-05T22:53:45Z"
+}

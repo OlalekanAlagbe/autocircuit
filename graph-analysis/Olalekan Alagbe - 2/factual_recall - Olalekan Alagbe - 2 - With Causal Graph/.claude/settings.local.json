@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pip install:*)",
+      "Bash(PYTHONIOENCODING=utf-8 python autocircuit_tools.py)",
+      "Bash(python -c ':*)"
+    ]
+  }
+}
