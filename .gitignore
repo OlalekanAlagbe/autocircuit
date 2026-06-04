@@ -14,5 +14,3 @@ __pycache__/
 .vscode/
 .idea/
 
-# Outputs from the new null-control work-in-progress
-experiments/exp8_180feature_validation/null_control.*

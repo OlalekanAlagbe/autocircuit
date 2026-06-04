@@ -1,0 +1,9 @@
+Circuit: 180 (layer, idx) pairs
+Sampled 180 non-circuit features for ablation
+Ablating 180 non-circuit features at strength -20...
+API call took 79.1s
+Default text:  '<bos>Paris is to France as Berlin is to Germany. It is the'
+Steered text:  '<bos>Paris is to France as Berlin is to Kyrie Kyrie Kyrie Kyrie Kyrie'
+First default token: ' Germany' (logprob -0.04248046875)
+First steered token: ' Kyrie' (logprob -2.84375)
+Wrote /Users/anish/Desktop/aisc_project/experiments/exp8_180feature_validation/null_control.json
