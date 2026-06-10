@@ -1,0 +1,88 @@
+Circuit: 180 features (shared across all prompts)
+
+=== analog_berlin: 'Paris is to France as Berlin is to' -> 'Germany' (baseline p=0.958) ===
+  (A) suppressing all 180 circuit features...
+      default : '<bos>Paris is to France as Berlin is to Germany. It is the'
+      steered : '<bos>Paris is to France as Berlin is to to to to to to'  (first=' to', lp=-0.0299072265625)
+      disrupted=True
+  (B) suppressing 180 random non-circuit features (seed 7, from analogy_graph.json)...
+      steered : '<bos>Paris is to France as Berlin is to Kyrie Kyrie Kyrie Kyrie Kyrie'  (first=' Kyrie', lp=-2.84375)
+      disrupted=True
+
+=== analog_rome: 'Paris is to France as Rome is to' -> 'Italy' (baseline p=0.974) ===
+  (A) suppressing all 180 circuit features...
+      ERROR: HTTP 500: Internal Server Error
+  (B) suppressing 180 random non-circuit features (seed 7, from analog_rome.json)...
+      ERROR: HTTP 500: Internal Server Error
+
+=== analog_tokyo: 'Paris is to France as Tokyo is to' -> 'Japan' (baseline p=0.99) ===
+  (A) suppressing all 180 circuit features...
+      default : '<bos>Paris is to France as Tokyo is to Japan. It is the'
+      steered : '<bos>Paris is to France as Tokyo is to to to to to to'  (first=' to', lp=-0.0301513671875)
+      disrupted=True
+  (B) suppressing 180 random non-circuit features (seed 7, from analog_tokyo.json)...
+      steered : '<bos>Paris is to France as Tokyo is to to to prawda prawda prawda'  (first=' to', lp=-1.96875)
+      disrupted=True
+
+=== analog_teacher: 'Doctor is to hospital as teacher is to' -> 'school' (baseline p=0.486) ===
+  (A) suppressing all 180 circuit features...
+      default : '<bos>Doctor is to hospital as teacher is to school.\n\nThe doctor'
+      steered : '<bos>Doctor is to hospital as teacher is to to to to to to'  (first=' to', lp=-0.028076171875)
+      disrupted=True
+  (B) suppressing 180 random non-circuit features (seed 7, from analog_teacher.json)...
+      steered : '<bos>Doctor is to hospital as teacher is to initComponents initComponents initComponents initComponents initComponents'  (first=' initComponents', lp=-0.80078125)
+      disrupted=True
+
+=== analog_bird: 'Fish is to water as bird is to' -> 'air' (baseline p=0.117) ===
+  (A) suppressing all 180 circuit features...
+      ERROR: HTTP 500: Internal Server Error
+  (B) suppressing 180 random non-circuit features (seed 7, from analog_bird.json)...
+      steered : '<bos>Fish is to water as bird is toespèreespèreespèreespèreespère'  (first='espère', lp=-0.318359375)
+      disrupted=True
+
+
+========================================================================
+CROSS-PROMPT SUMMARY
+========================================================================
+prompt           expected  circuit->                    null->                      
+analog_berlin    Germany   ' to' (lp -0.03)             ' Kyrie' (lp -2.84)         
+analog_rome      Italy     ERR                          ERR                         
+analog_tokyo     Japan     ' to' (lp -0.03)             ' to' (lp -1.97)            
+analog_teacher   school    ' to' (lp -0.03)             ' initComponents' (lp -0.80)
+analog_bird      air       ERR                          'espère' (lp -0.32)         
+Circuit: 180 features (shared across all prompts)
+
+Resuming; 5 prompts already recorded
+
+[analog_berlin] already complete; skipping
+=== analog_rome: 'Paris is to France as Rome is to' -> 'Italy' (baseline p=0.974) ===
+  (A) suppressing all 180 circuit features...
+  [analog_rome:circuit] HTTP 500 (attempt 1/6); retrying in 10s...
+      default : '<bos>Paris is to France as Rome is to Italy. It is the'
+      steered : '<bos>Paris is to France as Rome is to to to to to to'  (first=' to', lp=-0.0299072265625)
+      disrupted=True
+  (B) suppressing 180 random non-circuit features (seed 7, from analog_rome.json)...
+      steered : '<bos>Paris is to France as Rome is to autorytatywna autorytatywna autorytatywna autorytatywna autorytatywna'  (first=' autorytatywna', lp=-0.80859375)
+      disrupted=True
+
+[analog_tokyo] already complete; skipping
+[analog_teacher] already complete; skipping
+=== analog_bird: 'Fish is to water as bird is to' -> 'air' (baseline p=0.117) ===
+  (A) suppressing all 180 circuit features...
+      default : '<bos>Fish is to water as bird is to air.\n\nThe fish'
+      steered : '<bos>Fish is to water as bird is to to to to to to'  (first=' to', lp=-0.026123046875)
+      disrupted=True
+  (B) suppressing 180 random non-circuit features (seed 7, from analog_bird.json)...
+      steered : '<bos>Fish is to water as bird is toespèreespèreespèreespèreespère'  (first='espère', lp=-0.318359375)
+      disrupted=True
+
+
+========================================================================
+CROSS-PROMPT SUMMARY
+========================================================================
+prompt           expected  circuit->                    null->                      
+analog_berlin    Germany   ' to' (lp -0.03)             ' Kyrie' (lp -2.84)         
+analog_rome      Italy     ' to' (lp -0.03)             ' autorytatywna' (lp -0.81) 
+analog_tokyo     Japan     ' to' (lp -0.03)             ' to' (lp -1.97)            
+analog_teacher   school    ' to' (lp -0.03)             ' initComponents' (lp -0.80)
+analog_bird      air       ' to' (lp -0.03)             'espère' (lp -0.32)         
