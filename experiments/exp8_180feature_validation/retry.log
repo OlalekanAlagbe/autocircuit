@@ -1,0 +1,121 @@
+Loading existing results from /Users/anish/Desktop/aisc_project/experiments/exp8_180feature_validation/results.json
+  Necessity: 61/180 need retry
+  Full suppression: needs retry
+  Sufficiency: 3/3 need retry
+  Specificity: 20/20 need retry
+  Baseline: needs retry
+Total retry calls: 89
+Sleeping 1999s (33.3 min) for rate-limit window to roll over...
+
+[BASELINE] retrying
+  Persistent error: HTTP 500: Internal Server Error
+
+[NECESSITY RETRY] 61 features
+  [  1/61] L3_F5892        steered=' Germany'             
+  [  2/61] L12_F2416       steered=' Germany'             
+  [  3/61] L0_F355         steered=' the'          DISRUPT
+  [  4/61] L0_F11835       steered=' Germany'             
+  [  5/61] L1_F10748       steered=' Germany'             
+  [  6/61] L5_F15827       steered=' Germany'             
+  [  7/61] L3_F8907        steered=' Germany'             
+  [  8/61] L1_F961         steered=' Germany'             
+  [  9/61] L0_F4440        steered=' Germany'             
+  [ 10/61] L1_F39          steered=' Germany'             
+  [ 11/61] L5_F13874       steered=' Germany'             
+  [ 12/61] L0_F2608        steered=' Germany'             
+  [ 13/61] L2_F8364        steered=' Germany'             
+  [ 14/61] L2_F9088        steered=' Germany'             
+  [ 15/61] L5_F6109        steered=' Germany'             
+  [ 16/61] L3_F12615       steered=' the'          DISRUPT
+  [ 17/61] L1_F13789       steered='ERR'           ERR
+  [ 18/61] L8_F8823        steered=' Germany'             
+  [ 19/61] L4_F1802        steered=' Germany'             
+  [ 20/61] L0_F4062        steered=' Germany'             
+  [ 21/61] L10_F5559       steered=' Germany'             
+  [ 22/61] L12_F7938       steered=' Germany'             
+  [ 23/61] L1_F6265        steered='ERR'           ERR
+  [ 24/61] L13_F2904       steered=' Germany'             
+  [ 25/61] L2_F1531        steered=' Germany'             
+  [ 26/61] L0_F9977        steered=' London'       DISRUPT
+  [ 27/61] L0_F9026        steered=' the'          DISRUPT
+  [ 28/61] L7_F6756        steered=' Germany'             
+  [ 29/61] L0_F6274        steered=' Germany'             
+  [ 30/61] L9_F2750        steered=' Germany'             
+  [ 31/61] L0_F8047        steered=' Germany'             
+  [ 32/61] L0_F1448        steered=' Germany'             
+  [ 33/61] L4_F10469       steered=' Germany'             
+  [ 34/61] L0_F14519       steered=' the'          DISRUPT
+  [ 35/61] L0_F9033        steered=' Germany'             
+  [ 36/61] L5_F10251       steered=' Germany'             
+  [ 37/61] L3_F3289        steered=' Germany'             
+  [ 38/61] L3_F10923       steered=' Germany'             
+  [ 39/61] L6_F11805       steered=' Germany'             
+  [ 40/61] L4_F2485        steered=' Germany'             
+  [ 41/61] L1_F14749       steered=' Germany'             
+  [ 42/61] L0_F4739        steered=' the'          DISRUPT
+  [ 43/61] L0_F3756        steered=' Germany'             
+  [ 44/61] L3_F8196        steered=' Germany'             
+  [ 45/61] L3_F5266        steered=' Germany'             
+  [ 46/61] L8_F14883       steered=' Germany'             
+  [ 47/61] L0_F1903        steered=' Paris'        DISRUPT
+  [ 48/61] L25_F13416      steered=' Germany'             
+  [ 49/61] L4_F4021        steered=' Germany'             
+  [ 50/61] L15_F15954      steered=' Germany'             
+  [ 51/61] L24_F13541      steered=' Germany'             
+  [ 52/61] L4_F8051        steered=' Germany'             
+  [ 53/61] L0_F7370        steered=' Paris'        DISRUPT
+  [ 54/61] L5_F3992        steered=' Germany'             
+  [ 55/61] L1_F10469       steered=' Germany'             
+  [ 56/61] L0_F2800        steered=' Germany'             
+  [ 57/61] L2_F9457        steered=' Germany'             
+  [ 58/61] L4_F9110        steered=' Berlin'       DISRUPT
+  [ 59/61] L25_F4717       steered=' Germany'             
+  [ 60/61] L24_F13277      steered=' Germany'             
+  [ 61/61] L0_F1053        steered=' Germany'             
+
+[FULL SUPPRESSION RETRY]
+  Default: '<bos>Paris is to France as Berlin is to Germany. It is the'
+  Steered: '<bos>Paris is to France as Berlin is to to to to to to'
+  Disrupted: True
+
+[SUFFICIENCY RETRY] 3
+  'Cairo is to Egypt as Nairobi is to'
+    Boosted:  '<bos>Cairo is to Egypt as Nairobi is to Kenya.\n\nThe capital'
+    Induces 'Germany': False
+  'Madrid is to Spain as Berlin is to'
+    Boosted:  '<bos>Madrid is to Spain as Berlin is to Germany. It’s'
+    Induces 'Germany': True
+  'The weather today is really'
+    Boosted:  '<bos>The weather today is really nice. The sun is'
+    Induces 'Germany': False
+
+[SPECIFICITY RETRY] 20
+  [ 1/20] L25_2953   act= 14.28 infl=0.790  steered=' Germany'             
+  [ 2/20] L15_11238  act= 41.53 infl=0.740  steered=' Germany'             
+  [ 3/20] L12_12493  act= 65.31 infl=0.770  steered=' Germany'             
+  [ 4/20] L 2_14886  act= 13.08 infl=0.537  steered=' Germany'             
+  [ 5/20] L 9_8770   act= 26.21 infl=0.772  steered=' Germany'             
+  [ 6/20] L13_4435   act=  9.28 infl=0.799  steered=' Germany'             
+  [ 7/20] L11_48     act=  9.39 infl=0.759  steered=' Germany'             
+  [ 8/20] L11_9986   act= 10.06 infl=0.681  steered=' Germany'             
+  [ 9/20] L23_10207  act=  7.40 infl=0.577  steered=' Germany'             
+  [10/20] L23_9822   act= 10.17 infl=0.660  steered=' Germany'             
+  [11/20] L 9_11223  act=  4.56 infl=0.689  steered=' Germany'             
+  [12/20] L 9_7775   act=  4.40 infl=0.715  steered=' Germany'             
+  [13/20] L 2_7703   act=  3.96 infl=0.645  steered=' Germany'             
+  [14/20] L 6_3335   act=  4.86 infl=0.796  steered=' Germany'             
+  [15/20] L 3_15048  act=  6.09 infl=0.639  steered=' Germany'             
+  [16/20] L 0_11431  act=  2.62 infl=0.692  steered=' Germany'             
+  [17/20] L 3_5670   act=  2.85 infl=0.754  steered=' Germany'             
+  [18/20] L 5_10235  act=  3.72 infl=0.784  steered=' Germany'             
+  [19/20] L 5_3635   act=  3.72 infl=0.793  steered=' Germany'             
+  [20/20] L 5_13448  act=  3.54 infl=0.780  steered=' Germany'             
+
+======================================================================
+RETRY COMPLETE
+======================================================================
+Necessity:    24/178 features disrupt (of 180 total)
+Full suppress: DISRUPTED
+  steered: '<bos>Paris is to France as Berlin is to to to to to to'
+Sufficiency:  1/3 altered prompts induce 'Germany'
+Specificity:  0/20 non-circuit features disrupt

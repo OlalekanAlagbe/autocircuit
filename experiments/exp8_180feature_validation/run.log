@@ -1,0 +1,244 @@
+Output dir: /Users/anish/Desktop/aisc_project/experiments/exp8_180feature_validation
+Loading 180-feature circuit from /Users/anish/Downloads/analogical_circuit_180features.json
+  -> Loaded 180 features.
+Sampling 20 non-circuit features from analogy_graph.json
+  -> Sampled 20 (activation range 2.62–65.31).
+
+[BASELINE] 'Paris is to France as Berlin is to'
+  Default text: '?'
+  First token: '?' (logprob None)
+
+[NECESSITY] 180 individual ablations at strength -20
+  [  1/180] L4_F14857       steered= Germany             
+  [  2/180] L8_F13766       steered= Germany             
+  [  3/180] L6_F2267        steered= Germany             
+  [  4/180] L3_F3205        steered= Germany             
+  [  5/180] L9_F13344       steered= Germany             
+  [  6/180] L0_F4823        steered= Germany             
+  [  7/180] L0_F1847        steered= Paris        DISRUPT
+  [  8/180] L5_F2141        steered= Germany             
+  [  9/180] L5_F9672        steered= Germany             
+  [ 10/180] L0_F12200       steered= Germany             
+  [ 11/180] L13_F10969      steered= Germany             
+  [ 12/180] L0_F12747       steered= Germany             
+  [ 13/180] L0_F2115        steered=Paris         DISRUPT
+  [ 14/180] L5_F5793        steered= Germany             
+  [ 15/180] L5_F6473        steered= Germany             
+  [ 16/180] L11_F15947      steered= Germany             
+  [ 17/180] L6_F12605       steered= Germany             
+  [ 18/180] L3_F12006       steered= Germany             
+  [ 19/180] L2_F11475       steered= Berlin       DISRUPT
+  [ 20/180] L0_F11651       steered= Berlin       DISRUPT
+  [ 21/180] L4_F10752       steered= Germany             
+  [ 22/180] L1_F11356       steered= Germany             
+  [ 23/180] L4_F410         steered= Germany             
+  [ 24/180] L4_F12254       steered= Germany             
+  [ 25/180] L2_F9848        steered= Germany             
+  [ 26/180] L3_F10018       steered= Germany             
+  [ 27/180] L0_F11375       steered= Germany             
+  [ 28/180] L0_F8444        steered= Germany             
+  [ 29/180] L5_F7191        steered= Germany             
+  [ 30/180] L10_F6033       steered= Germany             
+  [ 31/180] L1_F1321        steered= Germany             
+  [ 32/180] L5_F6257        steered= Germany             
+  [ 33/180] L3_F169         steered= Germany             
+  [ 34/180] L6_F4662        steered= Germany             
+  [ 35/180] L2_F8165        steered= Germany             
+  [ 36/180] L1_F10752       steered= Germany             
+  [ 37/180] L0_F6028        steered= Germany             
+  [ 38/180] L0_F5626        steered= Germany             
+  [ 39/180] L0_F8008        steered= the          DISRUPT
+  [ 40/180] L6_F5451        steered= Germany             
+  [ 41/180] L10_F14542      steered= Germany             
+  [ 42/180] L5_F15819       steered= Germany             
+  [ 43/180] L13_F2249       steered= Germany             
+  [ 44/180] L4_F14729       steered= Germany             
+  [ 45/180] L6_F6732        steered= Germany             
+  [ 46/180] L2_F1154        steered= Germany             
+  [ 47/180] L2_F15420       steered= Germany             
+  [ 48/180] L1_F2493        steered= Germany             
+  [ 49/180] L2_F8539        steered= Germany             
+  [ 50/180] L0_F9773        steered= Berlin       DISRUPT
+  [ 51/180] L9_F2909        steered= Germany             
+  [ 52/180] L4_F9757        steered= France       DISRUPT
+  [ 53/180] L4_F128         steered= Germany             
+  [ 54/180] L0_F8163        steered= Paris        DISRUPT
+  [ 55/180] L14_F11455      steered= Germany             
+  [ 56/180] L2_F7346        steered= Germany             
+  [ 57/180] L5_F309         steered= Germany             
+  [ 58/180] L7_F749         steered= Germany             
+  [ 59/180] L0_F15414       steered= Germany             
+  [ 60/180] L0_F11834       steered= Germany             
+  [ 61/180] L1_F14137       steered= Germany             
+  [ 62/180] L4_F12658       steered= Germany             
+  [ 63/180] L3_F3554        steered= Germany             
+  [ 64/180] L6_F14038       steered= Germany             
+  [ 65/180] L4_F4849        steered= Germany             
+  [ 66/180] L0_F15038       steered= the          DISRUPT
+  [ 67/180] L22_F14727      steered= Germany             
+  [ 68/180] L7_F3099        steered= Germany             
+  [ 69/180] L5_F16136       steered= Germany             
+  [ 70/180] L6_F10428       steered= Germany             
+  [ 71/180] L3_F3976        steered= Germany             
+  [ 72/180] L5_F6846        steered= Germany             
+  [ 73/180] L6_F8974        steered= Germany             
+  [ 74/180] L0_F13004       steered= Paris        DISRUPT
+  [ 75/180] L9_F14231       steered= Germany             
+  [ 76/180] L4_F5903        steered= Germany             
+  [ 77/180] L6_F9220        steered= Germany             
+  [ 78/180] L1_F5532        steered= Germany             
+  [ 79/180] L5_F13039       steered= Germany             
+  [ 80/180] L5_F10824       steered= Germany             
+  [ 81/180] L4_F6405        steered= Germany             
+  [ 82/180] L2_F7856        steered= Germany             
+  [ 83/180] L12_F10440      steered= Germany             
+  [ 84/180] L6_F1071        steered= the          DISRUPT
+  [ 85/180] L3_F3783        steered= Germany             
+  [ 86/180] L6_F3178        steered= Germany             
+  [ 87/180] L0_F7688        steered= Germany             
+  [ 88/180] L12_F15954      steered= Germany             
+  [ 89/180] L3_F6895        steered= Germany             
+  [ 90/180] L1_F16165       steered= Germany             
+  [ 91/180] L0_F1998        steered= Germany             
+  [ 92/180] L18_F868        steered= the          DISRUPT
+  [ 93/180] L2_F7971        steered= Germany             
+  [ 94/180] L14_F3704       steered= Germany             
+  [ 95/180] L20_F15360      steered= Germany             
+  [ 96/180] L20_F3094       steered= Germany             
+  [ 97/180] L6_F3182        steered= Germany             
+  [ 98/180] L5_F617         steered= Germany             
+  [ 99/180] L6_F558         steered= Germany             
+  [100/180] L9_F7011        steered= Germany             
+  [101/180] L0_F16183       steered= France       DISRUPT
+  [102/180] L0_F1548        steered= Berlin       DISRUPT
+  [103/180] L5_F4967        steered= Germany             
+  [104/180] L7_F6884        steered= Germany             
+  [105/180] L3_F1931        steered= Germany             
+  [106/180] L5_F10903       steered= Germany             
+  [107/180] L1_F726         steered= Germany             
+  [108/180] L3_F12478       steered= Germany             
+  [109/180] L7_F11973       steered= Germany             
+  [110/180] L6_F2539        steered= Germany             
+  [111/180] L4_F1489        steered= London       DISRUPT
+  [112/180] L0_F6116        steered= Germany             
+  [113/180] L3_F11734       steered= Germany             
+  [114/180] L4_F2221        steered= Germany             
+  [115/180] L6_F4742        steered= Germany             
+  [116/180] L8_F3136        steered= Germany             
+  [117/180] L1_F3135        steered= Germany             
+  [118/180] L14_F8179       steered= Germany             
+  [119/180] L4_F1312        steered= Germany             
+  [120/180] L3_F5892        steered=?             DISRUPT
+  [121/180] L12_F2416       steered=?             DISRUPT
+  [122/180] L0_F355         steered=?             DISRUPT
+  [123/180] L0_F11835       steered=?             DISRUPT
+  [124/180] L1_F10748       steered=?             DISRUPT
+  [125/180] L5_F15827       steered=?             DISRUPT
+  [126/180] L3_F8907        steered=?             DISRUPT
+  [127/180] L1_F961         steered=?             DISRUPT
+  [128/180] L0_F4440        steered=?             DISRUPT
+  [129/180] L1_F39          steered=?             DISRUPT
+  [130/180] L5_F13874       steered=?             DISRUPT
+  [131/180] L0_F2608        steered=?             DISRUPT
+  [132/180] L2_F8364        steered=?             DISRUPT
+  [133/180] L2_F9088        steered=?             DISRUPT
+  [134/180] L5_F6109        steered=?             DISRUPT
+  [135/180] L3_F12615       steered=?             DISRUPT
+  [136/180] L1_F13789       steered=?             DISRUPT
+  [137/180] L8_F8823        steered=?             DISRUPT
+  [138/180] L4_F1802        steered=?             DISRUPT
+  [139/180] L0_F4062        steered=?             DISRUPT
+  [140/180] L10_F5559       steered=?             DISRUPT
+  [141/180] L12_F7938       steered=?             DISRUPT
+  [142/180] L1_F6265        steered=?             DISRUPT
+  [143/180] L13_F2904       steered=?             DISRUPT
+  [144/180] L2_F1531        steered=?             DISRUPT
+  [145/180] L0_F9977        steered=?             DISRUPT
+  [146/180] L0_F9026        steered=?             DISRUPT
+  [147/180] L7_F6756        steered=?             DISRUPT
+  [148/180] L0_F6274        steered=?             DISRUPT
+  [149/180] L9_F2750        steered=?             DISRUPT
+  [150/180] L0_F8047        steered=?             DISRUPT
+  [151/180] L0_F1448        steered=?             DISRUPT
+  [152/180] L4_F10469       steered=?             DISRUPT
+  [153/180] L0_F14519       steered=?             DISRUPT
+  [154/180] L0_F9033        steered=?             DISRUPT
+  [155/180] L5_F10251       steered=?             DISRUPT
+  [156/180] L3_F3289        steered=?             DISRUPT
+  [157/180] L3_F10923       steered=?             DISRUPT
+  [158/180] L6_F11805       steered=?             DISRUPT
+  [159/180] L4_F2485        steered=?             DISRUPT
+  [160/180] L1_F14749       steered=?             DISRUPT
+  [161/180] L0_F4739        steered=?             DISRUPT
+  [162/180] L0_F3756        steered=?             DISRUPT
+  [163/180] L3_F8196        steered=?             DISRUPT
+  [164/180] L3_F5266        steered=?             DISRUPT
+  [165/180] L8_F14883       steered=?             DISRUPT
+  [166/180] L0_F1903        steered=?             DISRUPT
+  [167/180] L25_F13416      steered=?             DISRUPT
+  [168/180] L4_F4021        steered=?             DISRUPT
+  [169/180] L15_F15954      steered=?             DISRUPT
+  [170/180] L24_F13541      steered=?             DISRUPT
+  [171/180] L4_F8051        steered=?             DISRUPT
+  [172/180] L0_F7370        steered=?             DISRUPT
+  [173/180] L5_F3992        steered=?             DISRUPT
+  [174/180] L1_F10469       steered=?             DISRUPT
+  [175/180] L0_F2800        steered=?             DISRUPT
+  [176/180] L2_F9457        steered=?             DISRUPT
+  [177/180] L4_F9110        steered=?             DISRUPT
+  [178/180] L25_F4717       steered=?             DISRUPT
+  [179/180] L24_F13277      steered=?             DISRUPT
+  [180/180] L0_F1053        steered=?             DISRUPT
+  -> 76/180 features individually disrupt the prediction.
+
+[FULL SUPPRESSION] All 180 features at strength -20
+  Default: '?'
+  Steered: '?'
+  Disrupted: YES
+
+[SUFFICIENCY] Boost hub L6_F3182 (avg_influence=0.7895) at strength 20
+  'Cairo is to Egypt as Nairobi is to' (different analogy same structure)
+    Baseline: '?'
+    Boosted:  '?'
+    Induces 'Germany': no
+  'Madrid is to Spain as Berlin is to' (different source pair (Berlin still present))
+    Baseline: '?'
+    Boosted:  '?'
+    Induces 'Germany': no
+  'The weather today is really' (irrelevant context)
+    Baseline: '?'
+    Boosted:  '?'
+    Induces 'Germany': no
+
+[SPECIFICITY] 20 non-circuit ablations at strength -20
+  [ 1/20] L25_2953   act= 14.28 infl=0.790  steered=?             DISRUPT
+  [ 2/20] L15_11238  act= 41.53 infl=0.740  steered=?             DISRUPT
+  [ 3/20] L12_12493  act= 65.31 infl=0.770  steered=?             DISRUPT
+  [ 4/20] L 2_14886  act= 13.08 infl=0.537  steered=?             DISRUPT
+  [ 5/20] L 9_8770   act= 26.21 infl=0.772  steered=?             DISRUPT
+  [ 6/20] L13_4435   act=  9.28 infl=0.799  steered=?             DISRUPT
+  [ 7/20] L11_48     act=  9.39 infl=0.759  steered=?             DISRUPT
+  [ 8/20] L11_9986   act= 10.06 infl=0.681  steered=?             DISRUPT
+  [ 9/20] L23_10207  act=  7.40 infl=0.577  steered=?             DISRUPT
+  [10/20] L23_9822   act= 10.17 infl=0.660  steered=?             DISRUPT
+  [11/20] L 9_11223  act=  4.56 infl=0.689  steered=?             DISRUPT
+  [12/20] L 9_7775   act=  4.40 infl=0.715  steered=?             DISRUPT
+  [13/20] L 2_7703   act=  3.96 infl=0.645  steered=?             DISRUPT
+  [14/20] L 6_3335   act=  4.86 infl=0.796  steered=?             DISRUPT
+  [15/20] L 3_15048  act=  6.09 infl=0.639  steered=?             DISRUPT
+  [16/20] L 0_11431  act=  2.62 infl=0.692  steered=?             DISRUPT
+  [17/20] L 3_5670   act=  2.85 infl=0.754  steered=?             DISRUPT
+  [18/20] L 5_10235  act=  3.72 infl=0.784  steered=?             DISRUPT
+  [19/20] L 5_3635   act=  3.72 infl=0.793  steered=?             DISRUPT
+  [20/20] L 5_13448  act=  3.54 infl=0.780  steered=?             DISRUPT
+  -> 20/20 non-circuit features disrupt the prediction.
+
+======================================================================
+SUMMARY
+======================================================================
+Necessity (individual):   76/180 features disrupt prediction
+Necessity (full):         DISRUPTED
+Sufficiency:              hub boost induces 'Germany' on 0/3 altered prompts
+Specificity:              20/20 non-circuit features disrupt (FAIL)
+
+Full results: /Users/anish/Desktop/aisc_project/experiments/exp8_180feature_validation/results.json

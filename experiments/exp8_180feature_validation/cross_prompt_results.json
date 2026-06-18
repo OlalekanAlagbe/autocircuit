@@ -1,0 +1,6032 @@
+{
+  "analog_berlin": {
+    "prompt": "Paris is to France as Berlin is to",
+    "expected": "Germany",
+    "baseline_p": 0.958,
+    "circuit": {
+      "n_features": 180,
+      "strength": -20,
+      "result": {
+        "default_text": "<bos>Paris is to France as Berlin is to Germany. It is the",
+        "steered_text": "<bos>Paris is to France as Berlin is to to to to to to",
+        "first_steered_token": " to",
+        "first_steered_logprob": -0.0299072265625,
+        "first_steered_top5": [
+          {
+            "token": " to",
+            "logprob": -0.0299072265625
+          },
+          {
+            "token": " and",
+            "logprob": -4.15625
+          },
+          {
+            "token": " is",
+            "logprob": -4.40625
+          },
+          {
+            "token": ",",
+            "logprob": -7.96875
+          },
+          {
+            "token": "  ",
+            "logprob": -8.9375
+          }
+        ],
+        "first_default_token": " Germany",
+        "first_default_logprob": -0.04248046875,
+        "first_default_top5": [
+          {
+            "token": " Germany",
+            "logprob": -0.04248046875
+          },
+          {
+            "token": " the",
+            "logprob": -4.40625
+          },
+          {
+            "token": " Berlin",
+            "logprob": -5.53125
+          },
+          {
+            "token": " German",
+            "logprob": -6.09375
+          },
+          {
+            "token": " Europe",
+            "logprob": -6.09375
+          }
+        ]
+      },
+      "disrupted": true
+    },
+    "baseline_text": "<bos>Paris is to France as Berlin is to Germany. It is the",
+    "baseline_first_token": " Germany",
+    "baseline_first_logprob": -0.04248046875,
+    "null": {
+      "n_features": 180,
+      "n_requested": 180,
+      "strength": -20,
+      "seed": 7,
+      "sampled_features": [
+        {
+          "layer": 24,
+          "index": 11186,
+          "activation": 23.7559871673584,
+          "influence": 0.49650663137435913
+        },
+        {
+          "layer": 10,
+          "index": 16328,
+          "activation": 10.82544231414795,
+          "influence": 0.7748769521713257
+        },
+        {
+          "layer": 24,
+          "index": 7100,
+          "activation": 37.714195251464844,
+          "influence": 0.6448483467102051
+        },
+        {
+          "layer": 12,
+          "index": 16125,
+          "activation": 18.973312377929688,
+          "influence": 0.7023289799690247
+        },
+        {
+          "layer": 25,
+          "index": 16381,
+          "activation": 14.127517700195312,
+          "influence": 0.7178564071655273
+        },
+        {
+          "layer": 25,
+          "index": 14744,
+          "activation": 54.69319152832031,
+          "influence": 0.5130339860916138
+        },
+        {
+          "layer": 10,
+          "index": 10933,
+          "activation": 48.47279357910156,
+          "influence": 0.7797099351882935
+        },
+        {
+          "layer": 8,
+          "index": 2742,
+          "activation": 12.441694259643555,
+          "influence": 0.7816611528396606
+        },
+        {
+          "layer": 20,
+          "index": 12072,
+          "activation": 15.608060836791992,
+          "influence": 0.6911877989768982
+        },
+        {
+          "layer": 21,
+          "index": 4827,
+          "activation": 45.03559112548828,
+          "influence": 0.798518717288971
+        },
+        {
+          "layer": 25,
+          "index": 11825,
+          "activation": 20.667301177978516,
+          "influence": 0.3886885344982147
+        },
+        {
+          "layer": 24,
+          "index": 1260,
+          "activation": 14.927787780761719,
+          "influence": 0.7099409699440002
+        },
+        {
+          "layer": 24,
+          "index": 5999,
+          "activation": 50.58662796020508,
+          "influence": 0.6381685733795166
+        },
+        {
+          "layer": 19,
+          "index": 5773,
+          "activation": 15.966707229614258,
+          "influence": 0.6408637166023254
+        },
+        {
+          "layer": 15,
+          "index": 10550,
+          "activation": 31.692750930786133,
+          "influence": 0.3403187394142151
+        },
+        {
+          "layer": 10,
+          "index": 14174,
+          "activation": 58.96271896362305,
+          "influence": 0.6435261964797974
+        },
+        {
+          "layer": 25,
+          "index": 15221,
+          "activation": 46.56607437133789,
+          "influence": 0.29940322041511536
+        },
+        {
+          "layer": 19,
+          "index": 411,
+          "activation": 17.436988830566406,
+          "influence": 0.7032990455627441
+        },
+        {
+          "layer": 20,
+          "index": 13541,
+          "activation": 17.69690704345703,
+          "influence": 0.4113466441631317
+        },
+        {
+          "layer": 24,
+          "index": 483,
+          "activation": 49.70423889160156,
+          "influence": 0.6764323115348816
+        },
+        {
+          "layer": 23,
+          "index": 9990,
+          "activation": 30.086280822753906,
+          "influence": 0.7108728885650635
+        },
+        {
+          "layer": 16,
+          "index": 4546,
+          "activation": 11.781837463378906,
+          "influence": 0.6812341809272766
+        },
+        {
+          "layer": 18,
+          "index": 3483,
+          "activation": 15.418577194213867,
+          "influence": 0.7389992475509644
+        },
+        {
+          "layer": 25,
+          "index": 323,
+          "activation": 17.60012435913086,
+          "influence": 0.6801329851150513
+        },
+        {
+          "layer": 12,
+          "index": 4592,
+          "activation": 11.17949104309082,
+          "influence": 0.7912902235984802
+        },
+        {
+          "layer": 11,
+          "index": 3318,
+          "activation": 15.343186378479004,
+          "influence": 0.7531194686889648
+        },
+        {
+          "layer": 18,
+          "index": 11952,
+          "activation": 41.03855895996094,
+          "influence": 0.688027024269104
+        },
+        {
+          "layer": 20,
+          "index": 3325,
+          "activation": 31.12183380126953,
+          "influence": 0.6162810325622559
+        },
+        {
+          "layer": 25,
+          "index": 10179,
+          "activation": 14.292156219482422,
+          "influence": 0.6584511995315552
+        },
+        {
+          "layer": 2,
+          "index": 6077,
+          "activation": 13.001533508300781,
+          "influence": 0.3922739624977112
+        },
+        {
+          "layer": 4,
+          "index": 1395,
+          "activation": 11.167509078979492,
+          "influence": 0.6317228078842163
+        },
+        {
+          "layer": 25,
+          "index": 10152,
+          "activation": 12.864747047424316,
+          "influence": 0.6722990870475769
+        },
+        {
+          "layer": 15,
+          "index": 1019,
+          "activation": 15.26343059539795,
+          "influence": 0.7577709555625916
+        },
+        {
+          "layer": 16,
+          "index": 12042,
+          "activation": 13.060615539550781,
+          "influence": 0.4376678168773651
+        },
+        {
+          "layer": 9,
+          "index": 14785,
+          "activation": 10.730801582336426,
+          "influence": 0.7205387949943542
+        },
+        {
+          "layer": 24,
+          "index": 14452,
+          "activation": 10.835973739624023,
+          "influence": 0.6749367713928223
+        },
+        {
+          "layer": 19,
+          "index": 12303,
+          "activation": 12.939248085021973,
+          "influence": 0.4540998935699463
+        },
+        {
+          "layer": 25,
+          "index": 15920,
+          "activation": 56.68909454345703,
+          "influence": 0.42640772461891174
+        },
+        {
+          "layer": 21,
+          "index": 7482,
+          "activation": 15.385030746459961,
+          "influence": 0.5761693120002747
+        },
+        {
+          "layer": 17,
+          "index": 13553,
+          "activation": 38.777366638183594,
+          "influence": 0.7838035821914673
+        },
+        {
+          "layer": 24,
+          "index": 15471,
+          "activation": 25.616106033325195,
+          "influence": 0.6157853007316589
+        },
+        {
+          "layer": 25,
+          "index": 1676,
+          "activation": 12.02577018737793,
+          "influence": 0.6192311644554138
+        },
+        {
+          "layer": 21,
+          "index": 5251,
+          "activation": 37.86822509765625,
+          "influence": 0.4127870500087738
+        },
+        {
+          "layer": 15,
+          "index": 14741,
+          "activation": 15.520679473876953,
+          "influence": 0.5692899227142334
+        },
+        {
+          "layer": 16,
+          "index": 16331,
+          "activation": 12.90251350402832,
+          "influence": 0.6197205185890198
+        },
+        {
+          "layer": 3,
+          "index": 14032,
+          "activation": 8.045646667480469,
+          "influence": 0.7127242088317871
+        },
+        {
+          "layer": 7,
+          "index": 5741,
+          "activation": 8.943746566772461,
+          "influence": 0.7570427656173706
+        },
+        {
+          "layer": 0,
+          "index": 2841,
+          "activation": 8.102458000183105,
+          "influence": 0.5221118330955505
+        },
+        {
+          "layer": 3,
+          "index": 2858,
+          "activation": 7.175832271575928,
+          "influence": 0.5951173305511475
+        },
+        {
+          "layer": 6,
+          "index": 6140,
+          "activation": 7.630802154541016,
+          "influence": 0.6719207167625427
+        },
+        {
+          "layer": 8,
+          "index": 6462,
+          "activation": 9.733291625976562,
+          "influence": 0.7627883553504944
+        },
+        {
+          "layer": 23,
+          "index": 9822,
+          "activation": 10.165641784667969,
+          "influence": 0.6596792340278625
+        },
+        {
+          "layer": 21,
+          "index": 10660,
+          "activation": 8.029102325439453,
+          "influence": 0.6823205947875977
+        },
+        {
+          "layer": 2,
+          "index": 792,
+          "activation": 6.622734069824219,
+          "influence": 0.5574091672897339
+        },
+        {
+          "layer": 13,
+          "index": 16376,
+          "activation": 7.80848503112793,
+          "influence": 0.7898540496826172
+        },
+        {
+          "layer": 7,
+          "index": 1980,
+          "activation": 9.708159446716309,
+          "influence": 0.6479021310806274
+        },
+        {
+          "layer": 17,
+          "index": 4321,
+          "activation": 8.761076927185059,
+          "influence": 0.691536545753479
+        },
+        {
+          "layer": 12,
+          "index": 12230,
+          "activation": 10.226179122924805,
+          "influence": 0.7538606524467468
+        },
+        {
+          "layer": 16,
+          "index": 6491,
+          "activation": 8.143641471862793,
+          "influence": 0.7961363792419434
+        },
+        {
+          "layer": 6,
+          "index": 1509,
+          "activation": 7.480982780456543,
+          "influence": 0.41557347774505615
+        },
+        {
+          "layer": 1,
+          "index": 8251,
+          "activation": 10.430407524108887,
+          "influence": 0.5229269862174988
+        },
+        {
+          "layer": 1,
+          "index": 11321,
+          "activation": 8.069475173950195,
+          "influence": 0.5113503336906433
+        },
+        {
+          "layer": 10,
+          "index": 96,
+          "activation": 10.468724250793457,
+          "influence": 0.7803628444671631
+        },
+        {
+          "layer": 9,
+          "index": 13780,
+          "activation": 7.850962162017822,
+          "influence": 0.7799278497695923
+        },
+        {
+          "layer": 20,
+          "index": 3682,
+          "activation": 9.458700180053711,
+          "influence": 0.740584671497345
+        },
+        {
+          "layer": 12,
+          "index": 9326,
+          "activation": 8.271095275878906,
+          "influence": 0.7090030908584595
+        },
+        {
+          "layer": 4,
+          "index": 12911,
+          "activation": 6.711883544921875,
+          "influence": 0.7187538146972656
+        },
+        {
+          "layer": 15,
+          "index": 2932,
+          "activation": 8.164362907409668,
+          "influence": 0.7133374214172363
+        },
+        {
+          "layer": 6,
+          "index": 3874,
+          "activation": 8.529415130615234,
+          "influence": 0.7865406274795532
+        },
+        {
+          "layer": 9,
+          "index": 13304,
+          "activation": 7.264436721801758,
+          "influence": 0.7243334054946899
+        },
+        {
+          "layer": 25,
+          "index": 9873,
+          "activation": 8.939085006713867,
+          "influence": 0.7735468149185181
+        },
+        {
+          "layer": 18,
+          "index": 3678,
+          "activation": 8.385345458984375,
+          "influence": 0.6563854217529297
+        },
+        {
+          "layer": 0,
+          "index": 2924,
+          "activation": 6.728257179260254,
+          "influence": 0.5792362689971924
+        },
+        {
+          "layer": 1,
+          "index": 1407,
+          "activation": 8.421334266662598,
+          "influence": 0.5237393975257874
+        },
+        {
+          "layer": 12,
+          "index": 9239,
+          "activation": 8.767366409301758,
+          "influence": 0.7875820398330688
+        },
+        {
+          "layer": 12,
+          "index": 12476,
+          "activation": 8.94711685180664,
+          "influence": 0.7222995758056641
+        },
+        {
+          "layer": 13,
+          "index": 4435,
+          "activation": 9.278331756591797,
+          "influence": 0.7987159490585327
+        },
+        {
+          "layer": 7,
+          "index": 6910,
+          "activation": 6.716609954833984,
+          "influence": 0.7681384682655334
+        },
+        {
+          "layer": 7,
+          "index": 13919,
+          "activation": 7.513367652893066,
+          "influence": 0.7437240481376648
+        },
+        {
+          "layer": 23,
+          "index": 10207,
+          "activation": 7.398364067077637,
+          "influence": 0.5767856240272522
+        },
+        {
+          "layer": 17,
+          "index": 526,
+          "activation": 10.345365524291992,
+          "influence": 0.7528713941574097
+        },
+        {
+          "layer": 8,
+          "index": 10084,
+          "activation": 6.742480754852295,
+          "influence": 0.7775224447250366
+        },
+        {
+          "layer": 0,
+          "index": 11232,
+          "activation": 7.390172958374023,
+          "influence": 0.4834369719028473
+        },
+        {
+          "layer": 2,
+          "index": 3732,
+          "activation": 8.200454711914062,
+          "influence": 0.5155365467071533
+        },
+        {
+          "layer": 5,
+          "index": 9396,
+          "activation": 7.166093826293945,
+          "influence": 0.7575284838676453
+        },
+        {
+          "layer": 4,
+          "index": 10301,
+          "activation": 8.84399127960205,
+          "influence": 0.5888308882713318
+        },
+        {
+          "layer": 8,
+          "index": 10532,
+          "activation": 8.455891609191895,
+          "influence": 0.7989131212234497
+        },
+        {
+          "layer": 20,
+          "index": 9871,
+          "activation": 9.071755409240723,
+          "influence": 0.4881998896598816
+        },
+        {
+          "layer": 21,
+          "index": 3271,
+          "activation": 7.861534118652344,
+          "influence": 0.7929203510284424
+        },
+        {
+          "layer": 23,
+          "index": 9585,
+          "activation": 10.42682933807373,
+          "influence": 0.6925755739212036
+        },
+        {
+          "layer": 0,
+          "index": 7931,
+          "activation": 5.973833084106445,
+          "influence": 0.4946955144405365
+        },
+        {
+          "layer": 3,
+          "index": 11700,
+          "activation": 4.902097702026367,
+          "influence": 0.702004611492157
+        },
+        {
+          "layer": 1,
+          "index": 1988,
+          "activation": 5.112490653991699,
+          "influence": 0.6960049271583557
+        },
+        {
+          "layer": 2,
+          "index": 8513,
+          "activation": 5.917687892913818,
+          "influence": 0.630310595035553
+        },
+        {
+          "layer": 3,
+          "index": 1942,
+          "activation": 4.345033645629883,
+          "influence": 0.6908389925956726
+        },
+        {
+          "layer": 0,
+          "index": 13977,
+          "activation": 5.358479976654053,
+          "influence": 0.6368070840835571
+        },
+        {
+          "layer": 10,
+          "index": 6654,
+          "activation": 5.932197570800781,
+          "influence": 0.7781805992126465
+        },
+        {
+          "layer": 4,
+          "index": 7569,
+          "activation": 4.924290657043457,
+          "influence": 0.681959331035614
+        },
+        {
+          "layer": 0,
+          "index": 10455,
+          "activation": 3.8034114837646484,
+          "influence": 0.642198383808136
+        },
+        {
+          "layer": 10,
+          "index": 15839,
+          "activation": 6.389837265014648,
+          "influence": 0.759936511516571
+        },
+        {
+          "layer": 2,
+          "index": 10593,
+          "activation": 4.564214706420898,
+          "influence": 0.702976644039154
+        },
+        {
+          "layer": 2,
+          "index": 10832,
+          "activation": 6.187066078186035,
+          "influence": 0.5560380220413208
+        },
+        {
+          "layer": 1,
+          "index": 6059,
+          "activation": 4.326037406921387,
+          "influence": 0.6491968035697937
+        },
+        {
+          "layer": 5,
+          "index": 4374,
+          "activation": 4.8215765953063965,
+          "influence": 0.7303217053413391
+        },
+        {
+          "layer": 3,
+          "index": 10447,
+          "activation": 4.801009178161621,
+          "influence": 0.7904702425003052
+        },
+        {
+          "layer": 6,
+          "index": 6275,
+          "activation": 4.191681385040283,
+          "influence": 0.7882037162780762
+        },
+        {
+          "layer": 1,
+          "index": 7862,
+          "activation": 4.146008491516113,
+          "influence": 0.713030993938446
+        },
+        {
+          "layer": 1,
+          "index": 5470,
+          "activation": 5.449141025543213,
+          "influence": 0.6645246744155884
+        },
+        {
+          "layer": 1,
+          "index": 508,
+          "activation": 3.897719383239746,
+          "influence": 0.7637317776679993
+        },
+        {
+          "layer": 8,
+          "index": 8473,
+          "activation": 4.522934913635254,
+          "influence": 0.5894082188606262
+        },
+        {
+          "layer": 6,
+          "index": 1273,
+          "activation": 5.354608535766602,
+          "influence": 0.7812293767929077
+        },
+        {
+          "layer": 2,
+          "index": 4374,
+          "activation": 4.796177387237549,
+          "influence": 0.6949847340583801
+        },
+        {
+          "layer": 1,
+          "index": 1395,
+          "activation": 4.920427322387695,
+          "influence": 0.6808676719665527
+        },
+        {
+          "layer": 5,
+          "index": 1492,
+          "activation": 4.796749114990234,
+          "influence": 0.6741860508918762
+        },
+        {
+          "layer": 4,
+          "index": 5065,
+          "activation": 5.006672382354736,
+          "influence": 0.7565558552742004
+        },
+        {
+          "layer": 7,
+          "index": 5852,
+          "activation": 6.24503231048584,
+          "influence": 0.7805799245834351
+        },
+        {
+          "layer": 3,
+          "index": 15048,
+          "activation": 6.094539642333984,
+          "influence": 0.6390726566314697
+        },
+        {
+          "layer": 0,
+          "index": 9624,
+          "activation": 5.579780101776123,
+          "influence": 0.5340266823768616
+        },
+        {
+          "layer": 1,
+          "index": 916,
+          "activation": 4.965489387512207,
+          "influence": 0.6608973145484924
+        },
+        {
+          "layer": 2,
+          "index": 13241,
+          "activation": 4.5089874267578125,
+          "influence": 0.7145509123802185
+        },
+        {
+          "layer": 10,
+          "index": 14579,
+          "activation": 3.953287124633789,
+          "influence": 0.7384694814682007
+        },
+        {
+          "layer": 0,
+          "index": 11713,
+          "activation": 4.234631061553955,
+          "influence": 0.6621097922325134
+        },
+        {
+          "layer": 13,
+          "index": 559,
+          "activation": 6.256726264953613,
+          "influence": 0.7016794681549072
+        },
+        {
+          "layer": 0,
+          "index": 3242,
+          "activation": 3.871732711791992,
+          "influence": 0.7717573046684265
+        },
+        {
+          "layer": 7,
+          "index": 5177,
+          "activation": 5.46394157409668,
+          "influence": 0.7613661885261536
+        },
+        {
+          "layer": 7,
+          "index": 9225,
+          "activation": 4.64359188079834,
+          "influence": 0.7790555357933044
+        },
+        {
+          "layer": 6,
+          "index": 13644,
+          "activation": 4.0016560554504395,
+          "influence": 0.750122606754303
+        },
+        {
+          "layer": 5,
+          "index": 6336,
+          "activation": 4.531286239624023,
+          "influence": 0.7755398750305176
+        },
+        {
+          "layer": 0,
+          "index": 2856,
+          "activation": 5.052482604980469,
+          "influence": 0.5332493782043457
+        },
+        {
+          "layer": 0,
+          "index": 11562,
+          "activation": 5.4869489669799805,
+          "influence": 0.6274520754814148
+        },
+        {
+          "layer": 5,
+          "index": 13340,
+          "activation": 5.2122111320495605,
+          "influence": 0.7333632707595825
+        },
+        {
+          "layer": 1,
+          "index": 8942,
+          "activation": 4.134738922119141,
+          "influence": 0.7274919152259827
+        },
+        {
+          "layer": 9,
+          "index": 7669,
+          "activation": 6.438584327697754,
+          "influence": 0.7945363521575928
+        },
+        {
+          "layer": 3,
+          "index": 8929,
+          "activation": 4.994259834289551,
+          "influence": 0.6665111184120178
+        },
+        {
+          "layer": 6,
+          "index": 7380,
+          "activation": 5.314898490905762,
+          "influence": 0.7080627679824829
+        },
+        {
+          "layer": 4,
+          "index": 426,
+          "activation": 3.32059383392334,
+          "influence": 0.793529212474823
+        },
+        {
+          "layer": 1,
+          "index": 1405,
+          "activation": 2.532533884048462,
+          "influence": 0.7061696648597717
+        },
+        {
+          "layer": 1,
+          "index": 5167,
+          "activation": 3.498664379119873,
+          "influence": 0.6966817378997803
+        },
+        {
+          "layer": 4,
+          "index": 13375,
+          "activation": 2.753993034362793,
+          "influence": 0.7943357825279236
+        },
+        {
+          "layer": 0,
+          "index": 996,
+          "activation": 3.5771069526672363,
+          "influence": 0.7202427983283997
+        },
+        {
+          "layer": 1,
+          "index": 8390,
+          "activation": 3.230682611465454,
+          "influence": 0.74656742811203
+        },
+        {
+          "layer": 0,
+          "index": 3636,
+          "activation": 2.1165125370025635,
+          "influence": 0.7993066906929016
+        },
+        {
+          "layer": 8,
+          "index": 9509,
+          "activation": 3.114063262939453,
+          "influence": 0.7665307521820068
+        },
+        {
+          "layer": 1,
+          "index": 3919,
+          "activation": 3.4546053409576416,
+          "influence": 0.739793062210083
+        },
+        {
+          "layer": 0,
+          "index": 6574,
+          "activation": 2.1899666786193848,
+          "influence": 0.7297602295875549
+        },
+        {
+          "layer": 1,
+          "index": 13255,
+          "activation": 3.197173595428467,
+          "influence": 0.6768046021461487
+        },
+        {
+          "layer": 1,
+          "index": 9357,
+          "activation": 2.9015588760375977,
+          "influence": 0.7963355779647827
+        },
+        {
+          "layer": 0,
+          "index": 5112,
+          "activation": 1.9170703887939453,
+          "influence": 0.7419010996818542
+        },
+        {
+          "layer": 2,
+          "index": 669,
+          "activation": 1.9885458946228027,
+          "influence": 0.7498699426651001
+        },
+        {
+          "layer": 7,
+          "index": 10671,
+          "activation": 1.548290729522705,
+          "influence": 0.790059506893158
+        },
+        {
+          "layer": 2,
+          "index": 4568,
+          "activation": 3.546455144882202,
+          "influence": 0.6771769523620605
+        },
+        {
+          "layer": 0,
+          "index": 2186,
+          "activation": 1.183659553527832,
+          "influence": 0.6894381642341614
+        },
+        {
+          "layer": 1,
+          "index": 9562,
+          "activation": 2.812668561935425,
+          "influence": 0.7854934334754944
+        },
+        {
+          "layer": 1,
+          "index": 9218,
+          "activation": 2.8656351566314697,
+          "influence": 0.6542982459068298
+        },
+        {
+          "layer": 1,
+          "index": 16342,
+          "activation": 2.6732099056243896,
+          "influence": 0.7403210997581482
+        },
+        {
+          "layer": 4,
+          "index": 6863,
+          "activation": 3.1492013931274414,
+          "influence": 0.769500732421875
+        },
+        {
+          "layer": 7,
+          "index": 3828,
+          "activation": 3.399695634841919,
+          "influence": 0.7955372333526611
+        },
+        {
+          "layer": 1,
+          "index": 12694,
+          "activation": 2.0696280002593994,
+          "influence": 0.7584959864616394
+        },
+        {
+          "layer": 0,
+          "index": 5358,
+          "activation": 2.8480749130249023,
+          "influence": 0.7623149752616882
+        },
+        {
+          "layer": 2,
+          "index": 121,
+          "activation": 2.0318074226379395,
+          "influence": 0.7906754016876221
+        },
+        {
+          "layer": 0,
+          "index": 5796,
+          "activation": 2.0384624004364014,
+          "influence": 0.7892369627952576
+        },
+        {
+          "layer": 3,
+          "index": 13853,
+          "activation": 2.3098413944244385,
+          "influence": 0.7594573497772217
+        },
+        {
+          "layer": 3,
+          "index": 11017,
+          "activation": 2.8542628288269043,
+          "influence": 0.7679102420806885
+        },
+        {
+          "layer": 1,
+          "index": 12602,
+          "activation": 2.9643688201904297,
+          "influence": 0.7975291013717651
+        },
+        {
+          "layer": 3,
+          "index": 752,
+          "activation": 2.38240385055542,
+          "influence": 0.7969328761100769
+        },
+        {
+          "layer": 0,
+          "index": 213,
+          "activation": 2.9287447929382324,
+          "influence": 0.6216650605201721
+        },
+        {
+          "layer": 4,
+          "index": 1383,
+          "activation": 3.217223644256592,
+          "influence": 0.7766430974006653
+        },
+        {
+          "layer": 3,
+          "index": 11523,
+          "activation": 3.3750271797180176,
+          "influence": 0.7508767247200012
+        },
+        {
+          "layer": 0,
+          "index": 3192,
+          "activation": 1.9725685119628906,
+          "influence": 0.7513774633407593
+        },
+        {
+          "layer": 0,
+          "index": 1266,
+          "activation": 3.3021960258483887,
+          "influence": 0.6869649887084961
+        },
+        {
+          "layer": 0,
+          "index": 3529,
+          "activation": 1.7711725234985352,
+          "influence": 0.7376731634140015
+        },
+        {
+          "layer": 0,
+          "index": 10210,
+          "activation": 2.1872801780700684,
+          "influence": 0.7888240218162537
+        },
+        {
+          "layer": 1,
+          "index": 184,
+          "activation": 2.4476287364959717,
+          "influence": 0.7697272300720215
+        },
+        {
+          "layer": 2,
+          "index": 1818,
+          "activation": 2.0778982639312744,
+          "influence": 0.7363383769989014
+        },
+        {
+          "layer": 2,
+          "index": 4473,
+          "activation": 3.7666659355163574,
+          "influence": 0.6142957806587219
+        },
+        {
+          "layer": 0,
+          "index": 15526,
+          "activation": 2.7930338382720947,
+          "influence": 0.7820917367935181
+        },
+        {
+          "layer": 0,
+          "index": 11431,
+          "activation": 2.623732089996338,
+          "influence": 0.692229688167572
+        },
+        {
+          "layer": 0,
+          "index": 2586,
+          "activation": 3.285041332244873,
+          "influence": 0.6936113238334656
+        },
+        {
+          "layer": 2,
+          "index": 11137,
+          "activation": 3.176126718521118,
+          "influence": 0.7867494225502014
+        },
+        {
+          "layer": 0,
+          "index": 253,
+          "activation": 1.7289648056030273,
+          "influence": 0.7921062707901001
+        }
+      ],
+      "result": {
+        "default_text": "<bos>Paris is to France as Berlin is to Germany. It is the",
+        "steered_text": "<bos>Paris is to France as Berlin is to Kyrie Kyrie Kyrie Kyrie Kyrie",
+        "first_steered_token": " Kyrie",
+        "first_steered_logprob": -2.84375,
+        "first_steered_top5": [
+          {
+            "token": " Kyrie",
+            "logprob": -2.84375
+          },
+          {
+            "token": " Ukrainian",
+            "logprob": -3.21875
+          },
+          {
+            "token": "\u03cc\u03bc\u03b5",
+            "logprob": -3.34375
+          },
+          {
+            "token": "Na",
+            "logprob": -3.59375
+          },
+          {
+            "token": "avis",
+            "logprob": -3.71875
+          }
+        ],
+        "first_default_token": " Germany",
+        "first_default_logprob": -0.04248046875,
+        "first_default_top5": [
+          {
+            "token": " Germany",
+            "logprob": -0.04248046875
+          },
+          {
+            "token": " the",
+            "logprob": -4.40625
+          },
+          {
+            "token": " Berlin",
+            "logprob": -5.53125
+          },
+          {
+            "token": " German",
+            "logprob": -6.09375
+          },
+          {
+            "token": " Europe",
+            "logprob": -6.09375
+          }
+        ]
+      },
+      "disrupted": true
+    }
+  },
+  "analog_rome": {
+    "prompt": "Paris is to France as Rome is to",
+    "expected": "Italy",
+    "baseline_p": 0.974,
+    "circuit": {
+      "n_features": 180,
+      "strength": -20,
+      "result": {
+        "default_text": "<bos>Paris is to France as Rome is to Italy. It is the",
+        "steered_text": "<bos>Paris is to France as Rome is to to to to to to",
+        "first_steered_token": " to",
+        "first_steered_logprob": -0.0299072265625,
+        "first_steered_top5": [
+          {
+            "token": " to",
+            "logprob": -0.0299072265625
+          },
+          {
+            "token": " and",
+            "logprob": -4.15625
+          },
+          {
+            "token": " is",
+            "logprob": -4.40625
+          },
+          {
+            "token": ",",
+            "logprob": -7.90625
+          },
+          {
+            "token": "  ",
+            "logprob": -8.75
+          }
+        ],
+        "first_default_token": " Italy",
+        "first_default_logprob": -0.04248046875,
+        "first_default_top5": [
+          {
+            "token": " Italy",
+            "logprob": -0.04248046875
+          },
+          {
+            "token": " the",
+            "logprob": -3.921875
+          },
+          {
+            "token": " Rome",
+            "logprob": -6.03125
+          },
+          {
+            "token": " Italian",
+            "logprob": -6.09375
+          },
+          {
+            "token": " Italians",
+            "logprob": -6.40625
+          }
+        ]
+      },
+      "disrupted": true
+    },
+    "null": {
+      "n_features": 180,
+      "n_requested": 180,
+      "strength": -20,
+      "seed": 7,
+      "sampled_features": [
+        {
+          "layer": 15,
+          "index": 241,
+          "activation": 13.003870010375977,
+          "influence": 0.6635062098503113
+        },
+        {
+          "layer": 9,
+          "index": 65,
+          "activation": 22.569976806640625,
+          "influence": 0.6867628693580627
+        },
+        {
+          "layer": 25,
+          "index": 1676,
+          "activation": 11.788373947143555,
+          "influence": 0.6080409288406372
+        },
+        {
+          "layer": 21,
+          "index": 12427,
+          "activation": 37.596168518066406,
+          "influence": 0.6221417784690857
+        },
+        {
+          "layer": 25,
+          "index": 3204,
+          "activation": 31.1048583984375,
+          "influence": 0.7279732823371887
+        },
+        {
+          "layer": 24,
+          "index": 15471,
+          "activation": 27.414464950561523,
+          "influence": 0.7519180178642273
+        },
+        {
+          "layer": 14,
+          "index": 11156,
+          "activation": 12.180817604064941,
+          "influence": 0.6698366403579712
+        },
+        {
+          "layer": 20,
+          "index": 7507,
+          "activation": 33.95867156982422,
+          "influence": 0.7401396036148071
+        },
+        {
+          "layer": 12,
+          "index": 1190,
+          "activation": 16.652393341064453,
+          "influence": 0.7176741361618042
+        },
+        {
+          "layer": 10,
+          "index": 14174,
+          "activation": 58.96271896362305,
+          "influence": 0.6569967865943909
+        },
+        {
+          "layer": 21,
+          "index": 5251,
+          "activation": 37.605506896972656,
+          "influence": 0.425899863243103
+        },
+        {
+          "layer": 19,
+          "index": 1233,
+          "activation": 16.60715675354004,
+          "influence": 0.6770657896995544
+        },
+        {
+          "layer": 15,
+          "index": 2107,
+          "activation": 17.173236846923828,
+          "influence": 0.7860546112060547
+        },
+        {
+          "layer": 9,
+          "index": 3056,
+          "activation": 40.553443908691406,
+          "influence": 0.6446083784103394
+        },
+        {
+          "layer": 24,
+          "index": 16122,
+          "activation": 25.41939926147461,
+          "influence": 0.2314729243516922
+        },
+        {
+          "layer": 9,
+          "index": 13035,
+          "activation": 10.611330032348633,
+          "influence": 0.766447126865387
+        },
+        {
+          "layer": 25,
+          "index": 15121,
+          "activation": 14.77304744720459,
+          "influence": 0.7895761728286743
+        },
+        {
+          "layer": 22,
+          "index": 14738,
+          "activation": 10.454228401184082,
+          "influence": 0.4705290198326111
+        },
+        {
+          "layer": 15,
+          "index": 11238,
+          "activation": 41.526981353759766,
+          "influence": 0.6462400555610657
+        },
+        {
+          "layer": 23,
+          "index": 10181,
+          "activation": 11.570098876953125,
+          "influence": 0.6627506017684937
+        },
+        {
+          "layer": 25,
+          "index": 4350,
+          "activation": 14.066556930541992,
+          "influence": 0.7301862239837646
+        },
+        {
+          "layer": 22,
+          "index": 7687,
+          "activation": 32.580970764160156,
+          "influence": 0.32135599851608276
+        },
+        {
+          "layer": 23,
+          "index": 11328,
+          "activation": 25.9953556060791,
+          "influence": 0.42197272181510925
+        },
+        {
+          "layer": 2,
+          "index": 14886,
+          "activation": 13.078348159790039,
+          "influence": 0.4805874526500702
+        },
+        {
+          "layer": 4,
+          "index": 1395,
+          "activation": 11.167509078979492,
+          "influence": 0.6138176918029785
+        },
+        {
+          "layer": 4,
+          "index": 7854,
+          "activation": 13.75899600982666,
+          "influence": 0.3779486417770386
+        },
+        {
+          "layer": 20,
+          "index": 411,
+          "activation": 10.979911804199219,
+          "influence": 0.5865676403045654
+        },
+        {
+          "layer": 13,
+          "index": 9888,
+          "activation": 13.764118194580078,
+          "influence": 0.7680449485778809
+        },
+        {
+          "layer": 24,
+          "index": 4252,
+          "activation": 11.231340408325195,
+          "influence": 0.7153094410896301
+        },
+        {
+          "layer": 15,
+          "index": 8544,
+          "activation": 18.189861297607422,
+          "influence": 0.7837493419647217
+        },
+        {
+          "layer": 24,
+          "index": 10139,
+          "activation": 47.41656494140625,
+          "influence": 0.3615037500858307
+        },
+        {
+          "layer": 9,
+          "index": 13780,
+          "activation": 11.1551513671875,
+          "influence": 0.6336515545845032
+        },
+        {
+          "layer": 24,
+          "index": 5999,
+          "activation": 53.22563552856445,
+          "influence": 0.6980023980140686
+        },
+        {
+          "layer": 20,
+          "index": 6257,
+          "activation": 14.552350997924805,
+          "influence": 0.5008355379104614
+        },
+        {
+          "layer": 15,
+          "index": 10550,
+          "activation": 31.692750930786133,
+          "influence": 0.3455817699432373
+        },
+        {
+          "layer": 20,
+          "index": 7666,
+          "activation": 22.734474182128906,
+          "influence": 0.5797335505485535
+        },
+        {
+          "layer": 9,
+          "index": 14785,
+          "activation": 10.730801582336426,
+          "influence": 0.6257455348968506
+        },
+        {
+          "layer": 22,
+          "index": 1364,
+          "activation": 10.305339813232422,
+          "influence": 0.6458340883255005
+        },
+        {
+          "layer": 22,
+          "index": 11652,
+          "activation": 14.783869743347168,
+          "influence": 0.6362313032150269
+        },
+        {
+          "layer": 13,
+          "index": 4159,
+          "activation": 11.10906982421875,
+          "influence": 0.74610835313797
+        },
+        {
+          "layer": 2,
+          "index": 4997,
+          "activation": 11.249094009399414,
+          "influence": 0.5017091631889343
+        },
+        {
+          "layer": 17,
+          "index": 8341,
+          "activation": 21.411296844482422,
+          "influence": 0.3087835907936096
+        },
+        {
+          "layer": 25,
+          "index": 10152,
+          "activation": 11.77799129486084,
+          "influence": 0.6937775611877441
+        },
+        {
+          "layer": 1,
+          "index": 15660,
+          "activation": 12.607198715209961,
+          "influence": 0.45219773054122925
+        },
+        {
+          "layer": 21,
+          "index": 4321,
+          "activation": 27.62126350402832,
+          "influence": 0.34306856989860535
+        },
+        {
+          "layer": 4,
+          "index": 10301,
+          "activation": 8.84399127960205,
+          "influence": 0.5937075018882751
+        },
+        {
+          "layer": 0,
+          "index": 16305,
+          "activation": 7.962014198303223,
+          "influence": 0.5034459233283997
+        },
+        {
+          "layer": 18,
+          "index": 6905,
+          "activation": 6.8475799560546875,
+          "influence": 0.7254464030265808
+        },
+        {
+          "layer": 18,
+          "index": 11353,
+          "activation": 8.940587997436523,
+          "influence": 0.6109548807144165
+        },
+        {
+          "layer": 4,
+          "index": 6637,
+          "activation": 9.29430103302002,
+          "influence": 0.31526514887809753
+        },
+        {
+          "layer": 16,
+          "index": 10573,
+          "activation": 9.315587997436523,
+          "influence": 0.7374952435493469
+        },
+        {
+          "layer": 0,
+          "index": 5740,
+          "activation": 7.853213310241699,
+          "influence": 0.5388093590736389
+        },
+        {
+          "layer": 0,
+          "index": 7931,
+          "activation": 5.973833084106445,
+          "influence": 0.5111019611358643
+        },
+        {
+          "layer": 0,
+          "index": 4068,
+          "activation": 6.5958757400512695,
+          "influence": 0.4946260452270508
+        },
+        {
+          "layer": 13,
+          "index": 14076,
+          "activation": 6.768259048461914,
+          "influence": 0.6756450533866882
+        },
+        {
+          "layer": 9,
+          "index": 12007,
+          "activation": 8.367228507995605,
+          "influence": 0.684722900390625
+        },
+        {
+          "layer": 13,
+          "index": 8341,
+          "activation": 7.6663665771484375,
+          "influence": 0.7161996960639954
+        },
+        {
+          "layer": 6,
+          "index": 5101,
+          "activation": 7.344615936279297,
+          "influence": 0.7114014029502869
+        },
+        {
+          "layer": 3,
+          "index": 15810,
+          "activation": 6.4112725257873535,
+          "influence": 0.5691269040107727
+        },
+        {
+          "layer": 6,
+          "index": 1608,
+          "activation": 7.670131683349609,
+          "influence": 0.6650098562240601
+        },
+        {
+          "layer": 14,
+          "index": 11575,
+          "activation": 8.065488815307617,
+          "influence": 0.6816286444664001
+        },
+        {
+          "layer": 1,
+          "index": 1407,
+          "activation": 8.421334266662598,
+          "influence": 0.5514965057373047
+        },
+        {
+          "layer": 23,
+          "index": 12777,
+          "activation": 8.626150131225586,
+          "influence": 0.5831871628761292
+        },
+        {
+          "layer": 8,
+          "index": 10084,
+          "activation": 6.742480754852295,
+          "influence": 0.7353535890579224
+        },
+        {
+          "layer": 18,
+          "index": 15009,
+          "activation": 8.961165428161621,
+          "influence": 0.6156975030899048
+        },
+        {
+          "layer": 7,
+          "index": 15891,
+          "activation": 6.9794793128967285,
+          "influence": 0.642130434513092
+        },
+        {
+          "layer": 6,
+          "index": 9454,
+          "activation": 5.98726224899292,
+          "influence": 0.7369629144668579
+        },
+        {
+          "layer": 9,
+          "index": 8424,
+          "activation": 6.15625,
+          "influence": 0.7453372478485107
+        },
+        {
+          "layer": 7,
+          "index": 1980,
+          "activation": 9.708159446716309,
+          "influence": 0.6189486384391785
+        },
+        {
+          "layer": 1,
+          "index": 4210,
+          "activation": 7.352649211883545,
+          "influence": 0.5726927518844604
+        },
+        {
+          "layer": 7,
+          "index": 1606,
+          "activation": 6.380288124084473,
+          "influence": 0.7065024971961975
+        },
+        {
+          "layer": 0,
+          "index": 11232,
+          "activation": 7.390172958374023,
+          "influence": 0.49640750885009766
+        },
+        {
+          "layer": 1,
+          "index": 12354,
+          "activation": 7.483180999755859,
+          "influence": 0.5837568044662476
+        },
+        {
+          "layer": 2,
+          "index": 3732,
+          "activation": 8.200454711914062,
+          "influence": 0.5237704515457153
+        },
+        {
+          "layer": 10,
+          "index": 5458,
+          "activation": 6.897093296051025,
+          "influence": 0.7998024821281433
+        },
+        {
+          "layer": 6,
+          "index": 15640,
+          "activation": 7.677468299865723,
+          "influence": 0.7764967083930969
+        },
+        {
+          "layer": 23,
+          "index": 3237,
+          "activation": 8.53933334350586,
+          "influence": 0.7268531918525696
+        },
+        {
+          "layer": 17,
+          "index": 12043,
+          "activation": 7.238818168640137,
+          "influence": 0.7622707486152649
+        },
+        {
+          "layer": 18,
+          "index": 3240,
+          "activation": 9.747958183288574,
+          "influence": 0.6297304630279541
+        },
+        {
+          "layer": 10,
+          "index": 8314,
+          "activation": 5.866390228271484,
+          "influence": 0.7948492765426636
+        },
+        {
+          "layer": 9,
+          "index": 2383,
+          "activation": 7.469398021697998,
+          "influence": 0.7364286780357361
+        },
+        {
+          "layer": 22,
+          "index": 1813,
+          "activation": 7.820071220397949,
+          "influence": 0.5893418788909912
+        },
+        {
+          "layer": 0,
+          "index": 12339,
+          "activation": 9.028764724731445,
+          "influence": 0.4334666132926941
+        },
+        {
+          "layer": 2,
+          "index": 8188,
+          "activation": 6.7983479499816895,
+          "influence": 0.6404635906219482
+        },
+        {
+          "layer": 7,
+          "index": 7929,
+          "activation": 6.618254661560059,
+          "influence": 0.768498957157135
+        },
+        {
+          "layer": 1,
+          "index": 15578,
+          "activation": 9.158337593078613,
+          "influence": 0.5260194540023804
+        },
+        {
+          "layer": 22,
+          "index": 8455,
+          "activation": 7.612945556640625,
+          "influence": 0.7476416826248169
+        },
+        {
+          "layer": 7,
+          "index": 13028,
+          "activation": 6.534950256347656,
+          "influence": 0.7833276987075806
+        },
+        {
+          "layer": 24,
+          "index": 7929,
+          "activation": 9.955060958862305,
+          "influence": 0.7603780031204224
+        },
+        {
+          "layer": 16,
+          "index": 4240,
+          "activation": 7.063193321228027,
+          "influence": 0.7852185964584351
+        },
+        {
+          "layer": 13,
+          "index": 7618,
+          "activation": 5.4230780601501465,
+          "influence": 0.7489088177680969
+        },
+        {
+          "layer": 3,
+          "index": 2637,
+          "activation": 4.388465404510498,
+          "influence": 0.6874390840530396
+        },
+        {
+          "layer": 5,
+          "index": 9619,
+          "activation": 4.32096529006958,
+          "influence": 0.7575149536132812
+        },
+        {
+          "layer": 5,
+          "index": 16054,
+          "activation": 4.307750701904297,
+          "influence": 0.7897814512252808
+        },
+        {
+          "layer": 1,
+          "index": 4996,
+          "activation": 3.77923583984375,
+          "influence": 0.7052648663520813
+        },
+        {
+          "layer": 0,
+          "index": 6018,
+          "activation": 3.946345806121826,
+          "influence": 0.6396257877349854
+        },
+        {
+          "layer": 6,
+          "index": 1689,
+          "activation": 5.451719760894775,
+          "influence": 0.7671334147453308
+        },
+        {
+          "layer": 3,
+          "index": 15856,
+          "activation": 5.366477966308594,
+          "influence": 0.7293574810028076
+        },
+        {
+          "layer": 2,
+          "index": 10593,
+          "activation": 4.564214706420898,
+          "influence": 0.7089623212814331
+        },
+        {
+          "layer": 0,
+          "index": 2856,
+          "activation": 4.795097351074219,
+          "influence": 0.6683599948883057
+        },
+        {
+          "layer": 5,
+          "index": 5766,
+          "activation": 3.6818814277648926,
+          "influence": 0.7696279883384705
+        },
+        {
+          "layer": 3,
+          "index": 1942,
+          "activation": 4.345033645629883,
+          "influence": 0.684380054473877
+        },
+        {
+          "layer": 5,
+          "index": 14258,
+          "activation": 5.629751205444336,
+          "influence": 0.728804349899292
+        },
+        {
+          "layer": 7,
+          "index": 11805,
+          "activation": 5.632184028625488,
+          "influence": 0.7694024443626404
+        },
+        {
+          "layer": 6,
+          "index": 9238,
+          "activation": 4.266116619110107,
+          "influence": 0.7643724083900452
+        },
+        {
+          "layer": 0,
+          "index": 10455,
+          "activation": 3.8034114837646484,
+          "influence": 0.6235018372535706
+        },
+        {
+          "layer": 5,
+          "index": 5500,
+          "activation": 5.065937042236328,
+          "influence": 0.7829049825668335
+        },
+        {
+          "layer": 9,
+          "index": 11177,
+          "activation": 4.354883193969727,
+          "influence": 0.7767142653465271
+        },
+        {
+          "layer": 2,
+          "index": 13241,
+          "activation": 4.5089874267578125,
+          "influence": 0.7110989689826965
+        },
+        {
+          "layer": 1,
+          "index": 14894,
+          "activation": 3.6806893348693848,
+          "influence": 0.7393499612808228
+        },
+        {
+          "layer": 1,
+          "index": 10712,
+          "activation": 4.0896148681640625,
+          "influence": 0.7101854681968689
+        },
+        {
+          "layer": 3,
+          "index": 10447,
+          "activation": 4.801009178161621,
+          "influence": 0.7803571820259094
+        },
+        {
+          "layer": 5,
+          "index": 7132,
+          "activation": 5.137899398803711,
+          "influence": 0.7228894233703613
+        },
+        {
+          "layer": 6,
+          "index": 14707,
+          "activation": 4.286318778991699,
+          "influence": 0.7954514622688293
+        },
+        {
+          "layer": 0,
+          "index": 3335,
+          "activation": 4.902219772338867,
+          "influence": 0.6593175530433655
+        },
+        {
+          "layer": 3,
+          "index": 10826,
+          "activation": 3.804851531982422,
+          "influence": 0.793440043926239
+        },
+        {
+          "layer": 1,
+          "index": 916,
+          "activation": 4.965489387512207,
+          "influence": 0.6672497391700745
+        },
+        {
+          "layer": 4,
+          "index": 8149,
+          "activation": 5.796545505523682,
+          "influence": 0.7315598726272583
+        },
+        {
+          "layer": 2,
+          "index": 4374,
+          "activation": 4.796177387237549,
+          "influence": 0.6510834693908691
+        },
+        {
+          "layer": 5,
+          "index": 6075,
+          "activation": 4.953702926635742,
+          "influence": 0.7411857843399048
+        },
+        {
+          "layer": 4,
+          "index": 12458,
+          "activation": 5.395661354064941,
+          "influence": 0.6749315857887268
+        },
+        {
+          "layer": 1,
+          "index": 12530,
+          "activation": 4.441936492919922,
+          "influence": 0.6470515131950378
+        },
+        {
+          "layer": 0,
+          "index": 11562,
+          "activation": 5.4869489669799805,
+          "influence": 0.6030957698822021
+        },
+        {
+          "layer": 5,
+          "index": 10508,
+          "activation": 4.733347415924072,
+          "influence": 0.7437868118286133
+        },
+        {
+          "layer": 3,
+          "index": 16186,
+          "activation": 3.8775384426116943,
+          "influence": 0.781420886516571
+        },
+        {
+          "layer": 9,
+          "index": 11524,
+          "activation": 5.3180084228515625,
+          "influence": 0.7599037289619446
+        },
+        {
+          "layer": 0,
+          "index": 8694,
+          "activation": 4.188576698303223,
+          "influence": 0.6679903864860535
+        },
+        {
+          "layer": 1,
+          "index": 1405,
+          "activation": 3.9559404850006104,
+          "influence": 0.6041012406349182
+        },
+        {
+          "layer": 4,
+          "index": 4538,
+          "activation": 5.46737813949585,
+          "influence": 0.6877769231796265
+        },
+        {
+          "layer": 0,
+          "index": 11713,
+          "activation": 4.234631061553955,
+          "influence": 0.661992609500885
+        },
+        {
+          "layer": 7,
+          "index": 15436,
+          "activation": 5.298451900482178,
+          "influence": 0.772539496421814
+        },
+        {
+          "layer": 3,
+          "index": 11700,
+          "activation": 4.902097702026367,
+          "influence": 0.7217414975166321
+        },
+        {
+          "layer": 5,
+          "index": 1252,
+          "activation": 4.2300801277160645,
+          "influence": 0.7092688083648682
+        },
+        {
+          "layer": 1,
+          "index": 7862,
+          "activation": 4.146008491516113,
+          "influence": 0.7015085220336914
+        },
+        {
+          "layer": 1,
+          "index": 382,
+          "activation": 5.613587856292725,
+          "influence": 0.6175602674484253
+        },
+        {
+          "layer": 1,
+          "index": 1556,
+          "activation": 3.076106071472168,
+          "influence": 0.6716732978820801
+        },
+        {
+          "layer": 1,
+          "index": 2532,
+          "activation": 2.161529064178467,
+          "influence": 0.7104904055595398
+        },
+        {
+          "layer": 0,
+          "index": 14883,
+          "activation": 2.3730130195617676,
+          "influence": 0.6486713290214539
+        },
+        {
+          "layer": 0,
+          "index": 3003,
+          "activation": 2.808598279953003,
+          "influence": 0.6795368194580078
+        },
+        {
+          "layer": 2,
+          "index": 6973,
+          "activation": 3.186295509338379,
+          "influence": 0.5990045070648193
+        },
+        {
+          "layer": 0,
+          "index": 11846,
+          "activation": 2.1966135501861572,
+          "influence": 0.7826934456825256
+        },
+        {
+          "layer": 2,
+          "index": 15206,
+          "activation": 1.6524372100830078,
+          "influence": 0.7589505910873413
+        },
+        {
+          "layer": 1,
+          "index": 2607,
+          "activation": 2.271293878555298,
+          "influence": 0.794044554233551
+        },
+        {
+          "layer": 3,
+          "index": 443,
+          "activation": 2.5498199462890625,
+          "influence": 0.7682721018791199
+        },
+        {
+          "layer": 1,
+          "index": 156,
+          "activation": 2.447455406188965,
+          "influence": 0.7509207129478455
+        },
+        {
+          "layer": 3,
+          "index": 12549,
+          "activation": 2.9504683017730713,
+          "influence": 0.7812083959579468
+        },
+        {
+          "layer": 4,
+          "index": 15859,
+          "activation": 3.1380867958068848,
+          "influence": 0.7372295260429382
+        },
+        {
+          "layer": 5,
+          "index": 10741,
+          "activation": 3.4285531044006348,
+          "influence": 0.7558313012123108
+        },
+        {
+          "layer": 0,
+          "index": 1620,
+          "activation": 3.290951728820801,
+          "influence": 0.7409246563911438
+        },
+        {
+          "layer": 1,
+          "index": 1994,
+          "activation": 3.323099374771118,
+          "influence": 0.7120055556297302
+        },
+        {
+          "layer": 4,
+          "index": 10453,
+          "activation": 3.245218276977539,
+          "influence": 0.7864714860916138
+        },
+        {
+          "layer": 3,
+          "index": 5882,
+          "activation": 2.625865936279297,
+          "influence": 0.7463645935058594
+        },
+        {
+          "layer": 0,
+          "index": 6574,
+          "activation": 1.9525890350341797,
+          "influence": 0.6999238729476929
+        },
+        {
+          "layer": 2,
+          "index": 4568,
+          "activation": 3.546455144882202,
+          "influence": 0.6742114424705505
+        },
+        {
+          "layer": 0,
+          "index": 4448,
+          "activation": 2.9072210788726807,
+          "influence": 0.7563132643699646
+        },
+        {
+          "layer": 1,
+          "index": 1861,
+          "activation": 1.7361751794815063,
+          "influence": 0.7996072173118591
+        },
+        {
+          "layer": 1,
+          "index": 15799,
+          "activation": 2.7350914478302,
+          "influence": 0.6802356243133545
+        },
+        {
+          "layer": 4,
+          "index": 14496,
+          "activation": 3.287597179412842,
+          "influence": 0.7799310088157654
+        },
+        {
+          "layer": 4,
+          "index": 11493,
+          "activation": 3.233130931854248,
+          "influence": 0.791820764541626
+        },
+        {
+          "layer": 1,
+          "index": 3992,
+          "activation": 3.179260730743408,
+          "influence": 0.7974401712417603
+        },
+        {
+          "layer": 0,
+          "index": 9022,
+          "activation": 3.55208158493042,
+          "influence": 0.7504194974899292
+        },
+        {
+          "layer": 1,
+          "index": 15706,
+          "activation": 3.3290529251098633,
+          "influence": 0.7350841760635376
+        },
+        {
+          "layer": 1,
+          "index": 4934,
+          "activation": 2.966587543487549,
+          "influence": 0.779077410697937
+        },
+        {
+          "layer": 3,
+          "index": 5670,
+          "activation": 2.8496017456054688,
+          "influence": 0.7629753351211548
+        },
+        {
+          "layer": 1,
+          "index": 11438,
+          "activation": 3.0054574012756348,
+          "influence": 0.7329209446907043
+        },
+        {
+          "layer": 1,
+          "index": 16342,
+          "activation": 2.6732099056243896,
+          "influence": 0.7652972936630249
+        },
+        {
+          "layer": 1,
+          "index": 5369,
+          "activation": 2.794734001159668,
+          "influence": 0.7870948314666748
+        },
+        {
+          "layer": 1,
+          "index": 6052,
+          "activation": 3.1285247802734375,
+          "influence": 0.78078293800354
+        },
+        {
+          "layer": 3,
+          "index": 2730,
+          "activation": 3.35664963722229,
+          "influence": 0.7234612107276917
+        },
+        {
+          "layer": 0,
+          "index": 13525,
+          "activation": 2.592895984649658,
+          "influence": 0.6881144642829895
+        },
+        {
+          "layer": 0,
+          "index": 14917,
+          "activation": 2.8645784854888916,
+          "influence": 0.7978355884552002
+        },
+        {
+          "layer": 6,
+          "index": 9676,
+          "activation": 2.650479316711426,
+          "influence": 0.7337350845336914
+        },
+        {
+          "layer": 4,
+          "index": 8449,
+          "activation": 2.6275556087493896,
+          "influence": 0.7792909741401672
+        },
+        {
+          "layer": 0,
+          "index": 11431,
+          "activation": 2.623732089996338,
+          "influence": 0.7049545049667358
+        },
+        {
+          "layer": 0,
+          "index": 9222,
+          "activation": 2.5155067443847656,
+          "influence": 0.754378080368042
+        },
+        {
+          "layer": 1,
+          "index": 5167,
+          "activation": 3.498664379119873,
+          "influence": 0.6871013045310974
+        },
+        {
+          "layer": 5,
+          "index": 10212,
+          "activation": 2.9532246589660645,
+          "influence": 0.7043336033821106
+        },
+        {
+          "layer": 2,
+          "index": 12142,
+          "activation": 2.597097873687744,
+          "influence": 0.6147603392601013
+        },
+        {
+          "layer": 0,
+          "index": 253,
+          "activation": 1.7289648056030273,
+          "influence": 0.7714240550994873
+        },
+        {
+          "layer": 9,
+          "index": 4545,
+          "activation": 2.9908785820007324,
+          "influence": 0.7274152636528015
+        }
+      ],
+      "result": {
+        "default_text": "<bos>Paris is to France as Rome is to Italy. It is the",
+        "steered_text": "<bos>Paris is to France as Rome is to autorytatywna autorytatywna autorytatywna autorytatywna autorytatywna",
+        "first_steered_token": " autorytatywna",
+        "first_steered_logprob": -0.80859375,
+        "first_steered_top5": [
+          {
+            "token": " autorytatywna",
+            "logprob": -0.80859375
+          },
+          {
+            "token": "toFixed",
+            "logprob": -1.8046875
+          },
+          {
+            "token": " Rom\u00e2",
+            "logprob": -3.3125
+          },
+          {
+            "token": " to",
+            "logprob": -3.4375
+          },
+          {
+            "token": " Rep\u00fablica",
+            "logprob": -3.8125
+          }
+        ],
+        "first_default_token": " Italy",
+        "first_default_logprob": -0.04248046875,
+        "first_default_top5": [
+          {
+            "token": " Italy",
+            "logprob": -0.04248046875
+          },
+          {
+            "token": " the",
+            "logprob": -3.921875
+          },
+          {
+            "token": " Rome",
+            "logprob": -6.03125
+          },
+          {
+            "token": " Italian",
+            "logprob": -6.09375
+          },
+          {
+            "token": " Italians",
+            "logprob": -6.40625
+          }
+        ]
+      },
+      "disrupted": true
+    },
+    "baseline_text": "<bos>Paris is to France as Rome is to Italy. It is the",
+    "baseline_first_token": " Italy",
+    "baseline_first_logprob": -0.04248046875
+  },
+  "analog_tokyo": {
+    "prompt": "Paris is to France as Tokyo is to",
+    "expected": "Japan",
+    "baseline_p": 0.99,
+    "circuit": {
+      "n_features": 180,
+      "strength": -20,
+      "result": {
+        "default_text": "<bos>Paris is to France as Tokyo is to Japan. It is the",
+        "steered_text": "<bos>Paris is to France as Tokyo is to to to to to to",
+        "first_steered_token": " to",
+        "first_steered_logprob": -0.0301513671875,
+        "first_steered_top5": [
+          {
+            "token": " to",
+            "logprob": -0.0301513671875
+          },
+          {
+            "token": " and",
+            "logprob": -4.15625
+          },
+          {
+            "token": " is",
+            "logprob": -4.40625
+          },
+          {
+            "token": ",",
+            "logprob": -7.84375
+          },
+          {
+            "token": "  ",
+            "logprob": -8.8125
+          }
+        ],
+        "first_default_token": " Japan",
+        "first_default_logprob": -0.0181884765625,
+        "first_default_top5": [
+          {
+            "token": " Japan",
+            "logprob": -0.0181884765625
+          },
+          {
+            "token": " the",
+            "logprob": -5.65625
+          },
+          {
+            "token": "\u2026",
+            "logprob": -6.21875
+          },
+          {
+            "token": " Japanese",
+            "logprob": -6.28125
+          },
+          {
+            "token": "...",
+            "logprob": -6.78125
+          }
+        ]
+      },
+      "disrupted": true
+    },
+    "baseline_text": "<bos>Paris is to France as Tokyo is to Japan. It is the",
+    "baseline_first_token": " Japan",
+    "baseline_first_logprob": -0.0181884765625,
+    "null": {
+      "n_features": 180,
+      "n_requested": 180,
+      "strength": -20,
+      "seed": 7,
+      "sampled_features": [
+        {
+          "layer": 15,
+          "index": 8544,
+          "activation": 18.189861297607422,
+          "influence": 0.7734126448631287
+        },
+        {
+          "layer": 13,
+          "index": 14536,
+          "activation": 32.09868240356445,
+          "influence": 0.7637715935707092
+        },
+        {
+          "layer": 24,
+          "index": 3134,
+          "activation": 15.921545028686523,
+          "influence": 0.7863871455192566
+        },
+        {
+          "layer": 8,
+          "index": 2742,
+          "activation": 12.441694259643555,
+          "influence": 0.7945497035980225
+        },
+        {
+          "layer": 23,
+          "index": 850,
+          "activation": 41.586936950683594,
+          "influence": 0.7738611698150635
+        },
+        {
+          "layer": 11,
+          "index": 3544,
+          "activation": 38.25551986694336,
+          "influence": 0.7874248623847961
+        },
+        {
+          "layer": 8,
+          "index": 6462,
+          "activation": 10.824298858642578,
+          "influence": 0.6326799392700195
+        },
+        {
+          "layer": 19,
+          "index": 11872,
+          "activation": 13.481755256652832,
+          "influence": 0.4721708297729492
+        },
+        {
+          "layer": 25,
+          "index": 13822,
+          "activation": 36.85939025878906,
+          "influence": 0.7588008642196655
+        },
+        {
+          "layer": 14,
+          "index": 4256,
+          "activation": 16.851499557495117,
+          "influence": 0.6868139505386353
+        },
+        {
+          "layer": 2,
+          "index": 14886,
+          "activation": 13.078348159790039,
+          "influence": 0.532983660697937
+        },
+        {
+          "layer": 15,
+          "index": 11238,
+          "activation": 41.526981353759766,
+          "influence": 0.6591939330101013
+        },
+        {
+          "layer": 13,
+          "index": 7940,
+          "activation": 13.80723762512207,
+          "influence": 0.6213937997817993
+        },
+        {
+          "layer": 11,
+          "index": 16076,
+          "activation": 26.38702392578125,
+          "influence": 0.720879852771759
+        },
+        {
+          "layer": 23,
+          "index": 11328,
+          "activation": 47.869590759277344,
+          "influence": 0.42951080203056335
+        },
+        {
+          "layer": 21,
+          "index": 5251,
+          "activation": 37.931156158447266,
+          "influence": 0.5305591225624084
+        },
+        {
+          "layer": 18,
+          "index": 3483,
+          "activation": 14.976993560791016,
+          "influence": 0.7115411758422852
+        },
+        {
+          "layer": 15,
+          "index": 1019,
+          "activation": 15.16762638092041,
+          "influence": 0.7736373543739319
+        },
+        {
+          "layer": 9,
+          "index": 2762,
+          "activation": 39.750572204589844,
+          "influence": 0.6738100051879883
+        },
+        {
+          "layer": 24,
+          "index": 6082,
+          "activation": 24.706865310668945,
+          "influence": 0.4742877185344696
+        },
+        {
+          "layer": 20,
+          "index": 411,
+          "activation": 10.802955627441406,
+          "influence": 0.6345698237419128
+        },
+        {
+          "layer": 24,
+          "index": 15252,
+          "activation": 13.366119384765625,
+          "influence": 0.726517915725708
+        },
+        {
+          "layer": 25,
+          "index": 10152,
+          "activation": 15.101943016052246,
+          "influence": 0.7057276368141174
+        },
+        {
+          "layer": 15,
+          "index": 241,
+          "activation": 10.706754684448242,
+          "influence": 0.6519045233726501
+        },
+        {
+          "layer": 23,
+          "index": 10181,
+          "activation": 13.219352722167969,
+          "influence": 0.6702301502227783
+        },
+        {
+          "layer": 18,
+          "index": 9239,
+          "activation": 34.95585632324219,
+          "influence": 0.36658960580825806
+        },
+        {
+          "layer": 20,
+          "index": 1194,
+          "activation": 25.821853637695312,
+          "influence": 0.7430446147918701
+        },
+        {
+          "layer": 19,
+          "index": 12535,
+          "activation": 12.676607131958008,
+          "influence": 0.6369224786758423
+        },
+        {
+          "layer": 22,
+          "index": 14418,
+          "activation": 11.348724365234375,
+          "influence": 0.7718324065208435
+        },
+        {
+          "layer": 23,
+          "index": 6956,
+          "activation": 10.669715881347656,
+          "influence": 0.7541772723197937
+        },
+        {
+          "layer": 25,
+          "index": 9873,
+          "activation": 11.193010330200195,
+          "influence": 0.7905076146125793
+        },
+        {
+          "layer": 6,
+          "index": 8369,
+          "activation": 13.173574447631836,
+          "influence": 0.5818105936050415
+        },
+        {
+          "layer": 12,
+          "index": 4592,
+          "activation": 11.524351119995117,
+          "influence": 0.7892810106277466
+        },
+        {
+          "layer": 0,
+          "index": 10785,
+          "activation": 10.120128631591797,
+          "influence": 0.52974534034729
+        },
+        {
+          "layer": 0,
+          "index": 8414,
+          "activation": 10.342110633850098,
+          "influence": 0.4364376962184906
+        },
+        {
+          "layer": 6,
+          "index": 3803,
+          "activation": 11.269092559814453,
+          "influence": 0.6757609844207764
+        },
+        {
+          "layer": 9,
+          "index": 15819,
+          "activation": 47.61338424682617,
+          "influence": 0.7628368735313416
+        },
+        {
+          "layer": 6,
+          "index": 10660,
+          "activation": 13.278325080871582,
+          "influence": 0.3460734784603119
+        },
+        {
+          "layer": 20,
+          "index": 7507,
+          "activation": 33.95867156982422,
+          "influence": 0.7706974744796753
+        },
+        {
+          "layer": 25,
+          "index": 15121,
+          "activation": 19.50904083251953,
+          "influence": 0.7433050274848938
+        },
+        {
+          "layer": 13,
+          "index": 14076,
+          "activation": 10.874509811401367,
+          "influence": 0.6392636895179749
+        },
+        {
+          "layer": 16,
+          "index": 12678,
+          "activation": 32.84952163696289,
+          "influence": 0.7364057302474976
+        },
+        {
+          "layer": 15,
+          "index": 15269,
+          "activation": 13.465904235839844,
+          "influence": 0.6234007477760315
+        },
+        {
+          "layer": 12,
+          "index": 15847,
+          "activation": 11.224167823791504,
+          "influence": 0.6488291621208191
+        },
+        {
+          "layer": 10,
+          "index": 6237,
+          "activation": 11.712480545043945,
+          "influence": 0.7347503304481506
+        },
+        {
+          "layer": 11,
+          "index": 3782,
+          "activation": 8.591896057128906,
+          "influence": 0.7965326309204102
+        },
+        {
+          "layer": 16,
+          "index": 1654,
+          "activation": 7.652583122253418,
+          "influence": 0.5611720681190491
+        },
+        {
+          "layer": 25,
+          "index": 6781,
+          "activation": 6.566347122192383,
+          "influence": 0.7941501140594482
+        },
+        {
+          "layer": 6,
+          "index": 15640,
+          "activation": 6.995848655700684,
+          "influence": 0.6722279191017151
+        },
+        {
+          "layer": 9,
+          "index": 14384,
+          "activation": 9.109197616577148,
+          "influence": 0.6492696404457092
+        },
+        {
+          "layer": 9,
+          "index": 9113,
+          "activation": 9.606388092041016,
+          "influence": 0.5691785216331482
+        },
+        {
+          "layer": 24,
+          "index": 7929,
+          "activation": 7.470369338989258,
+          "influence": 0.7244544625282288
+        },
+        {
+          "layer": 6,
+          "index": 1509,
+          "activation": 7.480982780456543,
+          "influence": 0.45536714792251587
+        },
+        {
+          "layer": 16,
+          "index": 5021,
+          "activation": 7.272042274475098,
+          "influence": 0.6963402032852173
+        },
+        {
+          "layer": 0,
+          "index": 1150,
+          "activation": 9.011381149291992,
+          "influence": 0.508403480052948
+        },
+        {
+          "layer": 2,
+          "index": 1898,
+          "activation": 8.338058471679688,
+          "influence": 0.47639790177345276
+        },
+        {
+          "layer": 13,
+          "index": 4435,
+          "activation": 9.657384872436523,
+          "influence": 0.7546689510345459
+        },
+        {
+          "layer": 7,
+          "index": 13919,
+          "activation": 7.653386116027832,
+          "influence": 0.749448299407959
+        },
+        {
+          "layer": 2,
+          "index": 13092,
+          "activation": 6.950430870056152,
+          "influence": 0.5369611978530884
+        },
+        {
+          "layer": 12,
+          "index": 12230,
+          "activation": 9.735836029052734,
+          "influence": 0.7813038229942322
+        },
+        {
+          "layer": 1,
+          "index": 12354,
+          "activation": 7.483180999755859,
+          "influence": 0.5724418759346008
+        },
+        {
+          "layer": 13,
+          "index": 13885,
+          "activation": 9.771454811096191,
+          "influence": 0.7050732374191284
+        },
+        {
+          "layer": 1,
+          "index": 4210,
+          "activation": 7.352649211883545,
+          "influence": 0.6046383380889893
+        },
+        {
+          "layer": 25,
+          "index": 5639,
+          "activation": 8.945255279541016,
+          "influence": 0.670630931854248
+        },
+        {
+          "layer": 9,
+          "index": 13649,
+          "activation": 7.811768054962158,
+          "influence": 0.772284984588623
+        },
+        {
+          "layer": 6,
+          "index": 9454,
+          "activation": 5.98726224899292,
+          "influence": 0.7917280197143555
+        },
+        {
+          "layer": 2,
+          "index": 12276,
+          "activation": 7.702972412109375,
+          "influence": 0.5805925726890564
+        },
+        {
+          "layer": 3,
+          "index": 14032,
+          "activation": 8.045646667480469,
+          "influence": 0.7112228870391846
+        },
+        {
+          "layer": 19,
+          "index": 12303,
+          "activation": 8.577019691467285,
+          "influence": 0.5854026675224304
+        },
+        {
+          "layer": 13,
+          "index": 13216,
+          "activation": 7.946297645568848,
+          "influence": 0.7369510531425476
+        },
+        {
+          "layer": 7,
+          "index": 2678,
+          "activation": 6.075945854187012,
+          "influence": 0.7830146551132202
+        },
+        {
+          "layer": 0,
+          "index": 4851,
+          "activation": 7.958763599395752,
+          "influence": 0.5002257823944092
+        },
+        {
+          "layer": 9,
+          "index": 1680,
+          "activation": 8.36242961883545,
+          "influence": 0.7380308508872986
+        },
+        {
+          "layer": 0,
+          "index": 9944,
+          "activation": 8.593250274658203,
+          "influence": 0.4588644206523895
+        },
+        {
+          "layer": 23,
+          "index": 8340,
+          "activation": 8.811386108398438,
+          "influence": 0.7590415477752686
+        },
+        {
+          "layer": 4,
+          "index": 12911,
+          "activation": 5.993779182434082,
+          "influence": 0.7578365206718445
+        },
+        {
+          "layer": 1,
+          "index": 11613,
+          "activation": 6.994893550872803,
+          "influence": 0.582413375377655
+        },
+        {
+          "layer": 5,
+          "index": 9396,
+          "activation": 6.943109512329102,
+          "influence": 0.7409495711326599
+        },
+        {
+          "layer": 7,
+          "index": 1980,
+          "activation": 9.708159446716309,
+          "influence": 0.6882477402687073
+        },
+        {
+          "layer": 3,
+          "index": 15048,
+          "activation": 6.094539642333984,
+          "influence": 0.6653881072998047
+        },
+        {
+          "layer": 18,
+          "index": 11353,
+          "activation": 6.931629657745361,
+          "influence": 0.7187517285346985
+        },
+        {
+          "layer": 24,
+          "index": 12743,
+          "activation": 7.735818862915039,
+          "influence": 0.7672584056854248
+        },
+        {
+          "layer": 1,
+          "index": 5855,
+          "activation": 6.6282453536987305,
+          "influence": 0.6461460590362549
+        },
+        {
+          "layer": 10,
+          "index": 8082,
+          "activation": 8.433431625366211,
+          "influence": 0.761661946773529
+        },
+        {
+          "layer": 4,
+          "index": 10583,
+          "activation": 8.012534141540527,
+          "influence": 0.33701974153518677
+        },
+        {
+          "layer": 14,
+          "index": 13575,
+          "activation": 8.685028076171875,
+          "influence": 0.783227264881134
+        },
+        {
+          "layer": 3,
+          "index": 10542,
+          "activation": 7.388515949249268,
+          "influence": 0.5889261960983276
+        },
+        {
+          "layer": 8,
+          "index": 705,
+          "activation": 9.718771934509277,
+          "influence": 0.7353042364120483
+        },
+        {
+          "layer": 2,
+          "index": 3899,
+          "activation": 9.446260452270508,
+          "influence": 0.5570240616798401
+        },
+        {
+          "layer": 9,
+          "index": 6402,
+          "activation": 7.781661033630371,
+          "influence": 0.7060544490814209
+        },
+        {
+          "layer": 5,
+          "index": 5683,
+          "activation": 4.844824314117432,
+          "influence": 0.770013153553009
+        },
+        {
+          "layer": 9,
+          "index": 3886,
+          "activation": 5.523301124572754,
+          "influence": 0.740157961845398
+        },
+        {
+          "layer": 2,
+          "index": 13869,
+          "activation": 4.186316013336182,
+          "influence": 0.6753755807876587
+        },
+        {
+          "layer": 9,
+          "index": 4483,
+          "activation": 5.016056060791016,
+          "influence": 0.7913219928741455
+        },
+        {
+          "layer": 3,
+          "index": 15286,
+          "activation": 5.550736904144287,
+          "influence": 0.7693269848823547
+        },
+        {
+          "layer": 5,
+          "index": 10508,
+          "activation": 4.733347415924072,
+          "influence": 0.7054005265235901
+        },
+        {
+          "layer": 9,
+          "index": 7775,
+          "activation": 3.581465721130371,
+          "influence": 0.7947492599487305
+        },
+        {
+          "layer": 6,
+          "index": 6329,
+          "activation": 5.818798065185547,
+          "influence": 0.7456273436546326
+        },
+        {
+          "layer": 3,
+          "index": 2637,
+          "activation": 4.388465404510498,
+          "influence": 0.6850146651268005
+        },
+        {
+          "layer": 10,
+          "index": 12364,
+          "activation": 5.766103267669678,
+          "influence": 0.7131272554397583
+        },
+        {
+          "layer": 1,
+          "index": 8942,
+          "activation": 4.134738922119141,
+          "influence": 0.7226773500442505
+        },
+        {
+          "layer": 1,
+          "index": 15715,
+          "activation": 4.618394374847412,
+          "influence": 0.682482898235321
+        },
+        {
+          "layer": 5,
+          "index": 1252,
+          "activation": 4.601785659790039,
+          "influence": 0.7458844780921936
+        },
+        {
+          "layer": 6,
+          "index": 8378,
+          "activation": 4.021598815917969,
+          "influence": 0.7502037882804871
+        },
+        {
+          "layer": 4,
+          "index": 2782,
+          "activation": 3.985781669616699,
+          "influence": 0.7172101736068726
+        },
+        {
+          "layer": 1,
+          "index": 1988,
+          "activation": 5.112490653991699,
+          "influence": 0.7070318460464478
+        },
+        {
+          "layer": 3,
+          "index": 1460,
+          "activation": 3.695857286453247,
+          "influence": 0.6846543550491333
+        },
+        {
+          "layer": 3,
+          "index": 1942,
+          "activation": 4.345033645629883,
+          "influence": 0.6842936277389526
+        },
+        {
+          "layer": 4,
+          "index": 5065,
+          "activation": 5.006672382354736,
+          "influence": 0.7561355829238892
+        },
+        {
+          "layer": 9,
+          "index": 11223,
+          "activation": 4.5562262535095215,
+          "influence": 0.6682193279266357
+        },
+        {
+          "layer": 6,
+          "index": 8256,
+          "activation": 4.713984489440918,
+          "influence": 0.7915251851081848
+        },
+        {
+          "layer": 0,
+          "index": 13916,
+          "activation": 4.570793628692627,
+          "influence": 0.7153327465057373
+        },
+        {
+          "layer": 3,
+          "index": 10447,
+          "activation": 4.801009178161621,
+          "influence": 0.7998566627502441
+        },
+        {
+          "layer": 0,
+          "index": 10842,
+          "activation": 5.770134925842285,
+          "influence": 0.5991507768630981
+        },
+        {
+          "layer": 3,
+          "index": 13666,
+          "activation": 5.6806535720825195,
+          "influence": 0.6678163409233093
+        },
+        {
+          "layer": 5,
+          "index": 11727,
+          "activation": 5.307692527770996,
+          "influence": 0.6686220765113831
+        },
+        {
+          "layer": 2,
+          "index": 4374,
+          "activation": 4.796177387237549,
+          "influence": 0.6928531527519226
+        },
+        {
+          "layer": 0,
+          "index": 5215,
+          "activation": 4.284114360809326,
+          "influence": 0.6875324845314026
+        },
+        {
+          "layer": 1,
+          "index": 5606,
+          "activation": 3.78220272064209,
+          "influence": 0.6817535758018494
+        },
+        {
+          "layer": 5,
+          "index": 11624,
+          "activation": 4.132173538208008,
+          "influence": 0.7558916807174683
+        },
+        {
+          "layer": 0,
+          "index": 12215,
+          "activation": 5.812292098999023,
+          "influence": 0.6126381158828735
+        },
+        {
+          "layer": 4,
+          "index": 6453,
+          "activation": 4.236311435699463,
+          "influence": 0.7080064415931702
+        },
+        {
+          "layer": 6,
+          "index": 451,
+          "activation": 5.119044780731201,
+          "influence": 0.7563793659210205
+        },
+        {
+          "layer": 0,
+          "index": 16298,
+          "activation": 4.473637104034424,
+          "influence": 0.6749855875968933
+        },
+        {
+          "layer": 2,
+          "index": 13548,
+          "activation": 3.9094901084899902,
+          "influence": 0.7250453233718872
+        },
+        {
+          "layer": 1,
+          "index": 4633,
+          "activation": 4.814878463745117,
+          "influence": 0.7096213698387146
+        },
+        {
+          "layer": 0,
+          "index": 2650,
+          "activation": 5.271093368530273,
+          "influence": 0.5075131058692932
+        },
+        {
+          "layer": 5,
+          "index": 1673,
+          "activation": 4.948655128479004,
+          "influence": 0.6953003406524658
+        },
+        {
+          "layer": 7,
+          "index": 8414,
+          "activation": 4.010836601257324,
+          "influence": 0.7471646666526794
+        },
+        {
+          "layer": 5,
+          "index": 2334,
+          "activation": 5.849957466125488,
+          "influence": 0.686454176902771
+        },
+        {
+          "layer": 5,
+          "index": 1492,
+          "activation": 4.796749114990234,
+          "influence": 0.6557973623275757
+        },
+        {
+          "layer": 3,
+          "index": 15381,
+          "activation": 5.005594253540039,
+          "influence": 0.786178469657898
+        },
+        {
+          "layer": 0,
+          "index": 3788,
+          "activation": 3.6412200927734375,
+          "influence": 0.7282584309577942
+        },
+        {
+          "layer": 5,
+          "index": 6336,
+          "activation": 4.531286239624023,
+          "influence": 0.7481828331947327
+        },
+        {
+          "layer": 0,
+          "index": 11170,
+          "activation": 5.605367183685303,
+          "influence": 0.7086548209190369
+        },
+        {
+          "layer": 2,
+          "index": 10425,
+          "activation": 2.6611838340759277,
+          "influence": 0.7466532588005066
+        },
+        {
+          "layer": 7,
+          "index": 13060,
+          "activation": 3.4578962326049805,
+          "influence": 0.5498934388160706
+        },
+        {
+          "layer": 2,
+          "index": 6973,
+          "activation": 3.186295509338379,
+          "influence": 0.5918136239051819
+        },
+        {
+          "layer": 1,
+          "index": 1033,
+          "activation": 2.085667610168457,
+          "influence": 0.721182107925415
+        },
+        {
+          "layer": 3,
+          "index": 537,
+          "activation": 3.1039137840270996,
+          "influence": 0.7288320064544678
+        },
+        {
+          "layer": 5,
+          "index": 4374,
+          "activation": 3.2951226234436035,
+          "influence": 0.7756404280662537
+        },
+        {
+          "layer": 9,
+          "index": 14188,
+          "activation": 2.2443933486938477,
+          "influence": 0.625883936882019
+        },
+        {
+          "layer": 4,
+          "index": 6863,
+          "activation": 3.1492013931274414,
+          "influence": 0.7463971376419067
+        },
+        {
+          "layer": 1,
+          "index": 9357,
+          "activation": 2.8743696212768555,
+          "influence": 0.7575944066047668
+        },
+        {
+          "layer": 2,
+          "index": 9018,
+          "activation": 1.6802797317504883,
+          "influence": 0.783652126789093
+        },
+        {
+          "layer": 2,
+          "index": 1761,
+          "activation": 1.9090871810913086,
+          "influence": 0.7469092011451721
+        },
+        {
+          "layer": 0,
+          "index": 2186,
+          "activation": 1.183659553527832,
+          "influence": 0.7047439217567444
+        },
+        {
+          "layer": 1,
+          "index": 1618,
+          "activation": 3.3740460872650146,
+          "influence": 0.7271019220352173
+        },
+        {
+          "layer": 1,
+          "index": 1254,
+          "activation": 3.260220527648926,
+          "influence": 0.7291181683540344
+        },
+        {
+          "layer": 4,
+          "index": 13375,
+          "activation": 2.753993034362793,
+          "influence": 0.7684094309806824
+        },
+        {
+          "layer": 1,
+          "index": 9218,
+          "activation": 2.8656351566314697,
+          "influence": 0.6540791988372803
+        },
+        {
+          "layer": 0,
+          "index": 13525,
+          "activation": 2.592895984649658,
+          "influence": 0.7000705003738403
+        },
+        {
+          "layer": 0,
+          "index": 2073,
+          "activation": 3.113564968109131,
+          "influence": 0.7425230741500854
+        },
+        {
+          "layer": 0,
+          "index": 1620,
+          "activation": 3.290951728820801,
+          "influence": 0.7196667790412903
+        },
+        {
+          "layer": 2,
+          "index": 3391,
+          "activation": 2.0316619873046875,
+          "influence": 0.7763022184371948
+        },
+        {
+          "layer": 1,
+          "index": 14970,
+          "activation": 2.8127822875976562,
+          "influence": 0.7509544491767883
+        },
+        {
+          "layer": 6,
+          "index": 9687,
+          "activation": 1.9524412155151367,
+          "influence": 0.7949480414390564
+        },
+        {
+          "layer": 0,
+          "index": 6574,
+          "activation": 1.9525890350341797,
+          "influence": 0.7217828631401062
+        },
+        {
+          "layer": 3,
+          "index": 13853,
+          "activation": 2.3098413944244385,
+          "influence": 0.7821618914604187
+        },
+        {
+          "layer": 4,
+          "index": 1383,
+          "activation": 2.8301234245300293,
+          "influence": 0.7851320505142212
+        },
+        {
+          "layer": 3,
+          "index": 12549,
+          "activation": 2.9504683017730713,
+          "influence": 0.7534386515617371
+        },
+        {
+          "layer": 1,
+          "index": 11387,
+          "activation": 2.361271381378174,
+          "influence": 0.7878386378288269
+        },
+        {
+          "layer": 2,
+          "index": 15431,
+          "activation": 2.8906521797180176,
+          "influence": 0.7953449487686157
+        },
+        {
+          "layer": 0,
+          "index": 12346,
+          "activation": 3.1752281188964844,
+          "influence": 0.7566226124763489
+        },
+        {
+          "layer": 5,
+          "index": 5768,
+          "activation": 3.2649223804473877,
+          "influence": 0.7531920075416565
+        },
+        {
+          "layer": 0,
+          "index": 2655,
+          "activation": 1.784090518951416,
+          "influence": 0.7720589637756348
+        },
+        {
+          "layer": 2,
+          "index": 426,
+          "activation": 3.2506399154663086,
+          "influence": 0.7789299488067627
+        },
+        {
+          "layer": 1,
+          "index": 3445,
+          "activation": 2.243107795715332,
+          "influence": 0.7688686847686768
+        },
+        {
+          "layer": 0,
+          "index": 6636,
+          "activation": 2.1872243881225586,
+          "influence": 0.7704697251319885
+        },
+        {
+          "layer": 0,
+          "index": 1266,
+          "activation": 2.384709358215332,
+          "influence": 0.7330808639526367
+        },
+        {
+          "layer": 1,
+          "index": 4493,
+          "activation": 2.2884864807128906,
+          "influence": 0.7709250450134277
+        },
+        {
+          "layer": 0,
+          "index": 14070,
+          "activation": 3.551848888397217,
+          "influence": 0.6917976140975952
+        },
+        {
+          "layer": 3,
+          "index": 9971,
+          "activation": 2.6622042655944824,
+          "influence": 0.797515869140625
+        },
+        {
+          "layer": 1,
+          "index": 13759,
+          "activation": 2.4993882179260254,
+          "influence": 0.7089774012565613
+        },
+        {
+          "layer": 4,
+          "index": 10453,
+          "activation": 3.245218276977539,
+          "influence": 0.7656371593475342
+        },
+        {
+          "layer": 6,
+          "index": 16065,
+          "activation": 3.1241440773010254,
+          "influence": 0.7776215672492981
+        },
+        {
+          "layer": 4,
+          "index": 12975,
+          "activation": 1.4401531219482422,
+          "influence": 0.7121767997741699
+        },
+        {
+          "layer": 4,
+          "index": 4463,
+          "activation": 3.580845355987549,
+          "influence": 0.7729623317718506
+        },
+        {
+          "layer": 4,
+          "index": 13019,
+          "activation": 3.2879791259765625,
+          "influence": 0.7524480819702148
+        },
+        {
+          "layer": 1,
+          "index": 2927,
+          "activation": 2.075991153717041,
+          "influence": 0.7259302139282227
+        }
+      ],
+      "result": {
+        "default_text": "<bos>Paris is to France as Tokyo is to Japan. It is the",
+        "steered_text": "<bos>Paris is to France as Tokyo is to to to prawda prawda prawda",
+        "first_steered_token": " to",
+        "first_steered_logprob": -1.96875,
+        "first_steered_top5": [
+          {
+            "token": " to",
+            "logprob": -1.96875
+          },
+          {
+            "token": " prawda",
+            "logprob": -2.09375
+          },
+          {
+            "token": "CppCodeGen",
+            "logprob": -2.59375
+          },
+          {
+            "token": "\u00e9rtelm\u0171",
+            "logprob": -3.09375
+          },
+          {
+            "token": " t",
+            "logprob": -3.71875
+          }
+        ],
+        "first_default_token": " Japan",
+        "first_default_logprob": -0.0181884765625,
+        "first_default_top5": [
+          {
+            "token": " Japan",
+            "logprob": -0.0181884765625
+          },
+          {
+            "token": " the",
+            "logprob": -5.65625
+          },
+          {
+            "token": "\u2026",
+            "logprob": -6.21875
+          },
+          {
+            "token": " Japanese",
+            "logprob": -6.28125
+          },
+          {
+            "token": "...",
+            "logprob": -6.78125
+          }
+        ]
+      },
+      "disrupted": true
+    }
+  },
+  "analog_teacher": {
+    "prompt": "Doctor is to hospital as teacher is to",
+    "expected": "school",
+    "baseline_p": 0.486,
+    "circuit": {
+      "n_features": 180,
+      "strength": -20,
+      "result": {
+        "default_text": "<bos>Doctor is to hospital as teacher is to school.\n\nThe doctor",
+        "steered_text": "<bos>Doctor is to hospital as teacher is to to to to to to",
+        "first_steered_token": " to",
+        "first_steered_logprob": -0.028076171875,
+        "first_steered_top5": [
+          {
+            "token": " to",
+            "logprob": -0.028076171875
+          },
+          {
+            "token": " and",
+            "logprob": -4.28125
+          },
+          {
+            "token": " is",
+            "logprob": -4.40625
+          },
+          {
+            "token": ",",
+            "logprob": -7.96875
+          },
+          {
+            "token": "  ",
+            "logprob": -8.75
+          }
+        ],
+        "first_default_token": " school",
+        "first_default_logprob": -0.57421875,
+        "first_default_top5": [
+          {
+            "token": " school",
+            "logprob": -0.57421875
+          },
+          {
+            "token": " student",
+            "logprob": -3.453125
+          },
+          {
+            "token": " ",
+            "logprob": -3.578125
+          },
+          {
+            "token": "...",
+            "logprob": -3.703125
+          },
+          {
+            "token": " college",
+            "logprob": -3.828125
+          }
+        ]
+      },
+      "disrupted": true
+    },
+    "baseline_text": "<bos>Doctor is to hospital as teacher is to school.\n\nThe doctor",
+    "baseline_first_token": " school",
+    "baseline_first_logprob": -0.57421875,
+    "null": {
+      "n_features": 180,
+      "n_requested": 180,
+      "strength": -20,
+      "seed": 7,
+      "sampled_features": [
+        {
+          "layer": 23,
+          "index": 14326,
+          "activation": 18.298925399780273,
+          "influence": 0.41629114747047424
+        },
+        {
+          "layer": 24,
+          "index": 10068,
+          "activation": 27.222129821777344,
+          "influence": 0.42745745182037354
+        },
+        {
+          "layer": 22,
+          "index": 15975,
+          "activation": 16.13493537902832,
+          "influence": 0.3766336441040039
+        },
+        {
+          "layer": 9,
+          "index": 15819,
+          "activation": 50.54485321044922,
+          "influence": 0.5876386761665344
+        },
+        {
+          "layer": 16,
+          "index": 5197,
+          "activation": 43.89259719848633,
+          "influence": 0.7535027861595154
+        },
+        {
+          "layer": 0,
+          "index": 2105,
+          "activation": 13.179878234863281,
+          "influence": 0.42305153608322144
+        },
+        {
+          "layer": 9,
+          "index": 8770,
+          "activation": 36.96571350097656,
+          "influence": 0.6932346820831299
+        },
+        {
+          "layer": 18,
+          "index": 6532,
+          "activation": 17.32262420654297,
+          "influence": 0.7795346975326538
+        },
+        {
+          "layer": 1,
+          "index": 7265,
+          "activation": 12.652442932128906,
+          "influence": 0.4598899185657501
+        },
+        {
+          "layer": 10,
+          "index": 10933,
+          "activation": 47.21712112426758,
+          "influence": 0.6469807028770447
+        },
+        {
+          "layer": 21,
+          "index": 4390,
+          "activation": 13.433309555053711,
+          "influence": 0.6776667833328247
+        },
+        {
+          "layer": 24,
+          "index": 8718,
+          "activation": 22.27518081665039,
+          "influence": 0.6504971981048584
+        },
+        {
+          "layer": 10,
+          "index": 14174,
+          "activation": 56.43742370605469,
+          "influence": 0.5317867994308472
+        },
+        {
+          "layer": 21,
+          "index": 2655,
+          "activation": 38.541107177734375,
+          "influence": 0.6639242768287659
+        },
+        {
+          "layer": 11,
+          "index": 16076,
+          "activation": 14.631698608398438,
+          "influence": 0.7652231454849243
+        },
+        {
+          "layer": 8,
+          "index": 3099,
+          "activation": 15.422159194946289,
+          "influence": 0.7654468417167664
+        },
+        {
+          "layer": 11,
+          "index": 10933,
+          "activation": 44.3112907409668,
+          "influence": 0.7816253900527954
+        },
+        {
+          "layer": 15,
+          "index": 14741,
+          "activation": 21.182138442993164,
+          "influence": 0.576155424118042
+        },
+        {
+          "layer": 10,
+          "index": 12232,
+          "activation": 37.476295471191406,
+          "influence": 0.6957245469093323
+        },
+        {
+          "layer": 7,
+          "index": 5741,
+          "activation": 15.220417976379395,
+          "influence": 0.5921725630760193
+        },
+        {
+          "layer": 18,
+          "index": 11952,
+          "activation": 46.312843322753906,
+          "influence": 0.7234412431716919
+        },
+        {
+          "layer": 14,
+          "index": 1956,
+          "activation": 31.036596298217773,
+          "influence": 0.741929829120636
+        },
+        {
+          "layer": 17,
+          "index": 7995,
+          "activation": 21.728004455566406,
+          "influence": 0.6628357768058777
+        },
+        {
+          "layer": 0,
+          "index": 14640,
+          "activation": 13.1084623336792,
+          "influence": 0.39436250925064087
+        },
+        {
+          "layer": 16,
+          "index": 12727,
+          "activation": 12.210870742797852,
+          "influence": 0.7877823114395142
+        },
+        {
+          "layer": 13,
+          "index": 15728,
+          "activation": 12.251440048217773,
+          "influence": 0.7338868975639343
+        },
+        {
+          "layer": 20,
+          "index": 6781,
+          "activation": 21.92308807373047,
+          "influence": 0.7511271834373474
+        },
+        {
+          "layer": 11,
+          "index": 9183,
+          "activation": 50.90053939819336,
+          "influence": 0.7818336486816406
+        },
+        {
+          "layer": 17,
+          "index": 9100,
+          "activation": 28.017343521118164,
+          "influence": 0.7516031265258789
+        },
+        {
+          "layer": 22,
+          "index": 14126,
+          "activation": 19.02599334716797,
+          "influence": 0.3062034845352173
+        },
+        {
+          "layer": 25,
+          "index": 10854,
+          "activation": 12.746039390563965,
+          "influence": 0.4971451759338379
+        },
+        {
+          "layer": 20,
+          "index": 6179,
+          "activation": 27.666790008544922,
+          "influence": 0.28572115302085876
+        },
+        {
+          "layer": 2,
+          "index": 131,
+          "activation": 19.6080322265625,
+          "influence": 0.4434143304824829
+        },
+        {
+          "layer": 8,
+          "index": 14441,
+          "activation": 13.208427429199219,
+          "influence": 0.6270942091941833
+        },
+        {
+          "layer": 23,
+          "index": 13488,
+          "activation": 19.193254470825195,
+          "influence": 0.6524189710617065
+        },
+        {
+          "layer": 10,
+          "index": 7106,
+          "activation": 27.110193252563477,
+          "influence": 0.7468090057373047
+        },
+        {
+          "layer": 24,
+          "index": 7901,
+          "activation": 19.39517593383789,
+          "influence": 0.5629882216453552
+        },
+        {
+          "layer": 24,
+          "index": 13657,
+          "activation": 15.687376976013184,
+          "influence": 0.6257956624031067
+        },
+        {
+          "layer": 1,
+          "index": 3761,
+          "activation": 17.6788272857666,
+          "influence": 0.48510152101516724
+        },
+        {
+          "layer": 21,
+          "index": 1648,
+          "activation": 13.024447441101074,
+          "influence": 0.7546862959861755
+        },
+        {
+          "layer": 23,
+          "index": 5978,
+          "activation": 48.052616119384766,
+          "influence": 0.33577391505241394
+        },
+        {
+          "layer": 24,
+          "index": 15259,
+          "activation": 12.672308921813965,
+          "influence": 0.4533350467681885
+        },
+        {
+          "layer": 14,
+          "index": 2051,
+          "activation": 13.752593040466309,
+          "influence": 0.6631990075111389
+        },
+        {
+          "layer": 20,
+          "index": 2722,
+          "activation": 18.56365394592285,
+          "influence": 0.6664538383483887
+        },
+        {
+          "layer": 24,
+          "index": 1082,
+          "activation": 12.500509262084961,
+          "influence": 0.7333741188049316
+        },
+        {
+          "layer": 17,
+          "index": 14126,
+          "activation": 8.440536499023438,
+          "influence": 0.6335041522979736
+        },
+        {
+          "layer": 7,
+          "index": 9711,
+          "activation": 11.025825500488281,
+          "influence": 0.6493324637413025
+        },
+        {
+          "layer": 9,
+          "index": 8954,
+          "activation": 7.44741678237915,
+          "influence": 0.7943384051322937
+        },
+        {
+          "layer": 24,
+          "index": 10662,
+          "activation": 11.388166427612305,
+          "influence": 0.7929670810699463
+        },
+        {
+          "layer": 1,
+          "index": 1279,
+          "activation": 7.3539533615112305,
+          "influence": 0.5793455243110657
+        },
+        {
+          "layer": 4,
+          "index": 4218,
+          "activation": 11.431560516357422,
+          "influence": 0.4542837142944336
+        },
+        {
+          "layer": 18,
+          "index": 12532,
+          "activation": 9.563206672668457,
+          "influence": 0.6146968603134155
+        },
+        {
+          "layer": 1,
+          "index": 9491,
+          "activation": 7.618339538574219,
+          "influence": 0.6339256763458252
+        },
+        {
+          "layer": 23,
+          "index": 1790,
+          "activation": 7.480794906616211,
+          "influence": 0.7421767115592957
+        },
+        {
+          "layer": 17,
+          "index": 14157,
+          "activation": 8.061566352844238,
+          "influence": 0.6941718459129333
+        },
+        {
+          "layer": 0,
+          "index": 10147,
+          "activation": 8.790011405944824,
+          "influence": 0.5669151544570923
+        },
+        {
+          "layer": 9,
+          "index": 6071,
+          "activation": 7.805129051208496,
+          "influence": 0.7676701545715332
+        },
+        {
+          "layer": 25,
+          "index": 130,
+          "activation": 7.881229400634766,
+          "influence": 0.6288209557533264
+        },
+        {
+          "layer": 16,
+          "index": 14840,
+          "activation": 8.457836151123047,
+          "influence": 0.6380904912948608
+        },
+        {
+          "layer": 1,
+          "index": 10854,
+          "activation": 8.939523696899414,
+          "influence": 0.6372631788253784
+        },
+        {
+          "layer": 23,
+          "index": 12399,
+          "activation": 9.32038688659668,
+          "influence": 0.7093772888183594
+        },
+        {
+          "layer": 0,
+          "index": 13640,
+          "activation": 10.033862113952637,
+          "influence": 0.4589630961418152
+        },
+        {
+          "layer": 1,
+          "index": 16301,
+          "activation": 9.326330184936523,
+          "influence": 0.5572560429573059
+        },
+        {
+          "layer": 16,
+          "index": 12036,
+          "activation": 11.231962203979492,
+          "influence": 0.6907210946083069
+        },
+        {
+          "layer": 2,
+          "index": 2589,
+          "activation": 7.114696502685547,
+          "influence": 0.49476414918899536
+        },
+        {
+          "layer": 1,
+          "index": 4153,
+          "activation": 7.503668308258057,
+          "influence": 0.5635546445846558
+        },
+        {
+          "layer": 17,
+          "index": 8909,
+          "activation": 7.655364990234375,
+          "influence": 0.7221047878265381
+        },
+        {
+          "layer": 0,
+          "index": 13868,
+          "activation": 8.6803560256958,
+          "influence": 0.4285464584827423
+        },
+        {
+          "layer": 17,
+          "index": 4899,
+          "activation": 7.8860321044921875,
+          "influence": 0.6859279870986938
+        },
+        {
+          "layer": 24,
+          "index": 12189,
+          "activation": 9.073884963989258,
+          "influence": 0.713072657585144
+        },
+        {
+          "layer": 8,
+          "index": 4823,
+          "activation": 11.30728530883789,
+          "influence": 0.793947160243988
+        },
+        {
+          "layer": 21,
+          "index": 14530,
+          "activation": 10.763494491577148,
+          "influence": 0.6966476440429688
+        },
+        {
+          "layer": 8,
+          "index": 16344,
+          "activation": 7.556535720825195,
+          "influence": 0.7443812489509583
+        },
+        {
+          "layer": 16,
+          "index": 12115,
+          "activation": 8.125616073608398,
+          "influence": 0.7750828862190247
+        },
+        {
+          "layer": 1,
+          "index": 1116,
+          "activation": 10.394850730895996,
+          "influence": 0.4241611957550049
+        },
+        {
+          "layer": 7,
+          "index": 13919,
+          "activation": 7.27911376953125,
+          "influence": 0.7941428422927856
+        },
+        {
+          "layer": 25,
+          "index": 4839,
+          "activation": 10.517656326293945,
+          "influence": 0.7416822910308838
+        },
+        {
+          "layer": 0,
+          "index": 15360,
+          "activation": 7.324580669403076,
+          "influence": 0.6376769542694092
+        },
+        {
+          "layer": 2,
+          "index": 4295,
+          "activation": 7.41820764541626,
+          "influence": 0.5383588075637817
+        },
+        {
+          "layer": 0,
+          "index": 12846,
+          "activation": 9.540722846984863,
+          "influence": 0.39943769574165344
+        },
+        {
+          "layer": 24,
+          "index": 746,
+          "activation": 11.879192352294922,
+          "influence": 0.7050186991691589
+        },
+        {
+          "layer": 17,
+          "index": 15942,
+          "activation": 8.716911315917969,
+          "influence": 0.7336305379867554
+        },
+        {
+          "layer": 8,
+          "index": 7860,
+          "activation": 11.678264617919922,
+          "influence": 0.7005821466445923
+        },
+        {
+          "layer": 19,
+          "index": 9314,
+          "activation": 8.431451797485352,
+          "influence": 0.7271413803100586
+        },
+        {
+          "layer": 7,
+          "index": 4051,
+          "activation": 9.082345962524414,
+          "influence": 0.735668957233429
+        },
+        {
+          "layer": 4,
+          "index": 15227,
+          "activation": 7.46849250793457,
+          "influence": 0.6900879144668579
+        },
+        {
+          "layer": 21,
+          "index": 881,
+          "activation": 8.278700828552246,
+          "influence": 0.7191420197486877
+        },
+        {
+          "layer": 5,
+          "index": 9396,
+          "activation": 7.912031173706055,
+          "influence": 0.6951047778129578
+        },
+        {
+          "layer": 10,
+          "index": 14118,
+          "activation": 8.19443416595459,
+          "influence": 0.7199562788009644
+        },
+        {
+          "layer": 0,
+          "index": 7344,
+          "activation": 10.456233978271484,
+          "influence": 0.3981861174106598
+        },
+        {
+          "layer": 4,
+          "index": 9894,
+          "activation": 5.172578811645508,
+          "influence": 0.619205117225647
+        },
+        {
+          "layer": 0,
+          "index": 16298,
+          "activation": 5.157487392425537,
+          "influence": 0.6364335417747498
+        },
+        {
+          "layer": 5,
+          "index": 5766,
+          "activation": 4.093387126922607,
+          "influence": 0.7700963020324707
+        },
+        {
+          "layer": 8,
+          "index": 3034,
+          "activation": 4.597914695739746,
+          "influence": 0.7260898947715759
+        },
+        {
+          "layer": 0,
+          "index": 2716,
+          "activation": 4.194842338562012,
+          "influence": 0.703550398349762
+        },
+        {
+          "layer": 1,
+          "index": 6384,
+          "activation": 4.777220249176025,
+          "influence": 0.6279581785202026
+        },
+        {
+          "layer": 0,
+          "index": 4706,
+          "activation": 6.488343238830566,
+          "influence": 0.5566770434379578
+        },
+        {
+          "layer": 8,
+          "index": 623,
+          "activation": 6.33749532699585,
+          "influence": 0.7429146766662598
+        },
+        {
+          "layer": 5,
+          "index": 8863,
+          "activation": 5.481697082519531,
+          "influence": 0.7229077219963074
+        },
+        {
+          "layer": 5,
+          "index": 7132,
+          "activation": 4.670255661010742,
+          "influence": 0.7784819602966309
+        },
+        {
+          "layer": 0,
+          "index": 2947,
+          "activation": 6.507744789123535,
+          "influence": 0.6763117909431458
+        },
+        {
+          "layer": 5,
+          "index": 12330,
+          "activation": 6.509735584259033,
+          "influence": 0.7937514781951904
+        },
+        {
+          "layer": 0,
+          "index": 1086,
+          "activation": 5.3139238357543945,
+          "influence": 0.7729275822639465
+        },
+        {
+          "layer": 0,
+          "index": 16332,
+          "activation": 4.787603378295898,
+          "influence": 0.577752947807312
+        },
+        {
+          "layer": 0,
+          "index": 1000,
+          "activation": 5.4566874504089355,
+          "influence": 0.6029558777809143
+        },
+        {
+          "layer": 2,
+          "index": 13321,
+          "activation": 5.062830924987793,
+          "influence": 0.6588132381439209
+        },
+        {
+          "layer": 0,
+          "index": 11170,
+          "activation": 5.166958332061768,
+          "influence": 0.7268788814544678
+        },
+        {
+          "layer": 18,
+          "index": 4093,
+          "activation": 6.726010322570801,
+          "influence": 0.682336688041687
+        },
+        {
+          "layer": 4,
+          "index": 7438,
+          "activation": 4.746682167053223,
+          "influence": 0.7765769958496094
+        },
+        {
+          "layer": 0,
+          "index": 15973,
+          "activation": 5.148214817047119,
+          "influence": 0.6878598928451538
+        },
+        {
+          "layer": 0,
+          "index": 9699,
+          "activation": 5.930624961853027,
+          "influence": 0.58248370885849
+        },
+        {
+          "layer": 6,
+          "index": 1931,
+          "activation": 6.230068683624268,
+          "influence": 0.748016357421875
+        },
+        {
+          "layer": 1,
+          "index": 1538,
+          "activation": 4.598269939422607,
+          "influence": 0.5803976655006409
+        },
+        {
+          "layer": 5,
+          "index": 10235,
+          "activation": 4.228919506072998,
+          "influence": 0.7707537412643433
+        },
+        {
+          "layer": 2,
+          "index": 1254,
+          "activation": 5.7712178230285645,
+          "influence": 0.5881490707397461
+        },
+        {
+          "layer": 0,
+          "index": 12300,
+          "activation": 5.407337188720703,
+          "influence": 0.7161301374435425
+        },
+        {
+          "layer": 8,
+          "index": 758,
+          "activation": 6.085902690887451,
+          "influence": 0.5200976729393005
+        },
+        {
+          "layer": 6,
+          "index": 11763,
+          "activation": 5.51980447769165,
+          "influence": 0.7681130766868591
+        },
+        {
+          "layer": 0,
+          "index": 4727,
+          "activation": 5.00928258895874,
+          "influence": 0.6865746974945068
+        },
+        {
+          "layer": 4,
+          "index": 7182,
+          "activation": 5.044678688049316,
+          "influence": 0.7484967708587646
+        },
+        {
+          "layer": 0,
+          "index": 14238,
+          "activation": 4.0290327072143555,
+          "influence": 0.7354158759117126
+        },
+        {
+          "layer": 3,
+          "index": 8335,
+          "activation": 6.362616539001465,
+          "influence": 0.5886567234992981
+        },
+        {
+          "layer": 5,
+          "index": 1731,
+          "activation": 6.348169326782227,
+          "influence": 0.7453550696372986
+        },
+        {
+          "layer": 7,
+          "index": 5560,
+          "activation": 5.650357723236084,
+          "influence": 0.6174170970916748
+        },
+        {
+          "layer": 1,
+          "index": 6749,
+          "activation": 5.834725379943848,
+          "influence": 0.6891346573829651
+        },
+        {
+          "layer": 1,
+          "index": 11438,
+          "activation": 5.477449893951416,
+          "influence": 0.6313857436180115
+        },
+        {
+          "layer": 0,
+          "index": 10842,
+          "activation": 6.030512809753418,
+          "influence": 0.5495491623878479
+        },
+        {
+          "layer": 3,
+          "index": 13446,
+          "activation": 4.860534191131592,
+          "influence": 0.7499345541000366
+        },
+        {
+          "layer": 0,
+          "index": 13145,
+          "activation": 4.014777183532715,
+          "influence": 0.6409655213356018
+        },
+        {
+          "layer": 1,
+          "index": 7230,
+          "activation": 4.9969987869262695,
+          "influence": 0.6453996896743774
+        },
+        {
+          "layer": 0,
+          "index": 9793,
+          "activation": 4.445618629455566,
+          "influence": 0.6249287128448486
+        },
+        {
+          "layer": 6,
+          "index": 8256,
+          "activation": 4.938200950622559,
+          "influence": 0.7255626916885376
+        },
+        {
+          "layer": 0,
+          "index": 16347,
+          "activation": 4.653432846069336,
+          "influence": 0.6786782145500183
+        },
+        {
+          "layer": 0,
+          "index": 5717,
+          "activation": 4.660165786743164,
+          "influence": 0.5324632525444031
+        },
+        {
+          "layer": 2,
+          "index": 3090,
+          "activation": 4.381473541259766,
+          "influence": 0.7090895771980286
+        },
+        {
+          "layer": 3,
+          "index": 14173,
+          "activation": 2.557680130004883,
+          "influence": 0.7376862168312073
+        },
+        {
+          "layer": 2,
+          "index": 7425,
+          "activation": 2.7397165298461914,
+          "influence": 0.6916667819023132
+        },
+        {
+          "layer": 3,
+          "index": 15831,
+          "activation": 2.676182270050049,
+          "influence": 0.7581842541694641
+        },
+        {
+          "layer": 0,
+          "index": 1859,
+          "activation": 3.0776052474975586,
+          "influence": 0.7328607439994812
+        },
+        {
+          "layer": 4,
+          "index": 15962,
+          "activation": 3.336592674255371,
+          "influence": 0.6963406205177307
+        },
+        {
+          "layer": 3,
+          "index": 10463,
+          "activation": 3.607954263687134,
+          "influence": 0.7441372871398926
+        },
+        {
+          "layer": 0,
+          "index": 1846,
+          "activation": 3.2325384616851807,
+          "influence": 0.6987770199775696
+        },
+        {
+          "layer": 1,
+          "index": 7507,
+          "activation": 1.49924898147583,
+          "influence": 0.7964736819267273
+        },
+        {
+          "layer": 7,
+          "index": 14131,
+          "activation": 1.3643202781677246,
+          "influence": 0.7724944353103638
+        },
+        {
+          "layer": 0,
+          "index": 3110,
+          "activation": 1.6876628398895264,
+          "influence": 0.7841119766235352
+        },
+        {
+          "layer": 7,
+          "index": 11433,
+          "activation": 3.909480333328247,
+          "influence": 0.48096081614494324
+        },
+        {
+          "layer": 4,
+          "index": 8449,
+          "activation": 2.3000261783599854,
+          "influence": 0.7997280955314636
+        },
+        {
+          "layer": 2,
+          "index": 4559,
+          "activation": 3.2166104316711426,
+          "influence": 0.7263530492782593
+        },
+        {
+          "layer": 2,
+          "index": 6670,
+          "activation": 3.012113094329834,
+          "influence": 0.7020700573921204
+        },
+        {
+          "layer": 0,
+          "index": 13566,
+          "activation": 2.96114444732666,
+          "influence": 0.7489766478538513
+        },
+        {
+          "layer": 0,
+          "index": 902,
+          "activation": 3.9622483253479004,
+          "influence": 0.6283898949623108
+        },
+        {
+          "layer": 1,
+          "index": 1849,
+          "activation": 3.342634677886963,
+          "influence": 0.7105231285095215
+        },
+        {
+          "layer": 0,
+          "index": 15005,
+          "activation": 2.555169105529785,
+          "influence": 0.7873788475990295
+        },
+        {
+          "layer": 0,
+          "index": 8080,
+          "activation": 2.1258544921875,
+          "influence": 0.7414348125457764
+        },
+        {
+          "layer": 2,
+          "index": 121,
+          "activation": 2.7125606536865234,
+          "influence": 0.7504123449325562
+        },
+        {
+          "layer": 0,
+          "index": 3898,
+          "activation": 2.8841068744659424,
+          "influence": 0.7366788983345032
+        },
+        {
+          "layer": 7,
+          "index": 12408,
+          "activation": 3.456958770751953,
+          "influence": 0.7976257801055908
+        },
+        {
+          "layer": 1,
+          "index": 2607,
+          "activation": 2.2008016109466553,
+          "influence": 0.7949231863021851
+        },
+        {
+          "layer": 5,
+          "index": 5435,
+          "activation": 3.7290239334106445,
+          "influence": 0.7613890767097473
+        },
+        {
+          "layer": 2,
+          "index": 2363,
+          "activation": 2.4699349403381348,
+          "influence": 0.7374345660209656
+        },
+        {
+          "layer": 0,
+          "index": 9397,
+          "activation": 2.6338436603546143,
+          "influence": 0.7855493426322937
+        },
+        {
+          "layer": 1,
+          "index": 8800,
+          "activation": 2.5981481075286865,
+          "influence": 0.794533371925354
+        },
+        {
+          "layer": 0,
+          "index": 6921,
+          "activation": 2.5893564224243164,
+          "influence": 0.7302742600440979
+        },
+        {
+          "layer": 0,
+          "index": 9637,
+          "activation": 2.1663978099823,
+          "influence": 0.7438932061195374
+        },
+        {
+          "layer": 2,
+          "index": 3622,
+          "activation": 3.5243539810180664,
+          "influence": 0.7556266188621521
+        },
+        {
+          "layer": 1,
+          "index": 11387,
+          "activation": 2.3555517196655273,
+          "influence": 0.7742226123809814
+        },
+        {
+          "layer": 0,
+          "index": 6361,
+          "activation": 2.1926462650299072,
+          "influence": 0.7099512219429016
+        },
+        {
+          "layer": 2,
+          "index": 14371,
+          "activation": 3.678586959838867,
+          "influence": 0.7774245142936707
+        },
+        {
+          "layer": 0,
+          "index": 3623,
+          "activation": 3.1948556900024414,
+          "influence": 0.7636514902114868
+        },
+        {
+          "layer": 6,
+          "index": 3441,
+          "activation": 3.8465192317962646,
+          "influence": 0.6624723076820374
+        },
+        {
+          "layer": 2,
+          "index": 15589,
+          "activation": 2.111171245574951,
+          "influence": 0.7703155875205994
+        },
+        {
+          "layer": 1,
+          "index": 13098,
+          "activation": 3.148789882659912,
+          "influence": 0.7463250160217285
+        },
+        {
+          "layer": 1,
+          "index": 8134,
+          "activation": 3.6605072021484375,
+          "influence": 0.7814170122146606
+        },
+        {
+          "layer": 5,
+          "index": 11624,
+          "activation": 3.7238528728485107,
+          "influence": 0.7801640033721924
+        },
+        {
+          "layer": 1,
+          "index": 13304,
+          "activation": 3.2641868591308594,
+          "influence": 0.6769907474517822
+        },
+        {
+          "layer": 5,
+          "index": 12364,
+          "activation": 2.9122776985168457,
+          "influence": 0.7836999297142029
+        },
+        {
+          "layer": 6,
+          "index": 15485,
+          "activation": 3.8597769737243652,
+          "influence": 0.7887880802154541
+        },
+        {
+          "layer": 2,
+          "index": 1870,
+          "activation": 2.1138901710510254,
+          "influence": 0.7678915858268738
+        },
+        {
+          "layer": 4,
+          "index": 4328,
+          "activation": 3.969721794128418,
+          "influence": 0.7797446250915527
+        },
+        {
+          "layer": 0,
+          "index": 3192,
+          "activation": 1.941718578338623,
+          "influence": 0.7748681306838989
+        }
+      ],
+      "result": {
+        "default_text": "<bos>Doctor is to hospital as teacher is to school.\n\nThe doctor",
+        "steered_text": "<bos>Doctor is to hospital as teacher is to initComponents initComponents initComponents initComponents initComponents",
+        "first_steered_token": " initComponents",
+        "first_steered_logprob": -0.80078125,
+        "first_steered_top5": [
+          {
+            "token": " initComponents",
+            "logprob": -0.80078125
+          },
+          {
+            "token": " estekak",
+            "logprob": -2.296875
+          },
+          {
+            "token": " esternos",
+            "logprob": -2.421875
+          },
+          {
+            "token": "ebaran",
+            "logprob": -3.171875
+          },
+          {
+            "token": "setVerticalGroup",
+            "logprob": -3.671875
+          }
+        ],
+        "first_default_token": " school",
+        "first_default_logprob": -0.57421875,
+        "first_default_top5": [
+          {
+            "token": " school",
+            "logprob": -0.57421875
+          },
+          {
+            "token": " student",
+            "logprob": -3.453125
+          },
+          {
+            "token": " ",
+            "logprob": -3.578125
+          },
+          {
+            "token": "...",
+            "logprob": -3.703125
+          },
+          {
+            "token": " college",
+            "logprob": -3.828125
+          }
+        ]
+      },
+      "disrupted": true
+    }
+  },
+  "analog_bird": {
+    "prompt": "Fish is to water as bird is to",
+    "expected": "air",
+    "baseline_p": 0.117,
+    "circuit": {
+      "n_features": 180,
+      "strength": -20,
+      "result": {
+        "default_text": "<bos>Fish is to water as bird is to air.\n\nThe fish",
+        "steered_text": "<bos>Fish is to water as bird is to to to to to to",
+        "first_steered_token": " to",
+        "first_steered_logprob": -0.026123046875,
+        "first_steered_top5": [
+          {
+            "token": " to",
+            "logprob": -0.026123046875
+          },
+          {
+            "token": " is",
+            "logprob": -4.40625
+          },
+          {
+            "token": " and",
+            "logprob": -4.40625
+          },
+          {
+            "token": ",",
+            "logprob": -8.1875
+          },
+          {
+            "token": "  ",
+            "logprob": -8.9375
+          }
+        ],
+        "first_default_token": " air",
+        "first_default_logprob": -2.578125,
+        "first_default_top5": [
+          {
+            "token": " air",
+            "logprob": -2.578125
+          },
+          {
+            "token": " ____",
+            "logprob": -2.578125
+          },
+          {
+            "token": " ________",
+            "logprob": -2.953125
+          },
+          {
+            "token": " ",
+            "logprob": -3.078125
+          },
+          {
+            "token": " the",
+            "logprob": -3.078125
+          }
+        ]
+      },
+      "disrupted": true
+    },
+    "null": {
+      "n_features": 180,
+      "n_requested": 180,
+      "strength": -20,
+      "seed": 7,
+      "sampled_features": [
+        {
+          "layer": 16,
+          "index": 10495,
+          "activation": 16.20166015625,
+          "influence": 0.6381492018699646
+        },
+        {
+          "layer": 21,
+          "index": 7677,
+          "activation": 25.03877067565918,
+          "influence": 0.3170374035835266
+        },
+        {
+          "layer": 23,
+          "index": 13488,
+          "activation": 14.705266952514648,
+          "influence": 0.5260148644447327
+        },
+        {
+          "layer": 9,
+          "index": 2762,
+          "activation": 40.41167449951172,
+          "influence": 0.48061928153038025
+        },
+        {
+          "layer": 19,
+          "index": 10328,
+          "activation": 35.45951843261719,
+          "influence": 0.7691860198974609
+        },
+        {
+          "layer": 12,
+          "index": 12230,
+          "activation": 12.282798767089844,
+          "influence": 0.664232611656189
+        },
+        {
+          "layer": 20,
+          "index": 3824,
+          "activation": 33.4742431640625,
+          "influence": 0.5072530508041382
+        },
+        {
+          "layer": 24,
+          "index": 2451,
+          "activation": 15.033769607543945,
+          "influence": 0.7568613886833191
+        },
+        {
+          "layer": 3,
+          "index": 6118,
+          "activation": 11.614850044250488,
+          "influence": 0.5727394223213196
+        },
+        {
+          "layer": 23,
+          "index": 8967,
+          "activation": 37.456539154052734,
+          "influence": 0.45121172070503235
+        },
+        {
+          "layer": 0,
+          "index": 658,
+          "activation": 12.837364196777344,
+          "influence": 0.4077714681625366
+        },
+        {
+          "layer": 6,
+          "index": 9865,
+          "activation": 20.170534133911133,
+          "influence": 0.799666166305542
+        },
+        {
+          "layer": 9,
+          "index": 15819,
+          "activation": 52.4562873840332,
+          "influence": 0.5881611108779907
+        },
+        {
+          "layer": 16,
+          "index": 6372,
+          "activation": 34.2357177734375,
+          "influence": 0.6396872997283936
+        },
+        {
+          "layer": 22,
+          "index": 3143,
+          "activation": 13.730690002441406,
+          "influence": 0.5086626410484314
+        },
+        {
+          "layer": 16,
+          "index": 7670,
+          "activation": 14.075085639953613,
+          "influence": 0.6624976992607117
+        },
+        {
+          "layer": 10,
+          "index": 6804,
+          "activation": 35.921268463134766,
+          "influence": 0.7528964877128601
+        },
+        {
+          "layer": 0,
+          "index": 2760,
+          "activation": 18.87883186340332,
+          "influence": 0.429621160030365
+        },
+        {
+          "layer": 18,
+          "index": 13557,
+          "activation": 34.04534149169922,
+          "influence": 0.7795725464820862
+        },
+        {
+          "layer": 20,
+          "index": 1743,
+          "activation": 14.0052490234375,
+          "influence": 0.6147639155387878
+        },
+        {
+          "layer": 10,
+          "index": 12232,
+          "activation": 37.172096252441406,
+          "influence": 0.6975583434104919
+        },
+        {
+          "layer": 22,
+          "index": 4252,
+          "activation": 29.42031478881836,
+          "influence": 0.2694365382194519
+        },
+        {
+          "layer": 24,
+          "index": 11315,
+          "activation": 19.334842681884766,
+          "influence": 0.45580410957336426
+        },
+        {
+          "layer": 24,
+          "index": 3865,
+          "activation": 11.546443939208984,
+          "influence": 0.5538595914840698
+        },
+        {
+          "layer": 17,
+          "index": 11287,
+          "activation": 11.375494003295898,
+          "influence": 0.6966478824615479
+        },
+        {
+          "layer": 6,
+          "index": 14718,
+          "activation": 11.406058311462402,
+          "influence": 0.5847988724708557
+        },
+        {
+          "layer": 22,
+          "index": 13619,
+          "activation": 19.620441436767578,
+          "influence": 0.5379096865653992
+        },
+        {
+          "layer": 10,
+          "index": 10933,
+          "activation": 46.13851547241211,
+          "influence": 0.6582589149475098
+        },
+        {
+          "layer": 10,
+          "index": 7106,
+          "activation": 27.659902572631836,
+          "influence": 0.7861694693565369
+        },
+        {
+          "layer": 18,
+          "index": 13586,
+          "activation": 16.808422088623047,
+          "influence": 0.6589741110801697
+        },
+        {
+          "layer": 19,
+          "index": 14160,
+          "activation": 11.952770233154297,
+          "influence": 0.7791541814804077
+        },
+        {
+          "layer": 24,
+          "index": 12559,
+          "activation": 11.41118049621582,
+          "influence": 0.5175437927246094
+        },
+        {
+          "layer": 23,
+          "index": 6306,
+          "activation": 17.303607940673828,
+          "influence": 0.607516348361969
+        },
+        {
+          "layer": 24,
+          "index": 10662,
+          "activation": 12.556798934936523,
+          "influence": 0.6908218860626221
+        },
+        {
+          "layer": 23,
+          "index": 7517,
+          "activation": 16.864879608154297,
+          "influence": 0.40192559361457825
+        },
+        {
+          "layer": 25,
+          "index": 9155,
+          "activation": 24.82017707824707,
+          "influence": 0.6717424392700195
+        },
+        {
+          "layer": 22,
+          "index": 2834,
+          "activation": 17.046449661254883,
+          "influence": 0.5021997094154358
+        },
+        {
+          "layer": 21,
+          "index": 12069,
+          "activation": 14.601110458374023,
+          "influence": 0.516208827495575
+        },
+        {
+          "layer": 9,
+          "index": 65,
+          "activation": 15.465274810791016,
+          "influence": 0.7533664107322693
+        },
+        {
+          "layer": 17,
+          "index": 5164,
+          "activation": 12.160787582397461,
+          "influence": 0.6062162518501282
+        },
+        {
+          "layer": 11,
+          "index": 3544,
+          "activation": 38.913509368896484,
+          "influence": 0.7020635008811951
+        },
+        {
+          "layer": 16,
+          "index": 9155,
+          "activation": 12.87913703918457,
+          "influence": 0.668700098991394
+        },
+        {
+          "layer": 11,
+          "index": 10034,
+          "activation": 12.997821807861328,
+          "influence": 0.6697201132774353
+        },
+        {
+          "layer": 15,
+          "index": 3807,
+          "activation": 16.341489791870117,
+          "influence": 0.6880090832710266
+        },
+        {
+          "layer": 7,
+          "index": 5741,
+          "activation": 11.559493064880371,
+          "influence": 0.6457562446594238
+        },
+        {
+          "layer": 0,
+          "index": 13224,
+          "activation": 8.266844749450684,
+          "influence": 0.6143430471420288
+        },
+        {
+          "layer": 7,
+          "index": 462,
+          "activation": 10.322110176086426,
+          "influence": 0.6835673451423645
+        },
+        {
+          "layer": 8,
+          "index": 3726,
+          "activation": 7.303466796875,
+          "influence": 0.7715548872947693
+        },
+        {
+          "layer": 19,
+          "index": 4262,
+          "activation": 10.705095291137695,
+          "influence": 0.3805888593196869
+        },
+        {
+          "layer": 0,
+          "index": 3919,
+          "activation": 7.271157741546631,
+          "influence": 0.5240914225578308
+        },
+        {
+          "layer": 15,
+          "index": 8858,
+          "activation": 10.710949897766113,
+          "influence": 0.685481071472168
+        },
+        {
+          "layer": 20,
+          "index": 6396,
+          "activation": 9.61288833618164,
+          "influence": 0.3958638310432434
+        },
+        {
+          "layer": 4,
+          "index": 12331,
+          "activation": 7.681894779205322,
+          "influence": 0.7076402902603149
+        },
+        {
+          "layer": 18,
+          "index": 15878,
+          "activation": 7.481084823608398,
+          "influence": 0.7415463924407959
+        },
+        {
+          "layer": 6,
+          "index": 15640,
+          "activation": 7.965508460998535,
+          "influence": 0.6999690532684326
+        },
+        {
+          "layer": 18,
+          "index": 2383,
+          "activation": 8.787944793701172,
+          "influence": 0.6870642900466919
+        },
+        {
+          "layer": 4,
+          "index": 7517,
+          "activation": 7.84342098236084,
+          "influence": 0.7743169069290161
+        },
+        {
+          "layer": 1,
+          "index": 11553,
+          "activation": 7.8826470375061035,
+          "influence": 0.5317084193229675
+        },
+        {
+          "layer": 8,
+          "index": 5316,
+          "activation": 8.47317123413086,
+          "influence": 0.7372952699661255
+        },
+        {
+          "layer": 23,
+          "index": 7310,
+          "activation": 8.853464126586914,
+          "influence": 0.6920585036277771
+        },
+        {
+          "layer": 1,
+          "index": 5347,
+          "activation": 9.230411529541016,
+          "influence": 0.5560954809188843
+        },
+        {
+          "layer": 3,
+          "index": 9908,
+          "activation": 9.76388931274414,
+          "influence": 0.5637384653091431
+        },
+        {
+          "layer": 0,
+          "index": 14149,
+          "activation": 9.257335662841797,
+          "influence": 0.6727482080459595
+        },
+        {
+          "layer": 23,
+          "index": 13968,
+          "activation": 10.613189697265625,
+          "influence": 0.7687510848045349
+        },
+        {
+          "layer": 5,
+          "index": 16157,
+          "activation": 7.277003765106201,
+          "influence": 0.7839237451553345
+        },
+        {
+          "layer": 7,
+          "index": 10892,
+          "activation": 7.534204959869385,
+          "influence": 0.7410511374473572
+        },
+        {
+          "layer": 24,
+          "index": 14509,
+          "activation": 7.690849304199219,
+          "influence": 0.7919642925262451
+        },
+        {
+          "layer": 1,
+          "index": 6420,
+          "activation": 8.614940643310547,
+          "influence": 0.5304557681083679
+        },
+        {
+          "layer": 24,
+          "index": 14352,
+          "activation": 7.8929443359375,
+          "influence": 0.737042248249054
+        },
+        {
+          "layer": 2,
+          "index": 7789,
+          "activation": 8.983538627624512,
+          "influence": 0.55829918384552
+        },
+        {
+          "layer": 8,
+          "index": 1143,
+          "activation": 10.691651344299316,
+          "influence": 0.5669477581977844
+        },
+        {
+          "layer": 19,
+          "index": 5671,
+          "activation": 10.191126823425293,
+          "influence": 0.6703972816467285
+        },
+        {
+          "layer": 7,
+          "index": 13028,
+          "activation": 7.987357139587402,
+          "influence": 0.7035424113273621
+        },
+        {
+          "layer": 17,
+          "index": 6986,
+          "activation": 9.88836669921875,
+          "influence": 0.7946985363960266
+        },
+        {
+          "layer": 6,
+          "index": 6140,
+          "activation": 7.493650436401367,
+          "influence": 0.6796886324882507
+        },
+        {
+          "layer": 21,
+          "index": 3616,
+          "activation": 9.95949935913086,
+          "influence": 0.3751782476902008
+        },
+        {
+          "layer": 0,
+          "index": 16040,
+          "activation": 7.219844341278076,
+          "influence": 0.6092394590377808
+        },
+        {
+          "layer": 6,
+          "index": 5757,
+          "activation": 7.102397918701172,
+          "influence": 0.6942080855369568
+        },
+        {
+          "layer": 0,
+          "index": 7344,
+          "activation": 9.562671661376953,
+          "influence": 0.4347497820854187
+        },
+        {
+          "layer": 19,
+          "index": 2059,
+          "activation": 11.170879364013672,
+          "influence": 0.673417866230011
+        },
+        {
+          "layer": 2,
+          "index": 3732,
+          "activation": 8.630891799926758,
+          "influence": 0.5007303953170776
+        },
+        {
+          "layer": 21,
+          "index": 10366,
+          "activation": 11.07723617553711,
+          "influence": 0.39213767647743225
+        },
+        {
+          "layer": 8,
+          "index": 14909,
+          "activation": 8.259891510009766,
+          "influence": 0.7375481128692627
+        },
+        {
+          "layer": 5,
+          "index": 14258,
+          "activation": 9.006484031677246,
+          "influence": 0.6373769640922546
+        },
+        {
+          "layer": 9,
+          "index": 6071,
+          "activation": 7.582795143127441,
+          "influence": 0.7488601803779602
+        },
+        {
+          "layer": 5,
+          "index": 14152,
+          "activation": 8.163454055786133,
+          "influence": 0.6005114316940308
+        },
+        {
+          "layer": 6,
+          "index": 13737,
+          "activation": 7.928711891174316,
+          "influence": 0.5391261577606201
+        },
+        {
+          "layer": 0,
+          "index": 2841,
+          "activation": 8.051180839538574,
+          "influence": 0.47483381628990173
+        },
+        {
+          "layer": 23,
+          "index": 15726,
+          "activation": 9.914535522460938,
+          "influence": 0.5155336260795593
+        },
+        {
+          "layer": 8,
+          "index": 7860,
+          "activation": 9.87478256225586,
+          "influence": 0.7050139904022217
+        },
+        {
+          "layer": 0,
+          "index": 10607,
+          "activation": 5.144941806793213,
+          "influence": 0.6450037360191345
+        },
+        {
+          "layer": 0,
+          "index": 7324,
+          "activation": 4.189175605773926,
+          "influence": 0.612650990486145
+        },
+        {
+          "layer": 0,
+          "index": 4241,
+          "activation": 4.550358295440674,
+          "influence": 0.682925283908844
+        },
+        {
+          "layer": 4,
+          "index": 9920,
+          "activation": 4.223781585693359,
+          "influence": 0.6453800201416016
+        },
+        {
+          "layer": 4,
+          "index": 8114,
+          "activation": 4.637339115142822,
+          "influence": 0.719266414642334
+        },
+        {
+          "layer": 15,
+          "index": 10402,
+          "activation": 6.773024559020996,
+          "influence": 0.7907811403274536
+        },
+        {
+          "layer": 9,
+          "index": 8857,
+          "activation": 6.666590213775635,
+          "influence": 0.7992886900901794
+        },
+        {
+          "layer": 1,
+          "index": 11068,
+          "activation": 5.5382866859436035,
+          "influence": 0.6744195818901062
+        },
+        {
+          "layer": 1,
+          "index": 10157,
+          "activation": 4.600131988525391,
+          "influence": 0.6793619990348816
+        },
+        {
+          "layer": 1,
+          "index": 11076,
+          "activation": 6.814269065856934,
+          "influence": 0.6334839463233948
+        },
+        {
+          "layer": 5,
+          "index": 11911,
+          "activation": 6.8251237869262695,
+          "influence": 0.7260625958442688
+        },
+        {
+          "layer": 2,
+          "index": 4260,
+          "activation": 5.3176093101501465,
+          "influence": 0.6283243894577026
+        },
+        {
+          "layer": 4,
+          "index": 5427,
+          "activation": 4.6964111328125,
+          "influence": 0.7877903580665588
+        },
+        {
+          "layer": 0,
+          "index": 11374,
+          "activation": 5.414677143096924,
+          "influence": 0.5354400873184204
+        },
+        {
+          "layer": 0,
+          "index": 2537,
+          "activation": 4.9791646003723145,
+          "influence": 0.540946900844574
+        },
+        {
+          "layer": 1,
+          "index": 7981,
+          "activation": 5.145820617675781,
+          "influence": 0.71733158826828
+        },
+        {
+          "layer": 3,
+          "index": 3931,
+          "activation": 7.000715732574463,
+          "influence": 0.646883487701416
+        },
+        {
+          "layer": 1,
+          "index": 5214,
+          "activation": 4.620525360107422,
+          "influence": 0.7694032192230225
+        },
+        {
+          "layer": 6,
+          "index": 12450,
+          "activation": 5.141816139221191,
+          "influence": 0.7678800225257874
+        },
+        {
+          "layer": 3,
+          "index": 9539,
+          "activation": 6.106266498565674,
+          "influence": 0.6892642974853516
+        },
+        {
+          "layer": 1,
+          "index": 7213,
+          "activation": 6.416046619415283,
+          "influence": 0.6160263419151306
+        },
+        {
+          "layer": 0,
+          "index": 9747,
+          "activation": 4.559271812438965,
+          "influence": 0.7600737810134888
+        },
+        {
+          "layer": 1,
+          "index": 1994,
+          "activation": 4.227358818054199,
+          "influence": 0.6621499061584473
+        },
+        {
+          "layer": 7,
+          "index": 8622,
+          "activation": 5.8153862953186035,
+          "influence": 0.7948921322822571
+        },
+        {
+          "layer": 1,
+          "index": 1170,
+          "activation": 5.394186973571777,
+          "influence": 0.6031656265258789
+        },
+        {
+          "layer": 0,
+          "index": 7610,
+          "activation": 6.306546688079834,
+          "influence": 0.5768501162528992
+        },
+        {
+          "layer": 0,
+          "index": 10013,
+          "activation": 5.672394275665283,
+          "influence": 0.6036023497581482
+        },
+        {
+          "layer": 5,
+          "index": 3347,
+          "activation": 4.928391456604004,
+          "influence": 0.7676616311073303
+        },
+        {
+          "layer": 0,
+          "index": 5813,
+          "activation": 4.938624382019043,
+          "influence": 0.6027268767356873
+        },
+        {
+          "layer": 0,
+          "index": 8655,
+          "activation": 4.143451690673828,
+          "influence": 0.6156055331230164
+        },
+        {
+          "layer": 5,
+          "index": 5683,
+          "activation": 6.695731163024902,
+          "influence": 0.7061848640441895
+        },
+        {
+          "layer": 2,
+          "index": 12681,
+          "activation": 6.694737911224365,
+          "influence": 0.6206044554710388
+        },
+        {
+          "layer": 4,
+          "index": 8149,
+          "activation": 5.775509357452393,
+          "influence": 0.7073497176170349
+        },
+        {
+          "layer": 12,
+          "index": 12746,
+          "activation": 5.941817283630371,
+          "influence": 0.7814468145370483
+        },
+        {
+          "layer": 0,
+          "index": 11170,
+          "activation": 5.492319583892822,
+          "influence": 0.5923545956611633
+        },
+        {
+          "layer": 7,
+          "index": 6059,
+          "activation": 6.289921760559082,
+          "influence": 0.7148106098175049
+        },
+        {
+          "layer": 1,
+          "index": 9051,
+          "activation": 4.697214126586914,
+          "influence": 0.6631925702095032
+        },
+        {
+          "layer": 0,
+          "index": 11945,
+          "activation": 4.114202499389648,
+          "influence": 0.6693807244300842
+        },
+        {
+          "layer": 4,
+          "index": 9720,
+          "activation": 4.891241073608398,
+          "influence": 0.7933375239372253
+        },
+        {
+          "layer": 4,
+          "index": 3066,
+          "activation": 4.432246208190918,
+          "influence": 0.7776879072189331
+        },
+        {
+          "layer": 0,
+          "index": 11938,
+          "activation": 4.760855674743652,
+          "influence": 0.5599408745765686
+        },
+        {
+          "layer": 3,
+          "index": 6230,
+          "activation": 4.568741321563721,
+          "influence": 0.7287209630012512
+        },
+        {
+          "layer": 6,
+          "index": 3669,
+          "activation": 4.598199367523193,
+          "influence": 0.7685335874557495
+        },
+        {
+          "layer": 0,
+          "index": 14828,
+          "activation": 4.344158172607422,
+          "influence": 0.633091151714325
+        },
+        {
+          "layer": 0,
+          "index": 2051,
+          "activation": 5.899714469909668,
+          "influence": 0.5168803930282593
+        },
+        {
+          "layer": 0,
+          "index": 13867,
+          "activation": 3.0525450706481934,
+          "influence": 0.7162169218063354
+        },
+        {
+          "layer": 1,
+          "index": 3856,
+          "activation": 2.9361653327941895,
+          "influence": 0.7762171030044556
+        },
+        {
+          "layer": 0,
+          "index": 9230,
+          "activation": 3.386962890625,
+          "influence": 0.7156562209129333
+        },
+        {
+          "layer": 0,
+          "index": 2405,
+          "activation": 3.6712470054626465,
+          "influence": 0.6096685528755188
+        },
+        {
+          "layer": 5,
+          "index": 12992,
+          "activation": 3.8518359661102295,
+          "influence": 0.7753740549087524
+        },
+        {
+          "layer": 1,
+          "index": 10757,
+          "activation": 3.5767734050750732,
+          "influence": 0.7222831845283508
+        },
+        {
+          "layer": 0,
+          "index": 10902,
+          "activation": 1.6691603660583496,
+          "influence": 0.6535516381263733
+        },
+        {
+          "layer": 0,
+          "index": 1655,
+          "activation": 1.665339469909668,
+          "influence": 0.7899872064590454
+        },
+        {
+          "layer": 0,
+          "index": 877,
+          "activation": 1.8145499229431152,
+          "influence": 0.6895768046379089
+        },
+        {
+          "layer": 1,
+          "index": 14576,
+          "activation": 4.076507568359375,
+          "influence": 0.6683591604232788
+        },
+        {
+          "layer": 0,
+          "index": 10304,
+          "activation": 2.4789233207702637,
+          "influence": 0.7755850553512573
+        },
+        {
+          "layer": 6,
+          "index": 5621,
+          "activation": 3.570005416870117,
+          "influence": 0.7954716086387634
+        },
+        {
+          "layer": 7,
+          "index": 2318,
+          "activation": 3.2917799949645996,
+          "influence": 0.7983419895172119
+        },
+        {
+          "layer": 3,
+          "index": 2876,
+          "activation": 3.2481439113616943,
+          "influence": 0.7230992317199707
+        },
+        {
+          "layer": 5,
+          "index": 4888,
+          "activation": 4.081718921661377,
+          "influence": 0.7683159112930298
+        },
+        {
+          "layer": 2,
+          "index": 8312,
+          "activation": 3.688210964202881,
+          "influence": 0.7442514896392822
+        },
+        {
+          "layer": 3,
+          "index": 2859,
+          "activation": 2.740323305130005,
+          "influence": 0.7816543579101562
+        },
+        {
+          "layer": 0,
+          "index": 5457,
+          "activation": 2.23750638961792,
+          "influence": 0.7362792491912842
+        },
+        {
+          "layer": 4,
+          "index": 7830,
+          "activation": 2.9534292221069336,
+          "influence": 0.7310978174209595
+        },
+        {
+          "layer": 0,
+          "index": 2594,
+          "activation": 3.15566349029541,
+          "influence": 0.6550104022026062
+        },
+        {
+          "layer": 0,
+          "index": 14963,
+          "activation": 3.7276411056518555,
+          "influence": 0.7972009181976318
+        },
+        {
+          "layer": 0,
+          "index": 13514,
+          "activation": 2.372544765472412,
+          "influence": 0.7505349516868591
+        },
+        {
+          "layer": 3,
+          "index": 10397,
+          "activation": 3.943535327911377,
+          "influence": 0.7281912565231323
+        },
+        {
+          "layer": 1,
+          "index": 12968,
+          "activation": 2.599353313446045,
+          "influence": 0.7883928418159485
+        },
+        {
+          "layer": 1,
+          "index": 11752,
+          "activation": 2.827929735183716,
+          "influence": 0.7950857281684875
+        },
+        {
+          "layer": 1,
+          "index": 1382,
+          "activation": 2.799929618835449,
+          "influence": 0.715937077999115
+        },
+        {
+          "layer": 0,
+          "index": 16083,
+          "activation": 2.7960526943206787,
+          "influence": 0.7444961667060852
+        },
+        {
+          "layer": 0,
+          "index": 8080,
+          "activation": 2.049492835998535,
+          "influence": 0.7905829548835754
+        },
+        {
+          "layer": 3,
+          "index": 10544,
+          "activation": 3.784353494644165,
+          "influence": 0.7271287441253662
+        },
+        {
+          "layer": 2,
+          "index": 7356,
+          "activation": 2.5049948692321777,
+          "influence": 0.7966260313987732
+        },
+        {
+          "layer": 0,
+          "index": 5369,
+          "activation": 2.2921485900878906,
+          "influence": 0.6945139765739441
+        },
+        {
+          "layer": 0,
+          "index": 8610,
+          "activation": 3.9083011150360107,
+          "influence": 0.6369900107383728
+        },
+        {
+          "layer": 3,
+          "index": 7781,
+          "activation": 3.5278782844543457,
+          "influence": 0.7519555687904358
+        },
+        {
+          "layer": 1,
+          "index": 8120,
+          "activation": 3.8705661296844482,
+          "influence": 0.7960497140884399
+        },
+        {
+          "layer": 2,
+          "index": 13092,
+          "activation": 2.4630494117736816,
+          "influence": 0.7917675375938416
+        },
+        {
+          "layer": 0,
+          "index": 5871,
+          "activation": 2.328077793121338,
+          "influence": 0.7895895838737488
+        },
+        {
+          "layer": 2,
+          "index": 763,
+          "activation": 3.4500091075897217,
+          "influence": 0.7279258966445923
+        },
+        {
+          "layer": 3,
+          "index": 4683,
+          "activation": 3.8528215885162354,
+          "influence": 0.7249886393547058
+        },
+        {
+          "layer": 0,
+          "index": 9689,
+          "activation": 3.9226162433624268,
+          "influence": 0.6528180837631226
+        },
+        {
+          "layer": 6,
+          "index": 11763,
+          "activation": 3.594923496246338,
+          "influence": 0.7927504181861877
+        },
+        {
+          "layer": 2,
+          "index": 5383,
+          "activation": 3.211493492126465,
+          "influence": 0.7435168623924255
+        },
+        {
+          "layer": 3,
+          "index": 8929,
+          "activation": 4.023181915283203,
+          "influence": 0.7273948788642883
+        },
+        {
+          "layer": 0,
+          "index": 8858,
+          "activation": 2.1966633796691895,
+          "influence": 0.7757958173751831
+        },
+        {
+          "layer": 1,
+          "index": 696,
+          "activation": 4.095919132232666,
+          "influence": 0.6673339009284973
+        },
+        {
+          "layer": 0,
+          "index": 1412,
+          "activation": 1.993912696838379,
+          "influence": 0.757092297077179
+        }
+      ],
+      "result": {
+        "default_text": "<bos>Fish is to water as bird is to air.\n\nThe fish",
+        "steered_text": "<bos>Fish is to water as bird is toesp\u00e8reesp\u00e8reesp\u00e8reesp\u00e8reesp\u00e8re",
+        "first_steered_token": "esp\u00e8re",
+        "first_steered_logprob": -0.318359375,
+        "first_steered_top5": [
+          {
+            "token": "esp\u00e8re",
+            "logprob": -0.318359375
+          },
+          {
+            "token": "<bos>",
+            "logprob": -3.0625
+          },
+          {
+            "token": "AntiForgeryToken",
+            "logprob": -3.3125
+          },
+          {
+            "token": "avantage",
+            "logprob": -3.9375
+          },
+          {
+            "token": " back",
+            "logprob": -4.625
+          }
+        ],
+        "first_default_token": " air",
+        "first_default_logprob": -2.578125,
+        "first_default_top5": [
+          {
+            "token": " air",
+            "logprob": -2.578125
+          },
+          {
+            "token": " ____",
+            "logprob": -2.578125
+          },
+          {
+            "token": " ________",
+            "logprob": -2.953125
+          },
+          {
+            "token": " ",
+            "logprob": -3.078125
+          },
+          {
+            "token": " the",
+            "logprob": -3.078125
+          }
+        ]
+      },
+      "disrupted": true
+    },
+    "baseline_text": "<bos>Fish is to water as bird is to air.\n\nThe fish",
+    "baseline_first_token": " air",
+    "baseline_first_logprob": -2.578125
+  }
+}
