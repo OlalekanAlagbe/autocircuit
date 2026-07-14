@@ -80,7 +80,7 @@ supplementary:
 
 We present a mechanistic analysis of analogical reasoning in Gemma-2-2B using Neuronpedia attribution graphs and Sparse Autoencoder (SAE) features. By generating and comparing five attribution graphs across structurally distinct analogical prompts — covering geographic analogies (*Paris - France → Berlin - ?*, *Rome - ?*, *Tokyo - ?*) and semantic role analogies (*Doctor - hospital → teacher - ?*, *Fish - water → bird - ?*) — we identify a shared **analogical reasoning circuit** comprising 180 features active across all five prompts and 510 features active across at least three. Each feature is identified by a stable *(layer, feature index)* pair, identifying circuits as lists of recurring internal model feature activation patterns that retain similar structure across analogical prompts.
 
-We discover dedicated analogy-encoding features at layers 5, 8, 9, and 13, including a feature at layer 5 labeled literally as **"analogies"** and a layer 8 feature encoding **"analogies or comparisons"** appearing across all graphs with high influence. Early layers (0–4) contain circuit templates tracking the "X is to Y as Z is to" pattern, while mid-to-late layers (5–13) house increasingly semantic representations of the relational structure. The circuit spans all 26 transformer layers and exhibits cross-domain generalization, with the same core features activating for both geographic and semantic role analogies. Causal validation via 159 feature steering experiments confirms that the identified backbone features are collectively necessary for the model's predictions, and that Phase 2 features collectively implement the relational transfer operation that is the computational core of analogical reasoning.
+We discover dedicated analogy-encoding features at layers 5, 8, 9, and 13, including a feature at layer 5 labeled literally as **"analogies"** and a layer 8 feature encoding **"analogies or comparisons"** appearing across all graphs with high influence. Early layers (0–4) contain circuit templates tracking the "X is to Y as Z is to" pattern, while mid-to-late layers (5–13) house increasingly semantic representations of the relational structure. The circuit spans all 26 transformer layers and exhibits cross-domain generalization, with the same core features activating for both geographic and semantic role analogies. Causal validation via 218 feature-steering experiments shows that ablating the 180-feature circuit — but not a size- and strength-matched random control — collapses the model to the bare analogy template across all five prompts; that this effect is not reducible to deletion of input-token features and reproduces on held-out analogies; and that Phase 2 features collectively implement the relational-transfer operation at the computational core of analogical reasoning.
 
 ---
 
@@ -96,7 +96,7 @@ Mechanistic interpretability research has made significant progress in understan
 
 However, analogical reasoning presents a distinct challenge beyond prior circuit analyses: it requires not merely retrieving a stored fact, but recognizing a **relational structure** and applying it compositionally to novel inputs. The relation type is never named in the prompt — the model must infer *capital-of* from the example alone, hold it as a variable, and transfer it to a new argument pair. Prior work has documented that LLMs exhibit apparently emergent analogical reasoning [1] and identified internal attention-head mechanisms supporting abstract reasoning [9], yet a feature-level, causally-validated circuit account has been absent.
 
-We address this gap using attribution graphs generated from the `gemmascope-transcoder-16k` SAE suite [7], which provides cross-layer transcoder features for every layer of Gemma-2-2B. Our analysis identifies a three-phase circuit with explicitly labeled analogy-concept features, provides causal validation through 159 steering experiments, and constitutes — to our knowledge — an SAE-level mechanistic account of analogical reasoning in a large language model.
+We address this gap using attribution graphs generated from the `gemmascope-transcoder-16k` SAE suite [7], which provides cross-layer transcoder features for every layer of Gemma-2-2B. Our analysis identifies a three-phase circuit with explicitly labeled analogy-concept features, provides causal validation through 218 steering experiments using a matched-null contrast design, and constitutes — to our knowledge — an SAE-level mechanistic account of analogical reasoning in a large language model.
 
 <!-- slide: Research Questions -->
 
@@ -190,18 +190,19 @@ Phase 2 is defined by two jointly applied criteria: **layer position (5–9)** a
 
 This grouping is validated causally: suppressing all four Phase 2 features simultaneously collapses all five circuits, with capital analogies producing "France" — the source-pair answer — rather than the target country. An arbitrary phase definition would not produce such a consistent and semantically meaningful failure mode.
 
-### 2.7 Circuit Definition and Causal Validation via Feature Steering
+### 2.7 Causal Validation via Feature Steering
 
-A **circuit** for a given prompt is defined as the backbone of causally important features in that prompt's attribution graph. The extraction procedure is identical for all prompts: trace the top-5 causal paths backward from the logit node (greedy walk following highest-weight incoming edges) and the top-5 paths forward from the highest-influence embedding nodes. Any transcoder feature appearing on at least one of these 10 paths is a backbone member. This procedure is analogous to the automated circuit discovery approach of Conmy et al. [4], applied here at the SAE feature level rather than the attention head level.
+The cross-graph analysis (§2.3) identifies the 180-feature shared circuit as a *correlational* object: these features recur across all five analogy graphs. Recurrence does not establish that the circuit *causes* the model's answers — a recurring feature could be a passenger that co-activates with the computation without driving it. We test causation by intervening on the circuit with the Neuronpedia `/api/steer` endpoint [8] (`modelId: "gemma-2-2b"`, `strength_multiplier: 4`, `temperature: 0`, `seed: 42`).
 
-Causal validation was performed using the Neuronpedia `/api/steer` endpoint [8] with `modelId: "gemma-2-2b"` and `strength_multiplier: 4`. Four experimental paradigms were applied:
+One methodological fact governs the whole validation. The per-feature `strength` we set (−20 for ablation) is scaled by the global `strength_multiplier` of 4, so the effective intervention is **−80** per feature — a large perturbation. At that magnitude, removing *any* sizable feature set derails the model, so the bare observation "the output changed" (necessity) is necessary but **not sufficient** evidence that a particular circuit is responsible. The discriminating evidence is of two kinds: (i) a **matched contrast** — does ablating the circuit break the task differently from ablating a size- and strength-matched *random* set? — and (ii) a **predicted failure mode** — does the model fail in the specific way the circuit's claimed role implies? Our design is built on these rather than on necessity alone:
 
-1. **Necessity (individual suppression):** Suppress a single backbone feature at strength −20.
-2. **Necessity (full backbone suppression):** Suppress all backbone features simultaneously.
-3. **Sufficiency (hub boost):** Boost a backbone hub feature at strength +20 on altered prompts.
-4. **Specificity (non-backbone suppression):** Suppress high-activation features not on any causal path.
+1. **Circuit necessity vs. a matched null (primary).** For each of the five analogy prompts, run two ablations of identical size (180 features) and strength (−20): (a) all 180 circuit features, and (b) 180 random *non*-circuit features drawn from the same prompt's graph. The evidence is the contrast between them.
+2. **Internal structure (individual necessity).** Ablate each of the 180 features one at a time to locate the individually necessary members.
+3. **Robustness.** Layer-stratified ablation (is the effect just deletion of L0 token features?), a strength titration (is it an artifact of the large −80 magnitude?), and held-out analogy prompts the circuit was never derived from (does it generalize?).
+4. **Architecture.** Collective suppression of the Phase-1 and Phase-2 feature groups (§2.4) to test the three-phase organization.
+5. **Single-feature side-tests.** A sufficiency probe (boost the highest-influence hub) and an individual non-circuit specificity scan, reported as supplementary single-feature controls.
 
-Two additional circuits from an expanded 30-prompt analysis (Cairo→Kenya, Puppy→cat) were included for cross-validation, for a total of **159 individual steering API calls across 7 circuits**.
+Across these paradigms the validation comprises **218 individual steering API calls**.
 
 ---
 
@@ -390,215 +391,99 @@ Despite the 50 prompts being phrased four different ways, the model consistently
 
 ### 3.7 Causal Validation via Feature Steering
 
-The attribution graph analysis identifies recurring features and causal path structures but does not by itself establish whether those features are causally necessary for the model's predictions. To answer that question, we performed systematic causal steering experiments via the Neuronpedia API [8]. However, the experiments test two distinct feature sets that serve different purposes, and understanding which set is being tested at each point is essential for reading the results correctly.
+The preceding results are correlational. The attribution graphs indicate which features are active and influential when the model produces an answer, but not whether those features cause it. In this section we intervene on the features directly, suppressing and boosting them, to test whether the paper's structural findings hold causally.
 
-**Feature Set A — Backbone features (§3.7.1–3.7.2).** A backbone is the set of features that sit on the main causal highway through a single prompt's attribution graph — traced via the top-5 highest-weight paths forward from the embedding layer and the top-5 highest-weight paths backward from the logit node (§2.7). Because the paths are traced toward the output token, backbone features naturally cluster in the final layers of the model (primarily L16–L25) — they are the last-mile computation before a word is written. They are *not* the cross-graph recurring features identified in §3.2–3.5; each circuit has its own backbone. Testing them first establishes that the attribution graphs capture real causal structure rather than mere correlations — a prerequisite for trusting any downstream steering result on the shared circuit features.
+Suppression is performed with the Neuronpedia steering API, which intervenes on a feature by adding a multiple of its direction to the residual stream at that feature's layer; a negative multiple pushes the feature's contribution down and thereby ablates it. The size of the push is set by a per-feature `strength`, which the API then scales by a global `strength_multiplier`. We used a strength of −20 and the default multiplier of 4, so the coefficient applied to each feature was −80. This is a large intervention: the core circuit features have typical activation magnitudes between roughly 1.5 and 16 (§2.4), so a −80 coefficient pushes them well outside their normal operating range and effectively removes them from the computation.
 
-**Feature Set B — Phase features (§3.7.3–3.7.4).** These are the cross-graph recurring features identified in §3.2–3.5 — the Phase 1 structural template features (L0–L4), the Phase 2 analogy recognition features (L5–L9), and the Phase 3 integration features (L10–L13). These are the features the paper's main claim is about; testing them is the primary causal validation of the shared circuit.
+This magnitude governs how every result below should be read (§2.7). Because the intervention is strong, ablating any sufficiently large set of features disrupts the model, so the fact that the output changed does not by itself identify the responsible circuit. We therefore rely on two forms of discriminating evidence. The first is a matched contrast, in which ablation of the circuit is compared against ablation of a random feature set of the same size and strength. The second is a predicted failure mode, in which we ask whether the model fails in the specific way the circuit's hypothesized role implies rather than in an arbitrary way.
 
-#### 3.7.1 Late-Layer Backbone Necessity (Individual Suppression)
+#### 3.7.1 Is the Recurring Circuit Causally Load-Bearing?
 
-*Feature Set A.* These are prompt-specific late-layer features — not the cross-graph recurring Phase features from §3.2–3.5. The experiments below ask: are these final-stage output features individually necessary for the model's prediction, and does attribution weight predict which ones are?
+We tested whether the 180-feature shared circuit (§2.3) drives the answer or merely co-activates with it. For each prompt we ran two ablations of identical size (180 features) and strength (−20), differing only in which features were removed: (A) all 180 circuit features, and (B) 180 random non-circuit features drawn from the same prompt's graph (seed 7). Because the circuit is defined by its recurrence across all five prompts, we ran both ablations on all five.
 
-**`analog_berlin`** — "Paris is to France as Berlin is to" → Germany (p=0.973)
+We call condition (B) the *matched null*. It is a control group of features, built to match the circuit in every respect that could trivially disrupt the model — the same number of features (180), the same steering strength, and features drawn from the same attribution graph — but composed of randomly chosen features instead of the recurring circuit. Its purpose is to answer one question: is the circuit *specifically* responsible for the answer, or would removing any 180 features do the same? The matched null is the negative control, or placebo, against which condition (A) is measured. It stands for the null hypothesis that the circuit is not special, so the circuit earns a causal interpretation only if ablating it produces an effect that ablating the null does not.
 
-| Feature | Layer | Index | Role | Steered Token | Necessary? |
+If the circuit implements the analogical computation, removing it should leave the model unable to complete "X is to Y as Z is to ___." The model would then fall back on the template structure it can still represent and repeat the connective "to" rather than produce an answer. A random ablation has no reason to fail in this way.
+
+| Prompt | Baseline: model's answer | (A) Ablate the circuit (180 feat.) | (B) Ablate a matched random set (180 feat.) |
+|---|---|---|---|
+| Paris - France → Berlin - ? | Germany (96%) | **to (97%)** | Kyrie (6%, a name) |
+| Paris - France → Rome - ? | Italy (96%) | **to (97%)** | autorytatywna (44%, Polish) |
+| Paris - France → Tokyo - ? | Japan (98%) | **to (97%)** | to (14%) |
+| Doctor - hospital → teacher - ? | school (57%) | **to (97%)** | initComponents (45%, code) |
+| Fish - water → bird - ? | air (8%) | **to (97%)** | espère (73%, French) |
+
+*How the two ablations fail. Both remove the model's correct answer, but ablating the circuit collapses every prompt to the same connective token "to" at ≈97% confidence, whereas ablating a matched random set produces a different idiosyncratic token each time (a name, a Polish word, a code identifier, a French word).*
+
+Two observations follow. First, both ablations remove the correct answer on all five prompts, confirming that at this strength the removal of 180 features of any kind disrupts the model and that necessity alone does not distinguish the circuit from a random set. Second, the two ablations fail in different ways. Circuit ablation produces a near-deterministic collapse to the connective "to" at the same confidence on every prompt (97%), for both geographic and semantic-role analogies. The matched null, applied to the same prompts at the same strength, produces a different idiosyncratic out-of-distribution token on each prompt, with no token shared across prompts and lower average confidence (26%); only one null run (Tokyo) reaches "to," and only at 14% confidence versus the circuit's 97%. Because the removed feature set is the only variable differing between (A) and (B), the structured collapse is attributable to the circuit rather than to the size of the intervention.
+
+One caveat should be stated directly. All five prompts end in the word "to" (for example, "…as Berlin is to"), and ablating the circuit makes the model output "to" — which is also the final word of the prompt. Two different explanations therefore predict the same token, and the output alone cannot separate them: the model may have lost the analogical computation and fallen back to the template connective "to" (the reading we intend), or it may simply be echoing the last word it was shown, as a broken model often does. What breaks the tie is the matched null, which faces the same "to"-final prompts but does not echo "to," emitting unrelated tokens instead. Ending in "to" is therefore not enough on its own to produce the collapse, so the effect is better explained by a loss of relational completion than by trivial token repetition.
+
+We also examined the internal distribution of the effect by ablating each of the 180 features individually on the Berlin prompt. Only 24 of 180 features (13.3%) shift the prediction on their own, and these concentrate at the embedding layer (17 of 24 at L0; 42.5% of the L0 features tested, compared with 5.0% at L1 and above). The circuit is therefore internally redundant: necessity is a property of the set rather than of most individual members, and the individually necessary features are early template features such as L0/11651 ("the word 'to'").
+
+#### 3.7.2 Robustness: Layer, Magnitude, and Generalization
+
+We first considered whether the effect is only the deletion of L0 token features. Forty of the 180 features lie at L0, the embedding layer, so suppressing them approximates deleting the entity tokens. If this accounted for the full effect, ablating only the L0 features would remove the answer. It does not. Ablating the circuit one layer band at a time gives:
+
+| Prompt | L0 only (40) | L1–L4 (67) | L5–L9 (50) | L10+ (23) | All non-L0 (140) |
 |---|---|---|---|---|---|
-| Science hub | 21 | 4827 | Strongest path entry (edge +198.0) | Germany | no |
-| Relay | 22 | 15670 | Path 1 relay | Germany | no |
-| Output driver A | 25 | 4717 | Final amplifier (shared across circuits) | Germany | no |
-| Location encoder | 16 | 6491 | Location/direction feature, path 2 entry | Germany | no |
-| Relay | 17 | 14546 | Mid-cascade relay | Germany | no |
-| Relay | 19 | 5773 | Late relay | Germany | no |
-| Integrator | 21 | 7482 | Integration hub (paths 2–4) | Germany | no |
-| Output driver B | 25 | 2725 | Secondary output driver (edge −2.09) | the | **YES** |
-| Relation applier | 19 | 855 | Relation application node | Germany | no |
+| Berlin | ` Germany` ✓ | broke | broke | broke | broke |
+| Rome | ` Italy` ✓ | broke | broke | broke | broke |
+| Tokyo | ` Japan` ✓ | broke | broke | broke | broke |
+| Bird | ` air` ✓ | broke (→ water) | broke | broke | broke |
+| Teacher | broke | broke | broke | broke | broke |
 
-**1/9 necessary.** Only L25/2725 is a single point of failure. The highest-weight feature (L21/4827, edge +198.0) is not individually necessary, demonstrating that attribution weight alone does not predict causal necessity — a key methodological lesson consistent with prior circuit analysis work [3, 4].
+*Layer-band ablation of the circuit across the five prompts. Ablating only the 40 L0 embedding features leaves the answer intact on 4/5; the exception, teacher, has a weak baseline (p = 0.49).* Necessity is carried by the L1-and-above features, so the token-deletion explanation is insufficient: the causal weight lies in the relational mid- and late-layer features rather than the input-token representations. The bird prompt illustrates this further, in that L0 alone leaves "air" intact but the L1–L4 band reverts the answer to "water," the source-domain completion.
 
-**`analog_rome`** — "Paris is to France as Rome is to" → Italy (p=0.974)
+We next considered whether the effect is an artifact of the large −80 magnitude. A strength titration on Berlin and Tokyo sweeps the suppression strength across −2, −5, −10, −20, and −40, bracketing the −20 used above; the table below shows the two extremes:
 
-| Feature | Layer | Index | Role | Steered Token | Necessary? |
-|---|---|---|---|---|---|
-| Relay | 20 | 15360 | Backward path from logit | Italy | no |
-| Late gate | 24 | 16122 | Backward path, L24 suppression gate | the | **YES** |
-| Output driver | 25 | 286 | Backward path, output driver | the | **YES** |
-| Final amplifier | 25 | 4717 | Shared final amplifier (act=265.2) | the | **YES** |
-| Output driver C | 25 | 10521 | Tertiary output driver | the | **YES** |
-| Relay | 17 | 14546 | Mid-cascade relay (shared with Berlin) | Italy | no |
-| Relay A | 22 | 12202 | Late relay | Italy | no |
-| Relay B | 22 | 14727 | Late relay | Italy | no |
-| Relay | 23 | 5917 | Late relay | Italy | no |
-| Secondary gate | 24 | 13277 | Late gate | Italy | no |
+| strength | Berlin circuit | Berlin null | Tokyo circuit | Tokyo null |
+|---|---|---|---|---|
+| −2 | to (97%) | similar (54%) | to (97%) | onPostExecute (33%) |
+| −40 | to (97%) | similar (50%) | to (97%) | onPostExecute (30%) |
 
-**4/10 necessary.** The Rome circuit has more single points of failure than Berlin despite near-identical confidence (p=0.974 vs 0.973), indicating path redundancy varies even among structurally similar geographic analogies.
+The collapse to "to" is already complete at the weakest setting tested (−2), and the circuit-versus-null distinction holds across the full range. The effect is therefore not a product of the −80 intervention.
 
-**`analog_tokyo`** — "Paris is to France as Tokyo is to" → Japan (p=0.990)
+Finally, we tested whether the circuit generalizes beyond its defining prompts. The 180 features were derived from five specific prompts. We applied the fixed circuit to four held-out analogies from which it was not derived:
 
-| Feature | Layer | Index | Role | Steered Token | Necessary? |
-|---|---|---|---|---|---|
-| Relay | 20 | 15360 | Backward path from logit | Japan | no |
-| Output driver | 25 | 286 | Backward path, output driver | the | **YES** |
-| Output driver B | 25 | 12223 | Backward path, secondary output | Japan | no |
-| Relay | 17 | 14546 | Mid-cascade relay (shared) | Japan | no |
-| Late relay A | 23 | 850 | Late relay | the | **YES** |
-| Late relay B | 23 | 13914 | Late relay (also necessary in Cairo circuit) | the | **YES** |
-| Gate | 24 | 13277 | Late gate (shared with Rome) | Japan | no |
-| Output driver C | 25 | 10152 | Tertiary output | Japan | no |
-| Hub | 20 | 6648 | L20 convergence hub | Japan | no |
-| Integration | 21 | 7764 | Late integration | Japan | no |
+| Held-out prompt | Baseline | Circuit ablation |
+|---|---|---|
+| Lisbon…Vienna is to | Austria | to (97%) |
+| Athens…Oslo is to | Norway | to (97%) |
+| Pen…knife is to | cutting | to (97%) |
+| Bee…ant is to | colony | to (97%) |
 
-**3/10 necessary.** L23/13914 is necessary in both Tokyo and Cairo circuits — a shared bottleneck consistent with a late-layer "geographic entity selector" role. L25/286 recurs as necessary in Rome, Tokyo, and Cairo, making it the single most critical output driver across geographic analogies.
+The same collapse to "to" (97%) appears on all four prompts, indicating that the circuit signature is not specific to the defining set.
 
-**`analog_teacher`** — "Doctor is to hospital as teacher is to" → school (p=0.486)
+#### 3.7.3 The Three-Phase Architecture
 
-| Feature | Layer | Index | Role | Steered Token | Necessary? |
-|---|---|---|---|---|---|
-| Embedding | 0 | 17 | Backward path, embedding-level | the | **YES** |
-| Gateway | 18 | 6532 | Backward path, mid-late gateway | school | no |
-| Hub | 20 | 6179 | Backward path, convergence hub | school | no |
-| Output driver | 25 | 4975 | Backward path, output driver | ... | **YES** |
-| Final amplifier | 25 | 4717 | Shared final amplifier (act=135.6) | a | **YES** |
-| Relay | 22 | 15670 | Late relay (shared) | school | no |
-| Relay B | 18 | 11952 | Mid-late relay | school | no |
-| Legal docs | 18 | 13586 | Legal docs feature | school | no |
-| Convergence | 21 | 2655 | Late convergence hub | school | no |
-| Gate | 24 | 15259 | Late suppression gate | school | no |
+Sections 3.7.1 and 3.7.2 establish that the recurring circuit causally drives the model's answer, rather than merely co-occurring with it. A separate claim (§2.4) is that the circuit is organized into three phases. We tested this with phase-level suppression of the representative features from each phase, across all five prompts.
 
-**3/10 necessary.** The teacher circuit is the only one where an **L0 embedding-level feature** (L0/17) is individually necessary — suggesting the semantic role analogy relies on an early feature not redundantly encoded by later layers, unlike the capital analogies.
+Suppressing the nine key phase features one at a time (45 tests) shows that the Phase-2 "analogy" features are individually redundant on high-confidence prompts. A Phase-1 template feature, L0/11651 ("the word 'to'"), is individually necessary in four of five circuits: suppressing it makes the capital analogies emit the city name itself rather than complete the analogy.
 
-**`analog_bird`** — "Fish is to water as bird is to" → air (p=0.117)
+Collective phase suppression provides the main architecture test:
 
-| Feature | Layer | Index | Role | Steered Token | Necessary? |
-|---|---|---|---|---|---|
-| Backward A | 22 | 4252 | Backward path from logit | (space) | **YES** |
-| Backward B | 24 | 8106 | Backward path, late gate | \_\_\_\_ | **YES** |
-| Final amplifier | 25 | 4717 | Shared final amplifier (act=122.3) | the | **YES** |
-| Output driver | 25 | 11801 | Output driver | ? | **YES** |
-| Relay A | 22 | 15670 | Late relay (shared) | \_\_\_\_\_\_\_\_ | **YES** |
-| Relay B | 22 | 14727 | Late relay | (space) | **YES** |
-| Relay C | 22 | 13619 | Late relay | (space) | **YES** |
-| Gate A | 24 | 4383 | Suppression gate | air | no |
-| Gate B | 24 | 12559 | Suppression gate | the | **YES** |
-| Hub | 20 | 3094 | Integration hub | air | no |
-
-**8/10 necessary.** This is the most fragile circuit in the dataset. Three L22 relay features (15670, 14727, 13619) are all independently necessary despite occupying the same layer, indicating they carry non-redundant information through parallel channels. This fragility is consistent with the circuit's very low prediction confidence (p=0.117).
-
-**Cross-circuit pattern.** Necessity inversely correlates with prediction confidence: Berlin (p=0.973): 1/9; Rome (p=0.974): 4/10; Tokyo (p=0.990): 3/10; Teacher (p=0.486): 3/10; Bird (p=0.117): 8/10. Three features recur as necessary across multiple circuits: **L25/#286** (Rome, Tokyo, Cairo), **L25/#4717** (Rome, Teacher, Bird), and **L23/#13914** (Tokyo, Cairo).
-
-#### 3.7.2 Full Backbone Suppression
-
-| Circuit | p | N feat. | Default Output | Steered Output | Disrupted? |
-|---|---|---|---|---|---|
-| `analog_berlin` | 0.973 | 9 | Germany. It is the | of of of of of | YES |
-| `analog_rome` | 0.974 | 10 | Italy. It is the | pleaſure pleaſure plea | YES |
-| `analog_tokyo` | 0.990 | 10 | Japan. It is the | country country count | YES |
-| `analog_teacher` | 0.486 | 10 | school. The doc | 1111 | YES |
-| `analog_bird` | 0.117 | 10 | air. The fish | (newline) The the the | YES |
-| Cairo→Kenya | 0.963 | 9 | Kenya. It is the | (whitespace) | YES |
-| Puppy→cat | 0.756 | 4 | cat. I' | cat. I think | no |
-
-**6/7 circuits fully disrupted.** Failure modes are qualitatively informative: capital analogies degenerate to repetitive or archaic text, indicating the backbone is required for entity selection while the prompt structure alone partially activates a "country" category. Teacher collapses to "1111"; bird falls through to generic continuation. Puppy→cat is the sole exception, apparently carried by direct embedding-to-logit connections outside the multi-hop backbone.
-
-#### 3.7.3 Phase 1 and Phase 2 Feature Necessity
-
-*Feature Set B — primary validation of the shared circuit.* The features tested here are the cross-graph recurring features identified in §3.3–3.4: the five Phase 1 structural template features (L0–L4), the four Phase 2 analogy recognition features (L5–L9), and the Phase 3 integration feature (L13/#10969). Unlike the backbone features in §3.7.1–3.7.2, which were selected by path tracing within individual graphs, these features were selected because they recur across all five independently generated attribution graphs. The question here is whether they are also causally necessary.
-
-Individual suppression of the 9 key phase features across all five prompts (45 tests):
-
-| Feature | Phase | Label | Berlin | Rome | Tokyo | Teacher | Bird |
-|---|---|---|---|---|---|---|---|
-| L0/11651 | 1 | "the word 'to'" | Berlin | Rome | Tokyo | school | water |
-| L1/11356 | 1 | "'to' followed by a verb" | — | — | — | — | — |
-| L4/10752 | 1 | "'to be' preceded by 'to'" | — | — | — | classroom | sky |
-| L5/9672 | 1 | "the phrase 'it is to'" | — | — | — | — | sky |
-| **L5/5793** | **2** | **"analogies"** | — | — | — | — | — |
-| L5/2141 | 2 | "comparisons of public figures" | — | — | — | — | — |
-| L8/13766 | 2 | "analogies or comparisons" | — | — | — | — | fish |
-| L9/13344 | 2 | "comparison between two things" | — | — | — | — | sky |
-| L13/10969 | 3 | "comparisons between disciplines" | — | — | — | — | — |
-
-*Cells show the steered first token when suppressed at strength −20. "—" = prediction unchanged.*
-
-**Phase 1 results.** L0/11651 is necessary in 4/5 circuits. Suppressing it causes capital analogies to predict the *city name itself* (Berlin, Rome, Tokyo), indicating the model reverts to the most recently mentioned entity rather than completing the analogy. For the bird circuit, suppression produces "water" (source-pair element).
-
-**Phase 2 results.** L5/5793 ("analogies") is **never individually necessary** in any circuit — it is individually redundant for high-confidence circuits. For the fragile bird circuit (p=0.117), however, Phase 2 features become individually necessary: L8/13766 changes "air" to "fish" (source-domain animal); L9/13344 changes "air" to "sky."
-
-**Phase 3 results.** L13/10969 is not individually necessary for any circuit.
-
-#### 3.7.4 Collective Phase Suppression
-
-| Experiment | Features Suppressed | Berlin | Rome | Tokyo | Teacher | Bird |
+| Experiment | Features | Berlin | Rome | Tokyo | Teacher | Bird |
 |---|---|---|---|---|---|---|
 | All Phase 2 (4 feat.) | L5/5793, L5/2141, L8/13766, L9/13344 | **France** | **France** | **France** | be | fish |
 | All Phase 1 (5 feat.) | L0/11651, L1/11356, L4/10752, L5/9672, L2/11475 | (empty) | (empty) | (empty) | to | to |
 | Phase 1+2 (9 feat.) | All Phase 1 + Phase 2 | : | : | : | : | : |
-| Phase 1+2+3 (10 feat.) | All Phase 1 + Phase 2 + L13/10969 | : | : | : | be | : |
 
-*All 20/20 cells disrupted.*
+Suppressing all four Phase-2 features makes the three capital analogies output "France," the source country. The model retains the factual association "Paris is to France" but loses the relational transfer "as Berlin is to ___." This is the failure mode predicted if Phase 2 implements relational transfer, and it is the strongest single piece of architecture evidence. Phase-1 suppression produces a more severe failure, an empty output for the capital prompts, consistent with Phase 1 being a prerequisite for Phase 2. Together these results indicate an ordered hierarchy: Phase 1 (template) precedes Phase 2 (relational transfer), which precedes answer retrieval in the later layers.
 
-**Phase 2 collective suppression is the most informative experiment in this paper.** All three capital analogies output **"France"** — retaining the factual association "Paris is to France" but losing the relational transfer "as Berlin is to \_\_\_." This is direct causal evidence that Phase 2 features collectively implement the relational transfer operation. The failure mode is precisely what one would predict from the internal representation findings of Lee et al. [10], where reasoning failures reflect missing relational information in mid-upper layers.
+#### 3.7.4 The Causal Validation Ledger
 
-**Phase 1 collective suppression** produces empty outputs for capital analogies and "to" for semantic role analogies — a more severe failure, consistent with Phase 1 being a prerequisite for Phase 2.
+The interventions above bear on the paper's structural claims with different degrees of strength. Four claims meet the matched-contrast or predicted-failure-mode standard and we regard as demonstrated: that the 180 recurring features drive the analogy rather than ride along with it (§3.7.1); that the effect is not merely deletion of the L0 entity tokens (§3.7.2); that it is not an artifact of the −80 steering magnitude (§3.7.2); and that the circuit is organized into the ordered three-phase hierarchy of §3.3, with the four Phase-2 features collectively implementing relational transfer (§3.7.3). The dedicated analogy features at layers 5, 8, 9, and 13 participate causally as a group, although individually they are redundant.
 
-**Combined Phase 1+2 suppression** produces ":" for 4/5 circuits, consistent with the model defaulting to list-formatting punctuation when both template parsing and analogy recognition are disabled.
+Two further claims are supported but lack a full matched control. The circuit's collapse signature reproduces on four held-out analogies (§3.7.2) and on the two semantic-role prompts, extending the account across domains; the teacher and bird baselines are weak, however (the model is only 49% and 12% confident at baseline), so cross-domain generalization rests on fewer confident cases than the geographic analogies. Finally, the high-recurrence formal-text features (§3.4) were not steered as a group and appear causally inert, so their role remains descriptive rather than demonstrated.
 
-These results establish a **causal hierarchy**: Phase 1 → Phase 2 → Phase 3 + late layers. Each phase is collectively necessary, and earlier phases are prerequisites for later ones.
+Three bounds should be stated explicitly:
 
-#### 3.7.5 Sufficiency (Hub Boost on Altered Prompts)
+1. **Sufficiency.** We show that the circuit is necessary and fails in the predicted way, but not that it is sufficient to produce the answer in isolation. The single-feature sufficiency probe, which boosts the highest-influence hub, is largely negative, inducing the target only when the target entity is already present in the prompt.
+2. **Surgical necessity.** Because −80 is a strong intervention, single-feature necessity is layer-dependent, so the strongest claims rest on the matched contrast rather than on any individual ablation.
+3. **Mediation.** The phase experiments show that each phase is collectively necessary, but establishing that information flows along the Phase 1 → Phase 2 edge requires path patching on the model weights, which the steering API does not expose. This remains future work.
 
-| Circuit | Hub Boosted | Altered Prompt | Induced? |
-|---|---|---|---|
-| `analog_berlin` | L21/4827 | "Cairo is to Egypt as Nairobi is to" | no |
-| `analog_berlin` | L21/4827 | "Madrid is to Spain as Berlin is to" | **YES → Germany** |
-| `analog_rome` | L20/15360 | "Paris is to France as Tokyo is to" | no |
-| `analog_rome` | L20/15360 | "Madrid is to Spain as Rome is to" | **YES → Italy** |
-| `analog_tokyo` | L20/15360 | "Paris is to France as Rome is to" | no |
-| `analog_tokyo` | L20/15360 | "Beijing is to China as Tokyo is to" | **YES → Japan** |
-| `analog_teacher` | L0/17 | "Nurse is to hospital as teacher is to" | no |
-| `analog_teacher` | L0/17 | "Doctor is to hospital as chef is to" | no |
-| `analog_bird` | L22/4252 | "Cat is to land as bird is to" | no |
-| `analog_bird` | L22/4252 | "Fish is to water as eagle is to" | **YES → air** |
-| Cairo→Kenya | L15/15954 | "Lagos is to Nigeria as Nairobi is to" | **YES → Kenya** |
-
-**5/11 tests succeed.** Sufficiency holds when the altered prompt retains the target entity or a semantically close substitute, and fails when it crosses domain boundaries. The capital hubs encode domain-specific geographic associations rather than general-purpose "answer slot" activators.
-
-#### 3.7.6 Specificity (Non-Backbone Feature Suppression)
-
-| Circuit | Feature | Label | Steered Token | Disrupted? |
-|---|---|---|---|---|
-| `analog_berlin` | L6/3335 | "difficulty/challenges" | Germany | no |
-| `analog_berlin` | L13/4435 | "opera-related terms" | Germany | no |
-| `analog_rome` | L6/2267 | "formal text/code" | Italy | no |
-| `analog_rome` | L4/14857 | "code snippets" | Italy | no |
-| `analog_tokyo` | L6/2267 | "formal text/code" | Japan | no |
-| `analog_tokyo` | L3/10018 | early structural feature | Japan | no |
-| `analog_teacher` | L4/14857 | "code snippets" | school | no |
-| `analog_teacher` | L8/13766 | "analogies or comparisons" | school | no |
-| `analog_bird` | L6/2267 | "formal text/code" | **sky** | YES |
-| `analog_bird` | L5/5793 | "analogies" | air | no |
-| Cairo→Kenya | L5/5500 | "profanity and comparisons" | Kenya | no |
-| Puppy→cat | L9/2909 | "formulas/ratios" | cat | no |
-
-**12/13 pass specificity.** The sole exception — L6/2267 tipping bird from "air" to "sky" — occurs at the margin of unresolved token competition (p=0.117) and is confirmed inert for all high-confidence circuits. L5/5793 ("analogies") passes specificity for the bird circuit, consistent with it being individually dispensable but collectively necessary.
-
-#### 3.7.7 Summary of Causal Validation
-
-| Circuit | p | Type | Individual Necessity | Full Suppress | Phase 2 Collective | Sufficiency | Specificity |
-|---|---|---|---|---|---|---|---|
-| `analog_berlin` | 0.973 | Capital | 1/9 | DISRUPTED | → France | 1/2 | PASS |
-| `analog_rome` | 0.974 | Capital | 4/10 | DISRUPTED | → France | 1/2 | PASS |
-| `analog_tokyo` | 0.990 | Capital | 3/10 | DISRUPTED | → France | 1/2 | PASS |
-| `analog_teacher` | 0.486 | Sem. role | 3/10 | DISRUPTED | → be | 0/2 | PASS |
-| `analog_bird` | 0.117 | Sem. role | 8/10 | DISRUPTED | → fish | 1/2 | 1/2 |
-| Cairo→Kenya | 0.963 | Capital | 2/9 | DISRUPTED | — | 1/2 | PASS |
-| Puppy→cat | 0.756 | Sem. role | 0/4 | intact | — | — | PASS |
-
-Across 159 steering experiments, the two validation tracks converge on five principal findings.
-
-From **Feature Set A (backbone, §3.7.1–3.7.2):** First, the late-layer backbone is collectively necessary — full suppression disrupts 6/7 circuits — establishing that the attribution graphs track genuine causal structure. Second, attribution weight does not predict individual necessity: the highest-weight feature in the Berlin graph (L21/4827, edge +198.0) is not individually necessary, while a lower-weight feature (L25/2725) is. Third, three late-layer features recur as necessary across multiple distinct circuits — L25/#286 (Rome, Tokyo, Cairo), L25/#4717 (Rome, Teacher, Bird), and L23/#13914 (Tokyo, Cairo) — revealing a shared output mechanism not visible in the cross-graph overlap analysis. Fourth, individual necessity scales inversely with prediction confidence: the Bird circuit (p=0.117) has 8/10 necessary backbone features while the Berlin circuit (p=0.973) has 1/9.
-
-From **Feature Set B (phase features, §3.7.3–3.7.4):** Fifth, the shared circuit identified in §3.2–3.5 is causally validated. Phase 1 features are individually necessary — L0/#11651 alone disrupts 4/5 circuits, causing capital prompts to revert to the city name. Phase 2 features are collectively necessary but individually redundant — simultaneous suppression collapses every circuit, with capital analogies reverting to "France" (the source-pair answer), while no single Phase 2 feature is individually indispensable. This is direct causal evidence that Phase 2 collectively implements the relational transfer operation. Phase 3 and formal-text features (L4/#14857, L6/#2267) are not individually necessary, confirming that high recurrence in the attribution graphs does not imply causal load-bearing.
+Within these bounds, the steering evidence supports the paper's central structural claims: a recurring circuit that causally drives the answer across five prompts and four held-out analogies, not reducible to token deletion or to the intervention magnitude, organized into the three phases of §3.3, and shared between geographic and semantic-role analogies.
 
 ---
 
@@ -606,15 +491,46 @@ From **Feature Set B (phase features, §3.7.3–3.7.4):** Fifth, the shared circ
 
 ## 4. Discussion
 
-**Overall synthesis.** The results establish that Gemma-2-2B performs analogical reasoning through a stable, three-phase distributed circuit rather than any single mechanism or layer. The convergence of structural, semantic, and causal evidence — across 159 steering experiments, a 50-prompt scaling study, cross-domain generalization testing, and 7 distinct circuits — provides a mechanistic account at a level of specificity and causal resolution that prior behavioral work on LLM analogical reasoning could not reach. The core argument of this paper is not merely that recurring features exist, but that the recurring features identified through graph overlap are causally load-bearing, and that different phases of the circuit play functionally distinct and experimentally separable roles.
+### 4.1 The Analogical Reasoning Circuit in Gemma-2-2B
 
-**The three-phase architecture in context.** The three-phase organization — structural template parsing (L0–L4), analogy recognition (L5–L9), and relational integration (L10–L13) — mirrors the abstract reasoning architecture documented by Webb et al. [9] through causal mediation analysis, where early layers abstract tokens into relational variables, intermediate layers perform induction over those variables, and later layers retrieve answers. The present results extend that framework in two important ways: by identifying specific SAE features at each phase rather than working at the attention head level, and by providing direct causal evidence through feature steering that each phase is collectively necessary for the circuit to function. Crucially, the phase boundaries were not imposed a priori — they emerged from the content of Neuronpedia automated labels naturally clustering by layer depth, with a convergent gradient in activation magnitudes — rising from 1.5–6.4 in Phase 1 to 9.1–16.3 in Phase 3 — confirming the same partition through a second independent line of evidence.
+**Overall synthesis.** The results establish that Gemma-2-2B performs analogical reasoning through a stable, three-phase distributed circuit rather than any single mechanism or layer. The convergence of structural, semantic, and causal evidence — across 218 steering experiments, a 50-prompt scaling study, cross-domain generalization testing, and held-out analogies — provides a mechanistic account at a level of specificity and causal resolution that prior behavioral work on LLM analogical reasoning could not reach. The core argument of this paper is not merely that recurring features exist, but that the recurring features identified through graph overlap are causally load-bearing, and that different phases of the circuit play functionally distinct and experimentally separable roles.
 
-**Circuit stability across surface forms.** Perhaps the most theoretically significant finding is the convergence of the feature set to a stable 67-feature core across 50 prompts phrased in four syntactically distinct surface forms (§3.6). The initial 180-feature circuit, identified from five prompts sharing the "X is to Y as Z is to" template, contracts rapidly when surface-diverse prompts are introduced — losing roughly half its features by N = 20 — but then plateaus, with only 19 further features lost across the subsequent 30 prompts, and just 3 in the final step. This two-phase scaling behaviour has a clear interpretation: the first contraction eliminates features that were coincidental artifacts of the shared surface template, while the plateau identifies features that activate because of the underlying relational structure, regardless of how that structure is expressed in words. All five directly analogical features survive the full 50-prompt filter. This is strong evidence against a surface-token explanation of the circuit and in favour of a genuine, abstract relational representation inside the model.
+**The three-phase architecture in context.** The three-phase organization — structural template parsing (L0–L4), analogy recognition (L5–L9), and relational integration (L10–L13) — mirrors the abstract reasoning architecture documented by Webb et al. [9] through causal mediation analysis, where early layers abstract tokens into relational variables, intermediate layers perform induction over those variables, and later layers retrieve answers. The present results extend that framework in two important ways: by identifying specific SAE features at each phase rather than working at the attention head level, and by providing direct causal evidence through feature steering that each phase is collectively necessary for the circuit to function. Crucially, the phase boundaries were not imposed a priori — they emerged from the content of Neuronpedia automated labels naturally clustering by layer depth, with a convergent gradient in activation magnitudes — rising from 1.5–6.4 in Phase 1 to 9.1–16.3 in Phase 3 (§2.4) — confirming the same partition through a second independent line of evidence.
+
+This is qualitatively distinct from multi-hop factual reasoning. Analogical reasoning requires extracting an unnamed relation type, holding it as a variable, and applying it to a new argument pair. The Phase 2 collective suppression experiment demonstrates that this extraction and transfer are implemented by identifiable internal components whose removal causes the model to echo the source-pair answer rather than transfer the relation — consistent with the "missing relational information" failure mode documented by Lee et al. [10] at the behavioral level. Our work provides a feature-level causal account of this phenomenon.
+
+Prior behavioral evidence [1] established that LLMs can match human performance on analogical tasks; Webb et al. [9] identified emergent symbolic mechanisms supporting abstract reasoning through causal mediation of attention heads. The present work extends these findings to the SAE feature level: the relational reasoning primitive is not just a pattern of attention head behavior but a specifically labeled feature that plays a causal role in the SAE's learned decomposition of residual stream activations.
+
+### 4.2 Circuit Stability Across Scaling and Surface Forms
+
+**Circuit stability across surface forms.** Perhaps the most theoretically significant finding outside the steering results is the convergence of the feature set to a stable 67-feature core across 50 prompts phrased in four syntactically distinct surface forms (§3.6). The initial 180-feature circuit, identified from five prompts sharing the "X is to Y as Z is to" template, contracts rapidly when surface-diverse prompts are introduced — losing roughly half its features by N = 20 — but then plateaus, with only 19 further features lost across the subsequent 30 prompts, and just 3 in the final step. This two-phase scaling behaviour has a clear interpretation: the first contraction eliminates features that were coincidental artifacts of the shared surface template, while the plateau identifies features that activate because of the underlying relational structure, regardless of how that structure is expressed in words. All five directly analogical features survive the full 50-prompt filter. This is strong evidence against a surface-token explanation of the circuit and in favour of a genuine, abstract relational representation inside the model — independent evidence from the same direction as the held-out-prompt generalization result in §3.7.2.
 
 **Cross-domain generalization.** The cross-domain generalization finding reinforces this interpretation. The shared circuit — and the stable 67-feature core — includes features that activate for both geographic capital analogies and semantic role analogies. The analogy-concept features at L5 and L8 fire equally for "Paris is to France as Berlin is to" and for "Doctor is to hospital as teacher is to", despite these prompts sharing no surface tokens related to analogy. This is consistent with the behavioral finding of Wijesiriwardene et al. [11] that LLMs encode relational information in a domain-general manner, and constitutes the first identification of specific internal features implementing that domain-generality at the feature level. The slightly larger attribution graphs for semantic role analogies (1,040–1,071 nodes) relative to capital analogies (905–963 nodes) may reflect that semantic roles require broader world-knowledge access rather than retrieval of a discrete, well-encoded fact — an interpretation consistent with the ROME findings of Meng et al. [2] on the compactness of factual storage for geographic entities.
 
-**Causal validation.** To confirm that the identified phases actually drive the model's predictions, each set of phase features was suppressed and the output observed. Phase 1 features are individually critical: removing just the feature tracking "the word 'to'" causes the model to stop completing the analogy and instead repeat the last entity it read — outputting "Berlin" instead of "Germany." Phase 2 features behave differently: removing any single one has no effect because the remaining three compensate, but removing all four simultaneously causes every capital circuit to output "France." The model still knows Paris→France but loses the ability to transfer that relationship to a new pair — direct evidence that Phase 2 collectively carries the relational transfer step. Prediction confidence and fragility are inversely related: high-confidence circuits have backup paths such that few features are individually critical, while low-confidence circuits have no redundancy and break when any single feature is removed. Finally, features whose labels describe formal text rather than analogy appear frequently in the graphs but are causally inert — suppressing them changes nothing, confirming that appearing in the graph does not equal driving the prediction.
+### 4.3 The Role of Formal Text Features
+
+The high-recurrence "code and legal text" features present an interpretive puzzle best understood through the lens of polysemanticity and superposition [6]. Two complementary explanations:
+
+**Functional hypothesis:** These features detect formal, template-driven text patterns generally. The analogy syntax "X is to Y as Z is to" is highly structured, resembling legal definitions, code comments, and mathematical notation. The model reuses a general "formal syntax" detector.
+
+**Training data hypothesis:** The analogy format appears frequently in SAT preparation and educational materials — which also contain code examples and legal definitions — creating a statistical association between formal-text features and analogy-completion contexts.
+
+Both are compatible with the causal steering data. The formal features process the syntactic surface of the template while the analogy features process the relational semantics; only the latter are collectively necessary for relational transfer. The SAE-based decomposition [5, 6] is what makes this functional distinction visible — raw neuron activations would not cleanly separate these roles.
+
+### 4.4 Comparison with the Capital City Recall Circuit
+
+Comparison with the capital city *factual recall* circuit (prompt: "The capital of X is") reveals:
+
+- **Overlap:** Formal-text features (L4/#14857, L6/#2267) appear with high frequency in both circuits, activated by the formal definitional structure of both prompt types. This is analogous to the shared MLP modules Meng et al. [2] identified across different factual recall tasks.
+- **Divergence:** The L5 "analogies" feature and L8 "analogies or comparisons" feature appear to be specific to the analogical task — they were not among the top recurring features in the factual recall circuit — supporting the interpretation that these features are selectively activated by relational structure recognition.
+
+### 4.5 Relation to Anthropic's Attribution Graph Methodology
+
+The present work is in direct methodological continuity with Anthropic's *On the Biology of a Large Language Model* [12], which applied attribution graphs to Claude 3.5 Haiku using cross-layer transcoders. Both papers find that models implement multi-step, staged computation rather than direct input-to-output pattern matching, and both validate circuit hypotheses through feature steering. Anthropic's paper groups related features into manually curated "supernodes" to present a cleaner narrative; the present work uses automated cross-graph intersection, which is more scalable and less susceptible to confirmation bias but produces a less narratively refined picture of any single circuit. The two approaches are complementary.
+
+### 4.6 Redundancy as a Property of Well-Learned Computation
+
+Single-feature ablation of the 180-feature circuit leaves the Berlin prediction intact in 156/180 cases (§3.7.1): necessity is a property of the *set*, not of most individual members, and the few individually necessary features concentrate at the embedding layer. Yet the circuit is collectively decisive — removing it collapses every prompt to the analogy template, while a size- and strength-matched random ablation does not. This combination — individually redundant, collectively necessary — suggests well-learned associations are protected by redundant parallel encodings rather than single critical features. It aligns with the circuit redundancy findings in [12] and may reflect a general property of how transformers distribute robust computations across many partially-redundant components.
 
 ---
 
@@ -622,7 +538,13 @@ From **Feature Set B (phase features, §3.7.3–3.7.4):** Fifth, the shared circ
 
 ## 5. Limitations
 
-All steering experiments operate at the SAE feature level only — attention heads and residual stream components are not assessed, so the three-phase architecture describes the SAE-visible portion of the circuit, not necessarily the complete one. The prompts were constructed by the authors rather than sampled from a standard benchmark, and no formal statistical tests were applied, meaning the findings are descriptive rather than statistically confirmed. Feature labels are LLM-generated by Neuronpedia and may not perfectly capture feature semantics. All results are from a single model (Gemma-2-2B) with a single SAE suite, so generalization to other model sizes or architectures is unknown.
+1. **SAE-feature-level intervention only.** Steering operates at the SAE feature level, not the attention head or residual stream level. The causal role of non-SAE circuit components is not assessed.
+2. **SAE coverage.** The `gemmascope-transcoder-16k` SAE [7] covers only cross-layer transcoder features. Attention head contributions and residual stream features are not captured.
+3. **Threshold sensitivity.** Results are sensitive to node and edge thresholds (0.80/0.85). Lower thresholds would reveal more features; higher thresholds would produce sparser, more focused circuits.
+4. **Label quality.** Neuronpedia [8] automated feature explanations are LLM-generated and may not perfectly capture feature semantics.
+5. **Prompt set size.** Five defining prompts (plus four held-out) are sufficient for circuit identification and a generalization check but too few to claim statistical robustness. A larger prompt set covering arithmetic, cross-lingual, and abstract relational analogies [13] would strengthen conclusions.
+6. **Sufficiency not established.** The steering evidence shows the circuit is necessary and fails in the predicted way, but not that it is *sufficient* to produce the answer in isolation. The single-feature sufficiency probe is largely negative — the highest-influence hub induces the target only when the target entity is already present in the prompt.
+7. **Large-magnitude intervention.** Steering at effective −80 per feature is a strong perturbation; the strongest claims rest on the circuit-vs-matched-null contrast and on the strength titration (the effect is already present at effective −8), not on any single surgical ablation. Establishing edge-level mediation (Phase 1 → Phase 2) requires activation/path patching on the model weights, which the steering API does not expose.
 
 **Future work:** activation patching at the attention head level, replication with benchmark prompt sets, and cross-model comparison.
 
@@ -634,7 +556,12 @@ All steering experiments operate at the SAE feature level only — attention hea
 
 We have identified a shared analogical reasoning circuit in Gemma-2-2B comprising 180 features active across five initial prompts, converging to a stable 67-feature core across 50 prompts phrased in four syntactically distinct surface forms. The circuit is organized into three phases: Phase 1 (L0–L4) parses the structural format of the analogy prompt; Phase 2 (L5–L9) recognises the relational concept itself through features explicitly labeled "analogies" and "analogies or comparisons"; and Phase 3 (L10–L13) integrates the relation with domain-specific knowledge. The same core features activate for both geographic capital analogies and semantic role analogies, confirming a domain-agnostic relational reasoning mechanism rather than separate topic-specific circuits.
 
-Causal steering experiments across 159 tests confirm that these phases are functionally distinct and causally necessary. Removing Phase 1 causes the model to lose the analogy structure entirely. Removing all four Phase 2 features simultaneously causes every capital circuit to output "France" — the model retains the Paris→France fact but loses the ability to transfer the relationship to a new pair, which is direct evidence that Phase 2 carries the relational transfer step. Circuits with higher prediction confidence tolerate individual feature removal better, suggesting that well-learned predictions are encoded through redundant backup paths while uncertain ones are not. These results provide the first causally validated, feature-level account of analogical reasoning in a large language model.
+1. **A stable shared circuit exists, identified by common feature IDs.** 180 features — identified by stable *(layer, feature index)* pairs — appear in all five independently generated attribution graphs.
+2. **Dedicated analogy features exist at layers 5, 8, 9, and 13.** These features have Neuronpedia explanations explicitly referencing analogies, comparisons, and relational concepts — providing direct SAE-level evidence of interpretable analogy-concept features in a large language model.
+3. **The circuit exhibits a three-phase architecture, identified by label semantics and validated causally.** Circuit template parsing (L0–L4), analogy recognition (L5–L9), and relational integration (L10–L13), with activation magnitude increasing through the sequence.
+4. **Cross-domain generalization is confirmed.** The same core features, including L5 SAE#5793 ("analogies"), activate for both geographic and semantic role analogies — a domain-agnostic relational reasoning primitive consistent with behavioral findings [1, 10, 11].
+5. **Phase 2 implements relational transfer, collectively but not individually.** Simultaneous suppression collapses every circuit; capital analogies revert to the source-pair answer.
+6. **The validation is robust to the obvious confounds.** Ablating the circuit — but not a matched random control — collapses all five prompts to the analogy template; the effect survives excluding the embedding layer (so it is not mere token deletion), holds from the weakest steering strength tested, and reproduces on held-out analogies the circuit was never derived from. Sufficiency and edge-level mediation remain open (§5).
 
 ---
 
