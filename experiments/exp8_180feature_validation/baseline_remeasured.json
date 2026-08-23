@@ -1,0 +1,162 @@
+{
+  "analog_berlin": {
+    "prompt": "Paris is to France as Berlin is to",
+    "expected": " Germany",
+    "argmax_token": " Germany",
+    "argmax_p": 0.9584091842675263,
+    "expected_p": 0.9584091842675263,
+    "expected_in_top5": true,
+    "top5": [
+      {
+        "token": " Germany",
+        "p": 0.9584091842675263
+      },
+      {
+        "token": " the",
+        "p": 0.012200845821682604
+      },
+      {
+        "token": " Berlin",
+        "p": 0.003961034699868069
+      },
+      {
+        "token": " German",
+        "p": 0.002256929540148032
+      },
+      {
+        "token": " Europe",
+        "p": 0.002256929540148032
+      }
+    ],
+    "default_text": "<bos>Paris is to France as Berlin is to Germany. It is the",
+    "noop_verified": true
+  },
+  "analog_rome": {
+    "prompt": "Paris is to France as Rome is to",
+    "expected": " Italy",
+    "argmax_token": " Italy",
+    "argmax_p": 0.9584091842675263,
+    "expected_p": 0.9584091842675263,
+    "expected_in_top5": true,
+    "top5": [
+      {
+        "token": " Italy",
+        "p": 0.9584091842675263
+      },
+      {
+        "token": " the",
+        "p": 0.019803927546861083
+      },
+      {
+        "token": " Rome",
+        "p": 0.002402488989655613
+      },
+      {
+        "token": " Italian",
+        "p": 0.002256929540148032
+      },
+      {
+        "token": " Italians",
+        "p": 0.0016512049250036575
+      }
+    ],
+    "default_text": "<bos>Paris is to France as Rome is to Italy. It is the",
+    "noop_verified": true
+  },
+  "analog_tokyo": {
+    "prompt": "Paris is to France as Tokyo is to",
+    "expected": " Japan",
+    "argmax_token": " Japan",
+    "argmax_p": 0.9819759354668612,
+    "expected_p": 0.9819759354668612,
+    "expected_in_top5": true,
+    "top5": [
+      {
+        "token": " Japan",
+        "p": 0.9819759354668612
+      },
+      {
+        "token": " the",
+        "p": 0.0034956008536636734
+      },
+      {
+        "token": "\u2026",
+        "p": 0.0019917333285323136
+      },
+      {
+        "token": " Japanese",
+        "p": 0.0018710603064642196
+      },
+      {
+        "token": "...",
+        "p": 0.0011348554420418653
+      }
+    ],
+    "default_text": "<bos>Paris is to France as Tokyo is to Japan. It is the",
+    "noop_verified": true
+  },
+  "analog_teacher": {
+    "prompt": "Doctor is to hospital as teacher is to",
+    "expected": " school",
+    "argmax_token": " school",
+    "argmax_p": 0.5631446537543375,
+    "expected_p": 0.5631446537543375,
+    "expected_in_top5": true,
+    "top5": [
+      {
+        "token": " school",
+        "p": 0.5631446537543375
+      },
+      {
+        "token": " student",
+        "p": 0.03164658611103602
+      },
+      {
+        "token": " ",
+        "p": 0.027928014220365963
+      },
+      {
+        "token": "...",
+        "p": 0.024646386044811498
+      },
+      {
+        "token": " college",
+        "p": 0.021750359344450344
+      }
+    ],
+    "default_text": "<bos>Doctor is to hospital as teacher is to school.\n\nThe doctor",
+    "noop_verified": true
+  },
+  "analog_bird": {
+    "prompt": "Fish is to water as bird is to",
+    "expected": " air",
+    "argmax_token": " air",
+    "argmax_p": 0.0759162135601666,
+    "expected_p": 0.0759162135601666,
+    "expected_in_top5": true,
+    "top5": [
+      {
+        "token": " air",
+        "p": 0.0759162135601666
+      },
+      {
+        "token": " ____",
+        "p": 0.0759162135601666
+      },
+      {
+        "token": " ________",
+        "p": 0.05217639966630833
+      },
+      {
+        "token": " ",
+        "p": 0.04604551109353302
+      },
+      {
+        "token": " the",
+        "p": 0.04604551109353302
+      }
+    ],
+    "default_text": "<bos>Fish is to water as bird is to air.\n\nThe fish",
+    "noop_verified": true
+  }
+}
