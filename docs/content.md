@@ -246,7 +246,7 @@ Cross-graph feature overlap analysis over the stable *(layer, feature index)* id
 
 **Figure 3:** Flow diagram of the three-group circuit, showing the input prompt, the representative features of Group 1, Group 2, and Group 3 with their Neuronpedia labels, and the model's output.
 
-We provide evidence that Gemma-2-2B performs **genuine multi-step analogical reasoning internally**. The attribution graph reveals a three-group computational process that activates for both geographic and semantic role analogies — evidence of a domain-agnostic relational reasoning mechanism. This three-stage organization parallels the symbolic architecture identified by Webb et al. [9] through causal mediation analysis and the internal representation findings of Lee et al. [10].
+We provide evidence that Gemma-2-2B performs **genuine multi-step analogical reasoning internally**. The attribution graph reveals a three-group computational process that activates for both geographic and semantic role analogies — evidence of a domain-independence relational reasoning mechanism. This three-stage organization parallels the symbolic architecture identified by Webb et al. [9] through causal mediation analysis and the internal representation findings of Lee et al. [10].
 
 ---
 
@@ -374,9 +374,8 @@ At each milestone (N = 5, 10, 20, 30, 40, 50), the strictest possible threshold 
 
 ![Figure 5: Scaling curve showing the number of features that recur across ALL N attribution graphs as N grows from 5 to 50. The curve drops steeply at first — removing features that only appeared by coincidence in the small prompt set — then nearly plateaus, converging to a stable floor of 67 features.](scaling_curve.png)
 
-The curve has a clear two-phase shape. First, near-stability from N = 5 to N = 10 (119 → 116, a drop of just 3 features), followed by a **rapid contraction** from N = 10 to N = 20: the newly introduced syntactically diverse prompts eliminate 30 features (−25.9%) — features that had persisted across the original template-only prompts by coincidence, or because they shared the "is to … as" surface string, and do not survive once fundamentally different phrasings are added. Second, a **near-plateau** from N = 20 onward: only 19 further features are lost across 30 additional prompts, and the final step (N = 40 → 50) removes just 3. By N = 50, the curve has essentially stopped moving.
-
-This convergence behaviour is the key result. The 67-feature core at N = 50 survived 50 prompts spanning two semantic domains, four surface forms, and a strict all-or-nothing threshold. That is not noise — it is a stable circuit.
+The curve stays nearly flat from N = 5 to N = 10 (119 to 116), then contracts sharply from N = 10 to N = 20, losing 30 features (−25.9%) as the syntactically diverse prompts are introduced. These are features that had persisted across the template-only prompts by coincidence or through the shared "is to … as" string, and do not survive once the phrasing changes. From N = 20 onward the curve nearly plateaus: only 19 more features are lost across the next 30 prompts, and just 3 in the final step, so by N = 50 it has essentially stopped moving.
+This settling is the key result. These 67 features appeared in every one of the 50 prompts. The prompts covered two different kinds of analogy (geographic and semantic) and four different ways of phrasing them, and a feature was only counted if it showed up in every single prompt. Features that appear by chance do not survive this kind of variation. So these 67 are not a coincidence. They are a real, stable set of features the model uses for analogies.
 
 **The five directly analogical features all survive.** Within the 67-feature core, five features carry Neuronpedia labels that explicitly describe analogical or comparative reasoning. Every one of them appears in all 50 attribution graphs:
 
